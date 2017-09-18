@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/design.css"/>
+</head>
+<body>
+<div>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <div class="logoImg"><img src="img/account/logo.png" alt=""/></div>
+                <div><p>小马驾驾平台管理系统</p></div>
+            </div>
+            <div class="login">
+                <div><p class="userImg"><span></span>您好，<b class="userName">admin</b>欢迎登录</p></div>
+                <div><p class="lock"><span></span>锁定</p></div>
+                <div><p class="exit"><span></span>退出</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="account.html"><span class="account"></span>账号管理</a></li>
+                        <li class="liActive"><a href="design.html"><span class="design"></span>计算公式管理</a></li>
+                        <li><a href="##"><span class="basic"></span>基本信息设置</a></li>
+                        <li><a href="##"><span class="order"></span>订单相关信息</a></li>
+                        <li><a href="##"><span class="entrepot"></span>仓库表</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <div>
+                    <ul>
+                        <li class="active"><a href="##">公式设置</a></li>
+                        <li><a href="##">城市等级增量</a></li>
+                        <li><a href="##">路况增量</a></li>
+                        <li><a href="##">固定变量</a></li>
+                        <li><a href="##">畅销等级议价</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <div class="present formulaSet">
+                    <div>
+                        <div class="title">
+                            <ul>
+                                <li>
+                                    <p>注：轮胎最终价格=<span>轮胎基本定价</span>×（1+城市等级分类+行驶路况+ <span>年均行驶里程</span>+
+                                        <span>剩余行驶时间</span>）
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>轮胎基本定价=轮胎+花纹</p>
+                                </li>
+                                <li>
+                                    <p>年均行驶里程=里程数×一年天数/行驶天数</p>
+                                </li>
+                                <li>
+                                    <p>剩余行驶时间=总服务年限+行驶证注册年-当前年份</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div><p>公式测试<span></span></p></div>
+                        <div class="formula">
+                            <ul>
+                                <li>
+                                    <p><span>轮胎基本定价：</span>（
+                                        <select>
+                                            <option value="">选择轮胎</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        &nbsp;+&nbsp;
+                                        <select>
+                                            <option value="">选择花纹</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        ）
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>×</span></p>
+                                </li>
+                                <li>
+                                    <p><span>（&nbsp;1</span></p>
+                                </li>
+                                <li>
+                                    <p><span>+</span></p>
+                                </li>
+                                <li>
+                                    <p><span>城市等级分类：</span>
+                                        <select>
+                                            <option value="">选择城市</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>+</span></p>
+                                </li>
+                                <li>
+                                    <p><span>行驶路况：</span>
+                                        <select>
+                                            <option value="">选择路况</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>+</span></p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <span>年均行驶里程</span>（
+                                        <input type="text" placeholder="输入里程数"/>
+                                        &nbsp;*&nbsp;
+                                        <select>
+                                            <option value="">366</option>
+                                            <option value="">365</option>
+                                        </select>
+                                        &nbsp;÷&nbsp;
+                                        <input type="text" placeholder="输入行驶证日期"/>
+                                        ）
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>+</span></p>
+                                </li>
+                                <li>
+                                    <p><span>剩余行驶时间）：</span>（
+                                        <input type="text" value="15" disabled/>
+                                        &nbsp;+&nbsp;
+                                        <input type="text" placeholder="输入行驶证注册年"/>
+                                        &nbsp;-&nbsp;
+                                        <select>
+                                            <option value="">2017</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        ）
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>=</span></p>
+                                </li>
+                                <li>
+                                    <p><span>轮胎最终价格：</span><b></b>（元）</p>
+                                </li>
+                                <li>
+                                    <button>计&nbsp;&nbsp;&nbsp;&nbsp;算</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" cityAdd">
+                    <div>
+                        <div class="cityTitle">
+                            <p>
+
+                            <h1>城市等级分类</h1></p>
+                            <p class="cityTitleTwo">
+                                <span>序号</span><span>城市等级（几线城市）</span><span>增量指数（%）</span><span>操作</span></p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <span>1</span>
+                                    <span>1</span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                     <a href="##" class="compile" data-id="1">
+                                         <b class="fa fa-edit"></b>
+                                         <i>编辑</i>
+                                     </a>
+                                </span>
+                                </li>
+
+                                <li>
+                                    <span>2</span>
+                                <span>
+                                 2
+                                </span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                     <a href="##" class="compile" data-id="1">
+                                         <b class="fa fa-edit"></b>
+                                         <i>编辑</i>
+                                     </a>
+                                </span>
+                                </li>
+
+                                <li>
+                                    <span>3</span>
+                                <span>
+                                   3
+                                </span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                   <a href="##" class="compile" data-id="1">
+                                       <b class="fa fa-edit"></b>
+                                       <i>编辑</i>
+                                   </a>
+                                </span>
+                                </li>
+
+                                <li>
+                                    <span>4</span>
+                                <span>
+                                   4
+                                </span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                   <a href="##" class="compile" data-id="1">
+                                       <b class="fa fa-edit"></b>
+                                       <i>编辑</i>
+                                   </a>
+                                </span>
+                                </li>
+
+                                <li>
+                                    <span>5</span>
+                                <span>
+                                5
+                                </span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                   <a href="##" class="compile" data-id="1">
+                                       <b class="fa fa-edit"></b>
+                                       <i>编辑</i>
+                                   </a>
+                                </span>
+                                </li>
+
+                                <li>
+                                    <span>6</span>
+                                <span>
+                                    6
+                                </span>
+                                <span>
+                                    <input type="text" value="6" disabled/>
+                                </span>
+                                <span>
+                                   <a href="##" class="compile" data-id="1">
+                                       <b class="fa fa-edit"></b>
+                                       <i>编辑</i>
+                                   </a>
+                                </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="traffic">
+                    <div>
+                        <div class="trafficTitle">
+                            <p>
+
+                            <h1>路况设置</h1>
+                            </p>
+                            <p class="trafficTitleTwo">
+                                <span>路况名称</span>
+                                <span>路况图</span>
+                                <span>路况描述</span>
+                                <span>一类增量（%）</span>
+                                <span>二类增量（%）</span>
+                                <span>三类增量（%）</span>
+                                <span>操作</span>
+                            </p>
+                        </div>
+                        <div class="trafficList">
+                            <ul>
+                                <li>
+                                    <div><span>非铺装</span></div>
+                                    <div><span><img src="img/design/img1.jpg" alt=""/></span></div>
+                                    <div class="describe"><span><button>查看描述</button>
+
+                                    </span>
+
+                                        <div class="describeInfo">
+                                            有些东西之所以弥足珍贵，是因为它们昙花一现。
+                                        </div>
+                                    </div>
+                                    <div><span>5</span></div>
+                                    <div><span>5</span></div>
+                                    <div><span>5</span></div>
+                                    <div>
+                                    <span>
+                                        <a href="##" class="edit">
+                                            <b class="fa fa-edit"></b>
+                                            <i>编辑</i>
+                                        </a>
+                                    </span>
+                                    </div>
+                                </li>
+                                <li class="add">
+                                    <a href="##">
+                                        <b class="fa fa-plus-square-o"></b>
+                                        <i>添加路况信息</i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="null"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="variable ">
+                    <div>
+                        <div class="variableTitle">
+                            <h1>固定变量设置</h1>
+                        </div>
+                        <div class="variableList">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <p>
+                                            <span>一年天数设置：</span>
+                                            <select>
+                                                <option value="">365</option>
+                                                <option value="">366</option>
+                                            </select>
+                                            （天）
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>
+                                            <span>最长服务期限：</span>
+                                            <input type="text"/>
+                                            （年）
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div>
+                                <p>
+                                    <button>提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market ">
+                    <div>
+                        <div class="marketTitle">
+                            <p>
+
+                            <h1>畅销等级</h1>
+                            </p>
+                            <p class="marketTitleTwo">
+                                <span>序号</span><span>畅销等级</span><span>增量指数（%）</span><span>操作</span></p>
+                        </div>
+                        <div class="marketList">
+                            <ul>
+                                <li>
+                                    <span>1</span>
+                                    <span>
+                                       <select disabled>
+                                           <option value="">A</option>
+                                           <option value="">A+</option>
+                                           <option value="">A++</option>
+                                           <option value="">A+++</option>
+                                       </select>
+                                    </span>
+                                    <span>
+                                        <input type="text" value="6" disabled/>
+                                    </span>
+                                    <span>
+                                       <a href="##" class="markerCompile" data-id="1">
+                                           <b class="fa fa-edit"></b>
+                                           <i>编辑</i>
+                                       </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <span>
+                                       <select disabled>
+                                           <option value="">A</option>
+                                           <option value="">A+</option>
+                                           <option value="">A++</option>
+                                           <option value="">A+++</option>
+                                       </select>
+                                    </span>
+                                    <span>
+                                        <input type="text" value="6" disabled/>
+                                    </span>
+                                    <span>
+                                       <a href="##" class="markerCompile" data-id="1">
+                                           <b class="fa fa-edit"></b>
+                                           <i>编辑</i>
+                                       </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>3</span>
+                                    <span>
+                                       <select disabled>
+                                           <option value="">A</option>
+                                           <option value="">A+</option>
+                                           <option value="">A++</option>
+                                           <option value="">A+++</option>
+                                       </select>
+                                    </span>
+                                    <span>
+                                        <input type="text" value="6" disabled/>
+                                    </span>
+                                    <span>
+                                       <a href="##" class="markerCompile" data-id="1">
+                                           <b class="fa fa-edit"></b>
+                                           <i >编辑</i>
+                                       </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>4</span>
+                                    <span>
+                                       <select disabled>
+                                           <option value="">A</option>
+                                           <option value="">A+</option>
+                                           <option value="">A++</option>
+                                           <option value="">A+++</option>
+                                       </select>
+                                    </span>
+                                    <span>
+                                        <input type="text" value="6" disabled/>
+                                    </span>
+                                    <span>
+                                       <a href="##" class="markerCompile" data-id="1">
+                                           <b class="fa fa-edit"></b>
+                                           <i >编辑</i>
+                                       </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>5</span>
+                                    <span>
+                                       <select disabled>
+                                           <option value="">A</option>
+                                           <option value="">A+</option>
+                                           <option value="">A++</option>
+                                           <option value="">A+++</option>
+                                       </select>
+                                    </span>
+                                    <span>
+                                        <input type="text" value="6" disabled/>
+                                    </span>
+                                    <span>
+                                       <a href="##" class="markerCompile" data-id="1">
+                                           <b class="fa fa-edit"></b>
+                                           <i >编辑</i>
+                                       </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="redact">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>编辑路况</h3>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>路况名称：</span>
+                                    <input type="text" class="trafficName"/>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>路况图片：</span> <br/>
+                                <img src="img/design/img2.jpg" alt=""/>
+
+                                <p class="files"><input type="file"/></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>路况描述：</span>
+                                <textarea cols="20" rows="5" class="addText"></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>一类增量：</span>
+                                    <input type="text" class="levelOne"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>二类增量：</span>
+                                    <input type="text" class="levelTwo"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>三类增量：</span>
+                                    <input type="text" class="levelThree"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="addBtn">
+                            <button class="addBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                            <button class="undoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="addHtml">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>添加路况</h3>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>路况名称：</span>
+                                    <input type="text" class="trafficName"/>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>路况图片：</span> <br/>
+                                <img src="img/design/img2.jpg" alt=""/>
+
+                                <p class="files"><input type="file"/></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span>路况描述：</span>
+                                <textarea name="" id="" cols="20" rows="5" class="addText"></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>一类增量：</span>
+                                    <input type="text" class="levelOne"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>二类增量：</span>
+                                    <input type="text" class="levelTwo"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p>
+                                    <span>三类增量：</span>
+                                    <input type="text" class="levelThree"/>
+                                    <b>（ % ）</b>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="addBtn">
+                            <button class="addBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                            <button class="undoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/design.js"></script>

@@ -1,0 +1,318 @@
+
+html, body, body > div {
+    height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/entrepot.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 30px;
+    padding: 5px 15px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 40px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 16px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*密码修改*/
+div.content > div.details > div.changePassword > div > ul > li:nth-child(odd) {
+    margin-top: 30px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li:nth-child(even) {
+    margin-top: 10px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li.errorInfo {
+    margin-top: 3px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li > span {
+    margin-left: 10px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li > span.correct {
+    color: #1ebd00;
+}
+
+div.content > div.details > div.changePassword > div > ul > li.errorInfo > span {
+    color: #ee2626;
+    font-size: 14px;
+    margin-left: 0;
+    opacity: 0;
+}
+
+div.content > div.details > div.changePassword > div > ul > li.LiTwo {
+    margin-top: 10px;
+
+}
+
+div.content > div.details > div.changePassword > div > ul > li.Li {
+    margin-top: 30px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li.but {
+    margin-top: 30px;
+}
+
+div.content > div.details > div.changePassword > div > ul > li.but > button {
+    background: #ee2626;
+    font-size: 18px;
+    border: none;
+    width: 100px;
+    height: 34px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+div.content > div.details > div.changePassword > div > ul > li > input {
+    width: 300px;
+    padding-left: 20px;
+}
+
+/*银行卡管理*/
+div.content > div.details > div.bankSetting > div > ul > li {
+    margin-top: 30px;
+}
+
+div.content > div.details > div.bankSetting > div > ul > li > p > input {
+    width: 300px;
+    height: 34px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div.bankSetting > div > ul > li > p > input:disabled {
+    border: none;
+    background: transparent;
+}
+
+div.content > div.details > div.bankSetting > div > ul > li > p > select:disabled {
+    border: none;
+    background: transparent;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+div.content > div.details > div.bankSetting > div > ul > li > button {
+    width: 100px;
+    font-size: 16px;
+    background: #ee2626;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+div.content > div.details > div.bankSetting > div > ul > li > button.setting {
+    margin-left: 30px;
+}
+
+/*微信*/
+div.content > div.details > div.weChat > div > ul > li {
+    margin-top: 20px;
+}
+
+div.content > div.details > div.weChat > div > ul > li > p {
+    font-size: 18px;
+}
+
+div.content > div.details > div.weChat > div > ul > li > p > a {
+    text-decoration: underline;
+    color: blue;
+    margin-left: 20px;
+}
+
+/*服务器*/
+div.content > div.details > div.sever > div > ul > li {
+    margin-top: 20px;
+}
+
+div.content > div.details > div.sever > div > ul > li > p {
+    font-size: 18px;
+}
+
+div.content > div.details > div.sever > div > ul > li > p > span {
+    color: #8e8e8e;
+}
+
+
+
+
+
