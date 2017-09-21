@@ -194,13 +194,15 @@ div.content > div.details > div > div > ul {
 
 /*车辆品牌设置*/
 div.content > div.details > div.agency > div > div > div.agencyContent ,
+div.content > div.details > div.AMG > div > div > div.AMGContent,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent {
     border: 1px solid #ccc;
     margin-top: 10px;
 }
 
 div.content > div.details > div.agency > div > div > div.agencyTitle > p,
-div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandTitle > p
+div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandTitle > p,
+div.content > div.details > div.AMG > div > div > div.AMGTitle > p
 {
     overflow: hidden;
     border-bottom: 1px solid #cccccc;
@@ -217,6 +219,7 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandTitle
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div
 {
     height: 40px;
@@ -225,10 +228,10 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
     box-sizing: border-box;
 }
 
-div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyAdd,
-div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandAdd {
-    border: none;
-}
+/*div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyAdd,*/
+/*div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandAdd {*/
+    /*border: none;*/
+/*}*/
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div > p,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div > p, {
@@ -246,12 +249,14 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyList ,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandList {
     height: 600px;
     overflow: auto;
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyList > ul > li ,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandList > ul > li {
     height: 85px;
     line-height: 85px;
@@ -261,6 +266,7 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyList > ul > li > div ,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div ,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandList > ul > li > div {
     overflow: hidden;
 }
@@ -273,11 +279,13 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyList > ul > li > div > div > img ,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div > div > img ,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandList > ul > li > div > div > img {
     vertical-align: middle;
 }
 
 div.content > div.details > div.agency > div > div > div.agencyContent > div.agencyList > ul > li > div > div > a > span.agencyRemove ,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div > div > a > span.AMGRemove ,
 div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandContent > div.vehicleBrandList > ul > li > div > div > a > span.vehicleBrandRemove {
     display: inline-block;
     width: 15px;
@@ -287,6 +295,7 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
     vertical-align: middle;
 }
 div.content>div.details>div.agency>div>div>div.agencyContent>div.agencyList>ul>li>div>div>a,
+div.content>div.details>div.AMG>div>div>div.AMGContent>div.AMGList>ul>li>div>div>a,
 div.content>div.details>div.vehicleBrand>div>div>div.vehicleBrandContent>div.vehicleBrandList>ul>li>div>div>a{
     display: inline-block;
     padding: 0 10px;
@@ -296,14 +305,17 @@ div.content>div.details>div.vehicleBrand>div>div>div.vehicleBrandContent>div.veh
     color: #000;
 }
 div.content>div.details>div.agency>div>div>div.agencyContent>div.agencyList>ul>li>div>div>a>span,
+div.content>div.details>div.AMG>div>div>div.AMGContent>div.AMGList>ul>li>div>div>a>span,
 div.content>div.details>div.vehicleBrand>div>div>div.vehicleBrandContent>div.vehicleBrandList>ul>li>div>div>a>span{
     margin-right: 3px;
 }
 div.content>div.details>div.agency>div>div>div.agencyContent>div.agencyAdd>div,
+div.content>div.details>div.AMG>div>div>div.AMGContent>div.AMGAdd>div,
 div.content>div.details>div.vehicleBrand>div>div>div.vehicleBrandContent>div.vehicleBrandAdd>div{
     background: #eeeeee;
 }
 div.content>div.details>div.agency>div>div>div.agencyContent>div.agencyAdd>div>a>p,
+div.content>div.details>div.AMG>div>div>div.AMGContent>div.AMGAdd>div>a>p,
 div.content>div.details>div.vehicleBrand>div>div>div.vehicleBrandContent>div.vehicleBrandAdd>div>a>p{
     color: #000;
 
@@ -316,22 +328,6 @@ div.content > div.details > div.agency > div > div > div.agencyContent > div.age
 {
     width: 33.33%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 div.addHtml,
 div.redact {
@@ -452,9 +448,7 @@ div.agencyRedact {
     top: 0;
     display: none;
 }
-div.agencyAddHtml{
-    display: block;
-}
+
 
 div.agencyAddHtml > div,
 div.agencyRedact > div {
@@ -479,7 +473,7 @@ div.agencyRedact > div > div {
 
 div.agencyAddHtml > div > div > ul > li,
 div.agencyRedact > div > div > ul > li {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 div.agencyAddHtml > div > div > ul > li >div.agencyLogo,
 div.agencyRedact > div > div > ul > li >div.agencyLogo{
@@ -514,22 +508,29 @@ div.agencyRedact > div > div > ul > li > div >span> input {
     padding-left: 10px;
 }
     /*搜索框*/
-div.agencyAddHtml > div > div > ul > li > div >span.agencyAddsecond{
+div.agencyAddHtml > div > div > ul > li > div >span.agencyAddsecond,
+div.agencyRedact > div > div > ul > li > div >span.agencyAddsecond
+{
     position: relative;
 }
-div.agencyAddHtml > div > div > ul > li > div >span>  input{
+div.agencyAddHtml > div > div > ul > li > div >span>  input,
+div.agencyAddHtml > div > div > ul > li.agencyName > div>input,
+div.agencyRedact > div > div > ul > li > div >span>input,
+div.agencyRedact > div > div > ul > li.agencyName > div >input{
     width: 120px;
     top: 9px;
     outline: none;
-    line-height: 30px;
+    line-height: 20px;
     left: 8px;
-    height: 30px;
+    height: 20px;
     border: 1px solid #999;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-div.agencyAddHtml > div > div > ul > li > div >span>select{
+div.agencyAddHtml > div > div > ul > li > div >span>select,
+div.agencyRedact > div > div > ul > li > div >span>select
+{
     width: 120px;
     height: 106px;
     outline: none;
@@ -537,30 +538,19 @@ div.agencyAddHtml > div > div > ul > li > div >span>select{
     position: absolute;
     right: 0;
 }
+div.agencyAddHtml > div > div > ul > li > div >span.agencyAddsecond>span,
+div.agencyAddHtml > div > div > ul > li.agencyName > div >span,
+div.agencyRedact > div > div > ul > li > div >span.agencyAddsecond>span,
+div.agencyRedact > div > div > ul > li.agencyName > div >span
+{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
 .blue {
     background:#1e91ff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 div.agencyAddHtml > div > div > ul > li > div > p > input.trafficName,
 div.agencyRedact > div > div > ul > li > div > p > input.trafficName {
@@ -596,5 +586,145 @@ div.agencyRedact > div > div > ul > li > div > p.agencyFiles {
 div.agencyAddHtml > div > div > ul > li > div > p.agencyFiles > input,
 div.agencyRedact > div > div > ul > li > div > p.agencyFiles > input {
     background: transparent;
+}
+
+
+
+/* 车系列表*/
+div.content > div.details > div.AMG > div > div > div.AMGTitle > p > span,
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div > div{
+    width: 25%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*车系添加*/
+div.AmgAddHtml,
+div.AmgRedact {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+
+div.AmgAddHtml > div,
+div.AmgRedact > div {
+    position: relative;
+    height: 100%;
+}
+
+div.AmgAddHtml > div > div,
+div.AmgRedact > div > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+div.AmgAddHtml > div > div > ul > li,
+div.AmgRedact > div > div > ul > li {
+    margin-top: 20px;
+}
+div.agencyAddHtml > div > div > ul > li >div.AmgLogo,
+div.AmgRedact > div > div > ul > li >div.AmgLogo{
+    text-align: center;
+}
+div.AmgAddHtml > div > div > ul > li >div,
+div.AmgRedact > div > div > ul > li >div{
+    text-align: left;
+}
+div.AmgAddHtml > div > div > ul > li > div >span.AmgAddsecond,
+div.AmgRedact > div > div > ul > li > div >span.AmgAddsecond{
+    position: relative;
+}
+div.AmgAddHtml > div > div > ul > li > div >span>input,
+div.AmgRedact > div > div > ul > li > div >span>input{
+    width: 150px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.AmgAddHtml > div > div > ul > li > div >span>select,
+div.AmgRedact > div > div > ul > li > div >span>select{
+    width: 150px;
+    height: 106px;
+    outline: none;
+    border: 1px solid #999;
+    position: absolute;
+    right: 0;
+}
+div.AmgAddHtml > div > div > ul > li >div>p,
+div.AmgRedact > div > div > ul > li >div>p{
+    text-align: left;
+}
+div.AmgAddHtml > div > div > ul > li > h3,
+div.AmgRedact > div > div > ul > li > h3,
+div.AmgAddHtml > div > div > ul > li > button,
+div.AmgRedact > div > div > ul > li > button {
+    text-align: center;
+}
+
+div.AmgAddHtml > div > div > ul > li.AmgAddBtn,
+div.AmgRedact > div > div > ul > li.AmgAddBtn {
+    text-align: center;
+}
+div.AmgAddHtml > div > div > ul > li.AmgName>div select,
+div.AmgAddHtml > div > div > ul > li.AmgName>div input,
+div.AmgRedact > div > div > ul > li.AmgName>div select,
+div.AmgRedact > div > div > ul > li.AmgName>div input
+{
+    width: 150px;
+    height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #cccccc;
+    border: none;
+}
+
+div.AmgAddHtml > div > div > ul > li>div input::-webkit-input-placeholder,
+div.AmgRedact > div > div > ul > li>div input::-webkit-input-placeholder
+{
+    color: #000;
+}
+
+
+
+div.AmgAddHtml > div > div > ul > li > button,
+div.AmgRedact > div > div > ul > li > button{
+    background: #ee2626;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+div.AmgAddHtml > div > div > ul > li > div >  input,
+div.AmgAddHtml > div > div > ul > li > div >span>  input,
+div.AmgRedact > div > div > ul > li > div > input ,
+div.AmgRedact > div > div > ul > li > div >span> input {
+    background: #cccccc;
+    border: none;
+    padding-left: 10px;
 }
 
