@@ -1,0 +1,413 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background: #9c3232;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/entrepot.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*轮胎总表*/
+.tire {
+    overflow-x: auto;
+}
+
+.tire > div > div {
+    overflow: auto;
+    border: 1px solid #cccccc;
+}
+.tire > div > div.note{
+    overflow:hidden ;
+
+    border: none;
+    margin-top: 30px;
+    color: #ee2626;
+    font-size: 18px;
+
+}
+.tire > div > div > div.tireContent {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tire > div > div > div.tireContent > div.screen > p > button {
+    width: 40px;
+    height: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tire > div > div > div.tireContent > div.tireList {
+    height: 500px;
+    overflow-y: auto;
+    width: 1573px;
+    position: relative;
+}
+
+.tire > div > div > div.tireContent > div.tireAdd {
+    width: 1573px;
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    border-top: 1px solid #cccccc;
+    margin-bottom: 5px;
+}
+
+.tire > div > div > div.tireContent > div.tireAdd > div > a {
+    color: #000;
+}
+
+.tire > div > div > div.tireContent > div.tireList > ul > li {
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    margin-top: 10px;;
+}
+
+.tire > div > div > div.tireContent > div.tireList > ul > li > div {
+    overflow: hidden;
+}
+
+.tire > div > div > div.tireContent > div.tireList > ul > li > div > div {
+    float: left;
+}
+
+.tire > div > div > div.tireTitle > p {
+    overflow: hidden;
+}
+
+.tire > div > div > div.tireTitle,
+.tire > div > div > div.tireContent > div.screen {
+    width: 1573px;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 0;
+}
+
+.tire > div > div > div.tireTitle > p > span {
+    float: left;
+}
+
+.tire > div > div > div.tireContent > div.tireList > ul > li > div > div,
+.tire > div > div > div.tireTitle > p > span {
+    width: 129px;
+    text-align: center;
+}
+
+.tire > div > div > div.tireContent > div.tireList > div {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.tire > div > div > div.tireContent > div.tireList > div > div {
+    position: fixed;
+    display: none;
+}
+
+.tire > div > div > div.tireContent > div.tireList > div > div > div {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #000000;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+
+.tireListAdd,
+.tireListRedact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.tireListAdd>div>div,
+.tireListRedact>div>div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+.tireListAdd>div>div>ul>li>h3,
+.tireListRedact>div>div>ul>li>h3{
+    text-align: center;
+}
+.tireListAdd>div>div>ul>li,
+.tireListRedact>div>div>ul>li
+{
+    margin-top: 10px;
+}
+.tireListAdd>div>div>ul>li>div>div,
+.tireListRedact>div>div>ul>li>div>div{
+    display: inline-block;
+}
+.tireListAdd>div>div>ul>li>div>span,
+.tireListRedact>div>div>ul>li>div>span{
+    width: 90px;
+    text-align: right;
+    display: inline-block;
+}
+.tireListAdd>div>div>ul>li.tireListAddBtn,
+.tireListRedact>div>div>ul>li.tireListRedactBtn{
+    margin-top: 30px;
+    text-align: center;
+}
+.tireListAdd>div>div>ul>li.tireListAddBtn>button,
+.tireListRedact>div>div>ul>li.tireListRedactBtn>button
+{
+    border: none;
+    background: #ee2626;
+    color:  #ffffff;
+    cursor: pointer;
+}
+.tireListAdd>div>div>ul>li>div>div>input,
+.tireListAdd>div>div>ul>li>div>select,
+.tireListRedact>div>div>ul>li>div>div>input,
+.tireListRedact>div>div>ul>li>div>select
+{
+    width: 150px;
+    height: 17px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #ccc;
+    border: none;
+}
+.tireListAdd>div>div>ul>li>div>div>input,
+.tireListRedact>div>div>ul>li>div>div>input
+{
+    padding-left: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

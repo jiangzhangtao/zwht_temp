@@ -240,7 +240,6 @@
         $('#agencyRedactMakeupCo').on("input", inputChagen);
         $('#agencyRedactTypeNum').on("change", changeF);
     }
-
     /*                      车系列表                       */
     function AmgList() {
         //筛选
@@ -319,13 +318,184 @@
         $('#AmgAddMakeupCo').on("click", focus);
         $('#AmgAddMakeupCo').on("input", inputChagen);
         $('#AmgAddTypeNum').on("change", changeF);
+    }
+    /*                      汽车总表                       */
+    function carList() {
+
+        //筛选
+        $(window).ready(function () {
+            $(".AMGList>ul>li").show()
+        });
+        /*品牌的筛选*/
+        $('.CarProxy').bind('input propertychange', function () {
+            var proxyData = $(".CarProxy").val();
+            $(".CarList>ul>li").hide().children().children(".CarBrad").filter(":contains('" + proxyData + "')").parent().parent().show();
+
+        });
+
+        //remove
+        $(".CarList>ul").on("click", ".delete", function (e) {
+            e.preventDefault();
+            var removeLi = confirm("确认删除？");
+            if (removeLi == true) {
+                $(this).parent().parent().parent().remove();
+            }
+        });
+
+        //edit
+        $(".CarList>ul").on("click", ".CarEdit", function (e) {
+            e.preventDefault();
+            $(".CarRedact").css("display", "block")
+        });
+
+        //redact undoAdd
+        $(".CarRedactBtn .CarUndoRedact").click(function () {
+            $(".CarRedact").css("display", "none")
+        });
+
+        //redact addOK
+        $(".CarRedactBtn .CarRedactBtnOk").click(function () {
+            $(".CarRedact").css("display", "none")
+        });
+
+        //addHtml undoAdd
+        $(".CarAddHtml .CarUndoAdd").click(function () {
+            $(".CarAddHtml").css("display", "none")
+        });
+
+        //addHtml addOK
+        $(".CarAddHtml .CarAddBtnOk").click(function () {
+            $(".CarAddHtml").css("display", "none");
+            var html = "";
+            html +='<li>'+
+                '<div>'+
+                '<div class="CarBrad"><span>雪佛兰</span></div>'+
+                '<div class="CarSet"><span>3系</span></div>'+
+                '<div class="CarCc"><span>1.6L/100KW</span></div>'+
+                '<div class="CarYear"><span>2013</span></div>'+
+                '<div class="CarName"><span>2013款雪佛兰克罗兹</span></div>'+
+                '<div>'+
+                '<a href="##" class="CarEdit"><span class="fa fa-edit"></span>编辑</a>'+
+                '<a href="##" class="delete"><span class="CarRemove"></span>删除</a>'+
+                '</div>'+
+                '</div>'+
+                '</li>';
+
+            $(".CarList>ul").append(html);
+        });
+
+        //添加车系
+        $(".CarAdd>div>a").click(function () {
+            $(".CarAddHtml").css("display", "block")
+        });
+
+
+        var typeNumRedact = 'CarRedactTypeNum';
+        var codeRedact = 'CarRedactMakeupCo';
+        temp(typeNumRedact, codeRedact);
+        $('#CarRedactMakeupCo').on("click", focus);
+        $('#CarRedactMakeupCo').on("input", inputChagen);
+        $('#CarRedactTypeNum').on("change", changeF);
+        var typeNum = 'CarAddTypeNum';
+        var code = 'CarAddMakeupCo';
+        temp(typeNum, code);
+        $('#CarAddMakeupCo').on("click", focus);
+        $('#CarAddMakeupCo').on("input", inputChagen);
+        $('#CarAddTypeNum').on("change", changeF);
+    }
+    /*                       车牌号                        */
+    function plateNumber(){
+
+        //筛选
+        $(window).ready(function () {
+            $(".plateNumberList>ul>li").show()
+        });
+        /*品牌的筛选*/
+        $('.plateNumberProxy').bind('input propertychange', function () {
+            var proxyData = $(".plateNumberProxy").val();
+            $(".plateNumberList>ul>li").hide().children().children(".plateNumberProvince").filter(":contains('" + proxyData + "')").parent().parent().show();
+
+        });
+
+        //remove
+        $(".plateNumberList>ul").on("click", ".delete", function (e) {
+            e.preventDefault();
+            var removeLi = confirm("确认删除？");
+            if (removeLi == true) {
+                $(this).parent().parent().parent().remove();
+            }
+        });
+
+        //edit
+        $(".plateNumberList>ul").on("click", ".plateNumberEdit", function (e) {
+            e.preventDefault();
+            $(".plateNumberRedact").css("display", "block")
+        });
+
+        //redact undoAdd
+        $(".plateNumberRedactBtn .plateNumberUndoAdd").click(function () {
+            $(".plateNumberRedact").css("display", "none")
+        });
+
+        //redact addOK
+        $(".plateNumberRedactBtn .plateNumberRedactBtnOk").click(function () {
+            $(".plateNumberRedact").css("display", "none")
+        });
+
+        //addHtml undoAdd
+        $(".plateNumberAddHtml .plateNumberUndoAdd").click(function () {
+            $(".plateNumberAddHtml").css("display", "none")
+        });
+
+        //addHtml addOK
+        $(".plateNumberAddHtml .plateNumberAddBtnOk").click(function () {
+            $(".plateNumberAddHtml").css("display", "none");
+            var html = "";
+            html +='<li>'+
+                '<div>'+
+                '<div class="plateNumberProvince"><span>山东</span></div>'+
+                '<div class="plateNumberProvinceCode"><span>京</span></div>'+
+                '<div class="plateNumberCity"><span>朝阳区</span></div>'+
+                '<div class="plateNumberCityCode"><span>A</span></div>'+
+                '<div class="plateNumberEnglish"><span>beijing</span></div>'+
+                '<div class="plateNumberLine"><span>1</span></div>'+
+                '<div>'+
+                '<a href="##" class="plateNumberEdit"><span class="fa fa-edit"></span>编辑</a>'+
+                '<a href="##" class="delete"><span class="plateNumberRemove"></span>删除</a>'+
+                '</div>'+
+                '</div>'+
+                '</li>';
+
+            $(".plateNumberList>ul").append(html);
+        });
+
+        //添加车系
+        $(".plateNumberAdd>div>a").click(function () {
+            $(".plateNumberAddHtml").css("display", "block")
+        });
+
+
+        var typeNumRedact = 'plateNumberRedactTypeNum';
+        var codeRedact = 'plateNumberRedactMakeupCo';
+        temp(typeNumRedact, codeRedact);
+        $('#plateNumberRedactMakeupCo').on("click", focus);
+        $('#plateNumberRedactMakeupCo').on("input", inputChagen);
+        $('#plateNumberRedactTypeNum').on("change", changeF);
+
+        var typeNum = 'plateNumberAddTypeNum';
+        var code = 'plateNumberAddMakeupCo';
+        temp(typeNum, code);
+        $('#plateNumberAddMakeupCo').on("click", focus);
+        $('#plateNumberAddMakeupCo').on("input", inputChagen);
+        $('#plateNumberAddTypeNum').on("change", changeF);
+
 
     }
-
-
+    plateNumber();
     vehicle();
     AmgAdd();
     AmgList();
+    carList()
 })();
 
 
