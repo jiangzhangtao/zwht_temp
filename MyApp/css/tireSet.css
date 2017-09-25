@@ -217,8 +217,9 @@ div.content > div.details > div > div > ul {
     overflow: auto;
     border: 1px solid #cccccc;
 }
-.tire > div > div.note{
-    overflow:hidden ;
+
+.tire > div > div.note {
+    overflow: hidden;
 
     border: none;
     margin-top: 30px;
@@ -226,6 +227,7 @@ div.content > div.details > div > div > ul {
     font-size: 18px;
 
 }
+
 .tire > div > div > div.tireContent {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -321,7 +323,6 @@ div.content > div.details > div > div > ul {
     background: #ffffff;
 }
 
-
 .tireListAdd,
 .tireListRedact {
     position: absolute;
@@ -332,8 +333,9 @@ div.content > div.details > div > div > ul {
     height: 100%;
     display: none;
 }
-.tireListAdd>div>div,
-.tireListRedact>div>div{
+
+.tireListAdd > div > div,
+.tireListRedact > div > div {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -346,43 +348,48 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     padding: 10px 20px;
 }
-.tireListAdd>div>div>ul>li>h3,
-.tireListRedact>div>div>ul>li>h3{
+
+.tireListAdd > div > div > ul > li > h3,
+.tireListRedact > div > div > ul > li > h3 {
     text-align: center;
+    margin-bottom: 40px;
 }
-.tireListAdd>div>div>ul>li,
-.tireListRedact>div>div>ul>li
-{
+
+.tireListAdd > div > div > ul > li,
+.tireListRedact > div > div > ul > li {
     margin-top: 10px;
 }
-.tireListAdd>div>div>ul>li>div>div,
-.tireListRedact>div>div>ul>li>div>div{
+
+.tireListAdd > div > div > ul > li > div > div,
+.tireListRedact > div > div > ul > li > div > div {
     display: inline-block;
 }
-.tireListAdd>div>div>ul>li>div>span,
-.tireListRedact>div>div>ul>li>div>span{
+
+.tireListAdd > div > div > ul > li > div > span,
+.tireListRedact > div > div > ul > li > div > span {
     width: 90px;
     text-align: right;
     display: inline-block;
 }
-.tireListAdd>div>div>ul>li.tireListAddBtn,
-.tireListRedact>div>div>ul>li.tireListRedactBtn{
+
+.tireListAdd > div > div > ul > li.tireListAddBtn,
+.tireListRedact > div > div > ul > li.tireListRedactBtn {
     margin-top: 30px;
     text-align: center;
 }
-.tireListAdd>div>div>ul>li.tireListAddBtn>button,
-.tireListRedact>div>div>ul>li.tireListRedactBtn>button
-{
+
+.tireListAdd > div > div > ul > li.tireListAddBtn > button,
+.tireListRedact > div > div > ul > li.tireListRedactBtn > button {
     border: none;
     background: #ee2626;
-    color:  #ffffff;
+    color: #ffffff;
     cursor: pointer;
 }
-.tireListAdd>div>div>ul>li>div>div>input,
-.tireListAdd>div>div>ul>li>div>select,
-.tireListRedact>div>div>ul>li>div>div>input,
-.tireListRedact>div>div>ul>li>div>select
-{
+
+.tireListAdd > div > div > ul > li > div > div > input,
+.tireListAdd > div > div > ul > li > div > select,
+.tireListRedact > div > div > ul > li > div > div > input,
+.tireListRedact > div > div > ul > li > div > select {
     width: 150px;
     height: 17px;
     padding-left: 10px;
@@ -390,24 +397,436 @@ div.content > div.details > div > div > ul {
     background: #ccc;
     border: none;
 }
-.tireListAdd>div>div>ul>li>div>div>input,
-.tireListRedact>div>div>ul>li>div>div>input
-{
+
+.tireListAdd > div > div > ul > li > div > div > input,
+.tireListRedact > div > div > ul > li > div > div > input {
     padding-left: 14px;
 }
 
+/*品牌列表*/
+/*四列*/
+.load > div > div > div.loadTitle > p,
+.speed > div > div > div.speedTitle > p,
+.figure > div > div > div.figureTitle > p,
+.stripe > div > div > div.stripeTitle > p,
+.sidewall > div > div > div.sidewallTitle > p,
+.mould > div > div > div.mouldTitle > p,
+.brand > div > div > div.brandTitle > p {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
 
+.load > div > div > div.loadTitle > p > span,
+.speed > div > div > div.speedTitle > p > span,
+.stripe > div > div > div.stripeTitle > p > span,
+.figure > div > div > div.figureTitle > p > span,
+.sidewall > div > div > div.sidewallTitle > p > span,
+.mould > div > div > div.mouldTitle > p > span,
+.brand > div > div > div.brandTitle > p > span {
+    width: 25%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
 
+.load > div > div > div.loadContent,
+.speed > div > div > div.speedContent,
+.figure > div > div > div.figureContent,
+.stripe > div > div > div.stripeContent,
+.sidewall > div > div > div.sidewallContent,
+.mould > div > div > div.mouldContent,
+.brand > div > div > div.brandContent {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
 
+.load > div > div > div.loadContent > div,
+.speed > div > div > div.speedContent > div,
+.figure > div > div > div.figureContent > div,
+.stripe > div > div > div.stripeContent > div,
+.sidewall > div > div > div.sidewallContent > div,
+.mould > div > div > div.mouldContent > div,
+.brand > div > div > div.brandContent > div {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
 
+.load > div > div > div.loadContent > div.loadList,
+.speed > div > div > div.speedContent > div.speedList,
+.figure > div > div > div.figureContent > div.figureList,
+.stripe > div > div > div.stripeContent > div.stripeList,
+.sidewall > div > div > div.sidewallContent > div.sidewallList,
+.mould > div > div > div.mouldContent > div.mouldList,
+.brand > div > div > div.brandContent > div.brandList {
+    height: 600px;
+    overflow-y: auto;
+}
 
+.load > div > div > div.loadContent > div.loadList > ul > li,
+.speed > div > div > div.speedContent > div.speedList > ul > li,
+.figure > div > div > div.figureContent > div.figureList > ul > li,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li,
+.sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li,
+.mould > div > div > div.mouldContent > div.mouldList > ul > li,
+.brand > div > div > div.brandContent > div.brandList > ul > li {
+    height: 85px;
+    line-height: 85px;
+    background: #eee;
+    margin: 5px 0;
+}
 
+.load > div > div > div.loadContent > div.loadList > ul > li > div,
+.speed > div > div > div.speedContent > div.speedList > ul > li > div,
+.figure > div > div > div.figureContent > div.figureList > ul > li > div,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div,
+.sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div,
+.mould > div > div > div.mouldContent > div.mouldList > ul > li > div,
+.brand > div > div > div.brandContent > div.brandList > ul > li > div {
+    overflow: hidden;
+}
 
+.load > div > div > div.loadContent > div.loadList > ul > li > div > div,
+.speed > div > div > div.speedContent > div.speedList > ul > li > div > div,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div,
+.figure > div > div > div.figureContent > div.figureList > ul > li > div > div,
+.sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div,
+.mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div,
+.brand > div > div > div.brandContent > div.brandList > ul > li > div > div {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
 
+.load > div > div > div.loadContent > div.loadList > ul > li > div > div > a,
+.speed > div > div > div.speedContent > div.speedList > ul > li > div > div > a,
+.figure > div > div > div.figureContent > div.figureList > ul > li > div > div > a,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > a,
+.sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div > a,
+.mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div > a,
+.brand > div > div > div.brandContent > div.brandList > ul > li > div > div > a {
+    display: inline-block;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+}
 
+.load > div > div > div.loadContent > div.loadList > ul > li > div > div > a > span.loadRemove,
+.speed > div > div > div.speedContent > div.speedList > ul > li > div > div > a > span.speedRemove,
+.figure > div > div > div.figureContent > div.figureList > ul > li > div > div > a > span.figureRemove,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > a > span.stripeRemove,
+.sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div > a > span.sidewallRemove,
+.mould > div > div > div.mouldlContent > div.mouldList > ul > li > div > div > a > span.mouldRemove,
+.brand > div > div > div.brandContent > div.brandList > ul > li > div > div > a > span.brandRemove {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/basic/remove.png) no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
 
+.load > div > div > div.loadContent > div.loadAdd > div,
+.speed > div > div > div.speedContent > div.speedAdd > div,
+.figure > div > div > div.figureContent > div.figureAdd > div,
+.stripe > div > div > div.stripeContent > div.stripeAdd > div,
+.sidewall > div > div > div.sidewallContent > div.sidewallAdd > div,
+.mould > div > div > div.mouldContent > div.mouldAdd > div,
+.brand > div > div > div.brandContent > div.brandAdd > div {
+    background: #eeeeee;
+}
 
+.load > div > div > div.loadContent > div.loadAdd > div > a > p,
+.speed > div > div > div.speedContent > div.speedAdd > div > a > p,
+.figure > div > div > div.figureContent > div.figureAdd > div > a > p,
+.stripe > div > div > div.stripeContent > div.stripeAdd > div > a > p,
+.sidewall > div > div > div.sidewallContent > div.sidewallAdd > div > a > p,
+.mould > div > div > div.mouldContent > div.mouldAdd > div > a > p,
+.brand > div > div > div.brandContent > div.brandAdd > div > a > p {
+    color: #000;
+}
 
+/*花纹属性*/
+.stripe > div > div > div.stripeTitle > p > span,
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div {
+    width: 20%;
+}
 
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div {
+    height: 85px;
+}
 
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > img {
+    height: 85px;
+    width: 110px;
+}
 
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > span > button {
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div.description {
+    position: relative;
+}
+
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li {
+    position: relative;
+}
+
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div.stripeInfo {
+    width: 130px;
+    border: 1px solid #000;
+    position: absolute;
+    word-wrap: break-word;
+    overflow: hidden;
+    background: #ffffff;
+    top: 0;
+    left: 77%;
+    line-height: normal;
+    display: none;
+}
+
+.stripeListAdd > div > div > ul > li > div > div > input,
+.stripeListRedact > div > div > ul > li > div > div > input {
+    padding-left: 14px;
+    padding-left: 14px;
+    width: 240px;
+    box-sizing: border-box;
+    height: 33px;
+}
+
+.stripeListRedact > div > div > ul > li > div > div > textarea,
+.stripeListAdd > div > div > ul > li > div > div > textarea {
+    vertical-align: top
+}
+
+.stripeListAdd > div > div > ul > li > div > div.stripeImg,
+.stripeListRedact > div > div > ul > li > div > div.stripeImg {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.stripeListAdd > div > div > ul > li > div > p,
+.stripeListRedact > div > div > ul > li > div > p {
+    text-align: center;
+}
+
+/*模具标识           一下内容为所有的添加和编辑模态框的通用样式*/
+.mouldListAdd,
+.mouldListRedact,
+.sidewallListAdd,
+.sidewallListRedact,
+.figureListAdd,
+.figureListRedact,
+.speedListAdd,
+.speedListRedact,
+.loadListAdd,
+.loadListRedact,
+.brandListAdd,
+.brandListRedact,
+.stripeListAdd,
+.stripeListRedact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.mouldListAdd > div > div,
+.mouldListRedact > div > div,
+.sidewallListAdd > div > div,
+.sidewallListRedact > div > div,
+.figureListAdd > div > div,
+.figureListRedact > div > div,
+.speedListAdd > div > div,
+.speedListRedact > div > div,
+.loadListAdd > div > div,
+.loadListRedact > div > div,
+.brandListAdd > div > div,
+.brandListRedact > div > div,
+.stripeListAdd > div > div,
+.stripeListRedact > div > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.mouldListAdd > div > div > ul > li > h3,
+.mouldListRedact > div > div > ul > li > h3,
+.sidewallListAdd > div > div > ul > li > h3,
+.sidewallListRedact > div > div > ul > li > h3,
+.figureListAdd > div > div > ul > li > h3,
+.figureListRedact > div > div > ul > li > h3,
+.speedListAdd > div > div > ul > li > h3,
+.speedListRedact > div > div > ul > li > h3,
+.loadListAdd > div > div > ul > li > h3,
+.loadListRedact > div > div > ul > li > h3,
+.brandListAdd > div > div > ul > li > h3,
+.brandListRedact > div > div > ul > li > h3,
+.stripeListAdd > div > div > ul > li > h3,
+.stripeListRedact > div > div > ul > li > h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mouldListAdd > div > div > ul > li,
+.mouldListRedact > div > div > ul > li,
+.sidewallListAdd > div > div > ul > li,
+.sidewallListRedact > div > div > ul > li,
+.figureListAdd > div > div > ul > li,
+.figureListRedact > div > div > ul > li,
+.speedListAdd > div > div > ul > li,
+.speedListRedact > div > div > ul > li,
+.loadListAdd > div > div > ul > li,
+.loadListRedact > div > div > ul > li,
+.brandListAdd > div > div > ul > li,
+.tireListRedact > div > div > ul > li,
+.stripeListAdd > div > div > ul > li,
+.stripeListRedact > div > div > ul > li {
+    margin-top: 10px;
+}
+
+.mouldListAdd > div > div > ul > li > div > div,
+.mouldListRedact > div > div > ul > li > div > div,
+.sidewallListAdd > div > div > ul > li > div > div,
+.sidewallListRedact > div > div > ul > li > div > div,
+.figureListAdd > div > div > ul > li > div > div,
+.figureListRedact > div > div > ul > li > div > div,
+.speedListAdd > div > div > ul > li > div > div,
+.speedListRedact > div > div > ul > li > div > div,
+.loadListAdd > div > div > ul > li > div > div,
+.loadListRedact > div > div > ul > li > div > div,
+.brandListAdd > div > div > ul > li > div > div,
+.brandListRedact > div > div > ul > li > div > div,
+.stripeListAdd > div > div > ul > li > div > div,
+.stripeListRedact > div > div > ul > li > div > div {
+    display: inline-block;
+}
+
+.mouldListAdd > div > div > ul > li > div > span,
+.mouldListRedact > div > div > ul > li > div > span,
+.sidewallListAdd > div > div > ul > li > div > span,
+.sidewallListRedact > div > div > ul > li > div > span,
+.figureListAdd > div > div > ul > li > div > span,
+.figureListRedact > div > div > ul > li > div > span,
+.speedListAdd > div > div > ul > li > div > span,
+.speedListRedact > div > div > ul > li > div > span,
+.loadListAdd > div > div > ul > li > div > span,
+.loadListRedact > div > div > ul > li > div > span,
+.brandListAdd > div > div > ul > li > div > span,
+.brandListRedact > div > div > ul > li > div > span,
+.stripeListAdd > div > div > ul > li > div > span,
+.stripeListRedact > div > div > ul > li > div > span {
+    width: 90px;
+    text-align: right;
+    display: inline-block;
+}
+
+.mouldListAdd > div > div > ul > li.mouldListAddBtn,
+.mouldListRedact > div > div > ul > li.mouldListRedactBtn,
+.sidewallListAdd > div > div > ul > li.sidewallListAddBtn,
+.sidewallListRedact > div > div > ul > li.sidewallListRedactBtn,
+.figureListAdd > div > div > ul > li.figureListAddBtn,
+.figureListRedact > div > div > ul > li.figureListRedactBtn,
+.speedListAdd > div > div > ul > li.speedListAddBtn,
+.speedListRedact > div > div > ul > li.speedListRedactBtn,
+.loadListAdd > div > div > ul > li.loadListAddBtn,
+.loadListRedact > div > div > ul > li.loadListRedactBtn,
+.brandListAdd > div > div > ul > li.brandListAddBtn,
+.brandListRedact > div > div > ul > li.brandListRedactBtn,
+.stripeListAdd > div > div > ul > li.stripeListAddBtn,
+.stripeListRedact > div > div > ul > li.stripeListRedactBtn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.mouldListAdd > div > div > ul > li.mouldListAddBtn > button,
+.mouldListRedact > div > div > ul > li.mouldListRedactBtn > button,
+.sidewallListAdd > div > div > ul > li.sidewallListAddBtn > button,
+.sidewallListRedact > div > div > ul > li.sidewallListRedactBtn > button,
+.figureListAdd > div > div > ul > li.figureListAddBtn > button,
+.figureListRedact > div > div > ul > li.figureListRedactBtn > button,
+.speedListAdd > div > div > ul > li.speedListAddBtn > button,
+.speedListRedact > div > div > ul > li.speedListRedactBtn > button,
+.loadListAdd > div > div > ul > li.loadListAddBtn > button,
+.loadListRedact > div > div > ul > li.loadListRedactBtn > button,
+.brandListAdd > div > div > ul > li.brandListAddBtn > button,
+.brandListRedact > div > div > ul > li.brandListRedactBtn > button,
+.stripeListAdd > div > div > ul > li.stripeListAddBtn > button,
+.stripeListRedact > div > div > ul > li.stripeListRedactBtn > button {
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.mouldListAdd > div > div > ul > li > div > div > input,
+.mouldListAdd > div > div > ul > li > div > select,
+.mouldListRedact > div > div > ul > li > div > div > input,
+.mouldListRedact > div > div > ul > li > div > select,
+.sidewallListAdd > div > div > ul > li > div > div > input,
+.sidewallListAdd > div > div > ul > li > div > select,
+.sidewallListRedact > div > div > ul > li > div > div > input,
+.sidewallListRedact > div > div > ul > li > div > select,
+.figureListAdd > div > div > ul > li > div > div > input,
+.figureListAdd > div > div > ul > li > div > select,
+.figureListRedact > div > div > ul > li > div > div > input,
+.figureListRedact > div > div > ul > li > div > select,
+.speedListAdd > div > div > ul > li > div > div > input,
+.speedListAdd > div > div > ul > li > div > div > select,
+.speedListRedact > div > div > ul > li > div > div > input,
+.speedListRedact > div > div > ul > li > div > div > select,
+.loadListAdd > div > div > ul > li > div > div > input,
+.loadListAdd > div > div > ul > li > div > select,
+.loadListRedact > div > div > ul > li > div > div > input,
+.loadListRedact > div > div > ul > li > div > select,
+.brandListAdd > div > div > ul > li > div > div > input,
+.brandListAdd > div > div > ul > li > div > select,
+.brandListRedact > div > div > ul > li > div > div > input,
+.brandListRedact > div > div > ul > li > div > select,
+.stripeListAdd > div > div > ul > li > div > div > input,
+.stripeListAdd > div > div > ul > li > div > select,
+.stripeListRedact > div > div > ul > li > div > div > input,
+.stripeListRedact > div > div > ul > li > div > select {
+    width: 150px;
+    height: 17px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #ccc;
+    border: none;
+}
+
+.mouldListAdd > div > div > ul > li > div > div > input,
+.mouldListRedact > div > div > ul > li > div > div > input,
+.sidewallListAdd > div > div > ul > li > div > div > input,
+.sidewallListRedact > div > div > ul > li > div > div > input,
+.figureListAdd > div > div > ul > li > div > div > input,
+.figureListRedact > div > div > ul > li > div > div > input,
+.speedListAdd > div > div > ul > li > div > div > input,
+.speedListRedact > div > div > ul > li > div > div > input,
+.loadListAdd > div > div > ul > li > div > div > input,
+.loadListRedact > div > div > ul > li > div > div > input,
+.brandListAdd > div > div > ul > li > div > div > input,
+.brandListRedact > div > div > ul > li > div > div > input {
+    padding-left: 14px;
+}
