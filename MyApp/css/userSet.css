@@ -1,0 +1,769 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background: #9c3232;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/entrepot.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*门店总表*/
+    /*标题*/
+.userSet>div>div>div.userSetTitle>p,
+.carSet>div>div>div.carSetTitle>p
+{
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+}
+.userSet>div>div>div.userSetTitle>p>span,
+.carSet>div>div>div.carSetTitle>p>span
+{
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+ .userSet>div>div>div.userSetTitle>p>span:nth-child(1),
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(1)
+{
+    width: 10%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(2),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(2){
+    width: 20%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(3),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(3){
+    width: 20%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(4),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(4){
+    width: 7%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(5),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(5){
+    width: 18%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(6),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(6){
+    width: 10%;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(7   ),
+.userSet>div>div>div.userSetTitle>p>span:nth-child(7){
+    width: 15%;
+}
+         /*筛选框*/
+
+.userSet>div>div>div.userSetContent>div.userSetScreen,
+.carSet>div>div>div.carSetContent>div.carSetScreen
+{
+    overflow: hidden;
+    border-bottom:1px solid #cccccc ;
+    padding: 5px 0;
+}
+.userSet>div>div>div.userSetContent>div.userSetScreen>div,
+.carSet>div>div>div.carSetContent>div.carSetScreen>div
+{
+    float: left;
+    position: relative;
+}
+.userSet>div>div>div.userSetContent>div.userSetScreen>div.userMoney{
+    position: absolute;
+    left: 65%;
+}
+.userSet>div>div>div.userSetContent>div.userSetScreen>div>button,
+.carSet>div>div>div.carSetContent>div.carSetScreen>div>button
+{
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+         /*可视窗口*/
+.carSet>div>div>div.carSetContent,
+.userSet>div>div>div.userSetContent{
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+}
+.carSet>div>div>div.carSetContent>div.carSetList,
+.userSet>div>div>div.userSetContent>div.userSetList{
+    height: 600px;
+    overflow: auto;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li,
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li{
+    height: 85px;
+    line-height: 85px;
+    background: #dddddd;
+    margin-top: 5px;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div,
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div{
+    overflow: hidden;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div,
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div{
+    float: left;
+    text-align: center;
+}
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>img{
+    width: 64px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div>a,
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>a{
+    color: #000;
+    display: inline-block;
+    padding: 0 5px;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div>a>span.carSetRemove,
+.userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>a>span.userSetRemove{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url('../img/basic/remove.png') no-repeat;
+    background-size:100% ;
+}
+
+/*用户信息*/
+.userSetInfo,
+.CarSetInfo
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.CarSetInfo>div,
+.userSetInfo>div{
+    height: 400px;
+    overflow: auto;
+}
+.CarSetInfo>div>div,
+.userSetInfo>div>div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+.CarSetInfo>div>div>ul>li,
+.userSetInfo>div>div>ul>li{
+    margin-top: 10px;
+}
+.CarSetInfo>div>div>ul>li.CarSetInfoAvatar>div,
+.userSetInfo>div>div>ul>li.userSetInfoAvatar>div{
+    text-align: center;
+}
+.CarSetInfo>div>div>ul>li.CarSetInfoTitle,
+.userSetInfo>div>div>ul>li.userSetInfoTitle{
+    text-align: center;
+}
+.CarSetInfo>div>div>ul>li.CarSetInfoPrimaryTitle,
+.userSetInfo>div>div>ul>li.userSetInfoPrimaryTitle{
+    padding-bottom: 5px;
+    border-bottom:1px solid #000;
+}
+.CarSetInfo>div>div>ul>li>div>img,
+.userSetInfo>div>div>ul>li>div>img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+}
+.CarSetInfo>div>div>ul>li>div>span,
+.userSetInfo>div>div>ul>li>div>span{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.CarSetInfo>div>div>ul>li>div>i,
+.userSetInfo>div>div>ul>li>div>i{
+    font-style:normal;
+}
+.CarSetInfo>div>div>ul>li>div>b,
+.userSetInfo>div>div>ul>li>div>b{
+    color: #ee2626;
+}
+.CarSetInfo>div>div>ul>li>div>span.CarSetInfoState,
+.userSetInfo>div>div>ul>li>div>span.userSetInfoState{
+    display: inline;
+    text-align: left;
+    color: #ee2626;
+    border-bottom: 1px solid #ee2626;
+    padding-bottom: 3px;
+}
+        /*按钮*/
+.CarSetInfo>div>div>div.CarSetInfoButton>div,
+.userSetInfo>div>div>div.userSetInfoButton>div{
+    text-align: center  ;
+}
+.CarSetInfo>div>div>div.CarSetInfoButton>div>button,
+.userSetInfo>div>div>div.userSetInfoButton>div>button{
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.CarSetInfo>div>div>div.CarSetInfoButton>div.CarSetInfoAllBut>button,
+.userSetInfo>div>div>div.userSetInfoButton>div.userSetInfoAllBut>button{
+    width: auto;
+    padding: 0 20px;
+}
+
+        /*宝驹总列表*/
+.CarSetList>div.CarSetListTitle>h3,
+.CarDetail>div.CarDetailTitle>h3,
+.userCarList>div.userInfoCarListTitle>h3,
+.carDetail>div.carDetailTitle>h3
+{
+    text-align: center;
+}
+.CarSetList>div.userInfoCarList>ul>li,
+.userCarList>div.userInfoCarList>ul>li{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div,
+.userCarList>div.userInfoCarList>ul>li>div{
+    float: left;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo,
+.userCarList>div.userInfoCarList>ul>li>div.carInfo{
+    background: #cccccc;
+    width: 78%;
+    margin-left: 20px;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div,
+.userCarList>div.userInfoCarList>ul>li>div.carInfo>div{
+    overflow: hidden;
+    line-height: 20px;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div>div,
+.userCarList>div.userInfoCarList>ul>li>div.carInfo>div>div{
+    width: 190px;
+    box-sizing: border-box;
+    float: left;
+    margin: 5px 0 ;
+    padding-left: 19px;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div>div>a,
+.userCarList>div.userInfoCarList>ul>li>div.carInfo>div>div>a{
+    padding: 6px 15px;
+    color: orange;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div>div>a>span.CarRemove,
+.userCarList>div.userInfoCarList>ul>li>div.carInfo>div>div>a>span.carRemove{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url('../img/userSet/remove.png') no-repeat;
+    background-size:100% ;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div>img,
+.userCarList>div.userInfoCarList>ul>li>div>img{
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.CarSetInfo>div>div.CarSetList,
+.userSetInfo>div>div.userCarList{
+    width: 560px;
+}
+div.CarSetList>div.CarSetInfoCarList,
+div.userCarList>div.userInfoCarList{
+    height: 400px;
+    overflow: auto;
+}
+div.CarSetList,
+div.userCarList{
+    display: none;
+}
+div.CarSetList>div>button,
+div.userCarList>div>button{
+    cursor: pointer;
+    width: 260px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ee2626;
+    color: #ffffff;
+}
+div.CarSetList>div.CarSetInfoComeback,
+div.userCarList>div.userSetInfoComeback{
+    text-align: center;
+    margin-top: 10px;
+}
+.CarDetail,
+.carDetail{
+    display: none;
+}
+.CarDetail>div>div,
+.carDetail>div>div{
+    overflow: hidden;
+    margin-top: 10px;
+}
+.CarDetail>div>div>div,
+.carDetail>div>div>div{
+    float: left;
+}
+.CarDetail>div>div>div>p,
+.carDetail>div>div>div>p{
+    width: 200px;
+    line-height: 22px;
+}
+.CarDetail>div>div>div>img,
+.carDetail>div>div>div>img
+{
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.CarDetail>div>div.CarDriving>div,
+.CarDetail>div>div.CarDrivingInsurance>div,
+.carDetail>div>div.driving>div,
+.carDetail>div>div.insurance>div
+{
+    width: 200px;
+}
+.CarDetail>div>div.CarDriving>div>img,
+.CarDetail>div>div.CarDrivingInsurance>div>img,
+.carDetail>div>div.driving>div>img,
+.carDetail>div>div.insurance>div>img
+{
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ee2626;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: inherit;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.CarDetail>div>div.CarDrivingInfo>ul>li,
+.carDetail>div>div.drivingInfo>ul>li{
+    margin-top: 10px;
+}
+.CarDetail>div>div.CarDrivingInfo>ul>li>i,
+.carDetail>div>div.drivingInfo>ul>li>i{
+    font-style: normal;
+}
+.CarDetail>div>div.CarDrivingInfo>ul>li>b,
+.carDetail>div>div.drivingInfo>ul>li>b{
+    color: #ee2626;
+}
+.CarDetail>div>div.CarDetailBtn,
+.carDetail>div>div.carDetailBtn{
+    text-align: center;
+}
+.CarDetail>div>div.CarDetailBtn>button,
+.carDetail>div>div.carDetailBtn>button{
+    width: 260px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/*宝驹总表*/
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(1),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(1){
+    width: 15%;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(2),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(2){
+    width: 15%;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(3),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(3){
+    width: 20%;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(4),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(4){
+    width: 15%;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(5),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(5){
+    width: 15%;
+}
+.carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(6),
+.carSet>div>div>div.carSetTitle>p>span:nth-child(6){
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.storeCategoryAdd,*/
+/*.cooperativeListServer,*/
+/*.severListAddAdd,*/
+/*.InventoryCategoriesListAdd,*/
+/*.storeCategoryRedact {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background: rgba(0, 0, 0, 0.3);*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*display: none;*/
+/*}*/
+
+
+/*.storeCategoryAdd > div > div,*/
+/*.cooperativeListServer > div > div,*/
+/*.severListAddAdd > div > div,*/
+/*.InventoryCategoriesListAdd > div > div,*/
+/*.storeCategoryRedact > div > div {*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*background: #ffffff;*/
+    /*border-top: 10px solid #ee2626;*/
+    /*border-left: 1px solid #ee2626;*/
+    /*border-right: 1px solid #ee2626;*/
+    /*border-bottom: 1px solid #ee2626;*/
+    /*box-sizing: border-box;*/
+    /*padding: 10px 20px;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li,*/
+/*.cooperativeListServer > div > div > ul > li,*/
+/*.severListAddAdd > div > div > ul > li,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li,*/
+/*.storeCategoryRedact > div > div > ul > li {*/
+    /*margin-top: 10px;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li > h3,*/
+/*.cooperativeListServer > div > div > ul > li > h3,*/
+/*.severListAddAdd > div > div > ul > li > h3,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > h3,*/
+/*.storeCategoryRedact > div > div > ul > li > h3 {*/
+    /*text-align: center;*/
+    /*margin-bottom: 40px;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li > div > span,*/
+/*.severListAddAdd > div > div > ul > li > div > span,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > div > span,*/
+/*.storeCategoryRedact > div > div > ul > li > div > span {*/
+    /*width: 90px;*/
+    /*text-align: right;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li > div,*/
+/*.severListAddAdd > div > div > ul > li > div,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > div,*/
+/*.storeCategoryRedact > div > div > ul > li > div {*/
+    /*display: inline-block;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li > div > div,*/
+/*.severListAddAdd > div > div > ul > li > div > div,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > div > div,*/
+/*.storeCategoryRedact > div > div > ul > li > div > div {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li > div > div > input,*/
+/*.severListAddAdd > div > div > ul > li > div > div > input,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > div > div > input,*/
+/*.severListAddAdd > div > div > ul > li > div > div > select,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li > div > div > select,*/
+/*.storeCategoryRedact > div > div > ul > li > div > div > input {*/
+    /*width: 150px;*/
+    /*height: 17px;*/
+    /*padding-left: 10px;*/
+    /*box-sizing: border-box;*/
+    /*background: #ccc;*/
+    /*border: none;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn,*/
+/*.severListAddAdd > div > div > ul > li.severListAddAddBtn,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn,*/
+/*.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn {*/
+    /*margin-top: 30px;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button,*/
+/*.severListAddAdd > div > div > ul > li.severListAddAddBtn > button,*/
+/*.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button,*/
+/*.InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn > button,*/
+/*.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button {*/
+    /*border: none;*/
+    /*background: #ee2626;*/
+    /*color: #ffffff;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > select,*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > input,*/
+/*.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > select,*/
+/*.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > input {*/
+    /*font-size: 16px;*/
+    /*width: 100px;*/
+    /*height: 34px;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+/*}*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > select:disabled,*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > input:disabled,*/
+/*.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > select:disabled,*/
+/*.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > input:disabled {*/
+    /*font-size: 16px;*/
+    /*background: transparent;*/
+    /*border: none;*/
+    /*appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*-webkit-appearance: none;*/
+    /*color: #000;*/
+/*}*/
+
+
+
+
+
+
+
+

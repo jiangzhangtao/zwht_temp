@@ -4,13 +4,15 @@
     (function () {
         var documentWidth = $(window).width();
         var menuWidth = $('.menu').innerWidth();
-        var detailsHeight = $('.details').innerHeight();
-        var navigationHeight = $(".navigation").innerHeight();
+        var menuHeight = $('.menu').innerHeight();
         var logoHeight = $('.header').innerHeight();
         var bodyHeight = $(window).innerHeight();
+        var detailsHeight=$('.details').innerHeight();
+        var contentHeight=$('.content').height();
+        console.log(menuHeight+logoHeight)
         $(".menu").css({
             height: bodyHeight - logoHeight-1,
-            minHeight: bodyHeight - logoHeight-1
+            minHeight: detailsHeight+50
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -89,10 +91,14 @@
         $(".details>div").eq($(this).parent().index()).addClass('present').siblings().removeClass('present');
         var detailsHeight = $('.details').innerHeight();
         var navigationHeight = $(".navigation").innerHeight();
-        var windowHeight = $(document.body).innerHeight();
+        var menuHeight = $('.menu').innerHeight();
         var logoHeight = $('.header').innerHeight();
+        var windowHeight = $(document.body).innerHeight();
+
+        console.log(menuHeight+logoHeight);
         $(".menu").css({
-            height: detailsHeight + navigationHeight
+            height: detailsHeight + navigationHeight,
+            minHeight: windowHeight - logoHeight-1
         });
     });
 
@@ -199,6 +205,118 @@
             $('.cooperativeListServer').css({display:"none"})
         })
     }
+
+    /*                   服务列表                      */
+    function severList(){
+        $('.severListList>ul').on('click','.severListEdit',function(e){
+            e.preventDefault();
+            var $_thisLi=$(this).parent().parent().parent();
+            var $_thisDiv=$(this).parent().parent();
+            if($(this).attr("data-id")==1){
+                $(this).attr("data-id",2);
+                $_thisDiv.children().children().children("input").attr("disabled",false);
+                $_thisDiv.children().children().children("select").attr("disabled",false);
+                $_thisLi.siblings().children().children().children().children("select").attr("disabled",true);
+                $_thisLi.siblings().children().children().children().children("input").attr("disabled",true);
+                $_thisLi.siblings().children().children().children(".severListEdit").attr("data-id",1)
+            }else{
+                $(this).attr("data-id",1);
+                $_thisDiv.children().children().children("input").attr("disabled",true);
+                $_thisDiv.children().children().children("select").attr("disabled",true)
+            }
+        });
+
+        //添加服务
+        $(".severListAdd>div>a").click(function(){
+            $('.severListAddAdd').css({display:"block"})
+        });
+        //取消添加
+        $('.severListAddUndoAdd').click(function(){
+            $('.severListAddAdd').css({display:"none"})
+        });
+        //确定添加
+        $('.severListAddAddBtnOk').click(function(){
+            $('.severListAddAdd').css({display:"none"});
+            var html='';
+            html+='<li>'+
+            '<div>'+
+            '<div><span>1</span></div>'+
+            '<div><span><input type="text" disabled value="普通洗车"/></span></div>'+
+            '<div><span>'+
+            '<select disabled>'+
+            '<option value="">美容清洗</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '</select>'+
+            '</span></div>'+
+            '<div>'+
+            '<a href="##" class="severListEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>'+
+            '<a href="##" class="delete"><span class="severListRemove"></span>删除</a>'+
+            '</div>'+
+            '</div>'+
+            '</li>';
+            $('.severListList>ul').append(html);
+        })
+    }
+
+    /*                    库存类别                     */
+    function InventoryCategories(){
+        $('.InventoryCategoriesList>ul').on('click','.InventoryCategoriesEdit',function(e){
+            e.preventDefault();
+            var $_thisLi=$(this).parent().parent().parent();
+            var $_thisDiv=$(this).parent().parent();
+            if($(this).attr("data-id")==1){
+                $(this).attr("data-id",2);
+                $_thisDiv.children().children().children("input").attr("disabled",false);
+                $_thisDiv.children().children().children("select").attr("disabled",false);
+                $_thisLi.siblings().children().children().children().children("select").attr("disabled",true);
+                $_thisLi.siblings().children().children().children().children("input").attr("disabled",true);
+                $_thisLi.siblings().children().children().children(".InventoryCategoriesEdit").attr("data-id",1)
+            }else{
+                $(this).attr("data-id",1);
+                $_thisDiv.children().children().children("input").attr("disabled",true);
+                $_thisDiv.children().children().children("select").attr("disabled",true)
+            }
+        });
+
+        //添加服务
+        $(".InventoryCategoriesAdd>div>a").click(function(){
+            $('.InventoryCategoriesListAdd').css({display:"block"})
+        });
+        //取消添加
+        $('.InventoryCategoriesListAddUndoAdd').click(function(){
+            $('.InventoryCategoriesListAdd').css({display:"none"})
+        });
+        //确定添加
+        $('.InventoryCategoriesListAddBtnOk').click(function(){
+            $('.InventoryCategoriesListAdd').css({display:"none"});
+            var html='';
+            html+='<li>'+
+            '<div>'+
+            '<div><span>1</span></div>'+
+            '<div><span><input type="text" disabled value="普通洗车"/></span></div>'+
+            '<div><span>'+
+            '<select disabled>'+
+            '<option value="">美容清洗</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '<option value="">轮胎服务</option>'+
+            '</select>'+
+            '</span></div>'+
+            '<div>'+
+            '<a href="##" class="InventoryCategoriesEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>'+
+            '<a href="##" class="delete"><span class="InventoryCategoriesRemove"></span>删除</a>'+
+            '</div>'+
+            '</div>'+
+            '</li>';
+            $('.InventoryCategoriesList>ul').append(html);
+        })
+    }
+    InventoryCategories();
+    severList();
     cooperative();
     storeCategory();
     shopList();

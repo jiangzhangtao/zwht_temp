@@ -319,7 +319,7 @@ div.content > div.details > div > div > ul {
     display: none;
 }
 
-.shopInfo > div  {
+.shopInfo > div {
     width: 682px;
     position: absolute;
     left: 50%;
@@ -334,7 +334,8 @@ div.content > div.details > div > div > ul {
     padding: 10px 40px 30px 40px;
     overflow: auto;
 }
-.shopInfo > div>div.shopInfoLock{
+
+.shopInfo > div > div.shopInfoLock {
     display: none;
 }
 
@@ -348,7 +349,8 @@ div.content > div.details > div > div > ul {
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div.shopTeamwork {
     margin-top: 40px;
 }
-.shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div.shopTeamwork>ul>li>div>p>span.shopService{
+
+.shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div.shopTeamwork > ul > li > div > p > span.shopService {
     background: red;
     border-radius: 24px;
     font-size: 14px;
@@ -356,6 +358,7 @@ div.content > div.details > div > div > ul {
     color: #fff;
 
 }
+
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockHeader {
     margin-bottom: 15px;
 }
@@ -372,10 +375,12 @@ div.content > div.details > div > div > ul {
     padding-bottom: 5px;
     width: 75%;
 }
-.shopInfo > div > div.shopInfoLock > div.shopInfoLockRight>div>ul>li.shopImg>img{
+
+.shopInfo > div > div.shopInfoLock > div.shopInfoLockRight > div > ul > li.shopImg > img {
     margin-left: 5px;
 }
-.shopInfo > div > div.shopInfoLock > div.shopInfoLockRight>div>ul>li.shopImg>img:nth-child(3){
+
+.shopInfo > div > div.shopInfoLock > div.shopInfoLockRight > div > ul > li.shopImg > img:nth-child(3) {
     margin-top: 5px;
 }
 
@@ -385,6 +390,7 @@ div.content > div.details > div > div > ul {
     border-bottom: 1px solid red;
     padding-bottom: 2px;
 }
+
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div > ul > li,
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockRight > div > ul > li {
     margin-top: 15px;
@@ -421,82 +427,92 @@ div.content > div.details > div > div > ul {
     cursor: pointer;
 }
 
-
-.shopInfo > div>div.shopInventory{
+.shopInfo > div > div.shopInventory {
     display: none;
 }
 
-.shopInfo > div>div.shopInventory>div.shopInventoryTitle,
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussTitle
-{
+.shopInfo > div > div.shopInventory > div.shopInventoryTitle,
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussTitle {
     text-align: center;
     margin-bottom: 10px;
-    
+
 }
-.shopInfo > div>div.shopInventory>div>div>div{
+
+.shopInfo > div > div.shopInventory > div > div > div {
     overflow: hidden;
     border-bottom: 1px solid #cccccc;
     padding-bottom: 5px;
 }
-.shopInfo > div>div.shopInventory>div>div>div>span,
-.shopInfo > div>div.shopInventory>div>div>ul>li>span
-{
+
+.shopInfo > div > div.shopInventory > div > div > div > span,
+.shopInfo > div > div.shopInventory > div > div > ul > li > span {
     text-align: center;
     float: left;
     width: 20%;
 }
-.shopInfo > div>div.shopInventory>div>div>ul>li>span.shopTimelineImg{
+
+.shopInfo > div > div.shopInventory > div > div > ul > li > span.shopTimelineImg {
     height: 85px;
 }
-.shopInfo > div>div.shopInventory>div>div>ul>li{
+
+.shopInfo > div > div.shopInventory > div > div > ul > li {
     height: 85px;
     line-height: 85px;
     margin-top: 10px;
     overflow: hidden;
     background: #eeeeee;
 }
-.shopInfo > div>div.shopInventory>div>div.shopInventoryTimeline,
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent
-{
+
+.shopInfo > div > div.shopInventory > div > div.shopInventoryTimeline,
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent {
     overflow: auto;
     height: 600px;
 }
-.shopInfo > div>div.shopInventory>div>div.shopInventoryTimeline>ul>li>span>img{
+
+.shopInfo > div > div.shopInventory > div > div.shopInventoryTimeline > ul > li > span > img {
     width: 120px;
     height: 79px;
     margin-top: 3px;
 }
-.shopInfo > div>div.shopInventory>div>div.comeBack{
+
+.shopInfo > div > div.shopInventory > div > div.comeBack {
     margin-top: 20px;
     text-align: center;
 }
-.shopInfo > div>div.shopInventory>div>div.comeBack>button{
+
+.shopInfo > div > div.shopInventory > div > div.comeBack > button {
     width: 260px;
     border: none;
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
 }
-.shopInfo > div>div.shopInfoDiscuss{
+
+.shopInfo > div > div.shopInfoDiscuss {
     display: none;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussTotal{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussTotal {
     margin: 10px 0;
     text-align: right;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussTotal>span{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussTotal > span {
     border: 1px solid #000000;
     padding: 5px;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li {
     margin-top: 20px;
     border-bottom: 1px solid #ccc;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div {
     padding: 10px 0;
     position: relative;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div>button{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div > button {
     width: 260px;
     background: #ee2626;
     color: #ffffff;
@@ -507,7 +523,8 @@ div.content > div.details > div > div > ul {
     right: 0;
     cursor: pointer;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div>img{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div > img {
     display: inline-block;
     border: 1px solid #000;
     box-sizing: border-box;
@@ -518,24 +535,29 @@ div.content > div.details > div > div > ul {
     -moz-border-radius: 10px;
     border-radius: 15px;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div>p>img{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div > p > img {
     vertical-align: middle;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div>p>span{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div > p > span {
     margin-right: 10px;
     line-height: 1.5;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopInfoDiscussContent>ul>li>div>p>span>span{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopInfoDiscussContent > ul > li > div > p > span > span {
     background: #ee2626;
     padding: 5px;
     font-size: 14px;
     color: #ffffff;
     border-radius: 7px;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopDiscussComeBack{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopDiscussComeBack {
     text-align: center;
 }
-.shopInfo > div>div.shopInfoDiscuss>div>div.shopDiscussComeBack>button{
+
+.shopInfo > div > div.shopInfoDiscuss > div > div.shopDiscussComeBack > button {
     width: 260px;
     background: #ee2626;
     color: #ffffff;
@@ -546,62 +568,79 @@ div.content > div.details > div > div > ul {
 
 /*门店类别*/
 .storeCategory > div > div > div.storeCategoryTitle > p,
-.cooperative > div > div > div.cooperativeTitle > p
-{
+.severList > div > div > .severListTitle > p,
+.InventoryCategories > div > div > .InventoryCategoriesTitle > p,
+.cooperative > div > div > div.cooperativeTitle > p {
     overflow: hidden;
     border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;
 }
 
 .storeCategory > div > div > div.storeCategoryContent,
-.cooperative > div > div > div.cooperativeContent
-{
+.severList > div > div > div.severListContent,
+.InventoryCategories > div > div > div.InventoryCategoriesContent,
+.cooperative > div > div > div.cooperativeContent {
     border: 1px solid #ccc;
     margin-top: 10px;
 }
-.storeCategory > div > div > div.storeCategoryContent>div,
-.cooperative > div > div > div.cooperativeContent>div
-{
+
+.storeCategory > div > div > div.storeCategoryContent > div,
+.severList > div > div > div.severListContent > div,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div,
+.cooperative > div > div > div.cooperativeContent > div {
     height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #cccccc;
     box-sizing: border-box;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList,
-.cooperative > div > div > div.cooperativeContent>div.cooperativeList
-{
+
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList,
+.severList > div > div > div.severListContent > div.severListList,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList,
+.cooperative > div > div > div.cooperativeContent > div.cooperativeList {
     height: 600px;
     overflow-y: auto;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList>ul>li,
-.cooperative > div > div > div.cooperativeContent>div.cooperativeList>ul>li
-{
+
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li,
+.severList > div > div > div.severListContent > div.severListList > ul > li,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li,
+.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li {
     height: 85px;
     line-height: 85px;
     background: #eee;
     margin: 5px 0;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList>ul>li>div,
-.cooperative > div > div > div.cooperativeContent>div.cooperativeList>ul>li>div
-{
+
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div,
+.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div {
     overflow: hidden;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList>ul>li>div>div,
-.storeCategory > div > div > div.storeCategoryTitle > p>span{
+
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div,
+.InventoryCategories > div > div > div.InventoryCategoriesTitle > p > span,
+.severList > div > div > div.severListTitle > p > span,
+.storeCategory > div > div > div.storeCategoryTitle > p > span {
 
     width: 25%;
     float: left;
     text-align: center;
 }
-.cooperative > div > div > div.cooperativeContent>div.cooperativeList>ul>li>div>div,
-.cooperative > div > div > div.cooperativeTitle > p>span{
+
+.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div,
+.cooperative > div > div > div.cooperativeTitle > p > span {
     width: 33.3%;
     float: left;
     text-align: center;
 }
 
-
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList>ul>li>div>div>a{
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div > a,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > a,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a {
     display: inline-block;
     padding: 0 10px;
     -webkit-box-sizing: border-box;
@@ -609,7 +648,10 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     color: #000;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryList>ul>li>div>div>a>span.storeCategoryRemove{
+
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a > span.severListRemove,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > a > span.InventoryCategoriesRemove,
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div > a > span.storeCategoryRemove {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -617,13 +659,33 @@ div.content > div.details > div > div > ul {
     background-size: 100%;
     vertical-align: middle;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryListAdd>div{
+
+.severList > div > div > div.severListContent > div.severListAdd,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd,
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd {
+    height: 50px;
+    line-height: 50px;
     background: #eeeeee;
+    border-top: 1px solid #cccccc;
 }
-.storeCategory > div > div > div.storeCategoryContent>div.storeCategoryListAdd>div>a>p{
+
+.severList > div > div > div.severListContent > div.severListAdd > div,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div,
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div,
+{
+    background: #eeeeee;
+
+}
+
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div > a >p,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div > a >p,
+.severList > div > div > div.severListContent > div.severListAdd > div> a>p
+{
     color: #000;
 }
-.cooperative > div > div > div.cooperativeContent>div.cooperativeList>ul>li>div>div>button{
+
+.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div > button,
+{
     border-radius: 5px;
     border: 1px solid #000;
     background: #ffffff;
@@ -632,7 +694,9 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd,
 .cooperativeListServer,
-.storeCategoryRedact{
+.severListAddAdd,
+.InventoryCategoriesListAdd,
+.storeCategoryRedact {
     position: absolute;
     top: 0;
     left: 0;
@@ -641,10 +705,13 @@ div.content > div.details > div > div > ul {
     height: 100%;
     display: none;
 }
-.storeCategoryAdd>div>div,
-.cooperativeListServer>div>div,
-.storeCategoryRedact>div>div
-{
+
+
+.storeCategoryAdd > div > div,
+.cooperativeListServer > div > div,
+.severListAddAdd > div > div,
+.InventoryCategoriesListAdd > div > div,
+.storeCategoryRedact > div > div {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -657,34 +724,54 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     padding: 10px 20px;
 }
+
 .storeCategoryAdd > div > div > ul > li,
 .cooperativeListServer > div > div > ul > li,
-.storeCategoryRedact > div > div > ul > li{
-    margin-top:10px;
+.severListAddAdd > div > div > ul > li,
+.InventoryCategoriesListAdd > div > div > ul > li,
+.storeCategoryRedact > div > div > ul > li {
+    margin-top: 10px;
 }
-.storeCategoryAdd > div > div > ul > li>h3,
-.cooperativeListServer > div > div > ul > li>h3,
-.storeCategoryRedact > div > div > ul > li>h3{
+
+.storeCategoryAdd > div > div > ul > li > h3,
+.cooperativeListServer > div > div > ul > li > h3,
+.severListAddAdd > div > div > ul > li > h3,
+.InventoryCategoriesListAdd > div > div > ul > li > h3,
+.storeCategoryRedact > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 40px;
 }
-.storeCategoryAdd > div > div > ul > li>div>span,
-.storeCategoryRedact > div > div > ul > li>div>span{
+
+.storeCategoryAdd > div > div > ul > li > div > span,
+.severListAddAdd > div > div > ul > li > div > span,
+.InventoryCategoriesListAdd > div > div > ul > li > div > span,
+.storeCategoryRedact > div > div > ul > li > div > span {
     width: 90px;
     text-align: right;
     display: inline-block;
 }
-.storeCategoryAdd > div > div > ul > li>div,
-.storeCategoryRedact > div > div > ul > li>div{
+
+.storeCategoryAdd > div > div > ul > li > div,
+.severListAddAdd > div > div > ul > li > div,
+.InventoryCategoriesListAdd > div > div > ul > li > div,
+.storeCategoryRedact > div > div > ul > li > div {
     display: inline-block;
     width: 100%;
 }
-.storeCategoryAdd > div > div > ul > li>div>div,
-.storeCategoryRedact > div > div > ul > li>div>div{
+
+.storeCategoryAdd > div > div > ul > li > div > div,
+.severListAddAdd > div > div > ul > li > div > div,
+.InventoryCategoriesListAdd > div > div > ul > li > div > div,
+.storeCategoryRedact > div > div > ul > li > div > div {
     display: inline-block;
 }
-.storeCategoryAdd > div > div > ul > li>div>div>input,
-.storeCategoryRedact > div > div > ul > li>div>div>input{
+
+.storeCategoryAdd > div > div > ul > li > div > div > input,
+.severListAddAdd > div > div > ul > li > div > div > input,
+.InventoryCategoriesListAdd > div > div > ul > li > div > div > input,
+.severListAddAdd > div > div > ul > li > div > div > select,
+.InventoryCategoriesListAdd > div > div > ul > li > div > div > select,
+.storeCategoryRedact > div > div > ul > li > div > div > input {
     width: 150px;
     height: 17px;
     padding-left: 10px;
@@ -692,23 +779,48 @@ div.content > div.details > div > div > ul {
     background: #ccc;
     border: none;
 }
+
 .storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn,
-.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn{
+.severListAddAdd > div > div > ul > li.severListAddAddBtn,
+.InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn,
+.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn {
     margin-top: 30px;
     text-align: center;
 }
 
-.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn>button,
-.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn>button,
-.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn>button{
+.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button,
+.severListAddAdd > div > div > ul > li.severListAddAddBtn > button,
+.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button,
+.InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn > button,
+.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button {
     border: none;
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
 }
-
-
-
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > select,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > input,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > select,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > input {
+    font-size: 16px;
+    width: 100px;
+    height: 34px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > select:disabled,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > span > input:disabled,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > select:disabled,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > span > input:disabled {
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: #000;
+}
 
 
 
