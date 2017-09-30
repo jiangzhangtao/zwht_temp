@@ -89,8 +89,6 @@
         $(".details>div").eq($(this).parent().index()).addClass('present').siblings().removeClass('present');
         var detailsHeight = $('.details').innerHeight();
         var navigationHeight = $(".navigation").innerHeight();
-        var windowHeight = $(document.body).innerHeight();
-        var logoHeight = $('.header').innerHeight();
         $(".menu").css({
             height: detailsHeight + navigationHeight
         });

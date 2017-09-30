@@ -208,7 +208,7 @@ div.content > div.details > div > div > ul {
 }
 
 /*门店类别*/
-.storeCategory > div > div > div.storeCategoryTitle > p,
+.shipments > div > div > div.shipmentsTitle > p,
 .severList > div > div > .severListTitle > p,
 .InventoryCategories > div > div > .InventoryCategoriesTitle > p,
 .cooperative > div > div > div.cooperativeTitle > p {
@@ -217,7 +217,7 @@ div.content > div.details > div > div > ul {
     padding-bottom: 10px;
 }
 
-.storeCategory > div > div > div.storeCategoryContent,
+.shipments > div > div > div.shipmentsContent,
 .severList > div > div > div.severListContent,
 .InventoryCategories > div > div > div.InventoryCategoriesContent,
 .cooperative > div > div > div.cooperativeContent {
@@ -225,7 +225,7 @@ div.content > div.details > div > div > ul {
     margin-top: 10px;
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div,
+.shipments > div > div > div.shipmentsContent > div,
 .severList > div > div > div.severListContent > div,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div,
 .cooperative > div > div > div.cooperativeContent > div {
@@ -235,7 +235,7 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList,
+.shipments > div > div > div.shipmentsContent > div.shipmentsList,
 .severList > div > div > div.severListContent > div.severListList,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList,
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList {
@@ -243,7 +243,7 @@ div.content > div.details > div > div > ul {
     overflow-y: auto;
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li,
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li,
 .severList > div > div > div.severListContent > div.severListList > ul > li,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li,
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li {
@@ -253,33 +253,103 @@ div.content > div.details > div > div > ul {
     margin: 5px 0;
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div,
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div,
 .severList > div > div > div.severListContent > div.severListList > ul > li > div,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div,
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div {
     overflow: hidden;
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div,
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div,
 .severList > div > div > div.severListContent > div.severListList > ul > li > div > div,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div,
 .InventoryCategories > div > div > div.InventoryCategoriesTitle > p > span,
 .severList > div > div > div.severListTitle > p > span,
-.storeCategory > div > div > div.storeCategoryTitle > p > span {
+.shipments > div > div > div.shipmentsTitle > p > span {
     position: relative;
+    float: left;
+    text-align: center;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(1),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(1){
+    width: 30%;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(2),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(2){
     width: 25%;
-    float: left;
-    text-align: center;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(3),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(3){
+    width: 10%;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(4),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(4){
+    width: 15%;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(5),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(5){
+    width: 10%;
+}
+.shipments > div > div > div.shipmentsTitle > p > span:nth-child(6),
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(6){
+    width: 10%;
+}
+.shipments > div > div > div.shipmentsContent>div.query>div{
+    overflow: hidden;
+    text-align: right;
+    padding-right: 30px;
+}
+.shipments > div > div > div.shipmentsContent>div.query>div>div{
+    position: relative;
+    display: inline-block;
+}
+.shipments > div > div > div.shipmentsContent>div.query>div>div>input{
+    padding-left: 26px;
+    box-sizing: border-box;
+    width: 200px;
+}
+.shipments > div > div > div.shipmentsContent>div.query>div>div>button{
+    width: 55px;
+    height: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: transparent;
+    line-height: 12px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.shipments > div > div > div.shipmentsContent>div.query>div>div>span.queryIcon{
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/order/seekIcon.png) no-repeat;
+    background-size: 100%;
 }
 
-.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div,
-.cooperative > div > div > div.cooperativeTitle > p > span {
-    width: 33.3%;
-    float: left;
-    text-align: center;
-}
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div > a,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div > a,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > a,
 .severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a {
     display: inline-block;
@@ -290,40 +360,29 @@ div.content > div.details > div > div > ul {
     color: #000;
 }
 
-.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a > span.severListRemove,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > a > span.InventoryCategoriesRemove,
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div > a > span.storeCategoryRemove {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background: url(../img/basic/remove.png) no-repeat;
-    background-size: 100%;
-    vertical-align: middle;
-}
+/*.severList > div > div > div.severListContent > div.severListAdd,*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd,*/
+/*.shipments > div > div > div.shipmentsContent > div.storeCategoryListAdd {*/
+    /*height: 50px;*/
+    /*line-height: 50px;*/
+    /*background: #eeeeee;*/
+    /*border-top: 1px solid #cccccc;*/
+/*}*/
 
-.severList > div > div > div.severListContent > div.severListAdd,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd,
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd {
-    height: 50px;
-    line-height: 50px;
-    background: #eeeeee;
-    border-top: 1px solid #cccccc;
-}
+/*.severList > div > div > div.severListContent > div.severListAdd > div,*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div,*/
+/*.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div,*/
+/*{*/
+    /*background: #eeeeee;*/
 
-.severList > div > div > div.severListContent > div.severListAdd > div,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div,
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div,
-{
-    background: #eeeeee;
+/*}*/
 
-}
-
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div > a >p,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div > a >p,
-.severList > div > div > div.severListContent > div.severListAdd > div> a>p
-{
-    color: #000;
-}
+/*.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div > a >p,*/
+/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div > a >p,*/
+/*.severList > div > div > div.severListContent > div.severListAdd > div> a>p*/
+/*{*/
+    /*color: #000;*/
+/*}*/
 
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div > button,
 {

@@ -313,7 +313,7 @@ div.content > div.details > div > div > ul {
     height: 100%;
     background: rgba(255, 255, 255, 0.4);
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 0;
     overflow: auto;
     display: none;
@@ -697,7 +697,7 @@ div.content > div.details > div > div > ul {
 .severListAddAdd,
 .InventoryCategoriesListAdd,
 .storeCategoryRedact {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.3);

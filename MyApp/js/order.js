@@ -4,13 +4,15 @@
     (function () {
         var documentWidth = $(window).width();
         var menuWidth = $('.menu').innerWidth();
+        var menuHeight = $('.menu').innerHeight();
         var logoHeight = $('.header').innerHeight();
         var bodyHeight = $(window).innerHeight();
-        var detailsHeight = $('.details').innerHeight();
-
+        var detailsHeight=$('.details').innerHeight();
+        var contentHeight=$('.content').height();
+        console.log(menuHeight+logoHeight)
         $(".menu").css({
-            height: bodyHeight - logoHeight - 1,
-            minHeight: detailsHeight + 50
+            height: bodyHeight - logoHeight-1,
+            minHeight: detailsHeight+50
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -26,8 +28,8 @@
             var detailsHeight = $('.details').innerHeight();
             var navigationHeight = $(".navigation").innerHeight();
             $(".menu").css({
-                height: detailsHeight + navigationHeight - 1,
-                minHeight: windowHeight - logoHeight - 1
+                height: detailsHeight + navigationHeight-1,
+                minHeight: windowHeight - logoHeight-1
             });
             $('.details').css({
                 width: documentWidth - menuWidth - 20
@@ -93,69 +95,26 @@
         var logoHeight = $('.header').innerHeight();
         var windowHeight = $(document.body).innerHeight();
 
-        console.log(menuHeight + logoHeight);
+        console.log(menuHeight+logoHeight);
         $(".menu").css({
             height: detailsHeight + navigationHeight,
-            minHeight: windowHeight - logoHeight - 1
+            minHeight: windowHeight - logoHeight-1
         });
     });
 
-    /*                   仓库列表                 */
-    function warehouse() {
-        //添加
-        $('.warehouseAddList').click(function () {
-            $('.warehouseAdd').css({display: "block"})
+    /*                     待发货                    */
+    function shipments(){
+        //筛选
+        $(window).ready(function () {
+            $(".shipmentsList>ul>li").show()
         });
-        $('.warehouseAddBtnOk').click(function () {
-            $('.warehouseAdd').css({display: "none"})
-        });
-        $('.warehouseUndoAdd').click(function () {
-            $('.warehouseAdd').css({display: "none"})
-        });
-        //编辑
-        $('.warehouseList>ul').on('click', ".warehouseEdit", function (e) {
-            e.preventDefault();
-            $('.warehouseRedact').css({display: "block"})
-        });
-        $('.warehouseRedactBtnOk').click(function () {
-            $('.warehouseRedact').css({display: "none"})
-        });
-        $('.warehouseUndoRedact').click(function () {
-            $('.warehouseRedact').css({display: "none"})
-        });
+        $('.query>div>div>button').click(function(){
+            var inputVal=$('.query>div>div>input').val();
+            $(".shipmentsList>ul>li").hide().children().children(".filterOrder").filter(":contains('" + inputVal + "')").parent().parent().show();
+            });
+        }
 
-    }
-
-    /*                    运费列表                */
-    function freight(){
-        //添加
-        $('.freightAddList').click(function () {
-            $('.freightAdd').css({display: "block"})
-        });
-        $('.freightAddBtnOk').click(function () {
-            $('.freightAdd').css({display: "none"})
-        });
-        $('.freightUndoAdd').click(function () {
-            $('.freightAdd').css({display: "none"})
-        });
-        //编辑
-        $('.freightList>ul').on('click', ".freightEdit", function (e) {
-            e.preventDefault();
-            $('.freightRedact').css({display: "block"})
-        });
-        $('.freightRedactBtnOk').click(function () {
-            $('.freightRedact').css({display: "none"})
-        });
-        $('.freightUndoRedact').click(function () {
-            $('.freightRedact').css({display: "none"})
-        });
-
-    }
-
-
-
-    warehouse();
-    freight();
+    shipments()
 })();
 
 
