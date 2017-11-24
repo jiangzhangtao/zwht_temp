@@ -4,13 +4,13 @@
     (function () {
         var documentWidth = $(window).width();
         var menuWidth = $('.menu').innerWidth();
-        var detailsHeight = $('.details').innerHeight();
-        var navigationHeight = $(".navigation").innerHeight();
+        var menuHeight = $('.menu').innerHeight();
         var logoHeight = $('.header').innerHeight();
         var bodyHeight = $(window).height();
+        var detailsHeight = $('.details').innerHeight();
+        console.log(bodyHeight - logoHeight - 1);
         $(".menu").css({
-            height: detailsHeight + navigationHeight,
-            minHeight: bodyHeight - logoHeight
+            height: bodyHeight - logoHeight - 1
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -26,8 +26,8 @@
             var detailsHeight = $('.details').innerHeight();
             var navigationHeight = $(".navigation").innerHeight();
             $(".menu").css({
-                height: detailsHeight + navigationHeight,
-                minHeight: windowHeight - logoHeight
+                height: detailsHeight + navigationHeight - 1,
+                minHeight: windowHeight - logoHeight - 1
             });
             $('.details').css({
                 width: documentWidth - menuWidth - 20

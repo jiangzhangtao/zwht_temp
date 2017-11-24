@@ -84,7 +84,7 @@ div.content > div.menu > div > ul > li {
 }
 
 div.content > div.menu > div > ul > li.basicTwo {
-    background: #9c3232;
+    background: #c41f1f;
 }
 
 div.content > div.menu > div > ul > li.basicTwo > a > span {
@@ -139,7 +139,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -209,26 +209,29 @@ div.content > div.details > div > div > ul {
 
 /*门店类别*/
 .shipments > div > div > div.shipmentsTitle > p,
-.severList > div > div > .severListTitle > p,
-.InventoryCategories > div > div > .InventoryCategoriesTitle > p,
-.cooperative > div > div > div.cooperativeTitle > p {
+.receiving > div > div > .receivingTitle > p,
+.service > div > div > .serviceTitle > p,
+.tyreOrder > div > div > .tyreOrderTitle > p,
+.finish > div > div > div.finishTitle > p {
     overflow: hidden;
     border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;
 }
 
 .shipments > div > div > div.shipmentsContent,
-.severList > div > div > div.severListContent,
-.InventoryCategories > div > div > div.InventoryCategoriesContent,
-.cooperative > div > div > div.cooperativeContent {
+.tyreOrder > div > div > div.tyreOrderContent,
+.receiving > div > div > div.receivingContent,
+.service > div > div > div.serviceContent,
+.finish > div > div > div.finishContent {
     border: 1px solid #ccc;
     margin-top: 10px;
 }
 
 .shipments > div > div > div.shipmentsContent > div,
-.severList > div > div > div.severListContent > div,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div,
-.cooperative > div > div > div.cooperativeContent > div {
+.tyreOrder > div > div > div.tyreOrderContent > div,
+.receiving > div > div > div.receivingContent > div,
+.service > div > div > div.serviceContent > div,
+.finish > div > div > div.finishContent > div {
     height: 40px;
     line-height: 40px;
     border-bottom: 1px solid #cccccc;
@@ -236,79 +239,165 @@ div.content > div.details > div > div > ul {
 }
 
 .shipments > div > div > div.shipmentsContent > div.shipmentsList,
-.severList > div > div > div.severListContent > div.severListList,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList,
-.cooperative > div > div > div.cooperativeContent > div.cooperativeList {
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList,
+.receiving > div > div > div.receivingContent > div.receivingList,
+.service > div > div > div.serviceContent > div.serviceList,
+.finish > div > div > div.finishContent > div.finishList {
     height: 600px;
     overflow-y: auto;
 }
 
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li,
-.severList > div > div > div.severListContent > div.severListList > ul > li,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li,
-.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li {
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li,
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li,
+.service > div > div > div.serviceContent > div.serviceList > ul > li,
+.finish > div > div > div.finishContent > div.finishList > ul > li {
     height: 85px;
     line-height: 85px;
     background: #eee;
     margin: 5px 0;
+    font-size: 16px;
 }
 
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div,
-.severList > div > div > div.severListContent > div.severListList > ul > li > div,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div,
-.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div {
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div,
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div,
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div,
+.finish > div > div > div.finishContent > div.finishList > ul > li > div {
     overflow: hidden;
 }
 
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div,
-.severList > div > div > div.severListContent > div.severListList > ul > li > div > div,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div,
-.InventoryCategories > div > div > div.InventoryCategoriesTitle > p > span,
-.severList > div > div > div.severListTitle > p > span,
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div,
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div,
+.service > div > div > div.serviceTitle > p > span,
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div,
+.finish > div > div > div.finishTitle > p > span,
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div,
+.tyreOrder > div > div > div.tyreOrderTitle > p > span,
+.receiving > div > div > div.receivingTitle > p > span,
 .shipments > div > div > div.shipmentsTitle > p > span {
     position: relative;
     float: left;
     text-align: center;
 }
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(1),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(1){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(1),
+.service > div > div > div.serviceTitle > p > span:nth-child(1),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(1),
+.tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(1),
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div:nth-child(1),
+.finish > div > div > div.finishTitle > p > span:nth-child(1),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(1),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(1),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(1) {
     width: 30%;
 }
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(2),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(2){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(2),
+.service > div > div > div.serviceTitle > p > span:nth-child(2),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(2),
+.finish > div > div > div.finishTitle > p > span:nth-child(2),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(2),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(2),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(2) {
     width: 25%;
 }
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(3),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(3){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(3),
+.service > div > div > div.serviceTitle > p > span:nth-child(3),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(3),
+.finish > div > div > div.finishTitle > p > span:nth-child(3),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(3),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(3),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(3) {
     width: 10%;
 }
+
+.tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(2),
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div:nth-child(2) {
+    width: 20%;
+}
+
+.tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(3),
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div:nth-child(3) {
+    width: 25%;
+}
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(4),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(4){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(4),
+.service > div > div > div.serviceTitle > p > span:nth-child(4),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(4),
+.tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(4),
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div:nth-child(4),
+.finish > div > div > div.finishTitle > p > span:nth-child(4),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(4),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(4),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(4) {
     width: 15%;
 }
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(5),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(5){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(5),
+.service > div > div > div.serviceTitle > p > span:nth-child(5),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(5),
+.tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(5),
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div:nth-child(5),
+.finish > div > div > div.finishTitle > p > span:nth-child(5),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(5),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(5),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(5) {
     width: 10%;
 }
+
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(6),
-.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(6){
+.shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(6),
+.service > div > div > div.serviceTitle > p > span:nth-child(6),
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(6),
+.finish > div > div > div.finishTitle > p > span:nth-child(6),
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div:nth-child(6),
+.receiving > div > div > div.receivingTitle > p > span:nth-child(6),
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div:nth-child(6) {
     width: 10%;
 }
-.shipments > div > div > div.shipmentsContent>div.query>div{
+
+.shipments > div > div > div.shipmentsContent > div.query > div,
+.service > div > div > div.serviceContent > div.query > div,
+.finish > div > div > div.finishContent > div.query > div,
+.tyreOrder > div > div > div.tyreOrderContent > div.query > div,
+.receiving > div > div > div.receivingContent > div.query > div {
     overflow: hidden;
     text-align: right;
     padding-right: 30px;
 }
-.shipments > div > div > div.shipmentsContent>div.query>div>div{
+
+.shipments > div > div > div.shipmentsContent > div.query > div > div,
+.service > div > div > div.serviceContent > div.query > div > div,
+.finish > div > div > div.finishContent > div.query > div > div,
+.tyreOrder > div > div > div.tyreOrderContent > div.query > div > div,
+.receiving > div > div > div.receivingContent > div.query > div > div {
     position: relative;
     display: inline-block;
 }
-.shipments > div > div > div.shipmentsContent>div.query>div>div>input{
+
+.shipments > div > div > div.shipmentsContent > div.query > div > div > input,
+.service > div > div > div.serviceContent > div.query > div > div > input,
+.finish > div > div > div.finishContent > div.query > div > div > input,
+.tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > input,
+.receiving > div > div > div.receivingContent > div.query > div > div > input {
     padding-left: 26px;
     box-sizing: border-box;
     width: 200px;
 }
-.shipments > div > div > div.shipmentsContent>div.query>div>div>button{
+
+.shipments > div > div > div.shipmentsContent > div.query > div > div > button,
+.service > div > div > div.serviceContent > div.query > div > div > button,
+.finish > div > div > div.finishContent > div.query > div > div > button,
+.tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > button,
+.receiving > div > div > div.receivingContent > div.query > div > div > button {
     width: 55px;
     height: 25px;
     -webkit-box-sizing: border-box;
@@ -319,7 +408,12 @@ div.content > div.details > div > div > ul {
     border: 1px solid #000;
     border-radius: 5px;
 }
-.shipments > div > div > div.shipmentsContent>div.query>div>div>span.queryIcon{
+
+.shipments > div > div > div.shipmentsContent > div.query > div > div > span.queryIcon,
+.service > div > div > div.serviceContent > div.query > div > div > span.queryIcon,
+.finish > div > div > div.finishContent > div.query > div > div > span.queryIcon,
+.tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > span.queryIcon,
+.receiving > div > div > div.receivingContent > div.query > div > div > span.queryIcon {
     position: absolute;
     top: 11px;
     left: 5px;
@@ -330,79 +424,252 @@ div.content > div.details > div > div > ul {
     background-size: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div > a,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div > a,
-.severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a {
+.service > div > div > div.serviceContent > div.serviceList > ul > li > div > div > a,
+.finish > div > div > div.finishContent > div.finishList > ul > li > div > div > a,
+.tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div > a,
+.receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div > a {
     display: inline-block;
     padding: 0 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #000;
+    color: blue;
+    text-decoration: underline;
 }
 
-/*.severList > div > div > div.severListContent > div.severListAdd,*/
-/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd,*/
-/*.shipments > div > div > div.shipmentsContent > div.storeCategoryListAdd {*/
-    /*height: 50px;*/
-    /*line-height: 50px;*/
-    /*background: #eeeeee;*/
-    /*border-top: 1px solid #cccccc;*/
-/*}*/
+/*    模态框   */
+.orderInfo > div > div > div.orderInfoTitle,
+.serviceInfo > div > div > div.serviceInfoTitle,
+.finishInfo > div > div > div.finishInfoTitle,
+.tyreOrderInfo > div > div > div.tyreOrderTitle,
+.receivingInfo > div > div > div.receivingInfoTitle {
+    text-align: center;
+    font-size: 20px;
+}
 
-/*.severList > div > div > div.severListContent > div.severListAdd > div,*/
-/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div,*/
-/*.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div,*/
-/*{*/
-    /*background: #eeeeee;*/
+.orderInfoContent,
+.serviceInfoContent,
+.finishInfoContent,
+.receivingInfoContent {
+    overflow: hidden;
+    margin-top: 20px;
+}
 
-/*}*/
+.orderInfoContent > div,
+.serviceInfoContent > div,
+.finishInfoContent > div,
+.receivingInfoContent > div {
+    float: left;
+    width: 45%;
+}
 
-/*.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div > a >p,*/
-/*.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div > a >p,*/
-/*.severList > div > div > div.severListContent > div.severListAdd > div> a>p*/
-/*{*/
-    /*color: #000;*/
-/*}*/
+.tyreOrderInfoContent > div {
+    margin-top: 30px;
+}
 
-.cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div > button,
-{
-    border-radius: 5px;
-    border: 1px solid #000;
-    background: #ffffff;
+.orderInfoContent > div:nth-child(2),
+.serviceInfoContent > div:nth-child(2),
+.finishInfoContent > div:nth-child(2),
+.receivingInfoContent > div:nth-child(2) {
+    margin-left: 10%;
+}
+
+.orderInfoContent > div.basicInfo > div.basicInfoTitle,
+.orderInfoContent > div.orderStatus > div.orderStatusTitle,
+.orderDetail > div.orderDetailTitle,
+.receivingInfoContent > div.receivingBasicInfo > div.receivingBasicInfoTitle,
+.receivingInfoContent > div.receivingStatus > div.receivingStatusTitle,
+.receivingDetail > div.receivingDetailTitle,
+.finishInfoContent > div.finishBasicInfo > div.finishBasicInfoTitle,
+.finishInfoContent > div.finishStatus > div.finishStatusTitle,
+.finishDetail > div.finishDetailTitle,
+.tyreOrderInfoContent > div.tyreOrderBasicInfo > div.tyreOrderBasicInfoTitle,
+.tyreOrderInfoContent > div.tyreOrderStatus > div.tyreOrderStatusTitle,
+.tyreOrderInfoContent > div.tyreInformation > div.tyreInformationTitle,
+.serviceInfoContent > div.serviceBasicInfo > div.serviceBasicInfoTitle,
+.serviceInfoContent > div.serviceStatus > div.serviceStatusTitle,
+.serviceDetail > div.serviceDetailTitle {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+
+}
+
+.orderInfoContent > div > div > ul > li,
+.orderDetailContent > div > ul > li,
+.orderInfoContent > div > div > ul > li > p > span,
+.finishInfoContent > div > div > ul > li,
+.finishDetailContent > div > ul > li,
+.finishInfoContent > div > div > ul > li > p > span,
+.serviceInfoContent > div > div > ul > li,
+.serviceDetailContent > div > ul > li,
+.serviceInfoContent > div > div > ul > li > p > span,
+.receivingInfoContent > div > div > ul > li,
+.receivingDetailContent > div > ul > li,
+.receivingInfoContent > div > div > ul > li > p > span {
+    margin-top: 18px;
+}
+
+.orderInfoContent > div > div > ul > li > p,
+.serviceInfoContent > div > div > ul > li > p,
+.finishInfoContent > div > div > ul > li > p,
+.receivingInfoContent > div > div > ul > li > p {
+    display: inline-block;
+    line-height: 17px;
+}
+
+/*订单明细*/
+.orderDetailContent,
+.serviceDetailContent,
+.finishDetailContent,
+.receivingDetailContent {
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: 400px;
+}
+
+.finishDetail,
+.serviceDetail,
+.receivingDetail,
+.orderDetail {
+    margin-top: 20px;
+}
+
+.receivingDetailContent > div,
+.serviceDetailContent > div,
+.finishDetailContent > div,
+.orderDetailContent > div {
+    overflow: hidden;
+
+}
+
+.orderDetailContent > div > div,
+.serviceDetailContent > div > div,
+.finishDetailContent > div > div,
+.receivingDetailContent > div > div {
+    width: 45%;
+    float: left;
+    margin-top: 10px;
+}
+
+.orderDetailContent > div > div:nth-child(even),
+.serviceDetailContent > div > div:nth-child(even),
+.finishDetailContent > div > div:nth-child(even),
+.receivingDetailContent > div > div:nth-child(even) {
+    margin-left: 10%;
+}
+
+.orderDetailContent > div > div > ul > li:nth-child(1),
+.serviceDetailContent > div > div > ul > li:nth-child(1),
+.finishDetailContent > div > div > ul > li:nth-child(1),
+.receivingDetailContent > div > div > ul > li:nth-child(1) {
+    background: #ff8b28;
+    color: #ffffff;
+}
+
+.orderDetailContent > div > div > ul > li,
+.serviceDetailContent > div > div > ul > li,
+.finishDetailContent > div > div > ul > li,
+.tyreOrderInfoContent > div > div > ul > li,
+.receivingDetailContent > div > div > ul > li {
+    padding: 5px 0;
+    margin-top: 8px;
+}
+
+.tyreOrderInfoContent > div > div > ul > li {
+    height: 25px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+.tyreOrderInfoContent > div > div > ul > li.nameBackground {
+    color: #ffffff;
+    background: #ff8b28;
+}
+
+.orderInfoContent > div > div > ul > li > i,
+.orderDetailContent > div > div > ul > li > span,
+.serviceInfoContent > div > div > ul > li > i,
+.serviceDetailContent > div > div > ul > li > span,
+.finishInfoContent > div > div > ul > li > i,
+.finishDetailContent > div > div > ul > li > span,
+.tyreOrderInfoContent > div > div > ul > li > i,
+.tyreOrderDetailContent > div > div > ul > li > span,
+.receivingInfoContent > div > div > ul > li > i,
+.receivingDetailContent > div > div > ul > li > span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-style: normal;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.tyreOrderInfoContent > div > div > ul > li > span,
+.tyreOrderInfoContent > div > div > ul > li > p {
+    margin-left: 20px;
+}
+
+.orderDetailContent > div > div > ul > li > p,
+.serviceDetailContent > div > div > ul > li > p,
+.finishDetailContent > div > div > ul > li > p,
+.tyreOrderInfoContent > div > div > ul > li > p,
+.receivingDetailContent > div > div > ul > li > p {
+    display: inline-block;
+    word-break: break-word;
+    width: 180px;
+}
+
+.orderDetailContent > div > div > ul > li > p > img,
+.serviceDetailContent > div > div > ul > li > p > img,
+.finishDetailContent > div > div > ul > li > p > img,
+.receivingDetailContent > div > div > ul > li > p > img {
+    display: inline-block;
+    width: 133px;
+    height: 100px;
+    border: 1px solid #000000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.orderButton > div,
+.serviceButton > div,
+.finishButton > div,
+.tyreOrderButton > div,
+.receivingButton > div {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.orderButton > div > button,
+.finishButton > div > button,
+.tyreOrderButton > div > button,
+.serviceButton > div > button,
+.serviceButton > div > div > button,
+.receivingButton > div > button {
+    width: 285px;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
     cursor: pointer;
+    font-size: 18px;
+}
+.tyreOrderButton>div.tyreOrderButtonBack,
+.finishButton>div.finishButtonBack,
+.serviceButton > div.serviceClickButton,
+.finishButton > div.finishButtonOk > button,
+.receivingButton > div.receivingButtonOk > button,
+.orderButton > div.orderButtonOk > button {
+    margin-top: 30px;
+
 }
 
-
-
-
-
-
-.tyreChange,
-.quality,
-.qualityRedact,
-.tyreChangeRedact,
-.cooperativeListServer,
-.storeCategoryRedact {
+.orderInfo,
+.serviceInfo,
+.tyreOrderInfo,
+.finishInfo,
+.receivingInfo {
     position: fixed;
     top: 0;
     left: 0;
@@ -412,14 +679,12 @@ div.content > div.details > div > div > ul {
     display: none;
 }
 
-
-.cooperativeListServer > div > div,
-.tyreChange > div > div,
-.quality > div > div,
-.qualityRedact > div > div,
-.tyreChangeRedact > div > div,
-.storeCategoryRedact > div > div {
-    width: 370px;
+.orderInfo > div > div,
+.serviceInfo > div,
+.finishInfo > div,
+.tyreOrderInfo > div,
+.receivingInfo > div > div {
+    width: 800px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -430,100 +695,89 @@ div.content > div.details > div > div > ul {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
 
-.tyreChange > div > div > ul > li,
-.quality > div > div > ul > li,
-.qualityRedact > div > div > ul > li,
-.tyreChangeRedact > div > div > ul > li,
-.cooperativeListServer > div > div > ul > li,
-.storeCategoryRedact > div > div > ul > li {
+.tyreOrderInfo > div {
+    width: 500px;
+}
+
+.redFont > span {
+    color: #ee2626;
+}
+
+.serviceButton > div.serviceClickButton > button:nth-child(1) {
+    margin-left: 0;
+}
+
+.serviceButton > div.serviceClickButton > button {
+    width: 130px;
+    margin-left: 20px;
+}
+
+.serviceInfo > div > div.serviceOrderImg {
+    display: none;
+}
+
+.serviceOrderImg img {
     margin-top: 10px;
-}
-
-.tyreChange > div > div > ul > li.tyreChangeBtn,
-.quality > div > div > ul > li.qualityBtn,
-.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn{
-    text-align: center;
-}
-
-.tyreChange > div > div > ul > li > h3,
-.quality > div > div > ul > li > h3,
-.qualityRedact > div > div > ul > li > h3,
-.tyreChangeRedact > div > div > ul > li > h3,
-.cooperativeListServer > div > div > ul > li > h3,
-.storeCategoryRedact > div > div > ul > li > h3 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-
-.tyreChangeRedact > div > div > ul > li > div > span ,
-.qualityRedact > div > div > ul > li > div > span ,
-.storeCategoryRedact > div > div > ul > li > div > span {
-    width: 90px;
-    text-align: right;
     display: inline-block;
-}
-
-
-.tyreChangeRedact > div > div > ul > li > div ,
-.qualityRedact > div > div > ul > li > div ,
-.storeCategoryRedact > div > div > ul > li > div {
-    display: inline-block;
-    width: 100%;
-}
-
-
-.tyreChangeRedact > div > div > ul > li > div > div ,
-.qualityRedact > div > div > ul > li > div > div ,
-.storeCategoryRedact > div > div > ul > li > div > div {
-    display: inline-block;
-}
-
-
-.tyreChangeRedact > div > div > ul > li > div > div>textarea,
-.qualityRedact > div > div > ul > li > div > div>textarea,
-.storeCategoryRedact > div > div > ul > li > div > div>textarea{
-    vertical-align: top;
-}
-
-.tyreChangeRedact > div > div > ul > li > div > div > input ,
-.qualityRedact > div > div > ul > li > div > div > input ,
-.storeCategoryRedact > div > div > ul > li > div > div > input {
-    width: 150px;
-    height: 17px;
-    padding-left: 10px;
+    width: 190px;
+    height: 113px;
+    border: 1px solid #000;
     box-sizing: border-box;
-    background: #ccc;
-    border: none;
 }
 
+.serviceOrderImg > div {
+    width: 450px;
+    margin-left: 154px;
+}
 
-.tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn,
-.qualityRedact > div > div > ul > li.qualityRedactBtn,
-.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn {
-    margin-top: 30px;
+.serviceOrderImg > div > div > h3 {
     text-align: center;
 }
 
-.tyreChange > div > div > ul > li.tyreChangeBtn > button,
-.quality > div > div > ul > li.qualityBtn > button,
-.qualityRedact > div > div > ul > li.qualityRedactBtn > button,
-.tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn > button,
-.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button,
-.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button {
+.serviceOrderImg > div > div > div.serviceOrderImgTitle,
+.imgTitle {
+    border-bottom: 1px solid #000;
+}
+
+.serviceOrderImg > div > div > div.serviceOrderImgTitle > h4,
+.licence > div > div > h4 {
+    padding: 5px 0;
+}
+
+.serviceOrderImg > div > div.carImg > div.orderCarImg {
+    text-align: center;
+}
+
+.serviceOrderImg > div > div > div > img:nth-child(even),
+.serviceInfo > div > div.serviceOrderImg > div > div.ServiceAffirm > button.ServiceAffirmComeBack {
+    margin-left: 65px;
+}
+
+.licence {
+    overflow: hidden;
+}
+
+.licence > div {
+    float: left;
+}
+
+.licenceImg {
+    margin-left: 70px;
+}
+
+.serviceInfo > div > div.serviceOrderImg > div > div.ServiceAffirm {
+    margin-top: 30px; text-align : center;
+}
+
+.serviceInfo > div > div.serviceOrderImg > div > div.ServiceAffirm > button {
+    width: 130px;
     border: none;
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
+    font-size: 18px;
 }
-
-
-
-
-
-
-
-

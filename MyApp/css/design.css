@@ -2,6 +2,16 @@
 html, body, body > div {
     min-height: 100%;
 }
+h1{
+    font-size: 22px;
+}
+button{
+    height: 34px; !important;
+    font-size: 18px; !important;
+    -webkit-box-sizing: border-box; !important;
+    -moz-box-sizing: border-box; !important;
+    box-sizing: border-box; !important;
+}
 
 div.header {
     height: 80px;
@@ -124,7 +134,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -147,7 +157,7 @@ div.content > div.navigation > div > ul > li {
     border-top: 2px solid #ee2626;
     border-left: 2px solid #ee2626;
     border-right: 2px solid #ee2626;
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 5px 15px;
 }
 
@@ -157,10 +167,6 @@ div.content > div.navigation > div > ul > li.active {
 
 div.content > div.navigation > div > ul > li.active > a {
     color: #ffffff;
-}
-
-div.content > div.navigation > div > ul > li:nth-child(1) {
-    margin-left: 40px;
 }
 
 div.content > div.navigation > div > ul > li > a {
@@ -193,7 +199,7 @@ div.content > div.details > div > div > ul {
 
 /*计算公式*/
 div.content > div.details > div.formulaSet > div > div {
-    padding: 20px 0 0 50px;
+    padding: 30px 0 0 50px;
 }
 
 div.content > div.details > div.formulaSet > div > div.title > ul > li {
@@ -215,6 +221,7 @@ div.content > div.details > div.formulaSet > div > div.title > ul > li > p > spa
 
 div.content > div.details > div.formulaSet > div > div > p {
     position: relative;
+    font-size: 16px;
 }
 
 div.content > div.details > div.formulaSet > div > div > p > span {
@@ -222,7 +229,7 @@ div.content > div.details > div.formulaSet > div > div > p > span {
     top: 7px;
     display: inline-block;
     border-bottom: 1px solid #000;
-    width: 70%;
+    width: 90%;
     margin-left: 10px;
 }
 
@@ -263,7 +270,7 @@ div.content > div.details > div.formulaSet > div > div.formula > ul > li > p > s
 
 div.content > div.details > div.formulaSet > div > div.formula > ul > li > button {
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 72px;
     margin-left: 40px;
     background: #ee2626;
     border: none;
@@ -276,7 +283,7 @@ div.content > div.details > div.formulaSet > div > div.formula > ul > li > butto
 
 /*城市等级增量*/
 div.content > div.details > div.cityAdd > div {
-    margin: 60px 60px;
+    margin: 25px 60px;
 }
 
 div.content > div.details > div.cityAdd > div > div.cityTitle {
@@ -287,7 +294,15 @@ div.content > div.details > div.cityAdd > div > div.cityTitle > p > span,
 div.content > div.details > div.cityAdd > div > div.list > ul > li > span {
     display: inline-block;
     box-sizing: border-box;
-    font-size: 18px;
+}
+
+div.content > div.details > div.cityAdd > div > div.list > ul > li > span > a {
+    color: blue;
+}
+
+div.content > div.details > div.cityAdd > div > div.list > ul > li > span > a > i {
+    font-style: normal;
+    text-decoration: underline;
 }
 
 div.content > div.details > div.cityAdd > div > div.cityTitle > p > span:nth-child(2),
@@ -314,9 +329,10 @@ div.content > div.details > div.cityAdd > div > div.cityTitle > p.cityTitleTwo {
 div.content > div.details > div.cityAdd > div > div.list > ul > li {
     text-align: center;
     box-sizing: border-box;
-    background: #cccccc;
+    background: #eee;
     margin: 20px 0;
     padding: 5px 0;
+    font-size: 16px;
 }
 
 div.content > div.details > div.cityAdd > div > div.list > ul > li > span > input {
@@ -333,6 +349,7 @@ div.content > div.details > div.cityAdd > div > div.list > ul > li > span > inpu
     -webkit-appearance: none;
     color: #000;
     font-size: 16px;
+    text-align: center;
 }
 
 div.content > div.details > div.cityAdd > div > div.list > ul > li > span > input.border_setting {
@@ -342,7 +359,7 @@ div.content > div.details > div.cityAdd > div > div.list > ul > li > span > inpu
 
 /*路况设置*/
 div.content > div.details > div.traffic > div {
-    margin: 60px 60px 0;
+    margin: 25px 60px 0;
 }
 
 div.content > div.details > div.traffic > div > div.trafficTitle,
@@ -351,7 +368,7 @@ div.content > div.details > div.traffic > div > div.trafficList {
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li {
-    background: #cccccc;
+    background: #eee;
     margin-top: 10px;
     overflow: hidden;
 }
@@ -359,12 +376,11 @@ div.content > div.details > div.traffic > div > div.trafficList > ul > li {
 div.content > div.details > div.traffic > div > div.trafficTitle > p > span,
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > p > span {
     box-sizing: border-box;
-    font-size: 18px;
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > div > span > img {
-    width: 100%;
-    height: 120px;
+    width: 146px;
+    height: 104px;
 }
 
 div.content > div.details > div.traffic > div > div.trafficTitle > p.trafficTitleTwo {
@@ -418,13 +434,24 @@ div.content > div.details > div.traffic > div > div.trafficList > ul > li > div:
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > div > span {
     width: 100%;
-    height: 120px;
-    line-height: 120px;
+    height: 104px;
+    line-height: 104px;
+}
+div.content > div.details > div.traffic > div > div.trafficList > ul > li > div > span>button{
+    width: 80px;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > div > span > a {
     display: inline-block;
     padding: 0 10px;
+    color: blue;
+}
+
+div.content > div.details > div.traffic > div > div.trafficList > ul > li > div > span > a > i {
+    font-style: normal;
+    text-decoration: underline;
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li {
@@ -457,14 +484,15 @@ div.content > div.details > div.traffic > div > div.trafficList > ul > li.add {
     height: 50px;
     line-height: 50px;
     margin-top: 40px;
-    background: #cccccc;
+    background: #eee;
 
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > a {
-    color: #fff;
+    color: blue;
     display: inline-block;
     padding: 0 20px;
+    font-size: 18px;
 }
 
 div.content > div.details > div.traffic > div > div.trafficList > ul > li > a > i {
@@ -483,7 +511,7 @@ div.addHtml,
 div.redact {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
     position: fixed;
     left: 0;
@@ -508,19 +536,30 @@ div.redact > div > div {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
+
+div.addHtml > div > div > ul > li:nth-child(1),
+div.redact > div > div > ul > li:nth-child(1){
+    margin-bottom: 30px;
+}
+
 
 div.addHtml > div > div > ul > li,
 div.redact > div > div > ul > li {
-    margin-top: 10px;
+    margin-top: 18px;
 }
-
+div.addHtml > div > div > ul > li>div>p>span,
+div.redact > div > div > ul > li>div>p>span{
+    font-weight: bold;
+}
 div.addHtml > div > div > ul > li > h3,
 div.redact > div > div > ul > li > h3,
 div.addHtml > div > div > ul > li > button,
 div.redact > div > div > ul > li > button {
     text-align: center;
+    font-size: 20px;
 }
 
 div.addHtml > div > div > ul > li.addBtn,
@@ -532,26 +571,33 @@ div.addHtml > div > div > ul > li > div > p > input,
 div.redact > div > div > ul > li > div > p > input,
 div.addHtml > div > div > ul > li > div > textarea,
 div.redact > div > div > ul > li > div > textarea {
-    background: #cccccc;
+    background: #e0dfdf;
     border: none;
     padding-left: 10px;
 }
-
-div.addHtml > div > div > ul > li > div > span
+div.addHtml > div > div > ul > li > div > textarea,
+div.redact > div > div > ul > li > div > textarea{
+    vertical-align: top;
+    width: 260px;
+    height: 110px;
+}
+div.addHtml > div > div > ul > li > div > span,
 div.redact > div > div > ul > li > div > span {
     vertical-align: top;
+    font-weight: bold;
 }
 
 div.addHtml > div > div > ul > li > div > p > input.trafficName,
 div.redact > div > div > ul > li > div > p > input.trafficName {
-    width: 63%;
+    width: 260px;
 }
 
 div.addHtml > div > div > ul > li > div > img,
 div.redact > div > div > ul > li > div > img {
     width: 257px;
     height: 142px;
-    margin-top: 5px;
+    margin-top: 14px;
+    margin-left: 54px;
 }
 
 div.addHtml > div > div > ul > li > button:nth-child(1),
@@ -565,12 +611,36 @@ div.redact > div > div > ul > li > button {
     background: #ee2626;
     border: none;
     cursor: pointer;
-    color: #FFF
+    color: #FFF;
+    margin-top: 30px;
+    width: 130px;
+}
+div.addHtml > div > div > ul > li > button:nth-child(2),
+div.redact > div > div > ul > li > button:nth-child(2){
+    margin-left: 25px;
 }
 
 div.addHtml > div > div > ul > li > div > p.files,
 div.redact > div > div > ul > li > div > p.files {
     text-align: center;
+}
+
+div.addHtml > div > div > ul > li > div > p.files>label,
+div.redact > div > div > ul > li > div > p.files>label{
+    position: relative;
+    display: inline-block;
+    padding: 4px 20px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    color: #333;
+    margin-top: 8px;
+    border: 1px solid #000;
+}
+div.addHtml > div > div > ul > li > div > p.files>label>input,
+div.redact > div > div > ul > li > div > p.files>label>input{
+    display: none;
 }
 
 div.addHtml > div > div > ul > li > div > p.files > input,
@@ -581,8 +651,7 @@ div.redact > div > div > ul > li > div > p.files > input {
 
 /*固定变量设置*/
 div.content > div.details > div.variable > div {
-    text-align: center;
-    margin: 0 40px;
+    margin: 0 140px;
 }
 
 div.content > div.details > div.variable > div > div.variableTitle {
@@ -598,13 +667,17 @@ div.content > div.details > div.variable > div > div.variableList {
 div.content > div.details > div.variable > div > div.variableList > ul > li {
     margin-top: 20px;
 }
-
+div.content > div.details > div.variable > div > div.variableList > ul > li > div > p>span{
+    font-size: 16px;
+}
 div.content > div.details > div.variable > div > div.variableList > ul > li > div > p > select,
 div.content > div.details > div.variable > div > div.variableList > ul > li > div > p > input {
     width: 140px;
     text-align: center;
     height: 34px;
     box-sizing: border-box;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 div.content > div.details > div.variable > div > div.variableList > div > p > button {
@@ -617,12 +690,13 @@ div.content > div.details > div.variable > div > div.variableList > div > p > bu
     width: 140px;
     height: 34px;
     box-sizing: border-box;
+    margin-left: 100px;
 }
 
 /*畅销等级*/
 
 div.content > div.details > div.market > div {
-    margin: 60px 60px;
+    margin: 25px 60px;
 }
 
 div.content > div.details > div.market > div > div.marketTitle {
@@ -633,7 +707,15 @@ div.content > div.details > div.market > div > div.marketTitle > p > span,
 div.content > div.details > div.market > div > div.marketList > ul > li > span {
     display: inline-block;
     box-sizing: border-box;
-    font-size: 18px;
+}
+
+div.content > div.details > div.market > div > div.marketList > ul > li > span > a {
+    color: blue;
+}
+
+div.content > div.details > div.market > div > div.marketList > ul > li > span > a > i {
+    font-style: normal;
+    text-decoration: underline;
 }
 
 div.content > div.details > div.market > div > div.marketTitle > p > span:nth-child(2),
@@ -660,9 +742,10 @@ div.content > div.details > div.market > div > div.marketTitle > p.marketTitleTw
 div.content > div.details > div.market > div > div.marketList > ul > li {
     text-align: center;
     box-sizing: border-box;
-    background: #cccccc;
-    margin: 20px 0;
+    background: #eee;
+    margin: 16px 0;
     padding: 5px 0;
+    font-size: 16px;
 }
 
 div.content > div.details > div.market > div > div.marketList > ul > li > span > input,
@@ -671,8 +754,11 @@ div.content > div.details > div.market > div > div.marketList > ul > li > span >
     height: 34px;
     box-sizing: border-box;
     background: transparent;
+    font-size: 16px;
 }
-
+div.content > div.details > div.market > div > div.marketList > ul > li > span > input{
+    text-align: center;
+}
 div.content > div.details > div.market > div > div.marketList > ul > li > span > input:disabled,
 div.content > div.details > div.market > div > div.marketList > ul > li > span > select:disabled {
     border: none;
@@ -681,9 +767,12 @@ div.content > div.details > div.market > div > div.marketList > ul > li > span >
     -webkit-appearance: none;
     color: #000;
     font-size: 16px;
-
+    text-align: center;
 }
-
+div.content > div.details > div.market > div > div.marketList > ul > li > span > select,
+div.content > div.details > div.market > div > div.marketList > ul > li > span > select:disabled{
+    padding-left: 58px;
+}
 div.content > div.details > div.market > div > div.marketList > ul > li > span > input.border_setting {
     border: 1px solid #000000;
     background: #ffffff;

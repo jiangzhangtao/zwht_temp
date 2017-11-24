@@ -124,7 +124,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -147,7 +147,7 @@ div.content > div.navigation > div > ul > li {
     border-top: 2px solid #ee2626;
     border-left: 2px solid #ee2626;
     border-right: 2px solid #ee2626;
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 5px 15px;
 }
 
@@ -157,10 +157,6 @@ div.content > div.navigation > div > ul > li.active {
 
 div.content > div.navigation > div > ul > li.active > a {
     color: #ffffff;
-}
-
-div.content > div.navigation > div > ul > li:nth-child(1) {
-    margin-left: 40px;
 }
 
 div.content > div.navigation > div > ul > li > a {
@@ -188,10 +184,13 @@ div.content > div.details > div > div {
 }
 
 div.content > div.details > div > div > ul {
-    padding: 40px 0 0 170px;
+    padding: 40px 0 0 120px;
 }
 
 /*密码修改*/
+div.content > div.details > div.changePassword > div > ul > li>p{
+    font-size: 16px;
+}
 div.content > div.details > div.changePassword > div > ul > li:nth-child(odd) {
     margin-top: 30px;
 }
@@ -225,7 +224,7 @@ div.content > div.details > div.changePassword > div > ul > li.LiTwo {
 }
 
 div.content > div.details > div.changePassword > div > ul > li.Li {
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 div.content > div.details > div.changePassword > div > ul > li.but {
@@ -249,9 +248,11 @@ div.content > div.details > div.changePassword > div > ul > li > input {
 
 /*银行卡管理*/
 div.content > div.details > div.bankSetting > div > ul > li {
-    margin-top: 30px;
+    margin-top: 14px;
 }
-
+div.content > div.details > div.bankSetting > div > ul > li>p{
+    font-size: 16px;
+}
 div.content > div.details > div.bankSetting > div > ul > li > p > input {
     width: 300px;
     height: 34px;
@@ -261,6 +262,7 @@ div.content > div.details > div.bankSetting > div > ul > li > p > input {
 div.content > div.details > div.bankSetting > div > ul > li > p > input:disabled {
     border: none;
     background: transparent;
+    font-size: 16px;
 }
 
 div.content > div.details > div.bankSetting > div > ul > li > p > select:disabled {
@@ -269,9 +271,11 @@ div.content > div.details > div.bankSetting > div > ul > li > p > select:disable
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+    font-size: 16px;
 }
 
 div.content > div.details > div.bankSetting > div > ul > li > button {
+    margin-top: 20px;
     width: 100px;
     font-size: 16px;
     background: #ee2626;
@@ -290,7 +294,7 @@ div.content > div.details > div.weChat > div > ul > li {
 }
 
 div.content > div.details > div.weChat > div > ul > li > p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 div.content > div.details > div.weChat > div > ul > li > p > a {
@@ -301,11 +305,11 @@ div.content > div.details > div.weChat > div > ul > li > p > a {
 
 /*服务器*/
 div.content > div.details > div.sever > div > ul > li {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 div.content > div.details > div.sever > div > ul > li > p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 div.content > div.details > div.sever > div > ul > li > p > span {

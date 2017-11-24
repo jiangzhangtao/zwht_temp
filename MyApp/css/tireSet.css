@@ -84,7 +84,7 @@ div.content > div.menu > div > ul > li {
 }
 
 div.content > div.menu > div > ul > li.basicTwo {
-    background: #9c3232;
+    background: #c41f1f;
 }
 
 div.content > div.menu > div > ul > li.basicTwo > a > span {
@@ -139,7 +139,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -261,7 +261,13 @@ div.content > div.details > div > div > ul {
 .tire > div > div > div.tireContent > div.tireAdd > div > a {
     color: #000;
 }
-
+.tire > div > div > div.tireContent > div.tireAdd > div > a>p{
+    color: blue;
+    font-size: 18px;
+}
+.tire > div > div > div.tireContent > div.tireAdd > div > a>p>span:nth-child(2){
+    text-decoration: underline;
+}
 .tire > div > div > div.tireContent > div.tireList > ul > li {
     height: 50px;
     line-height: 50px;
@@ -296,6 +302,14 @@ div.content > div.details > div > div > ul {
 .tire > div > div > div.tireTitle > p > span {
     width: 129px;
     text-align: center;
+}
+.tire > div > div > div.tireTitle > p > span.tireListBig,
+.tire > div > div > div.tireContent > div.tireList > ul > li > div > div.tireListBig{
+    width: 80px;
+}
+.tire > div > div > div.tireTitle > p > span.tireListModel,
+.tire > div > div > div.tireContent > div.tireList > ul > li > div > div.tireListModel{
+    width: 180px;
 }
 
 .tire > div > div > div.tireContent > div.tireList > div {
@@ -346,13 +360,15 @@ div.content > div.details > div > div > ul {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
 
 .tireListAdd > div > div > ul > li > h3,
 .tireListRedact > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
 .tireListAdd > div > div > ul > li,
@@ -370,6 +386,7 @@ div.content > div.details > div > div > ul {
     width: 90px;
     text-align: right;
     display: inline-block;
+    font-weight: bold;
 }
 
 .tireListAdd > div > div > ul > li.tireListAddBtn,
@@ -384,14 +401,19 @@ div.content > div.details > div > div > ul {
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
+    width: 130px;
 }
+.tireListAdd > div > div > ul > li.tireListAddBtn > button:nth-child(2),
+.tireListRedact > div > div > ul > li.tireListRedactBtn > button:nth-child(2){
+    margin-left: 20px;
 
+}
 .tireListAdd > div > div > ul > li > div > div > input,
 .tireListAdd > div > div > ul > li > div > select,
 .tireListRedact > div > div > ul > li > div > div > input,
 .tireListRedact > div > div > ul > li > div > select {
-    width: 150px;
-    height: 17px;
+    width: 200px;
+    height:30px;
     padding-left: 10px;
     box-sizing: border-box;
     background: #ccc;
@@ -476,6 +498,7 @@ div.content > div.details > div > div > ul {
     line-height: 85px;
     background: #eee;
     margin: 5px 0;
+    font-size: 16px;
 }
 
 .load > div > div > div.loadContent > div.loadList > ul > li > div,
@@ -508,11 +531,12 @@ div.content > div.details > div > div > ul {
 .mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div > a,
 .brand > div > div > div.brandContent > div.brandList > ul > li > div > div > a {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 6px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #000;
+    color: blue;
+    text-decoration: underline;
 }
 
 .load > div > div > div.loadContent > div.loadList > ul > li > div > div > a > span.loadRemove,
@@ -525,7 +549,6 @@ div.content > div.details > div > div > ul {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url(../img/basic/remove.png) no-repeat;
     background-size: 100%;
     vertical-align: middle;
 }
@@ -547,9 +570,19 @@ div.content > div.details > div > div > ul {
 .sidewall > div > div > div.sidewallContent > div.sidewallAdd > div > a > p,
 .mould > div > div > div.mouldContent > div.mouldAdd > div > a > p,
 .brand > div > div > div.brandContent > div.brandAdd > div > a > p {
-    color: #000;
+    color: blue;
+    font-size: 18px;
 }
 
+.load > div > div > div.loadContent > div.loadAdd > div > a > p>span:nth-child(2),
+.speed > div > div > div.speedContent > div.speedAdd > div > a > p>span:nth-child(2),
+.figure > div > div > div.figureContent > div.figureAdd > div > a > p>span:nth-child(2),
+.stripe > div > div > div.stripeContent > div.stripeAdd > div > a > p>span:nth-child(2),
+.sidewall > div > div > div.sidewallContent > div.sidewallAdd > div > a > p>span:nth-child(2),
+.mould > div > div > div.mouldContent > div.mouldAdd > div > a > p>span:nth-child(2),
+.brand > div > div > div.brandContent > div.brandAdd > div > a > p>span:nth-child(2){
+    text-decoration: underline;
+}
 /*花纹属性*/
 .stripe > div > div > div.stripeTitle > p > span,
 .stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div {
@@ -597,7 +630,6 @@ div.content > div.details > div > div > ul {
 .stripeListAdd > div > div > ul > li > div > div > input,
 .stripeListRedact > div > div > ul > li > div > div > input {
     padding-left: 14px;
-    padding-left: 14px;
     width: 240px;
     box-sizing: border-box;
     height: 33px;
@@ -605,7 +637,11 @@ div.content > div.details > div > div > ul {
 
 .stripeListRedact > div > div > ul > li > div > div > textarea,
 .stripeListAdd > div > div > ul > li > div > div > textarea {
-    vertical-align: top
+    vertical-align: top;
+    width: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .stripeListAdd > div > div > ul > li > div > div.stripeImg,
@@ -619,8 +655,26 @@ div.content > div.details > div > div > ul {
 .stripeListRedact > div > div > ul > li > div > p {
     text-align: center;
 }
+.stripeListAdd > div > div > ul > li > div > p>label,
+.stripeListRedact > div > div > ul > li > div > p>label{
+    position: relative;
+    display: inline-block;
+    padding: 4px 20px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    color: #333;
+    margin-top: 8px;
+    border: 1px solid #000;
+}
+.stripeListAdd > div > div > ul > li > div > p>label>input,
+.stripeListRedact > div > div > ul > li > div > p>label>input{
+    display: none;
+}
 
-/*模具标识           一下内容为所有的添加和编辑模态框的通用样式*/
+
+    /*模具标识           一下内容为所有的添加和编辑模态框的通用样式*/
 .mouldListAdd,
 .mouldListRedact,
 .sidewallListAdd,
@@ -668,7 +722,8 @@ div.content > div.details > div > div > ul {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
 
 .mouldListAdd > div > div > ul > li > h3,
@@ -687,6 +742,7 @@ div.content > div.details > div > div > ul {
 .stripeListRedact > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
 .mouldListAdd > div > div > ul > li,
@@ -703,7 +759,7 @@ div.content > div.details > div > div > ul {
 .tireListRedact > div > div > ul > li,
 .stripeListAdd > div > div > ul > li,
 .stripeListRedact > div > div > ul > li {
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 .mouldListAdd > div > div > ul > li > div > div,
@@ -740,6 +796,7 @@ div.content > div.details > div > div > ul {
     width: 90px;
     text-align: right;
     display: inline-block;
+    font-weight: bold;
 }
 
 .mouldListAdd > div > div > ul > li.mouldListAddBtn,
@@ -778,7 +835,27 @@ div.content > div.details > div > div > ul {
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
+    margin-top: 20px;
+    width: 130px;
 }
+
+.mouldListAdd > div > div > ul > li.mouldListAddBtn > button:nth-child(2),
+.mouldListRedact > div > div > ul > li.mouldListRedactBtn > button:nth-child(2),
+.sidewallListAdd > div > div > ul > li.sidewallListAddBtn > button:nth-child(2),
+.sidewallListRedact > div > div > ul > li.sidewallListRedactBtn > button:nth-child(2),
+.figureListAdd > div > div > ul > li.figureListAddBtn > button:nth-child(2),
+.figureListRedact > div > div > ul > li.figureListRedactBtn > button:nth-child(2),
+.speedListAdd > div > div > ul > li.speedListAddBtn > button:nth-child(2),
+.speedListRedact > div > div > ul > li.speedListRedactBtn > button:nth-child(2),
+.loadListAdd > div > div > ul > li.loadListAddBtn > button:nth-child(2),
+.loadListRedact > div > div > ul > li.loadListRedactBtn > button:nth-child(2),
+.brandListAdd > div > div > ul > li.brandListAddBtn > button:nth-child(2),
+.brandListRedact > div > div > ul > li.brandListRedactBtn > button:nth-child(2),
+.stripeListAdd > div > div > ul > li.stripeListAddBtn > button:nth-child(2),
+.stripeListRedact > div > div > ul > li.stripeListRedactBtn > button:nth-child(2){
+    margin-left: 20px;
+}
+
 
 .mouldListAdd > div > div > ul > li > div > div > input,
 .mouldListAdd > div > div > ul > li > div > select,
@@ -808,8 +885,8 @@ div.content > div.details > div > div > ul {
 .stripeListAdd > div > div > ul > li > div > select,
 .stripeListRedact > div > div > ul > li > div > div > input,
 .stripeListRedact > div > div > ul > li > div > select {
-    width: 150px;
-    height: 17px;
+    width: 200px;
+    height: 30px;
     padding-left: 10px;
     box-sizing: border-box;
     background: #ccc;
@@ -829,4 +906,7 @@ div.content > div.details > div > div > ul {
 .brandListAdd > div > div > ul > li > div > div > input,
 .brandListRedact > div > div > ul > li > div > div > input {
     padding-left: 14px;
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
 }

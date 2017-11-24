@@ -113,13 +113,20 @@
 
        });
        /*删除*/
-       $('.tireList').on('click','.tireListRemove',function(){
+       $('.tireList').on('click','.tireListRemove',function(e){
+           e.stopPropagation();
            if(confirm('确认删除？')){
-               that.remove()
+               that.remove();
            }
+           $('.listRedact').css({display:"none"})
+       });
+       $('.listRedact').click(function(){
+           $(this).css({
+               display:"none"
+           })
        });
        /*编辑*/
-       $('.listRedact').click(function(){
+       $('.tireList>div').on('click','.tireListEdit',function(){
            $('.listRedact>div').css({
                display:"none"
            });

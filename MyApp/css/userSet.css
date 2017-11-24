@@ -84,7 +84,7 @@ div.content > div.menu > div > ul > li {
 }
 
 div.content > div.menu > div > ul > li.basicTwo {
-    background: #9c3232;
+    background:#c41f1f;
 }
 
 div.content > div.menu > div > ul > li.basicTwo > a > span {
@@ -139,7 +139,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -259,7 +259,7 @@ div.content > div.details > div > div > ul {
 {
     overflow: hidden;
     border-bottom:1px solid #cccccc ;
-    padding: 5px 0;
+    padding: 5px 0 5px 20px;
 }
 .userSet>div>div>div.userSetContent>div.userSetScreen>div,
 .carSet>div>div>div.carSetContent>div.carSetScreen>div
@@ -316,9 +316,10 @@ div.content > div.details > div > div > ul {
 }
 .carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div>a,
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>a{
-    color: #000;
+    color: blue;
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 6px;
+    text-decoration: underline;
 }
 .carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div>a>span.carSetRemove,
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>a>span.userSetRemove{
@@ -326,8 +327,6 @@ div.content > div.details > div > div > ul {
     width: 14px;
     height: 14px;
     vertical-align: middle;
-    background: url('../img/basic/remove.png') no-repeat;
-    background-size:100% ;
 }
 
 /*用户信息*/
@@ -336,7 +335,7 @@ div.content > div.details > div > div > ul {
 {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
     position: fixed;
     top: 0;
@@ -346,6 +345,10 @@ div.content > div.details > div > div > ul {
 .userSetInfo>div{
     height: 400px;
     overflow: auto;
+}
+.userSetInfo>div>div>div.userSetInfoButton,
+.CarSetInfo>div>div>div.CarSetInfoButton{
+    margin-top: 30px;
 }
 .CarSetInfo>div>div,
 .userSetInfo>div>div{
@@ -359,25 +362,36 @@ div.content > div.details > div > div > ul {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
 .CarSetInfo>div>div>ul>li,
 .userSetInfo>div>div>ul>li{
-    margin-top: 10px;
+    margin-top: 18px;
 }
 .CarSetInfo>div>div>ul>li.CarSetInfoAvatar>div,
 .userSetInfo>div>div>ul>li.userSetInfoAvatar>div{
     text-align: center;
+
 }
 .CarSetInfo>div>div>ul>li.CarSetInfoTitle,
 .userSetInfo>div>div>ul>li.userSetInfoTitle{
     text-align: center;
+    padding-bottom: 30px;
+}
+.CarSetInfo>div>div>ul>li.CarSetInfoTitle>h3,
+.userSetInfo>div>div>ul>li.userSetInfoTitle>h3{
+    font-size: 20px;
 }
 .CarSetInfo>div>div>ul>li.CarSetInfoPrimaryTitle,
 .userSetInfo>div>div>ul>li.userSetInfoPrimaryTitle{
     padding-bottom: 5px;
     border-bottom:1px solid #000;
 }
+.userSetInfo>div>div>ul>li.userSetInfoPrimaryTitle>h4{
+    font-size: 16px;
+}
+
 .CarSetInfo>div>div>ul>li>div>img,
 .userSetInfo>div>div>ul>li>div>img{
     width: 80px;
@@ -390,6 +404,7 @@ div.content > div.details > div > div > ul {
     display: inline-block;
     width: 100px;
     text-align: right;
+    font-weight: bold;
 }
 .CarSetInfo>div>div>ul>li>div>i,
 .userSetInfo>div>div>ul>li>div>i{
@@ -420,11 +435,16 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     margin-top: 20px;
     cursor: pointer;
+    width: 130px;
+    font-size: 18px;
 }
-
+.CarSetInfo>div>div>div.CarSetInfoButton>div>button:nth-child(2),
+.userSetInfo>div>div>div.userSetInfoButton>div>button:nth-child(2){
+    margin-left: 20px;
+}
 .CarSetInfo>div>div>div.CarSetInfoButton>div.CarSetInfoAllBut>button,
 .userSetInfo>div>div>div.userSetInfoButton>div.userSetInfoAllBut>button{
-    width: auto;
+    width: 285px;
     padding: 0 20px;
 }
 
@@ -435,6 +455,9 @@ div.content > div.details > div > div > ul {
 .carDetail>div.carDetailTitle>h3
 {
     text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-top: 18px;
 }
 .CarSetList>div.userInfoCarList>ul>li,
 .userCarList>div.userInfoCarList>ul>li{
@@ -461,8 +484,12 @@ div.content > div.details > div > div > ul {
     width: 190px;
     box-sizing: border-box;
     float: left;
-    margin: 5px 0 ;
+    margin: 9px 0 ;
     padding-left: 19px;
+}
+.CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div>div>span:nth-child(1),
+.userCarList>div.userInfoCarList>ul>li>div.carInfo>div>div>span:nth-child(1){
+    font-weight: bold;
 }
 .CarSetList>div.CarSetInfoCarList>ul>li>div.CarInfo>div>div>a,
 .userCarList>div.userInfoCarList>ul>li>div.carInfo>div>div>a{
@@ -486,7 +513,7 @@ div.content > div.details > div > div > ul {
 }
 .CarSetInfo>div>div.CarSetList,
 .userSetInfo>div>div.userCarList{
-    width: 560px;
+    width: 650px;
 }
 div.CarSetList>div.CarSetInfoCarList,
 div.userCarList>div.userInfoCarList{
@@ -507,11 +534,12 @@ div.userCarList>div>button{
     box-sizing: border-box;
     background: #ee2626;
     color: #ffffff;
+    font-size: 18px;
 }
 div.CarSetList>div.CarSetInfoComeback,
 div.userCarList>div.userSetInfoComeback{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .CarDetail,
 .carDetail{
@@ -531,6 +559,10 @@ div.userCarList>div.userSetInfoComeback{
     width: 200px;
     line-height: 22px;
 }
+.CarDetail>div>div>div>p>span:nth-child(1),
+.carDetail>div>div>div>p>span:nth-child(1){
+    font-weight: bold;
+}
 .CarDetail>div>div>div>img,
 .carDetail>div>div>div>img
 {
@@ -544,6 +576,12 @@ div.userCarList>div.userSetInfoComeback{
 .carDetail>div>div.insurance>div
 {
     width: 200px;
+}
+.CarDetail>div>div.CarDriving>div,
+.CarDetail>div>div.CarDrivingInsurance>div,
+.carDetail>div>div.insurance>div,
+.carDetail>div>div.driving>div>span{
+    font-weight: bold;
 }
 .CarDetail>div>div.CarDriving>div>img,
 .CarDetail>div>div.CarDrivingInsurance>div>img,
@@ -561,6 +599,11 @@ div.userCarList>div.userSetInfoComeback{
     display: inline-block;
 }
 
+.CarDetail>div>div.CarDrivingInfo>ul>li>span,
+.carDetail>div>div.drivingInfo>ul>li>span{
+    font-weight: bold;
+}
+
 .CarDetail>div>div.CarDrivingInfo>ul>li,
 .carDetail>div>div.drivingInfo>ul>li{
     margin-top: 10px;
@@ -576,6 +619,7 @@ div.userCarList>div.userSetInfoComeback{
 .CarDetail>div>div.CarDetailBtn,
 .carDetail>div>div.carDetailBtn{
     text-align: center;
+    margin-top: 20px;
 }
 .CarDetail>div>div.CarDetailBtn>button,
 .carDetail>div>div.carDetailBtn>button{
@@ -588,6 +632,7 @@ div.userCarList>div.userSetInfoComeback{
     border: none;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 18px;
 }
 /*宝驹总表*/
 .carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div:nth-child(1),

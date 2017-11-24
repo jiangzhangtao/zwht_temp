@@ -84,7 +84,7 @@ div.content > div.menu > div > ul > li {
 }
 
 div.content > div.menu > div > ul > li.basicTwo {
-    background: #9c3232;
+    background: #c41f1f;
 }
 
 div.content > div.menu > div > ul > li.basicTwo > a > span {
@@ -139,7 +139,7 @@ div.content > div.menu > div > ul > li > a > span.order {
 }
 
 div.content > div.menu > div > ul > li > a > span.entrepot {
-    background: url("../img/account/entrepot.png") no-repeat;
+    background: url("../img/account/activity.png") no-repeat;
 }
 
 /*三级菜单*/
@@ -251,6 +251,7 @@ div.content > div.details > div > div > ul {
     line-height: 85px;
     background: #eee;
     margin: 5px 0;
+    font-size: 16px;
 }
 
 .storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div,
@@ -287,7 +288,8 @@ div.content > div.details > div > div > ul {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #000;
+    color: blue;
+    text-decoration: underline;
 }
 
 .severList > div > div > div.severListContent > div.severListList > ul > li > div > div > a > span.severListRemove,
@@ -296,8 +298,6 @@ div.content > div.details > div > div > ul {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url(../img/basic/remove.png) no-repeat;
-    background-size: 100%;
     vertical-align: middle;
 }
 
@@ -360,7 +360,7 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div,
 .tyreChangeRedact > div > div,
 .storeCategoryRedact > div > div {
-    width: 370px;
+    width: 450px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -371,7 +371,8 @@ div.content > div.details > div > div > ul {
     border-right: 1px solid #ee2626;
     border-bottom: 1px solid #ee2626;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 67px 44px;
+    padding-top: 20px;
 }
 
 .tyreChange > div > div > ul > li,
@@ -380,13 +381,14 @@ div.content > div.details > div > div > ul {
 .tyreChangeRedact > div > div > ul > li,
 .cooperativeListServer > div > div > ul > li,
 .storeCategoryRedact > div > div > ul > li {
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 .tyreChange > div > div > ul > li.tyreChangeBtn,
 .quality > div > div > ul > li.qualityBtn,
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn{
     text-align: center;
+    margin-top: 30px;
 }
 
 .tyreChange > div > div > ul > li > h3,
@@ -397,6 +399,7 @@ div.content > div.details > div > div > ul {
 .storeCategoryRedact > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
 
@@ -406,6 +409,7 @@ div.content > div.details > div > div > ul {
     width: 90px;
     text-align: right;
     display: inline-block;
+    font-weight: bold;
 }
 
 
@@ -428,13 +432,16 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div > ul > li > div > div>textarea,
 .storeCategoryRedact > div > div > ul > li > div > div>textarea{
     vertical-align: top;
+    width: 200px;
+    box-sizing: border-box;
+
 }
 
 .tyreChangeRedact > div > div > ul > li > div > div > input ,
 .qualityRedact > div > div > ul > li > div > div > input ,
 .storeCategoryRedact > div > div > ul > li > div > div > input {
-    width: 150px;
-    height: 17px;
+    width: 200px;
+    height: 30px;
     padding-left: 10px;
     box-sizing: border-box;
     background: #ccc;
@@ -459,6 +466,16 @@ div.content > div.details > div > div > ul {
     background: #ee2626;
     color: #ffffff;
     cursor: pointer;
+    width: 130px;
+    font-size: 18px;
+}
+.tyreChange > div > div > ul > li.tyreChangeBtn > button:nth-child(2),
+.quality > div > div > ul > li.qualityBtn > button:nth-child(2),
+.qualityRedact > div > div > ul > li.qualityRedactBtn > button:nth-child(2),
+.tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn > button:nth-child(2),
+.cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button:nth-child(2),
+.storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button:nth-child(2){
+    margin-left: 20px;
 }
 
 

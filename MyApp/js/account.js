@@ -1,40 +1,42 @@
 (function () {
-    var documentWidth = $(window).width();
-    var menuWidth=$('.menu').innerWidth();
-    var contentHeight=$('.content').innerHeight();
-    var detailsHeight=$('.details').innerHeight();
-    var navigationHeight = $(".navigation").innerHeight();
-    var windowHeight=$(document.body).innerHeight();
-    var logoHeight=$('.header').innerHeight();
-    $(".menu").css({
-        height: detailsHeight+navigationHeight,
-        minHeight:windowHeight-logoHeight
-    });
-    $('.navigation').css({
-        width:documentWidth-menuWidth-20
-    });
-    $('.details').css({
-        width:documentWidth-menuWidth-20
-    });
-    $(window).resize(function () {
-        var navigationHeight = $(".navigation").innerHeight();
+    (function () {
         var documentWidth = $(window).width();
-        var menuWidth=$('.menu').innerWidth();
-        var detailsHeight=$('.details').innerHeight();
-        var windowHeight=$(document.body).innerHeight();
-        var logoHeight=$('.header').innerHeight();
-        console.log(windowHeight)
+        var menuWidth = $('.menu').innerWidth();
+        var menuHeight = $('.menu').innerHeight();
+        var logoHeight = $('.header').innerHeight();
+        var bodyHeight = $(window).innerHeight();
+        var detailsHeight = $('.details').innerHeight();
+        var contentHeight = $('.content').height();
+        console.log(menuHeight + logoHeight);
         $(".menu").css({
-            height: detailsHeight+navigationHeight,
-            minHeight:windowHeight-logoHeight
-        });
-        $('.details').css({
-            width:documentWidth-menuWidth-20
+            height: bodyHeight - logoHeight - 1,
+            minHeight: detailsHeight + 50
         });
         $('.navigation').css({
-            width:documentWidth-menuWidth-20
-        })
-    });
+            width: documentWidth - menuWidth - 20
+        });
+        $('.details').css({
+            width: documentWidth - menuWidth - 20
+        });
+        $(window).resize(function () {
+            var documentWidth = $(window).width();
+            var menuWidth = $('.menu').innerWidth();
+            var windowHeight = $(window).height();
+            var logoHeight = $('.header').innerHeight();
+            var detailsHeight = $('.details').innerHeight();
+            var navigationHeight = $(".navigation").innerHeight();
+            $(".menu").css({
+                height: detailsHeight + navigationHeight - 1,
+                minHeight: windowHeight - logoHeight - 1
+            });
+            $('.details').css({
+                width: documentWidth - menuWidth - 20
+            });
+            $('.navigation').css({
+                width: documentWidth - menuWidth - 20
+            })
+        });
+    })();
     /*选项卡切换*/
     $(".navigation>div>ul>li>a").click(function () {
         $(".navigation>div>ul>li>a").eq($(this).parent().index()).parent().addClass('active').siblings().removeClass("active");
