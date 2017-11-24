@@ -1,0 +1,386 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background: #c41f1f;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/activity.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+    padding: 20px 0;
+}
+div.content > div.details > div.custom > div{
+    width: 600px;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*门店类别*/
+.system > div > div > .systemTitle > p {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.system > div > div > div.systemContent {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.system > div > div > div.systemContent > div {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.system > div > div > div.systemContent > div.systemList {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.system > div > div > div.systemContent > div.systemList > ul > li {
+    height: 85px;
+    line-height: 85px;
+    background: #eee;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.system > div > div > div.systemContent > div.systemList > ul > li > div {
+    overflow: hidden;
+}
+
+.system > div > div > div.systemContent > div.systemList > ul > li > div > div,
+.system > div > div > div.systemTitle > p > span {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+.system > div > div > div.systemTitle > p > span,
+.system > div > div > div.systemContent > div.systemList > ul > li > div > div {
+    width: 25%;
+}
+
+.system > div > div > div.systemContent > div.systemList > ul > li > div > div > a {
+    display: inline-block;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: blue;
+    text-decoration: underline;
+}
+
+.custom > div {
+    text-align: center;
+}
+.custom > div > ul > li{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+.custom > div>div>button{
+    margin-top: 50px;
+    background: #ee2626;
+    border: none;
+    width: 130px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.custom > div > ul > li > p > i {
+    display: inline-block;
+    font-style: normal;
+    width: 130px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom > div > ul > li > p > span {
+    display: inline-block;
+    width: 400px;
+    text-align: right;
+}
+
+.custom > div > ul > li > p > span > input {
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 30px;
+    text-align: center;
+}
+.custom > div > ul > li > p > span > input:disabled{
+    background: transparent;
+    border: none;
+    color: #000;
+}
+div.content > div.details > div > div > ul {
+    padding: 0px;
+}
+
+/*    模态框   */
+.systemReact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.systemReact > div > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 67px 44px;
+    padding-top: 20px;
+}
+
+.systemReact > div > div > ul > li {
+    margin-top: 18px;
+}
+
+.systemReact > div > div > ul > li.systemReactBtn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.systemReact > div > div > ul > li.systemReactBtn > button {
+    border: none;
+    background: #ee2626;
+    width: 130px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.systemReact > div > div > ul > li.systemReactBtn > button:nth-child(2){
+    margin-left: 20px;
+}
+
+.systemReact > div > div > ul > li > h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.systemReact > div > div > ul > li > div > input {
+    width: 260px;
+    height: 30px;
+    border: none;
+    box-sizing: border-box;
+    background: #cccccc;
+    padding-left: 10px;
+}
+
+.systemReact > div > div > ul > li > div > span {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+}

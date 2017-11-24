@@ -1,0 +1,689 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background:#c41f1f;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/activity.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+    padding: 20px 0;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*门店类别*/
+.price > div > div > .priceTitle > p ,
+.cash > div > div > .cashTitle > p {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.cash > div > div > div.cashContent ,
+.price > div > div > div.priceContent {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.cash > div > div > div.cashContent > div.cashList ,
+.price > div > div > div.priceContent > div.priceList {
+    height: 550px;
+    overflow-y: auto;
+}
+
+.cash > div > div > div.cashContent > div.cashList > div > div,
+.cash > div > div > div.cashContent > div.cashList > ul > li,
+.price > div > div > div.priceContent > div.priceList > div > div,
+.price > div > div > div.priceContent > div.priceList > ul > li {
+    height: 60px;
+    line-height: 60px;
+    background: #eee;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div,
+.price > div > div > div.priceContent > div.priceList > div > div > div,
+.cash > div > div > div.cashContent > div.cashList > ul > li > div,
+.cash > div > div > div.cashContent > div.cashList > div > div > div
+{
+    overflow: hidden;
+}
+
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div,
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div,
+.cash > div > div > div.cashTitle > p > span,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div,
+.price > div > div > div.priceTitle > p > span {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+/*宽度*/
+.price > div > div > div.priceTitle > p > span,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div {
+    width: 20%;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(1),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(1),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(1){
+    padding-left: 10px;
+    box-sizing: border-box;
+    width: 5%;
+    text-align: left;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(2),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(2),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(2){
+    width: 20%;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(3),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(3),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(3){
+    width: 10%;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(4),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(4),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(4){
+    width: 30%;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(5),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(5),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(5){
+    width: 15%;
+}
+.cash > div > div > div.cashTitle > p > span:nth-child(6),
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div:nth-child(6),
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div:nth-child(6){
+    width: 20%;
+}
+
+
+
+.price > div > div > div.priceTitle > p > span:nth-child(2),
+.price > div > div > div.priceContent > div.priceList > div > div > div > div:nth-child(2),
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div:nth-child(2) {
+    width: 40%;
+}
+
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div > a,
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div > a,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > a,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div > a {
+    display: inline-block;
+    padding: 0 6px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: blue;
+    text-decoration: underline;
+}
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div > a>i,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > a>i{
+    font-style: normal;
+}
+
+.cash > div > div > div.cashContent > div.cashAddList ,
+.price > div > div > div.priceContent > div.priceAddList {
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    border: 1px solid #ccc;
+}
+
+.cash > div > div > div.cashContent > div.query ,
+.price > div > div > div.priceContent > div.query {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.price > div > div > div.priceContent > div.priceAddList > div > a {
+    cursor: pointer;
+}
+
+.cash > div > div > div.cashContent > div.cashAddList > div > a > p > span ,
+.price > div > div > div.priceContent > div.priceAddList > div > a > p > span {
+    font-size: 18px;
+    color: blue;
+}
+
+.cash > div > div > div.cashContent > div.cashList > ul > li > div > div > span > input,
+.cash > div > div > div.cashContent > div.cashList > div > div > div > div > span > input,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > span > input,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div > span > input {
+    text-align: center;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 0px;
+}
+
+/*模态框*/
+.priceReact,
+.priceAdd,
+.cashReact,
+.cashAdd
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.priceReact > div.priceReactContent > div ,
+.cashReact > div.cashReactContent > div ,
+.priceAdd > div.priceAddContent > div ,
+.cashAdd > div.cashAddContent > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 67px 44px;
+    padding-top: 20px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li ,
+.priceAdd > div.priceAddContent > div > div > ul > li,
+.cashReact > div.cashReactContent > div > div > ul > li ,
+.cashAdd > div.cashAddContent > div > div > ul > li {
+    margin-top: 18px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li.priceReactTitle ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddTitle,
+.cashReact > div.cashReactContent > div > div > ul > li.cashReactTitle ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddTitle {
+    margin-bottom: 30px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li.priceReactTitle > h3 ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddTitle > h3,
+.cashReact > div.cashReactContent > div > div > ul > li.cashReactTitle > h3 ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddTitle > h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div,
+.cashReact > div.cashReactContent > div > div > ul > li > div ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div {
+    display: inline-block;
+    width: 100%;
+
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > div ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+}
+.priceReact > div.priceReactContent > div > div > ul > li > div > div.text ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div.text,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div.text ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div.text{
+    vertical-align: top
+}
+.priceReact > div.priceReactContent > div > div > ul > li > div > div.service ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div.service ,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div.cashService ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div.cashService {
+    min-height: 41px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li.serviceItems > div > div > div ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddServiceItems > div > div > div ,
+.cashReact > div.cashReactContent > div > div > ul > li.cashServiceItems > div > div > div ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddServiceItems > div > div > div {
+    position: relative;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > div > input ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div > input,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div > input ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div > input {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #ccc;
+    border: none;
+}
+
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div > span,
+.priceReact > div.priceReactContent > div > div > ul > li > div > div > span,
+.priceAdd > div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabConAdd > div > div > span ,
+.priceReact > div.serviceMatte > div.serviceItemsTab > .serviceItemsTabCon > div > div > span,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div > span,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div > span,
+.cashAdd > div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabConAdd > div > div > span ,
+.cashReact > div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabCon > div > div > span {
+    display: inline-block;
+    background: orange;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin: 0px 5px 5px 0;
+    color: #fff;
+    position: relative;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > div > span > i ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div > span > i,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div > span > i ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div > span > i {
+    width: 8px;
+    height: 8px;
+    padding: 1px;
+    background: url(../img/coupon/remove.png) no-repeat;
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    right: 4px;
+    display: none;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > div > div > button ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div > div > button ,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div > div > button ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div > div > button {
+    margin-left: 130px;
+    width: 120px;
+    border: 1px solid #000000;
+    background: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > div > textarea ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > div > textarea,
+.cashReact > div.cashReactContent > div > div > ul > li > div > div > textarea ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > div > textarea {
+    vertical-align: top;
+    width: 200px;
+    box-sizing: border-box;
+    height: 99px;
+    border: 1px solid #000;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li > div > span ,
+.priceAdd > div.priceAddContent > div > div > ul > li > div > span,
+.cashReact > div.cashReactContent > div > div > ul > li > div > span ,
+.cashAdd > div.cashAddContent > div > div > ul > li > div > span {
+    width: 130px;
+    text-align: right;
+    display: inline-block;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li.priceReactBtn ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddBtn,
+.cashReact > div.cashReactContent > div > div > ul > li.cashReactBtn ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddBtn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.priceReact > div.priceReactContent > div > div > ul > li.priceReactBtn > button ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddBtn > button,
+.cashReact > div.cashReactContent > div > div > ul > li.cashReactBtn > button ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddBtn > button {
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    width: 130px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 18px;
+}
+.priceReact > div.priceReactContent > div > div > ul > li.priceReactBtn > button:nth-child(2) ,
+.priceAdd > div.priceAddContent > div > div > ul > li.priceAddBtn > button:nth-child(2),
+.cashReact > div.cashReactContent > div > div > ul > li.cashReactBtn > button:nth-child(2) ,
+.cashAdd > div.cashAddContent > div > div > ul > li.cashAddBtn > button:nth-child(2){
+    margin-left: 20px;
+}
+
+/*添加服务项目的选项卡*/
+.priceReact > div.serviceMatte ,
+.priceAdd > div.serviceMatteAdd ,
+.cashReact > div.cashServiceMatte ,
+.cashAdd > div.cashServiceMatteAdd {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd ,
+.priceReact> div.serviceMatte > div.serviceItemsTab,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd ,
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab {
+    border: 1px solid #cccccc;
+    position: absolute;
+    top: 0;
+    background: #ffffff;
+}
+
+.priceReact> div.serviceMatte > div.serviceItemsTab > .serviceItemsTabNav ,
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabNavAdd ,
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabNav ,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabNavAdd {
+    margin-top: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.priceReact> div.serviceMatte > div.serviceItemsTab > .serviceItemsTabNav > ul ,
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabNavAdd > ul,
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabNav > ul ,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabNavAdd > ul {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+}
+
+.priceReact> div.serviceMatte >  div.serviceItemsTab > .serviceItemsTabNav > ul > li ,
+.priceAdd> div.serviceMatteAdd >  div.serviceItemsTabAdd > .serviceItemsTabNavAdd > ul > li,
+.cashReact> div.cashServiceMatte >  div.cashServiceItemsTab > .cashServiceItemsTabNav > ul > li ,
+.cashAdd> div.cashServiceMatteAdd >  div.cashServiceItemsTabAdd > .cashServiceItemsTabNavAdd > ul > li {
+    float: left;
+    width: 80px;
+    text-align: center;
+    margin-right: 15px;
+    padding: 5px 0;
+    border: 1px solid #cccccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 1px;
+}
+
+.priceReact> div.serviceMatte > div.serviceItemsTab > .serviceItemsTabNav > ul > li:nth-child(1) ,
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabNavAdd > ul > li:nth-child(1),
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabNav > ul > li:nth-child(1) ,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabNavAdd > ul > li:nth-child(1) {
+    margin-left: 15px;
+}
+
+.priceReact> div.serviceMatte >  div.serviceItemsTab > .serviceItemsTabNav > ul > li.serviceItemsTabConActive ,
+.priceAdd> div.serviceMatteAdd >  div.serviceItemsTabAdd > .serviceItemsTabNavAdd > ul > li.serviceItemsTabConActiveAdd,
+.cashReact> div.cashServiceMatte >  div.cashServiceItemsTab > .cashServiceItemsTabNav > ul > li.cashServiceItemsTabConActive ,
+.cashAdd> div.cashServiceMatteAdd >  div.cashServiceItemsTabAdd > .cashServiceItemsTabNavAdd > ul > li.cashServiceItemsTabConActiveAdd {
+    background: #FFF;
+    border-bottom: 1px solid #ffffff;
+}
+
+.priceReact> div.serviceMatte >  div.serviceItemsTab > .serviceItemsTabCon > div ,
+.priceAdd> div.serviceMatteAdd >  div.serviceItemsTabAdd > .serviceItemsTabConAdd > div ,
+.cashReact> div.cashServiceMatte >  div.cashServiceItemsTab > .cashServiceItemsTabCon > div ,
+.cashAdd> div.cashServiceMatteAdd >  div.cashServiceItemsTabAdd > .cashServiceItemsTabConAdd > div {
+    width: 400px;
+    min-height: 100px;
+    display: none;
+}
+
+.priceReact> div.serviceMatte >  div.serviceItemsTab > .serviceItemsTabCon > div.serviceItemsTabConBlock ,
+.priceAdd> div.serviceMatteAdd >  div.serviceItemsTabAdd > .serviceItemsTabConAdd > div.serviceItemsTabConBlock ,
+.cashReact> div.cashServiceMatte >  div.cashServiceItemsTab > .cashServiceItemsTabCon > div.cashServiceItemsTabConBlock ,
+.cashAdd> div.cashServiceMatteAdd >  div.cashServiceItemsTabAdd > .cashServiceItemsTabConAdd > div.cashServiceItemsTabConBlock {
+    display: block;
+}
+
+.priceReact> div.serviceMatte >  div.serviceItemsTab > .serviceItemsTabCon > div > div > span ,
+.priceAdd> div.serviceMatteAdd >  div.serviceItemsTabAdd > .serviceItemsTabConAdd > div > div > span ,
+.cashReact> div.cashServiceMatte >  div.cashServiceItemsTab > .cashServiceItemsTabCon > div > div > span ,
+.cashAdd> div.cashServiceMatteAdd >  div.cashServiceItemsTabAdd > .cashServiceItemsTabConAdd > div > div > span {
+    border: 1px solid #000000;
+    display: inline-block;
+    background: transparent;
+    padding: 6px 25px;
+    border-radius: 5px;
+    margin: 10px 10px 0 10px;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.priceReact > div.serviceMatte> div.serviceItemsTab > .serviceItemsTabCon > div > div > span.select ,
+.priceAdd > div.serviceMatteAdd> div.serviceItemsTabAdd > .serviceItemsTabConAdd > div > div > span.select,
+.cashReact > div.cashServiceMatte> div.cashServiceItemsTab > .cashServiceItemsTabCon > div > div > span.select ,
+.cashAdd > div.cashServiceMatteAdd> div.cashServiceItemsTabAdd > .cashServiceItemsTabConAdd > div > div > span.select {
+    background: orange;
+    border-color: #ffffff;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.priceReact> div.serviceMatte > div.serviceItemsTab > .serviceItemsTabButton ,
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabButtonAdd,
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabButton ,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabButtonAdd {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.priceReact> div.serviceMatte > div.serviceItemsTab > .serviceItemsTabButton > button ,
+.priceAdd> div.serviceMatteAdd > div.serviceItemsTabAdd > .serviceItemsTabButtonAdd > button,
+.cashReact> div.cashServiceMatte > div.cashServiceItemsTab > .cashServiceItemsTabButton > button ,
+.cashAdd> div.cashServiceMatteAdd > div.cashServiceItemsTabAdd > .cashServiceItemsTabButtonAdd > button{
+    border: none;
+    box-sizing: border-box;
+    background: #ee2626;
+    color: #ffffff;
+}

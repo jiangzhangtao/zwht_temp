@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/forage.css"/>
+</head>
+<body>
+<div>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <div class="logoImg"><img src="img/account/logo.png" alt=""/></div>
+                <div><p>小马驾驾平台管理系统</p></div>
+            </div>
+            <div class="login">
+                <div><p class="userImg"><span></span>您好，<b class="userName">admin</b>欢迎登录</p></div>
+                <div><p class="lock"><span></span>锁定</p></div>
+                <div><p class="exit"><span></span>退出</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="account.html"><span class="account"></span>账号管理</a></li>
+                        <li><a href="design.html"><span class="design"></span>计算公式管理</a></li>
+                        <li class=""><a href="basic.html"><span class="basic"></span>基本信息设置</a></li>
+                        <li class="liActive"><a href="order.html"><span class="order"></span>订单相关信息</a></li>
+
+                        <li class="basicTwo "><a href="order.html"><span class=""></span>查看轮胎订单</a></li>
+                        <li class="basicTwo"><a href="forage.html"><span class="basicTwoImg"></span>马粮设置</a></li>
+                        <li class="basicTwo"><a href="transaction.html"><span class=""></span>交易历史</a></li>
+
+                        <li><a href="activity.html"><span class="entrepot"></span>活动管理</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <div>
+                    <ul>
+                        <li class="active"><a href="##">系统充值</a></li>
+                        <li><a href="##">自定义充值</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <!--系统充值-->
+                <div class="system present">
+                    <div>
+                        <div>
+                            <div class="systemTitle">
+                                <p>
+                                    <span>序号</span>
+                                    <span>充值金额</span>
+                                    <span>马粮币</span>
+                                    <span>操作</span>
+                                </p>
+                            </div>
+                            <div class="systemContent">
+                                <div class="query">
+
+                                </div>
+                                <div class="systemList">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span>1500</span></div>
+                                                <div><span>1300</span></div>
+                                                <div>
+                                                    <a href="##" class="systemEdit"><span class="fa fa-edit"></span>编辑</a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--自定义充值-->
+                <div class="custom">
+                    <div>
+                        <ul>
+                            <li>
+                                <p>
+                                    <i>充值马粮比例：</i>
+                                    <span>
+                                        <input type="text" value="100" disabled/>
+                                        %
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i>充值一元时：</i>
+                                    <span>
+                                        可兑换
+                                        <input type="text" value="22" disabled/>
+                                        马粮
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="moneyButton" data-id="1">
+                                编&nbsp;&nbsp;&nbsp;辑
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--待发货详细信息-->
+        <div class="systemReact">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>充值金额编辑</h3>
+                        </li>
+
+                        <li class="">
+                            <div>
+                                <span>充值金额：</span>
+                                <input type="text" placeholder="请输入充值金额"/>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div>
+                                <span>马粮币：</span>
+                                <input type="text" placeholder="请输入城市名称"/>
+                            </div>
+                        </li>
+                        <li class="systemReactBtn">
+                            <button class="systemReactBtnOk">提&nbsp;&nbsp;&nbsp;交</button>
+                            <button class="systemReactUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/forage.js"></script>

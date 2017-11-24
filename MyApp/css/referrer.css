@@ -1,0 +1,672 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background:#c41f1f;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/activity.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+    padding: 20px 0;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*门店类别*/
+.price > div > div > .priceTitle > p {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.price > div > div > div.priceContent {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.price > div > div > div.priceContent > div.priceList {
+    height: 550px;
+    overflow-y: auto;
+}
+
+.price > div > div > div.priceContent > div.priceList > div > div,
+.price > div > div > div.priceContent > div.priceList > ul > li {
+    height: 60px;
+    line-height: 60px;
+    background: #eee;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.price > div > div > div.priceContent > div.priceList > div.newLi {
+    display: none;
+}
+
+.price > div > div > div.priceContent > div.priceList > div.newLi > div {
+    height: 85px;
+    line-height: 85px;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div,
+.price > div > div > div.priceContent > div.priceList > div > div > div,
+{
+    overflow: hidden;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div,
+.price > div > div > div.priceTitle > p > span {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div>span>a{
+    color: blue;
+    text-decoration: underline;
+}
+.price > div > div > div.priceTitle > p > span,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div,
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div {
+    width: 20%;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > a,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div > a {
+    display: inline-block;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.price > div > div > div.priceContent > div.priceAddList {
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    border: 1px solid #ccc;
+}
+
+.price > div > div > div.priceContent > div.query {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.price > div > div > div.priceContent > div.priceAddList > div > a {
+    cursor: pointer;
+}
+
+.price > div > div > div.priceContent > div.priceAddList > div > a > p > span {
+    color: #000;
+    font-size: 20px;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > span > input,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div > span > input {
+    text-align: center;
+}
+
+.price > div > div > div.priceContent > div.priceList > ul > li > div > div > span > input:disabled,
+.price > div > div > div.priceContent > div.priceList > div > div > div > div > span > input:disabled {
+    background: transparent;
+    color: #000;
+    text-align: center;
+    border: none;
+}
+
+div.content > div.details > div.custom > div {
+    border: 1px solid #cccccc;
+    width: 600px;
+    padding-top: 0;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 0px;
+}
+
+/*模态框*/
+
+/*用户信息*/
+.userSetInfo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.userSetInfo > div {
+    height: 400px;
+    overflow: auto;
+}
+
+.userSetInfo > div > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 67px 44px;
+    padding-top: 20px;
+}
+
+.userSetInfo > div > div > ul > li {
+    margin-top: 18px;
+}
+
+.userSetInfo > div > div > ul > li.userSetInfoAvatar > div {
+    text-align: center;
+}
+
+.CarSetInfo > div > div > ul > li.CarSetInfoTitle,
+.userSetInfo > div > div > ul > li.userSetInfoTitle {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.userSetInfo > div > div > ul > li.userSetInfoPrimaryTitle {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.userSetInfo > div > div > ul > li > div > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.userSetInfo > div > div > ul > li > div > span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.userSetInfo > div > div > ul > li > div > i {
+    font-style: normal;
+}
+
+.userSetInfo > div > div > ul > li > div > b {
+    color: #ee2626;
+}
+
+.userSetInfo > div > div > ul > li > div > span.userSetInfoState {
+    display: inline;
+    text-align: left;
+    color: #ee2626;
+    border-bottom: 1px solid #ee2626;
+    padding-bottom: 3px;
+}
+
+/*按钮*/
+
+.userSetInfo > div > div > div.userSetInfoButton > div {
+    text-align: center;
+}
+
+.userSetInfo > div > div > div.userSetInfoButton > div > button {
+    width: 260px;
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.userSetInfo > div > div > div.userSetInfoButton > div.userSetInfoAllBut > button {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.userSetInfo > div > div.tradingRecord {
+    padding: 20px 80px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent,
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack,
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet {
+    margin-top: 60px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li {
+    padding: 5px 0;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > i {
+    display: inline-block;
+    font-style: normal;
+    width: 80px;
+    text-align: right;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > span {
+    margin-left: 10px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div {
+    margin-top: 10px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div > button {
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack > div {
+    text-align: center;
+}
+
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack > div > button {
+    width: 200px;
+    box-sizing: border-box;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+div.userCarList > div.userSetInfoComeback {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.userSetInfo > div > div.userCarList {
+    width: 560px;
+}
+
+/* 宝驹列表*/
+.userCarList > div.userInfoCarListTitle > h3{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-top: 18px;
+}
+
+.userCarList > div.userInfoCarList > ul > li {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div {
+    float: left;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div.carInfo {
+    background: #cccccc;
+    width: 78%;
+    margin-left: 20px;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div {
+    overflow: hidden;
+    line-height: 20px;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div {
+    width: 190px;
+    box-sizing: border-box;
+    float: left;
+    margin: 9px 0;
+    padding-left: 19px;
+}
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div>span:nth-child(1){
+    font-weight: bold;
+}
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a {
+    padding: 6px 15px;
+    color: orange;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a > span.carRemove {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url('../img/userSet/remove.png') no-repeat;
+    background-size: 100%;
+}
+
+.userCarList > div.userInfoCarList > ul > li > div > img {
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.userSetInfo > div > div.userCarList {
+    width: 650px;
+}
+
+div.userCarList > div.userInfoCarList {
+    height: 400px;
+    overflow: auto;
+}
+
+div.userCarList {
+    display: none;
+}
+
+div.userCarList > div > button {
+    cursor: pointer;
+    width: 260px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ee2626;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+div.userCarList > div.userSetInfoComeback {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*单个宝驹列表*/
+
+.carDetail {
+    display: none;
+}
+
+.carDetail > div > div {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.carDetail > div > div > div {
+    float: left;
+}
+
+.carDetail > div > div > div > p {
+    width: 200px;
+    margin-top: 18px;
+}
+
+.carDetail > div > div > div > p>span:nth-child(1) {
+    font-weight: bold;
+}
+
+.carDetail > div > div > div > img {
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.carDetail > div > div.driving > div,
+.carDetail > div > div.insurance > div {
+    width: 200px;
+}
+.carDetail > div > div.driving > div>span,
+.carDetail > div > div.insurance > div>span{
+    font-weight: bold;
+}
+
+.carDetail > div > div.driving > div > img,
+.carDetail > div > div.insurance > div > img {
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ee2626;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: inherit;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.carDetail > div > div.drivingInfo > ul > li {
+    margin-top: 18px;
+}
+.carDetail > div > div.drivingInfo > ul > li>span{
+    font-weight: bold;
+}
+.carDetail > div > div.drivingInfo > ul > li:nth-child(1){
+    margin-top: 0;
+}
+
+.carDetail > div > div.drivingInfo > ul > li > i {
+    font-style: normal;
+}
+
+.carDetail > div > div.drivingInfo > ul > li > b {
+    color: #ee2626;
+}
+
+.carDetail > div > div.carDetailBtn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carDetail > div > div.carDetailBtn > button {
+    width: 260px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.carDetail > div.carDetailTitle > h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-top: 18px;
+}
+

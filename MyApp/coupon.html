@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/coupon.css"/>
+</head>
+<body>
+<div>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <div class="logoImg"><img src="img/account/logo.png" alt=""/></div>
+                <div><p>小马驾驾平台管理系统</p></div>
+            </div>
+            <div class="login">
+                <div><p class="userImg"><span></span>您好，<b class="userName">admin</b>欢迎登录</p></div>
+                <div><p class="lock"><span></span>锁定</p></div>
+                <div><p class="exit"><span></span>退出</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="account.html"><span class="account"></span>账号管理</a></li>
+                        <li><a href="design.html"><span class="design"></span>计算公式管理</a></li>
+                        <li class=""><a href="basic.html"><span class="basic"></span>基本信息设置</a></li>
+                        <li class=""><a href="order.html"><span class="order"></span>订单相关信息</a></li>
+                        <li class="liActive"><a href="activity.html"><span class="entrepot"></span>活动管理</a></li>
+                        <li class="basicTwo "><a href="activity.html"><span class=""></span>畅行无忧</a></li>
+                        <li class="basicTwo"><a href="coupon.html"><span class="basicTwoImg"></span>优惠券</a></li>
+                        <li class="basicTwo"><a href="referrer.html"><span class=""></span>推荐人</a></li>
+                        <li class="basicTwo"><a href="generalize.html"><span class=""></span>推广有礼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <div>
+                    <ul>
+                        <li class="active"><a href="##">服务优惠券</a></li>
+                        <li><a href="##">现金优惠券</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <!--服务优惠券-->
+                <div class="price present">
+                    <div>
+                        <div>
+                            <div class="priceTitle">
+                                <p>
+                                    <span>序号</span>
+                                    <span>名称</span>
+                                    <span>赠送频率（月/次）</span>
+                                    <span>操作</span>
+                                </p>
+                            </div>
+                            <div class="priceContent">
+                                <div class="query">
+
+                                </div>
+                                <div class="priceList">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span>外表洗车券</span></div>
+                                                <div><span>3</span></div>
+                                                <div>
+                                                    <a href="##" class="priceEdit" data-id="1">
+                                                        <span class="fa fa-edit "></span><i>编辑</i></a>
+                                                    <a href="##" class="priceDelete"><span class="fa fa-external-link "></span><i>移除</i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="priceAddList">
+                                   <div>
+                                       <a data-id="0">
+                                           <p>
+                                               <span class="fa fa-plus-square-o"></span>
+                                               <span>新增优惠券</span>
+                                           </p>
+                                       </a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--现金优惠券-->
+                <div class="cash">
+                    <div>
+                        <div>
+                            <div class="cashTitle">
+                                <p>
+                                    <span>序号</span>
+                                    <span>名称</span>
+                                    <span>金额（元）</span>
+                                    <span>试用服务范围</span>
+                                    <span>有效期（天）</span>
+                                    <span>操作</span>
+                                </p>
+                            </div>
+                            <div class="cashContent">
+                                <div class="query">
+
+                                </div>
+                                <div class="cashList">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span>外表洗车券</span></div>
+                                                <div><span>34</span></div>
+                                                <div><span>汽车美容/钣金喷漆</span></div>
+                                                <div><span>30天</span></div>
+                                                <div>
+                                                    <a href="##" class="cashEdit" data-id="1">
+                                                        <span class="fa fa-edit "></span><i>编辑</i></a>
+                                                    <a href="##" class="cashDelete"><span class="fa fa-external-link "></span><i>移除</i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="cashAddList">
+                                    <div>
+                                        <a data-id="0">
+                                            <p>
+                                                <span class="fa fa-plus-square-o"></span>
+                                                <span>新增优惠券</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--现金优惠券编辑-->
+        <div class="cashReact">
+            <div class="cashReactContent">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="cashReactTitle">
+                                <h3>现金优惠券编辑</h3>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券名称：</span>
+                                    <div><input type="text" placeholder="请输入优惠券名称"/></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>规则：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠规则"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>金额：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠金额"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>有效期：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入有效期天数"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券内容：</span>
+                                    <div class="text">
+                                        <textarea name=""  cols="18" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cashServiceItems">
+                                <div>
+                                    <span>包含服务项目：</span>
+                                    <div class="cashService text">
+                                        <span>普通洗车 <i></i></span>
+                                        <span>更换机油滤芯<i></i></span>
+                                        <span>更换防冻液<i></i></span>
+                                        <span>普通洗车<i></i></span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button class="cashServiceItemsSelect"><i class="fa fa-edit"></i>编辑</button>
+                                            <!-- 添加服务项目的选项卡-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cashReactBtn">
+                                <button class="cashReactBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                                <button class="cashReactUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cashServiceMatte">
+                <div class="cashServiceItemsTab">
+                    <div class="cashServiceItemsTabNav">
+                        <ul>
+                            <li class="cashServiceItemsTabConActive"><a href="##">汽车保养</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                        </ul>
+                    </div>
+                    <div class="cashServiceItemsTabCon">
+                        <div class="cashServiceItemsTabConBlock">
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cashServiceItemsTabButton">
+                        <button>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cashAdd">
+            <div class="cashAddContent">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="cashAddTitle">
+                                <h3>添加现金优惠券</h3>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券名称：</span>
+                                    <div><input type="text" placeholder="请输入优惠券名称"/></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>规则：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠规则"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>金额：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠金额"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>有效期：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入有效期天数"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券内容：</span>
+                                    <div>
+                                        <textarea name=""  cols="18" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cashAddServiceItems">
+                                <div>
+                                    <span>包含服务项目：</span>
+                                    <div class="cashService">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button class="cashAddServiceItemsSelect"><i class="fa fa-edit"></i>编辑</button>
+                                            <!-- 添加服务项目的选项卡-->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cashAddBtn">
+                                <button class="cashAddBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                                <button class="cashAddUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cashServiceMatteAdd">
+                <div class="cashServiceItemsTabAdd">
+                    <div class="cashServiceItemsTabNavAdd">
+                        <ul>
+                            <li class="cashServiceItemsTabConActive"><a href="##">汽车保养</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                        </ul>
+                    </div>
+                    <div class="cashServiceItemsTabConAdd">
+                        <div class="cashServiceItemsTabConBlock">
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cashServiceItemsTabButtonAdd">
+                        <button>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--服务优惠券编辑-->
+        <div class="priceReact">
+            <div class="priceReactContent">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="priceReactTitle">
+                                <h3>服务优惠券编辑</h3>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券名称：</span>
+                                    <div><input type="text" placeholder="请输入优惠券名称"/></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>规则：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠规则"/>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="">
+                                    <span>优惠券内容：</span>
+                                    <div class="text">
+                                        <textarea name=""  cols="18" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="serviceItems">
+                                <div>
+                                    <span>包含服务项目：</span>
+                                    <div class="service text">
+                                        <span>普通洗车 <i></i></span>
+                                        <span>更换机油滤芯<i></i></span>
+                                        <span>更换防冻液<i></i></span>
+                                        <span>普通洗车<i></i></span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button class="serviceItemsSelect"><i class="fa fa-edit"></i>编辑</button>
+                                            <!-- 添加服务项目的选项卡-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>赠送频率（月/次）：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入赠送次数"/>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="priceReactBtn">
+                                <button class="priceReactBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                                <button class="priceReactUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="serviceMatte">
+                <div class="serviceItemsTab">
+                    <div class="serviceItemsTabNav">
+                        <ul>
+                            <li class="serviceItemsTabConActive"><a href="##">汽车保养</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                        </ul>
+                    </div>
+                    <div class="serviceItemsTabCon">
+                        <div class="serviceItemsTabConBlock">
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serviceItemsTabButton">
+                        <button>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="priceAdd">
+            <div class="priceAddContent">
+                <div>
+                    <div>
+                        <ul>
+                            <li class="priceAddTitle">
+                                <h3>添加服务优惠券</h3>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>优惠券名称：</span>
+                                    <div><input type="text" placeholder="请输入优惠券名称"/></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="">
+                                    <span>规则：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入优惠规则"/>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="">
+                                    <span>优惠券内容：</span>
+                                    <div>
+                                        <textarea name=""  cols="18" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="priceAddServiceItems">
+                                <div>
+                                    <span>包含服务项目：</span>
+                                    <div class="service">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button class="priceAddServiceItemsSelect"><i class="fa fa-edit"></i>编辑</button>
+                                            <!-- 添加服务项目的选项卡-->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>赠送频率（月/次）：</span>
+                                    <div>
+                                        <input type="text" placeholder="请输入赠送次数"/>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="priceAddBtn">
+                                <button class="priceAddBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                                <button class="priceAddUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="serviceMatteAdd">
+                <div class="serviceItemsTabAdd">
+                    <div class="serviceItemsTabNavAdd">
+                        <ul>
+                            <li class="serviceItemsTabConActive"><a href="##">汽车保养</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                            <li><a href="##">美容清洗</a></li>
+                        </ul>
+                    </div>
+                    <div class="serviceItemsTabConAdd">
+                        <div class="serviceItemsTabConBlock">
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span data-id="1">普通洗车 </span>
+                                <span data-id="1">更换机油滤芯</span>
+                                <span data-id="1">更换防冻液</span>
+                                <span data-id="1">普通洗车</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serviceItemsTabButtonAdd">
+                        <button>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/coupon.js"></script>

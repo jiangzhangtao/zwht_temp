@@ -1,0 +1,1243 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background: #c41f1f;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/activity.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+
+/*门店总表*/
+/*标题*/
+.userSet > div > div > div.userSetTitle > p,
+.carSet > div > div > div.carSetTitle > p,
+.storeOrder > div > div > div.storeOrderTitle > p,
+.storeOrder > div > div > div.storeOrderChangeTitle > p,
+.orderHistory > div > div > div.orderHistoryTitle > p {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+}
+
+.userSet > div > div > div.userSetTotal > div > p,
+.carSet > div > div > div.carSetTotal > div > p,
+.storeOrder > div > div > div.storeOrderTotal > div > p,
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p,
+.orderHistory > div > div > div.carSetTotal > div > p {
+    overflow: hidden;
+}
+
+.userSet > div > div > div.userSetTitle > p > span,
+.carSet > div > div > div.carSetTitle > p > span,
+.orderHistory > div > div > div.orderHistoryTitle > p > span,
+.storeOrder > div > div > div.storeOrderTitle > p > span,
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span,
+.userSet > div > div > div.userSetTotal > div > p > span,
+.carSet > div > div > div.carSetTotal > div > p > span,
+.storeOrder > div > div > div.storeOrderTotal > div > p > span,
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span,
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span {
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/*筛选框*/
+.userSet > div > div > div.userSetContent > div.userSetScreen,
+.carSet > div > div > div.carSetContent > div.carSetScreen,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderScreen,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen {
+    overflow: hidden;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 0 5px 20px;
+}
+
+.userSet > div > div.moneyList > div.userSetContent > div.userSetScreen > div.userMoney,
+.carSet > div > div > div.carSetContent > div.carSetScreen > div.carSetPlate,
+.userSet > div > div.moneyChange > div.userSetContent > div.userSetScreen > div.singleUserMoney,
+.storeOrder > div > div.storeOrderChange > div.storeOrderChangeContent > div.storeOrderChangeScreen > div.storeOrderChangeMoney
+{
+    float: left;
+    margin-left: 50%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetScreen > div.carSetPlate {
+    margin-left: 55%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetScreen > div > button,
+.carSet > div > div > div.carSetContent > div.carSetScreen > div > button,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderScreen > div > button,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen > div > button,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen > div > button {
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen > div.query,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen > div.query
+{
+    position: relative;
+    float: left;
+    margin-left: 20px;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen > div.query > input,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen > div.query > input
+{
+    padding-left: 26px;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen > div.query > span,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen > div.query > span
+{
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/order/seekIcon.png) no-repeat;
+    background-size: 100%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryScreen > div.orderHistoryPlate,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeScreen > div.storeOrderChangePlate
+{
+    display: inline-block;
+    float: left;
+    margin-left: 35%;
+}
+
+/*可视窗口*/
+.carSet > div > div > div.carSetContent,
+.userSet > div > div > div.userSetContent,
+.storeOrder > div > div > div.storeOrderContent,
+.storeOrder > div > div > div.storeOrderChangeContent,
+.orderHistory > div > div > div.orderHistoryContent {
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList,
+.userSet > div > div > div.userSetContent > div.userSetList,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList {
+    height: 550px;
+    overflow: auto;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li,
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li {
+    height: 85px;
+    line-height: 85px;
+    background: #dddddd;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div,
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li > div,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div {
+    overflow: hidden;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div,
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li > div > div,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div {
+    float: left;
+    text-align: center;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div > a,
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div > a,
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li > div > div > a,
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div > a,
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div > a {
+    color: blue;
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration: underline;
+}
+
+.userSet > div > div > div.userSetTotal,
+.carSet > div > div > div.carSetTotal,
+.storeOrder > div > div > div.storeOrderTotal,
+.storeOrder > div > div > div.storeOrderChangeTotal,
+.orderHistory > div > div > div.orderHistoryTotal {
+    height: 50px;
+    line-height: 50px;
+    background: #eeeeee;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 16px;
+}
+
+/*用户信息*/
+.userSetInfo,
+.CarSetInfo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.userSetInfo > div > div.personal {
+    display: none;
+}
+
+.CarSetInfo > div,
+.userSetInfo > div {
+    overflow: auto;
+}
+
+.CarSetInfo > div > div,
+.userSetInfo > div > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 67px 44px;
+    padding-top: 20px;
+}
+
+.CarSetInfo > div > div > ul > li,
+.userSetInfo > div > div > ul > li {
+    margin-top: 18px;
+}
+
+.CarSetInfo > div > div > ul > li.CarSetInfoAvatar > div,
+.userSetInfo > div > div > ul > li.userSetInfoAvatar > div {
+    text-align: center;
+}
+
+.CarSetInfo > div > div > ul > li.CarSetInfoTitle,
+.userSetInfo > div > div > ul > li.userSetInfoTitle {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.CarSetInfo > div > div > ul > li.CarSetInfoTitle>h3,
+.userSetInfo > div > div > ul > li.userSetInfoTitle>h3{
+    font-size: 20px;
+}
+
+.CarSetInfo > div > div > ul > li.CarSetInfoPrimaryTitle,
+.userSetInfo > div > div > ul > li.userSetInfoPrimaryTitle {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.CarSetInfo > div > div > ul > li > div > img,
+.userSetInfo > div > div > ul > li > div > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.CarSetInfo > div > div > ul > li > div > span,
+.userSetInfo > div > div > ul > li > div > span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.CarSetInfo > div > div > ul > li > div > i,
+.userSetInfo > div > div > ul > li > div > i {
+    font-style: normal;
+}
+
+.CarSetInfo > div > div > ul > li > div > b,
+.userSetInfo > div > div > ul > li > div > b {
+    color: #ee2626;
+}
+
+.CarSetInfo > div > div > ul > li > div > span.CarSetInfoState,
+.userSetInfo > div > div > ul > li > div > span.userSetInfoState {
+    display: inline;
+    text-align: left;
+    color: #ee2626;
+    border-bottom: 1px solid #ee2626;
+    padding-bottom: 3px;
+}
+
+/*按钮*/
+.CarSetInfo > div > div > div.CarSetInfoButton > div,
+.userSetInfo > div > div > div.userSetInfoButton > div {
+    text-align: center;
+}
+.userSetInfo > div > div > div.userSetInfoButton > div.userSetInfoAllBut{
+    margin-top: 30px;
+}
+
+.CarSetInfo > div > div > div.CarSetInfoButton > div > button,
+.userSetInfo > div > div > div.userSetInfoButton > div > button {
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 130px;
+}
+.CarSetInfo > div > div > div.CarSetInfoButton > div > button:nth-child(2),
+.userSetInfo > div > div > div.userSetInfoButton > div > button:nth-child(2){
+    margin-left: 20px;
+}
+.CarSetInfo > div > div > div.CarSetInfoButton > div.CarSetInfoAllBut > button,
+.userSetInfo > div > div > div.userSetInfoButton > div.userSetInfoAllBut > button {
+    width: 285px;
+    padding: 0 20px;
+}
+
+/*宝驹总列表*/
+.CarSetList > div.CarSetListTitle > h3,
+.CarDetail > div.CarDetailTitle > h3,
+.userCarList > div.userInfoCarListTitle > h3,
+.carDetail > div.carDetailTitle > h3 {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-top: 18px;
+}
+
+.CarSetList > div.userInfoCarList > ul > li,
+.userCarList > div.userInfoCarList > ul > li {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div,
+.userCarList > div.userInfoCarList > ul > li > div {
+    float: left;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo,
+.userCarList > div.userInfoCarList > ul > li > div.carInfo {
+    background: #cccccc;
+    width: 78%;
+    margin-left: 20px;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div,
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div {
+    overflow: hidden;
+    line-height: 20px;
+}
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div>div>span:nth-child(1),
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div>div>span:nth-child(1){
+    font-weight: bold;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div,
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div {
+    width: 190px;
+    box-sizing: border-box;
+    float: left;
+    margin: 9px 0;
+    padding-left: 19px;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div > a,
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a {
+    padding: 6px 15px;
+    color: orange;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div > a > span.CarRemove,
+.userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a > span.carRemove {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url('../img/userSet/remove.png') no-repeat;
+    background-size: 100%;
+}
+
+.CarSetList > div.CarSetInfoCarList > ul > li > div > img,
+.userCarList > div.userInfoCarList > ul > li > div > img {
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.CarSetInfo > div > div.CarSetList,
+.userSetInfo > div > div.userCarList {
+    width: 650px;
+}
+
+div.CarSetList > div.CarSetInfoCarList,
+div.userCarList > div.userInfoCarList {
+    height: 400px;
+    overflow: auto;
+}
+
+div.CarSetList,
+div.userCarList {
+    display: none;
+}
+
+div.CarSetList > div > button,
+div.userCarList > div > button {
+    cursor: pointer;
+    width: 260px;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ee2626;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+div.CarSetList > div.CarSetInfoComeback,
+div.userCarList > div.userSetInfoComeback {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.CarDetail,
+.carDetail {
+    display: none;
+}
+
+.CarDetail > div > div,
+.carDetail > div > div {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.CarDetail > div > div > div,
+.carDetail > div > div > div {
+    float: left;
+}
+
+.CarDetail > div > div > div > p,
+.carDetail > div > div > div > p {
+    width: 200px;
+    margin-top: 18px;
+}
+
+.CarDetail > div > div > div > p>span:nth-child(1),
+.carDetail > div > div > div > p>span:nth-child(1){
+    font-weight: bold;
+}
+
+.CarDetail > div > div > div > img,
+.carDetail > div > div > div > img {
+    width: 90px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.CarDetail > div > div.CarDriving > div,
+.CarDetail > div > div.CarDrivingInsurance > div,
+.carDetail > div > div.driving > div,
+.carDetail > div > div.insurance > div {
+    width: 200px;
+}
+.CarDetail > div > div.CarDriving > div>span,
+.CarDetail > div > div.CarDrivingInsurance > div>span,
+.carDetail > div > div.driving > div>span,
+.carDetail > div > div.insurance > div>span{
+    font-weight: bold;
+}
+
+.CarDetail > div > div.CarDriving > div > img,
+.CarDetail > div > div.CarDrivingInsurance > div > img,
+.carDetail > div > div.driving > div > img,
+.carDetail > div > div.insurance > div > img {
+    width: 150px;
+    height: 100px;
+    border: 1px solid #ee2626;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: inherit;
+    margin-top: 10px;
+    display: inline-block;
+}
+.carDetail > div > div.drivingInfo > ul > li:nth-child(1){
+    margin-top: 0;
+}
+.CarDetail > div > div.CarDrivingInfo > ul > li,
+.carDetail > div > div.drivingInfo > ul > li {
+    margin-top: 18px;
+}
+.CarDetail > div > div.CarDrivingInfo > ul > li>span,
+.carDetail > div > div.drivingInfo > ul > li>span{
+    font-weight: bold;
+}
+
+.CarDetail > div > div.CarDrivingInfo > ul > li > i,
+.carDetail > div > div.drivingInfo > ul > li > i {
+    font-style: normal;
+}
+
+.CarDetail > div > div.CarDrivingInfo > ul > li > b,
+.carDetail > div > div.drivingInfo > ul > li > b {
+    color: #ee2626;
+}
+
+.CarDetail > div > div.CarDetailBtn,
+.carDetail > div > div.carDetailBtn {
+    text-align: center;
+}
+
+.CarDetail > div > div.CarDetailBtn > button,
+.carDetail > div > div.carDetailBtn > button {
+    width: 260px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    background: #ee2626;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.userSetInfo > div > div.tradingRecord {
+    padding: 20px 80px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent,
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack,
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet {
+    margin-top: 60px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li {
+    padding: 5px 0;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > i {
+    display: inline-block;
+    font-style: normal;
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > span {
+    margin-left: 10px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div {
+    margin-top: 10px;
+}
+
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div > button {
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack > div {
+    text-align: center;
+}
+
+.userSetInfo > div > div.tradingRecord > div.buttonComeBack > div > button {
+    width: 260px;
+    box-sizing: border-box;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    margin-bottom: 100px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+/*          马粮变动           */
+.userSet > div > div.moneyChange,
+.storeOrder > div > div.storeOrderChange
+{
+    margin-top: -25px;
+    display: none;
+}
+
+.userSet > div > div.moneyChange > div.userSetTitle > div > p ,
+.storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p
+{
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.userSet > div > div.moneyChange > div.userSetTitle > div > p > span ,
+.storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p > span
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.userSet > div > div.moneyChange > div.userSetTitle > div > p > button,
+.storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p > button
+{
+    float: right;
+    border: none;
+    box-sizing: border-box;
+    background: #ee2626;
+    color: #ffffff;
+    width: 130px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.orderInfo,
+.storeOrderInfo,
+.tyreOrderInfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+.orderInfo > div > div,
+.storeOrderInfo > div > div,
+.tyreOrderInfo > div {
+    width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-top: 10px solid #ee2626;
+    border-left: 1px solid #ee2626;
+    border-right: 1px solid #ee2626;
+    border-bottom: 1px solid #ee2626;
+    box-sizing: border-box;
+    padding: 67px 44px;
+    padding-top: 20px;
+}
+
+.tyreOrderInfo > div{
+    width: 500px;
+}
+
+.redFont > span {
+    color: #ee2626;
+}
+
+
+.tyreOrderInfoContent > div > div > ul > li {
+    height: 25px;
+    line-height: 25px;
+    margin-top: 18px;
+}
+
+.tyreOrderInfoContent > div > div > ul > li.nameBackground {
+    color: #ffffff;
+    background: #ff8b28;
+}
+
+.tyreOrderInfoContent > div > div > ul > li > i,
+.orderInfoContent > div > div > ul > li > i,
+.storeOrderInfoContent > div > div > ul > li > i,
+.tyreOrderDetailContent > div > div > ul > li > span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-style: normal;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.tyreOrderInfoContent > div > div > ul > li > span,
+.tyreOrderInfoContent > div > div > ul > li > p {
+    margin-left: 20px;
+}
+
+.orderDetailContent > div > div > ul > li > p,
+.storeOrderDetailContent > div > div > ul > li > p,
+.tyreOrderInfoContent > div > div > ul > li > p {
+    display: inline-block;
+    word-break: break-word;
+    width: 180px;
+}
+
+.tyreOrderInfoContent > div.tyreOrderBasicInfo > div.tyreOrderBasicInfoTitle,
+.tyreOrderInfoContent > div.tyreOrderStatus > div.tyreOrderStatusTitle,
+.tyreOrderInfoContent > div.tyreInformation > div.tyreInformationTitle {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+}
+
+.tyreOrderInfoContent > div {
+    margin-top: 30px;
+}
+
+.tyreOrderInfo > div > div > div.tyreOrderTitle {
+    text-align: center;
+}
+
+.orderButton > div > button,
+.storeOrderButton > div > button,
+.tyreOrderButton > div > button {
+    width: 260px;
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.orderButton > div,
+.storeOrderButton > div,
+.tyreOrderButton > div {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*历史订单详情*/
+.orderInfoContent > div > div > ul > li > p,
+.storeOrderInfoContent > div > div > ul > li > p
+{
+    display: inline-block;
+    line-height: 17px;
+}
+
+.orderInfoContent > div > div > ul > li,
+.storeOrderInfoContent > div > div > ul > li,
+.orderDetailContent > div > ul > li,
+.orderInfoContent > div > div > ul > li > p > span,
+.storeOrderInfoContent > div > div > ul > li > p > span
+{
+    margin-top: 18px;
+}
+
+.orderInfoContent > div.basicInfo > div.basicInfoTitle,
+.orderInfoContent > div.orderStatus > div.orderStatusTitle,
+.storeOrderInfoContent > div.storeOrderInfoBasic > div.storeOrderInfoBasicTitle,
+.storeOrderInfoContent > div.storeOrderInfoStatus > div.storeOrderStatusTitle,
+.orderDetail > div.orderDetailTitle,
+.storeOrderDetail > div.storeOrderDetailTitle
+{
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+}
+
+.orderInfoContent > div:nth-child(2) ,
+.storeOrderInfoContent > div:nth-child(2)
+{
+    margin-left: 10%;
+}
+
+.orderInfoContent > div,
+.storeOrderInfoContent > div
+{
+    float: left;
+    width: 45%;
+}
+.storeOrderDetail,
+.orderDetail{
+    margin-top: 20px;
+}
+
+.orderInfoContent ,
+.storeOrderInfoContent
+{
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.orderInfo > div > div > div.orderInfoTitle,
+.storeOrderInfo > div > div > div.storeOrderInfoTitle
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.orderDetailContent > div ,
+.storeOrderDetailContent > div
+{
+    overflow: hidden;
+
+}
+
+.orderDetailContent > div > div ,
+.storeOrderDetailContent > div > div
+{
+    width: 45%;
+    float: left;
+    margin-top: 10px;
+}
+
+.orderDetailContent > div > div:nth-child(even) ,
+.storeOrderDetailContent > div > div:nth-child(even) {
+    margin-left: 10%;
+}
+
+.orderDetailContent > div > div > ul > li:nth-child(1) ,
+.storeOrderDetailContent > div > div > ul > li:nth-child(1)
+{
+    background: #ff8b28;
+    color: #ffffff;
+}
+
+.orderDetailContent > div > div > ul > li,
+.storeOrderDetailContent > div > div > ul > li
+{
+    padding: 5px 0;
+}
+
+.orderDetailContent > div > div > ul > li > p > img,
+.storeOrderDetailContent > div > div > ul > li > p > img
+{
+    display: inline-block;
+    width: 133px;
+    height: 100px;
+    border: 1px solid #000000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.orderInfoContent > div > div > ul > li > i,
+.storeOrderInfoContent > div > div > ul > li > i,
+.orderDetailContent > div > div > ul > li > span,
+.storeOrderDetailContent > div > div > ul > li > span
+{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    font-style: normal;
+    vertical-align: top;
+    font-weight:bold;
+
+}
+
+.orderDetailContent,
+.storeOrderDetail
+{
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: 400px;
+}
+
+/*马粮变动记录每个块的宽度*/
+.userSet > div > div > div.userSetTitle > p > span:nth-child(1),
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(1),
+.carSet > div > div > div.carSetTotal > div > p > span:nth-child(1),
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(1) {
+    width: 20%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(2),
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(2),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(2) {
+    width: 10%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(3),
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(3),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(3) {
+    width: 10%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(4),
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(4),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(4) {
+    width: 10%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(5),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(5) {
+    width: 15%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(6),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(6) {
+    width: 25%;
+}
+
+.userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(7),
+.userSet > div > div > div.userSetTitle > p > span:nth-child(7) {
+    width: 10%;
+}
+
+/*轮胎购买记录的每个块的宽度*/
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(1),
+.carSet > div > div > div.carSetTotal > div > p > span:nth-child(1),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(1) {
+    width: 20%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(2),
+.carSet > div > div > div.carSetTotal > div > p > span:nth-child(2),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(2) {
+    width: 10%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(3),
+.carSet > div > div > div.carSetTotal > div > p > span:nth-child(3),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(3) {
+    width: 15%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(4),
+.carSet > div > div > div.carSetTotal > div > p > span:nth-child(4),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(4) {
+    width: 15%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(5),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(5) {
+    width: 20%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(6),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(6) {
+    width: 10%;
+}
+
+.carSet > div > div > div.carSetContent > div.carSetList > ul > li > div > div:nth-child(7),
+.carSet > div > div > div.carSetTitle > p > span:nth-child(7) {
+    width: 10%;
+}
+
+/*历史订单*/
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(1),
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span:nth-child(1),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(1) {
+    width: 20%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(2),
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span:nth-child(2),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(2) {
+    width: 20%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(3),
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span:nth-child(3),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(3) {
+    width: 15%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(4),
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span:nth-child(4),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(4) {
+    width: 15%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(5),
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span:nth-child(5),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(5) {
+    width: 20%;
+}
+
+.orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li > div > div:nth-child(6),
+.orderHistory > div > div > div.orderHistoryTitle > p > span:nth-child(6) {
+    width: 10%;
+}
+
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span.orderHistoryTotal,
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span.storeOrderChangeTotalNumber
+{
+    font-size: 20px;
+    color: #ee2626;
+}
+
+/* 店铺完成订单*/
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li > div > div,
+.storeOrder > div > div > div.storeOrderTotal > div > p > span,
+.storeOrder > div > div > div.storeOrderTitle > p > span{
+    width: 11%;
+}
+.storeOrder > div > div > div.storeOrderContent > div.storeOrderList > ul > li > div > div:nth-child(1),
+.storeOrder > div > div > div.storeOrderTotal > div > p > span:nth-child(1),
+.storeOrder > div > div > div.storeOrderTitle > p > span:nth-child(1){
+    width: 23%;
+}
+
+/*店铺完成订单查看页面*/
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(1),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(1),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(1){
+    width: 30%;
+}
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(2),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(2),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(2){
+    width: 20%;
+}
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(3),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(3),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(3){
+    width: 10%;
+}
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(4),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(4),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(4){
+    width: 15%;
+}
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(5),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(5),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(5){
+    width: 15%;
+}
+.storeOrder > div > div > div.storeOrderChangeContent > div.storeOrderChangeList > ul > li > div > div:nth-child(6),
+.storeOrder > div > div > div.storeOrderChangeTotal > div > p > span:nth-child(6),
+.storeOrder > div > div > div.storeOrderChangeTitle > p > span:nth-child(6){
+    width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.storeOrderPlate>input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/*----------用来移除叉叉按钮----------*/
+.storeOrderPlate>input[type="date"]::-webkit-clear-button{
+    display:none;
+}
+

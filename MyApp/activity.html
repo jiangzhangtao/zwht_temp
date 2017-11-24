@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/activity.css"/>
+</head>
+<body>
+<div>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <div class="logoImg"><img src="img/account/logo.png" alt=""/></div>
+                <div><p>小马驾驾平台管理系统</p></div>
+            </div>
+            <div class="login">
+                <div><p class="userImg"><span></span>您好，<b class="userName">admin</b>欢迎登录</p></div>
+                <div><p class="lock"><span></span>锁定</p></div>
+                <div><p class="exit"><span></span>退出</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="account.html"><span class="account"></span>账号管理</a></li>
+                        <li><a href="design.html"><span class="design"></span>计算公式管理</a></li>
+                        <li class=""><a href="basic.html"><span class="basic"></span>基本信息设置</a></li>
+                        <li class=""><a href="order.html"><span class="order"></span>订单相关信息</a></li>
+                        <li class="liActive"><a href="activity.html"><span class="entrepot"></span>活动管理</a></li>
+                        <li class="basicTwo "><a href="activity.html"><span class="basicTwoImg"></span>畅行无忧</a></li>
+                        <li class="basicTwo"><a href="coupon.html"><span class=""></span>优惠券</a></li>
+                        <li class="basicTwo"><a href="referrer.html"><span class=""></span>推荐人</a></li>
+                        <li class="basicTwo"><a href="generalize.html"><span class=""></span>推广有礼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <div>
+                    <ul>
+                        <li class="active"><a href="##">价格增量</a></li>
+                        <li><a href="##">赠送设置</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <!--价格增量-->
+                <div class="price present">
+                    <div>
+                        <div>
+                            <div class="priceTitle">
+                                <p>
+                                    <span>序号</span>
+                                    <span>购买次数</span>
+                                    <span>增量（%）</span>
+                                    <span>操作</span>
+                                </p>
+                            </div>
+                            <div class="priceContent">
+                                <div class="query">
+
+                                </div>
+                                <div class="priceList">
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span><input type="text" disabled value="0"/></span></div>
+                                                <div><span><input type="text" disabled value="0"/></span></div>
+                                                <div>
+                                                    <a href="##" class="priceEdit" data-id="1">
+                                                        <span class="fa fa-edit"></span><i>编辑</i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <div class="newLi">
+                                        <div>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span><input type="text"/></span></div>
+                                                <div><span><input type="text" /></span></div>
+                                                <div>
+                                                    <a href="##" class="priceConfirmAdd" data-id="1">
+                                                        <span class="fa fa-check-circle">确认</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="priceAdd">
+                                   <div>
+                                       <a data-id="0">
+                                           <p>
+                                               <span class="fa fa-plus-square-o"></span>
+                                               <span>新增增量</span>
+                                           </p>
+                                       </a>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--自定义充值-->
+                <div class="custom">
+                    <div>
+                        <div class="customTitle">
+                            <h3>畅行无忧赠送管理</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>
+                                    <i>购买轮胎标准：</i>
+                                    <span>
+                                        <input type="text" value="100" disabled/>
+                                        （个）
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i>每个城市限制名额：</i>
+                                    <span>
+
+                                        <input type="text" value="22" disabled/>
+                                        （名）
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i>赠送数量：</i>
+                                    <span>
+
+                                        <input type="text" value="22" disabled/>
+                                        （次）
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                        <div>
+                            <button class="moneyButton" data-id="1">
+                                编&nbsp;&nbsp;&nbsp;辑
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--待发货详细信息-->
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/activity.js"></script>
