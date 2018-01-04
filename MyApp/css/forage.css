@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;

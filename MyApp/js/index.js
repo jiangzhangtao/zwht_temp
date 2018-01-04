@@ -38,6 +38,30 @@
 
     $('button').click(function(){
 
+        var admin_id=$('.userId').val();
+        var password=$('.password').val();
+        $.ajax({
+            type:'post',
+            url:'http://180.76.243.205:8383/_API/_admin/login',
+            data:{
+                account:admin_id,
+                password:strmd5(password)
+            },
+            success:function(data){
+                if(data.code=='E0000'){
+                    sessionStorage['admin_id']=data.data.admin_id;
+                    sessionStorage['token']=data.data.token;
+                    alert('登陆成功');
+                    window.location.href='account.html';
+                }else{
+                    alert(data.message)
+                }
+            },
+            error:function(err){
+                console.log(err)
+            }
+
+        })
     });
 
 })();

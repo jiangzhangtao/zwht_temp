@@ -1,4 +1,6 @@
 (function () {
+    var admin_id=sessionStorage['admin_id'];
+    var token=sessionStorage['token'];
 
     /*自适应屏幕*/
     (function () {
@@ -12,7 +14,7 @@
         console.log(menuHeight + logoHeight);
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: detailsHeight + 50
+            minHeight: 810+'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -103,143 +105,84 @@
         });
     });
 
-    /*               价格增量                */
+    /*               服务优惠券                */
     function price() {
-        $('.priceReactUndoAdd').click(function () {
-            $('.priceReact').css({display: 'none'})
-        });
+
+
+        //列表	
+         $.ajax({
+			type:'post',
+			url:'http://180.76.243.205:8383/_API/_adminSales/getServiceList',
+			data:{
+				admin_id:admin_id,
+				token:token
+			},
+			success:function(data){
+				if(data.code=='E0000'){
+                    if(data.data){
+                        var html='';
+                        for(var i=0;i<data.data.length;i++){
+                            html+='<li data-id="'+data.data[i].id+'"><div>'+
+                            ' <div class="filterOrder"><span>'+(i+1)+'</span></div>'+
+                            '<div><span>'+data.data[i].name+'</span></div>'+
+                            '<div><span>'+data.data[i].every_months+'</span></div>'+
+                            '<div>'+
+                            '<a href="##" class="priceEdit" data-id="1">'+
+                            '<span class="fa fa-eye "></span><i>查看</i></a>'+
+                    
+                            '</div></div></li>';
+                        }
+                        $('.priceList>ul').html(html)
+                    }
+				}else{
+					alert(data.message);
+				}
+			},
+			err:function(err){
+				console.log(err);
+			}
+		});
+
+        //查看单一优惠券
         $('.priceList>ul').on('click', '.priceEdit', function (e) {
-            $(this).parent().parent().parent().parent();
-            $('.priceReact').css({display: 'block'})
-        });
+           var sale_id= $(this).parent().parent().parent().attr('data-id');
+            $('.priceReact').css({display: 'block'});
+            $.ajax({
+                type:'post',
+                url:'http://180.76.243.205:8383/_API/_adminSales/getService',
+                data:{
+                    admin_id:admin_id,
+                    token:token,
+                    sale_id:sale_id
+                },
+                success:function(data){
+                    if(data.code=='E0000'){
+                        console.log(data);
+                    
+                        $('.priceReact .name>div>span').html(data.data.name);
+                        $('.priceReact .rule>div>span').html(data.data.rule);
+                        $('.priceReact .time>div>span').html(data.data.time);
+                        $('.priceReact .type>div>span').html(data.data.service_type);
+                        $('.priceReact .content>div>textarea').html(data.data.content);
+                        $('.priceReact .money>div>span').html(data.data.sale_services.name);
+                        $('.priceReact .img').attr('src',data.data.img);
+                
 
 
-        $('.priceReact .serviceItems>div>div').on('mouseover', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "block"})
-        });
-        $('.priceReact .serviceItems>div>div').on('mouseout', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "none"})
-        });
-        //删除单个项目
-        $('.priceReact .serviceItems>div>div.service').on('click', 'i', function (e) {
-            e.preventDefault();
-            if (confirm('确定删除?')) {
-                $(this).parent().remove();
-            }
-        });
-        //选项卡切换
-        $(".serviceItemsTab>div>ul>li>a").click(function (e) {
-            e.stopPropagation();
-            $(".serviceItemsTab>div>ul>li>a").eq($(this).parent().index()).parent().addClass('serviceItemsTabConActive').siblings().removeClass("serviceItemsTabConActive");
-            $(".serviceItemsTabCon>div").eq($(this).parent().index()).addClass('serviceItemsTabConBlock').siblings().removeClass('serviceItemsTabConBlock');
-        });
 
-        //选项卡中选择项目
-        $('.serviceItemsTabCon>div>div').on('click', 'span', function (e) {
-            e.stopPropagation();
-            if ($(this).attr('data-id') == 1) {
-                $(this).attr('data-id', 2);
-                $(this).addClass('select')
-            } else {
-                $(this).attr('data-id', 1);
-                $(this).removeClass('select')
-            }
-        });
-        //确定添加
-        $('.serviceItemsTabButton>button').click(function (e) {
-            e.stopPropagation();
-            var arr = [];
-            $('.serviceItemsTabCon>div>div>span').each(function () {
-                if ($(this).attr('data-id') == 2) {
-                    arr.push($(this).text())
+                    }else{
+                        alert(data.message);
+                    }
+                },
+                err:function(err){
+                    console.log(err);
                 }
             });
-            console.log(arr);
-            var html = '';
-            for (var i = 0; i < arr.length; i++) {
-                html += '<span>' + arr[i] + ' <i></i></span>';
-            }
-            $('.service').append(html);
-            $('.serviceMatte').css({display: 'none'})
+    
+
         });
 
-
-        $('.serviceItemsSelect').click(function (e) {
-            $('.serviceMatte').css({display: 'block'});
-            console.log(e.clientX, e.clientY);
-            $('.serviceItemsTab').css({
-                left:e.clientX,
-                top:e.clientY
-            });
-        });
-        $('.serviceMatte').click(function(e){
-            $(this).css({
-                display:"none"
-            })
-        });
-
-
-        //添加优惠券
-        $('.priceAddList>div>a').click(function(){
-            $('.priceAdd').css({display:"block"})
-        });
-        $('.priceAddUndoAdd').click(function () {
-            $('.priceAdd').css({display: 'none'})
-        });
-        $('.priceAdd .priceAddServiceItems>div>div').on('mouseover', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "block"})
-        });
-        $('.priceAdd .priceAddServiceItems>div>div').on('mouseout', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "none"})
-        });
-        //删除单个项目
-        $('.priceAdd .priceAddServiceItems>div>div.service').on('click', 'i', function (e) {
-            e.preventDefault();
-            if (confirm('确定删除?')) {
-                $(this).parent().remove();
-            }
-        });
-        //选项卡切换
-        $(".serviceItemsTabAdd>div>ul>li>a").click(function (e) {
-            e.stopPropagation();
-            $(".serviceItemsTabAdd>div>ul>li>a").eq($(this).parent().index()).parent().addClass('serviceItemsTabConActive').siblings().removeClass("serviceItemsTabConActive");
-            $(".serviceItemsTabConAdd>div").eq($(this).parent().index()).addClass('serviceItemsTabConBlock').siblings().removeClass('serviceItemsTabConBlock');
-        });
-
-        //选项卡中选择项目
-        $('.serviceItemsTabConAdd>div>div').on('click', 'span', function (e) {
-            e.stopPropagation();
-            if ($(this).attr('data-id') == 1) {
-                $(this).attr('data-id', 2);
-                $(this).addClass('select')
-            } else {
-                $(this).attr('data-id', 1);
-                $(this).removeClass('select')
-            }
-        });
-        //确定添加
-        $('.serviceItemsTabButtonAdd>button').click(function (e) {
-            e.stopPropagation();
-            var arr = [];
-            $('.serviceItemsTabConAdd>div>div>span').each(function () {
-                if ($(this).attr('data-id') == 2) {
-                    arr.push($(this).text())
-                }
-            });
-            console.log(arr);
-            var html = '';
-            for (var i = 0; i < arr.length; i++) {
-                html += '<span>' + arr[i] + ' <i></i></span>';
-            }
-            $('.priceAddServiceItems .service').append(html);
-            $('.serviceMatteAdd').css({display: 'none'})
-        });
-
-
+       
         $('.priceAddServiceItemsSelect').click(function (e) {
             $('.serviceMatteAdd').css({display: 'block'});
             console.log(e.clientX, e.clientY);
@@ -248,163 +191,85 @@
                 top:e.clientY
             });
         });
-        $('.serviceMatteAdd').click(function(e){
-            $(this).css({
-                display:"none"
-            })
+        $('.priceReactBtnOk').click(function(){
+            $('.priceReact').css({display:'none'})
         })
+    
     }
 
-    /*现金优惠券*/
+    /*               现金优惠券                */
     function cash() {
+        $.ajax({
+			type:'post',
+			url:'http://180.76.243.205:8383/_API/_adminSales/getCashList',
+			data:{
+				admin_id:admin_id,
+				token:token
+			},
+			success:function(data){
+				if(data.code=='E0000'){
+                    console.log(data);
+                    if(data.data){
+                        var html="";
+                        for(var i=0;i<data.data.length;i++){
+                            html+='<li data-id="'+data.data[i].id+'"><div>'+
+                            '<div class="filterOrder"><span>'+(i+1)+'</span></div>'+
+                            '<div class="filterOrder"><span>'+data.data[i].name+'</span></div>'+
+                            '<div class="filterOrder"><span>'+data.data[i].value+'</span></div>'+
+                            '<div class="filterOrder"><span>'+data.data[i].content+'</span></div>'+
+                            '<div class="filterOrder"><span>'+data.data[i].expiry_days+'</span></div>'+
+                            '<div><a href="##" class="cashEdit" data-id="1"><span class="fa fa-eye "></span><i>查看</i></a></div>'+
+                            '</div></li>';
+                        }
+                        $('.cashList>ul').html(html)
+                    }
+				}else{
+					alert(data.message);
+				}
+			},
+			err:function(err){
+				console.log(err);
+			}
+		});
+
+           //查看单一优惠券
+           $('.cashList>ul').on('click', '.cashEdit', function (e) {
+            var sale_id= $(this).parent().parent().parent().attr('data-id');
+             $('.cashReact').css({display: 'block'});
+             $.ajax({
+                 type:'post',
+                 url:'http://180.76.243.205:8383/_API/_adminSales/getCash',
+                 data:{
+                     admin_id:admin_id,
+                     token:token,
+                     sale_id:sale_id
+                 },
+                 success:function(data){
+                     if(data.code=='E0000'){
+                         $('.cashReact .name>div>span').html(data.data.name);
+                         $('.cashReact .rule>div>span').html(data.data.rule);
+                         $('.cashReact .time>div>span').html(data.data.time);
+                         $('.cashReact .type>div>span').html(data.data.service_type);
+                         $('.cashReact .content>div>textarea').html(data.data.content);
+                         $('.cashReact .money>div>span').html(data.data.value);
+                         $('.cashReact .img').attr('src',data.data.img);
+                         var service_type='';
+                         for(var j=0;j<data.data.service_type.length;j++){
+                            service_type+=data.data.service_type[j]+' ';
+                         }
+                         $('.cashReact .service_type>div>span').html(service_type);
+                     }else{
+                         alert(data.message);
+                     }
+                 },
+                 err:function(err){
+                     console.log(err);
+                 }
+             });
+         });
         $('.cashReactUndoAdd').click(function () {
             $('.cashReact').css({display: 'none'})
         });
-        $('.cashList>ul').on('click', '.cashEdit', function (e) {
-            $(this).parent().parent().parent().parent();
-            $('.cashReact').css({display: 'block'})
-        });
-
-
-        $('.cashReact .cashServiceItems>div>div').on('mouseover', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "block"})
-        });
-        $('.cashReact .cashServiceItems>div>div').on('mouseout', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "none"})
-        });
-        //删除单个项目
-        $('.cashReact .cashServiceItems>div>div.cashService').on('click', 'i', function (e) {
-            e.preventDefault();
-            if (confirm('确定删除?')) {
-                $(this).parent().remove();
-            }
-        });
-        //选项卡切换
-        $(".cashServiceItemsTab>div>ul>li>a").click(function (e) {
-            e.stopPropagation();
-            $(".cashServiceItemsTab>div>ul>li>a").eq($(this).parent().index()).parent().addClass('cashServiceItemsTabConActive').siblings().removeClass("cashServiceItemsTabConActive");
-            $(".cashServiceItemsTabCon>div").eq($(this).parent().index()).addClass('cashServiceItemsTabConBlock').siblings().removeClass('cashServiceItemsTabConBlock');
-        });
-
-        //选项卡中选择项目
-        $('.cashServiceItemsTabCon>div>div').on('click', 'span', function (e) {
-            e.stopPropagation();
-            if ($(this).attr('data-id') == 1) {
-                $(this).attr('data-id', 2);
-                $(this).addClass('select')
-            } else {
-                $(this).attr('data-id', 1);
-                $(this).removeClass('select')
-            }
-        });
-        //确定添加
-        $('.cashServiceItemsTabButton>button').click(function (e) {
-            e.stopPropagation();
-            var arr = [];
-            $('.cashServiceItemsTabCon>div>div>span').each(function () {
-                if ($(this).attr('data-id') == 2) {
-                    arr.push($(this).text())
-                }
-            });
-            console.log(arr);
-            var html = '';
-            for (var i = 0; i < arr.length; i++) {
-                html += '<span>' + arr[i] + ' <i></i></span>';
-            }
-            $('.cashService').append(html);
-            $('.cashServiceMatte').css({display: 'none'})
-        });
-
-
-        $('.cashServiceItemsSelect').click(function (e) {
-            $('.cashServiceMatte').css({display: 'block'});
-            console.log(e.clientX, e.clientY);
-            $('.cashServiceItemsTab').css({
-                left:e.clientX,
-                top:e.clientY
-            });
-        });
-        $('.cashServiceMatte').click(function(e){
-            $(this).css({
-                display:"none"
-            })
-        });
-
-
-        //添加优惠券
-        $('.cashAddList>div>a').click(function(){
-            $('.cashAdd').css({display:"block"})
-        });
-        $('.cashAddUndoAdd').click(function () {
-            $('.cashAdd').css({display: 'none'})
-        });
-        $('.cashAdd .cashAddServiceItems>div>div').on('mouseover', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "block"})
-        });
-        $('.cashAdd .cashAddServiceItems>div>div').on('mouseout', 'span', function (e) {
-            e.preventDefault();
-            $(this).children('i').css({display: "none"})
-        });
-        //删除单个项目
-        $('.cashAdd .cashAddServiceItems>div>div.cashService').on('click', 'i', function (e) {
-            e.preventDefault();
-            if (confirm('确定删除?')) {
-                $(this).parent().remove();
-            }
-        });
-        //选项卡切换
-        $(".cashServiceItemsTabAdd>div>ul>li>a").click(function (e) {
-            e.stopPropagation();
-            $(".cashServiceItemsTabAdd>div>ul>li>a").eq($(this).parent().index()).parent().addClass('cashServiceItemsTabConActive').siblings().removeClass("cashServiceItemsTabConActive");
-            $(".cashServiceItemsTabConAdd>div").eq($(this).parent().index()).addClass('cashServiceItemsTabConBlock').siblings().removeClass('cashServiceItemsTabConBlock');
-        });
-
-        //选项卡中选择项目
-        $('.cashServiceItemsTabConAdd>div>div').on('click', 'span', function (e) {
-            e.stopPropagation();
-            if ($(this).attr('data-id') == 1) {
-                $(this).attr('data-id', 2);
-                $(this).addClass('select')
-            } else {
-                $(this).attr('data-id', 1);
-                $(this).removeClass('select')
-            }
-        });
-        //确定添加
-        $('.cashServiceItemsTabButtonAdd>button').click(function (e) {
-            e.stopPropagation();
-            var arr = [];
-            $('.cashServiceItemsTabConAdd>div>div>span').each(function () {
-                if ($(this).attr('data-id') == 2) {
-                    arr.push($(this).text())
-                }
-            });
-            console.log(arr);
-            var html = '';
-            for (var i = 0; i < arr.length; i++) {
-                html += '<span>' + arr[i] + ' <i></i></span>';
-            }
-            $('.cashAddServiceItems .cashService').append(html);
-            $('.cashServiceMatteAdd').css({display: 'none'})
-        });
-
-
-        $('.cashAddServiceItemsSelect').click(function (e) {
-            $('.cashServiceMatteAdd').css({display: 'block'});
-            console.log(e.clientX, e.clientY);
-            $('.cashServiceItemsTabAdd').css({
-                left:e.clientX,
-                top:e.clientY
-            });
-        });
-        $('.cashServiceMatteAdd').click(function(e){
-            $(this).css({
-                display:"none"
-            })
-        })
     }
 
     price();

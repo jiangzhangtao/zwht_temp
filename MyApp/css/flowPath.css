@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -239,7 +242,7 @@ div.content > div.details > div > div > ul {
 .severList > div > div > div.severListContent > div.severListList,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList,
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList {
-    height: 600px;
+    height: 570px;
     overflow-y: auto;
 }
 
@@ -252,6 +255,7 @@ div.content > div.details > div > div > ul {
     background: #eee;
     margin: 5px 0;
     font-size: 16px;
+    position: relative;
 }
 
 .storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div,
@@ -302,8 +306,8 @@ div.content > div.details > div > div > ul {
 }
 
 .severList > div > div > div.severListContent > div.severListAdd,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd,
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd {
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesListAdd,
+.storeCategory > div > div > div.storeCategoryContent > div.cooperativeListAdd {
     height: 50px;
     line-height: 50px;
     background: #eeeeee;
@@ -311,18 +315,20 @@ div.content > div.details > div > div > ul {
 }
 
 .severList > div > div > div.severListContent > div.severListAdd > div,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div,
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesListAdd > div,
+.storeCategory > div > div > div.storeCategoryContent > div.cooperativeListAdd > div,
 {
     background: #eeeeee;
 
 }
 
-.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryListAdd > div > a >p,
-.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesAdd > div > a >p,
+.storeCategory > div > div > div.storeCategoryContent > div.cooperativeListAdd > div > a >p,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesListAdd > div > a >p,
 .severList > div > div > div.severListContent > div.severListAdd > div> a>p
 {
-    color: #000;
+    color: blue;
+    font-size: 18px;
+    text-decoration: underline;
 }
 
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div > button,
@@ -343,6 +349,10 @@ div.content > div.details > div > div > ul {
 .qualityRedact,
 .tyreChangeRedact,
 .cooperativeListServer,
+.storeCategoryAdd,
+.tyreChangeAdd,
+.InventoryCategoriesAdd,
+.InventoryCategoriesRedact,
 .storeCategoryRedact {
     position: fixed;
     top: 0;
@@ -359,6 +369,10 @@ div.content > div.details > div > div > ul {
 .quality > div > div,
 .qualityRedact > div > div,
 .tyreChangeRedact > div > div,
+.storeCategoryAdd > div > div,
+.tyreChangeAdd > div > div,
+.InventoryCategoriesAdd > div > div,
+.InventoryCategoriesRedact > div > div,
 .storeCategoryRedact > div > div {
     width: 450px;
     position: absolute;
@@ -380,6 +394,10 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div > ul > li,
 .tyreChangeRedact > div > div > ul > li,
 .cooperativeListServer > div > div > ul > li,
+.storeCategoryAdd > div > div > ul > li,
+.tyreChangeAdd > div > div > ul > li,
+.InventoryCategoriesAdd > div > div > ul > li,
+.InventoryCategoriesRedact > div > div > ul > li,
 .storeCategoryRedact > div > div > ul > li {
     margin-top: 18px;
 }
@@ -396,6 +414,10 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div > ul > li > h3,
 .tyreChangeRedact > div > div > ul > li > h3,
 .cooperativeListServer > div > div > ul > li > h3,
+.storeCategoryAdd > div > div > ul > li > h3,
+.tyreChangeAdd > div > div > ul > li > h3,
+.InventoryCategoriesAdd > div > div > ul > li > h3,
+.InventoryCategoriesRedact > div > div > ul > li > h3,
 .storeCategoryRedact > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 40px;
@@ -405,6 +427,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li > div > span ,
 .qualityRedact > div > div > ul > li > div > span ,
+.storeCategoryAdd > div > div > ul > li > div > span ,
+.tyreChangeAdd > div > div > ul > li > div > span ,
+.InventoryCategoriesAdd > div > div > ul > li > div > span ,
+.InventoryCategoriesRedact > div > div > ul > li > div > span ,
 .storeCategoryRedact > div > div > ul > li > div > span {
     width: 90px;
     text-align: right;
@@ -415,6 +441,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li > div ,
 .qualityRedact > div > div > ul > li > div ,
+.storeCategoryAdd > div > div > ul > li > div ,
+.tyreChangeAdd > div > div > ul > li > div ,
+.InventoryCategoriesAdd > div > div > ul > li > div ,
+.InventoryCategoriesRedact > div > div > ul > li > div ,
 .storeCategoryRedact > div > div > ul > li > div {
     display: inline-block;
     width: 100%;
@@ -423,6 +453,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li > div > div ,
 .qualityRedact > div > div > ul > li > div > div ,
+.storeCategoryAdd > div > div > ul > li > div > div ,
+.tyreChangeAdd > div > div > ul > li > div > div ,
+.InventoryCategoriesAdd > div > div > ul > li > div > div ,
+.InventoryCategoriesRedact > div > div > ul > li > div > div ,
 .storeCategoryRedact > div > div > ul > li > div > div {
     display: inline-block;
 }
@@ -430,6 +464,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li > div > div>textarea,
 .qualityRedact > div > div > ul > li > div > div>textarea,
+.storeCategoryAdd > div > div > ul > li > div > div>textarea,
+.tyreChangeAdd > div > div > ul > li > div > div>textarea,
+.InventoryCategoriesAdd > div > div > ul > li > div > div>textarea,
+.InventoryCategoriesRedact > div > div > ul > li > div > div>textarea,
 .storeCategoryRedact > div > div > ul > li > div > div>textarea{
     vertical-align: top;
     width: 200px;
@@ -439,6 +477,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li > div > div > input ,
 .qualityRedact > div > div > ul > li > div > div > input ,
+.storeCategoryAdd > div > div > ul > li > div > div > input ,
+.tyreChangeAdd > div > div > ul > li > div > div > input ,
+.InventoryCategoriesAdd > div > div > ul > li > div > div > input ,
+.InventoryCategoriesRedact > div > div > ul > li > div > div > input ,
 .storeCategoryRedact > div > div > ul > li > div > div > input {
     width: 200px;
     height: 30px;
@@ -451,6 +493,10 @@ div.content > div.details > div > div > ul {
 
 .tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn,
 .qualityRedact > div > div > ul > li.qualityRedactBtn,
+.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn,
+.tyreChangeAdd > div > div > ul > li.storeCategoryAddBtn,
+.InventoryCategoriesAdd > div > div > ul > li.storeCategoryAddBtn,
+.InventoryCategoriesRedact > div > div > ul > li.InventoryCategoriesRedactBtn,
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn {
     margin-top: 30px;
     text-align: center;
@@ -461,6 +507,10 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div > ul > li.qualityRedactBtn > button,
 .tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn > button,
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button,
+.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button,
+.InventoryCategoriesAdd > div > div > ul > li.InventoryCategoriesAddBtn > button,
+.tyreChangeAdd > div > div > ul > li.tyreChangeAddBtn > button,
+.InventoryCategoriesRedact > div > div > ul > li.InventoryCategoriesRedactBtn > button,
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button {
     border: none;
     background: #ee2626;
@@ -474,12 +524,31 @@ div.content > div.details > div > div > ul {
 .qualityRedact > div > div > ul > li.qualityRedactBtn > button:nth-child(2),
 .tyreChangeRedact > div > div > ul > li.tyreChangeRedactBtn > button:nth-child(2),
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button:nth-child(2),
+.storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button:nth-child(2),
+.tyreChangeAdd > div > div > ul > li.tyreChangeAddBtn > button:nth-child(2),
+.InventoryCategoriesAdd > div > div > ul > li.InventoryCategoriesAddBtn > button:nth-child(2),
+.InventoryCategoriesRedact > div > div > ul > li.InventoryCategoriesRedactBtn > button:nth-child(2),
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button:nth-child(2){
     margin-left: 20px;
 }
 
 
-
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div.stripeInfo,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div.stripeInfo,
+.severList > div > div > div.severListContent > div.severListList > ul > li > div.stripeInfo
+{
+    width: 130px;
+    border: 1px solid #000;
+    position: absolute;
+    word-wrap: break-word;
+    overflow: hidden;
+    background: #ffffff;
+    top: 0;
+    left: 77%;
+    line-height: normal;
+    display: none;
+    z-index: 100;
+}
 
 
 

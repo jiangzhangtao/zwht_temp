@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -231,7 +234,7 @@ div.content > div.details > div > div > ul {
 
 .freight > div > div > div.freightContent > div.freightList,
 .warehouse > div > div > div.warehouseContent > div.warehouseList {
-    height: 600px;
+    height: 570px;
     overflow: auto;
 }
 
@@ -242,6 +245,7 @@ div.content > div.details > div > div > ul {
     background: #eee;
     margin: 5px 0;
     font-size: 16px;
+    position: relative;
 }
 
 .freight > div > div > div.freightContent > div.freightAddList,
@@ -288,11 +292,15 @@ div.content > div.details > div > div > ul {
 
 .warehouse > div > div > div.warehouseContent > div.warehouseList > ul > li > div > div:nth-child(4),
 .warehouse > div > div > div.warehouseTitle > p > span:nth-child(4) {
-    width: 40%;
+    width: 10%;
 }
-
 .warehouse > div > div > div.warehouseContent > div.warehouseList > ul > li > div > div:nth-child(5),
 .warehouse > div > div > div.warehouseTitle > p > span:nth-child(5) {
+    width: 30%;
+}
+
+.warehouse > div > div > div.warehouseContent > div.warehouseList > ul > li > div > div:nth-child(6),
+.warehouse > div > div > div.warehouseTitle > p > span:nth-child(6) {
     width: 20%;
 }
 
@@ -430,4 +438,16 @@ div.content > div.details > div > div > ul {
 .warehouseAdd > div > div > ul > li.warehouseAddBtn > button:nth-child(2),
 .warehouseRedact > div > div > ul > li.warehouseRedactBtn > button:nth-child(2){
     margin-left: 20px;
+}
+.warehouse > div > div > div.warehouseContent > div.warehouseList > ul > li > div.stripeInfo{
+    width: 130px;
+    border: 1px solid #000;
+    position: absolute;
+    word-wrap: break-word;
+    overflow: hidden;
+    background: #ffffff;
+    top: 0;
+    left: 77%;
+    line-height: normal;
+    display: none;
 }

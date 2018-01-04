@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -227,6 +230,7 @@ div.content > div.details > div > div > ul {
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(1)
 {
     width: 10%;
+     height: 100%;
 }
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div:nth-child(2),
 .userSet>div>div>div.userSetTitle>p>span:nth-child(2){
@@ -303,6 +307,7 @@ div.content > div.details > div > div > ul {
 .carSet>div>div>div.carSetContent>div.carSetList>ul>li>div,
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div{
     overflow: hidden;
+    height: 100%;
 }
 .carSet>div>div>div.carSetContent>div.carSetList>ul>li>div>div,
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div{
@@ -311,6 +316,7 @@ div.content > div.details > div > div > ul {
 }
 .userSet>div>div>div.userSetContent>div.userSetList>ul>li>div>div>img{
     width: 64px;
+    height: 64px;
     border-radius: 50%;
     vertical-align: middle;
 }
@@ -368,6 +374,12 @@ div.content > div.details > div > div > ul {
 .CarSetInfo>div>div>ul>li,
 .userSetInfo>div>div>ul>li{
     margin-top: 18px;
+}
+.CarSetInfo>div>div>ul>li>div>input,
+.userSetInfo>div>div>ul>li>div>input{
+    height: 25px;
+    border: 1px solid #000000;
+    color: #ee2626;
 }
 .CarSetInfo>div>div>ul>li.CarSetInfoAvatar>div,
 .userSetInfo>div>div>ul>li.userSetInfoAvatar>div{
@@ -438,11 +450,13 @@ div.content > div.details > div > div > ul {
     width: 130px;
     font-size: 18px;
 }
+
 .CarSetInfo>div>div>div.CarSetInfoButton>div>button:nth-child(2),
 .userSetInfo>div>div>div.userSetInfoButton>div>button:nth-child(2){
     margin-left: 20px;
 }
 .CarSetInfo>div>div>div.CarSetInfoButton>div.CarSetInfoAllBut>button,
+.userSetInfo>div>div>div.userSetInfoButton>div.userBlackBut>button,
 .userSetInfo>div>div>div.userSetInfoButton>div.userSetInfoAllBut>button{
     width: 285px;
     padding: 0 20px;
@@ -454,10 +468,10 @@ div.content > div.details > div > div > ul {
 .userCarList>div.userInfoCarListTitle>h3,
 .carDetail>div.carDetailTitle>h3
 {
-    text-align: center;
     font-size: 20px;
     padding-bottom: 30px;
     margin-top: 18px;
+    text-align: center;
 }
 .CarSetList>div.userInfoCarList>ul>li,
 .userCarList>div.userInfoCarList>ul>li{

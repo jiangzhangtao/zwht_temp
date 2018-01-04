@@ -3,7 +3,10 @@ html,body,div.index,div.index>div{
     width: 100%;
     user-select: none;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.index>div{
     position: relative;
 }

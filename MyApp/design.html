@@ -58,10 +58,10 @@
                                     <p>轮胎基本定价=轮胎+花纹</p>
                                 </li>
                                 <li>
-                                    <p>年均行驶里程=里程数×一年天数/行驶天数</p>
+                                    <p>年均行驶里程=里程数×一年天数/行驶证注册日期</p>
                                 </li>
                                 <li>
-                                    <p>剩余行驶时间=总服务年限+行驶证注册年-当前年份</p>
+                                    <p>剩余行驶时间=总服务年限+行驶证注册日期-当前年份</p>
                                 </li>
                             </ul>
                         </div>
@@ -69,19 +69,21 @@
                         <div class="formula">
                             <ul>
                                 <li>
+                                    <p><span>畅行无忧次数：</span>
+                                        <input type="text" class="cxwy"/>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>×</span></p>
+                                </li>
+                                <li>
                                     <p><span>轮胎基本定价：</span>（
-                                        <select>
+                                        <select class="shoe">
                                             <option value="">选择轮胎</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
                                         </select>
                                         &nbsp;+&nbsp;
-                                        <select>
+                                        <select class="flgures">
                                             <option value="">选择花纹</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
                                         </select>
                                         ）
                                     </p>
@@ -97,25 +99,22 @@
                                 </li>
                                 <li>
                                     <p><span>城市等级分类：</span>
-                                        <select>
+                                        <select class="plats">
                                             <option value="">选择城市</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
                                         </select>
                                     </p>
                                 </li>
                                 <li>
                                     <p><span>+</span></p>
                                 </li>
-                                <li>
-                                    <p><span>行驶路况：</span>
-                                        <select>
-                                            <option value="">选择路况</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                        </select>
+                                <li class="type_rate">
+                                    <p><span>行驶路况：</span>（
+                                        <input type="button" value="选择一类路况" class="type_i_rate"/>
+                                        &nbsp;+&nbsp;
+                                        <input type="button" value="选择二类路况" class="type_ii_rate"/>
+                                        &nbsp;+&nbsp;
+                                        <input type="button" value="选择三类路况" class="type_iii_rate"/>
+                                        ）
                                     </p>
                                 </li>
                                 <li>
@@ -124,14 +123,11 @@
                                 <li>
                                     <p>
                                         <span>年均行驶里程</span>（
-                                        <input type="text" placeholder="输入里程数"/>
+                                        <input type="text" placeholder="输入里程数" class="traveled"/>
                                         &nbsp;*&nbsp;
-                                        <select>
-                                            <option value="">366</option>
-                                            <option value="">365</option>
-                                        </select>
+                                        <input class="yearDays" type="text">
                                         &nbsp;÷&nbsp;
-                                        <input type="text" placeholder="输入行驶证日期"/>
+                                        <input type="date" placeholder="输入行驶证日期" class="driving_license_date" />
                                         ）
                                     </p>
                                 </li>
@@ -142,24 +138,19 @@
                                     <p><span>剩余行驶时间）：</span>（
                                         <input type="text" value="15" disabled/>
                                         &nbsp;+&nbsp;
-                                        <input type="text" placeholder="输入行驶证注册年"/>
+                                        <input type="text" placeholder="行驶证注册年" class="license_register_date" disabled/>
                                         &nbsp;-&nbsp;
-                                        <select>
-                                            <option value="">2017</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                        </select>
+                                        <input type="text" class="year" disabled/>
                                         ）
                                     </p>
                                 </li>
                                 <li>
                                     <p><span>=</span></p>
                                 </li>
-                                <li>
+                                <li class="shoe_price">
                                     <p><span>轮胎最终价格：</span><b></b>（元）</p>
                                 </li>
-                                <li>
+                                <li class="formulaButton">
                                     <button>计&nbsp;&nbsp;&nbsp;&nbsp;算</button>
                                 </li>
                             </ul>
@@ -178,99 +169,99 @@
                         </div>
                         <div class="list">
                             <ul>
-                                <li>
-                                    <span>1</span>
-                                    <span>1</span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                     <a href="##" class="compile" data-id="1">
-                                         <b class="fa fa-edit"></b>
-                                         <i>编辑</i>
-                                     </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>1</span>-->
+                                    <!--<span>1</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                     <!--<a href="##" class="compile" data-id="1">-->
+                                         <!--<b class="fa fa-edit"></b>-->
+                                         <!--<i>编辑</i>-->
+                                     <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
-                                <li>
-                                    <span>2</span>
-                                <span>
-                                 2
-                                </span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                     <a href="##" class="compile" data-id="1">
-                                         <b class="fa fa-edit"></b>
-                                         <i>编辑</i>
-                                     </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>2</span>-->
+                                <!--<span>-->
+                                 <!--2-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                     <!--<a href="##" class="compile" data-id="1">-->
+                                         <!--<b class="fa fa-edit"></b>-->
+                                         <!--<i>编辑</i>-->
+                                     <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
-                                <li>
-                                    <span>3</span>
-                                <span>
-                                   3
-                                </span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                   <a href="##" class="compile" data-id="1">
-                                       <b class="fa fa-edit"></b>
-                                       <i>编辑</i>
-                                   </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>3</span>-->
+                                <!--<span>-->
+                                   <!--3-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                   <!--<a href="##" class="compile" data-id="1">-->
+                                       <!--<b class="fa fa-edit"></b>-->
+                                       <!--<i>编辑</i>-->
+                                   <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
-                                <li>
-                                    <span>4</span>
-                                <span>
-                                   4
-                                </span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                   <a href="##" class="compile" data-id="1">
-                                       <b class="fa fa-edit"></b>
-                                       <i>编辑</i>
-                                   </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>4</span>-->
+                                <!--<span>-->
+                                   <!--4-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                   <!--<a href="##" class="compile" data-id="1">-->
+                                       <!--<b class="fa fa-edit"></b>-->
+                                       <!--<i>编辑</i>-->
+                                   <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
-                                <li>
-                                    <span>5</span>
-                                <span>
-                                5
-                                </span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                   <a href="##" class="compile" data-id="1">
-                                       <b class="fa fa-edit"></b>
-                                       <i>编辑</i>
-                                   </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>5</span>-->
+                                <!--<span>-->
+                                <!--5-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                   <!--<a href="##" class="compile" data-id="1">-->
+                                       <!--<b class="fa fa-edit"></b>-->
+                                       <!--<i>编辑</i>-->
+                                   <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
-                                <li>
-                                    <span>6</span>
-                                <span>
-                                    6
-                                </span>
-                                <span>
-                                    <input type="text" value="6" disabled/>
-                                </span>
-                                <span>
-                                   <a href="##" class="compile" data-id="1">
-                                       <b class="fa fa-edit"></b>
-                                       <i>编辑</i>
-                                   </a>
-                                </span>
-                                </li>
+                                <!--<li>-->
+                                    <!--<span>6</span>-->
+                                <!--<span>-->
+                                    <!--6-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                    <!--<input type="text" value="6" disabled/>-->
+                                <!--</span>-->
+                                <!--<span>-->
+                                   <!--<a href="##" class="compile" data-id="1">-->
+                                       <!--<b class="fa fa-edit"></b>-->
+                                       <!--<i>编辑</i>-->
+                                   <!--</a>-->
+                                <!--</span>-->
+                                <!--</li>-->
 
                             </ul>
                         </div>
@@ -296,29 +287,24 @@
                         </div>
                         <div class="trafficList">
                             <ul>
-                                <li>
-                                    <div><span>非铺装</span></div>
-                                    <div><span><img src="img/design/img1.jpg" alt=""/></span></div>
-                                    <div class="describe"><span><button>查看描述</button>
+                                <!--<li>-->
+                                    <!--<div><span>非铺装</span></div>-->
+                                    <!--<div><span><img src="img/design/img1.jpg" alt=""/></span></div>-->
+                                    <!--<div class="describe"><span><button>查看描述</button>-->
 
-                                    </span>
+                                    <!--</span>-->
 
-                                        <div class="describeInfo">
-                                            有些东西之所以弥足珍贵，是因为它们昙花一现。
-                                        </div>
-                                    </div>
-                                    <div><span>5</span></div>
-                                    <div><span>5</span></div>
-                                    <div><span>5</span></div>
-                                    <div>
-                                    <span>
-                                        <a href="##" class="edit">
-                                            <b class="fa fa-edit"></b>
-                                            <i>编辑</i>
-                                        </a>
-                                    </span>
-                                    </div>
-                                </li>
+                                        <!--<div class="describeInfo"></div>-->
+                                    <!--</div>-->
+                                    <!--<div><span>5</span></div>-->
+                                    <!--<div><span>5</span></div>-->
+                                    <!--<div><span>5</span></div>-->
+                                    <!--<div><span><a href="##" class="edit"><b class="fa fa-edit"></b>-->
+                                            <!--<i>编辑</i>-->
+                                        <!--</a>-->
+                                    <!--</span>-->
+                                    <!--</div>-->
+                                <!--</li>-->
                                 <li class="add">
                                     <a href="##">
                                         <b class="fa fa-plus-square-o"></b>
@@ -339,9 +325,9 @@
                                     <div>
                                         <p>
                                             <span>一年天数设置：</span>
-                                            <select>
-                                                <option value="">365</option>
-                                                <option value="">366</option>
+                                            <select class="variableYearDays">
+                                                <option value="365">365</option>
+                                                <option value="366">366</option>
                                             </select>
                                             （天）
                                         </p>
@@ -351,7 +337,7 @@
                                     <div>
                                         <p>
                                             <span>最长服务期限：</span>
-                                            <input type="text"/>
+                                            <input type="text" class="variableLong"/>
                                             （年）
                                         </p>
                                     </div>
@@ -378,114 +364,66 @@
                         </div>
                         <div class="marketList">
                             <ul>
-                                <li>
-                                    <span>1</span>
-                                    <span>
-                                       <select disabled>
-                                           <option value="">A</option>
-                                           <option value="">A+</option>
-                                           <option value="">A++</option>
-                                           <option value="">A+++</option>
-                                       </select>
-                                    </span>
-                                    <span>
-                                        <input type="text" value="6" disabled/>
-                                    </span>
-                                    <span>
-                                       <a href="##" class="markerCompile" data-id="1">
-                                           <b class="fa fa-edit"></b>
-                                           <i>编辑</i>
-                                       </a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>2</span>
-                                    <span>
-                                       <select disabled>
-                                           <option value="">A</option>
-                                           <option value="">A+</option>
-                                           <option value="">A++</option>
-                                           <option value="">A+++</option>
-                                       </select>
-                                    </span>
-                                    <span>
-                                        <input type="text" value="6" disabled/>
-                                    </span>
-                                    <span>
-                                       <a href="##" class="markerCompile" data-id="1">
-                                           <b class="fa fa-edit"></b>
-                                           <i>编辑</i>
-                                       </a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>3</span>
-                                    <span>
-                                       <select disabled>
-                                           <option value="">A</option>
-                                           <option value="">A+</option>
-                                           <option value="">A++</option>
-                                           <option value="">A+++</option>
-                                       </select>
-                                    </span>
-                                    <span>
-                                        <input type="text" value="6" disabled/>
-                                    </span>
-                                    <span>
-                                       <a href="##" class="markerCompile" data-id="1">
-                                           <b class="fa fa-edit"></b>
-                                           <i >编辑</i>
-                                       </a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>4</span>
-                                    <span>
-                                       <select disabled>
-                                           <option value="">A</option>
-                                           <option value="">A+</option>
-                                           <option value="">A++</option>
-                                           <option value="">A+++</option>
-                                       </select>
-                                    </span>
-                                    <span>
-                                        <input type="text" value="6" disabled/>
-                                    </span>
-                                    <span>
-                                       <a href="##" class="markerCompile" data-id="1">
-                                           <b class="fa fa-edit"></b>
-                                           <i >编辑</i>
-                                       </a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>5</span>
-                                    <span>
-                                       <select disabled>
-                                           <option value="">A</option>
-                                           <option value="">A+</option>
-                                           <option value="">A++</option>
-                                           <option value="">A+++</option>
-                                       </select>
-                                    </span>
-                                    <span>
-                                        <input type="text" value="6" disabled/>
-                                    </span>
-                                    <span>
-                                       <a href="##" class="markerCompile" data-id="1">
-                                           <b class="fa fa-edit"></b>
-                                           <i >编辑</i>
-                                       </a>
-                                    </span>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="redact">
+        <div class="roadsSelect1 roadsSelect">
             <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>选择路况</h3>
+                        </li>
+
+                        <li class="addBtn">
+                            <button class="addBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                            <button class="undoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="roadsSelect2 roadsSelect">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>选择路况</h3>
+                        </li>
+
+                        <li class="addBtn">
+                            <button class="addBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                            <button class="undoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="roadsSelect3 roadsSelect">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>选择路况</h3>
+                        </li>
+
+                        <li class="addBtn">
+                            <button class="addBtnOk">确&nbsp;&nbsp;&nbsp;定</button>
+                            <button class="undoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="addHtml">
+            <div>
+                <form enctype="multipart/form-data" id="trafficAdd">
+                </form>
                 <div>
                     <ul>
                         <li>
@@ -495,29 +433,29 @@
                             <div>
                                 <p>
                                     <span>路况名称：</span>
-                                    <input type="text" class="trafficName"/>
+                                    <input type="text" class="trafficName" form="trafficAdd" name="name"/>
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <span>路况图片：</span> <br/>
-                                <img src="img/design/img2.jpg" alt=""/>
+                                <img src="img/design/img2.jpg" alt="" class="trafficImg" />
 
-                                <p class="files"><label for="file"><input type="file" id="file"/>选择文件</label></p>
+                                <p class="files"><label for="file"><input type="file" form="trafficAdd"/>选择文件</label></p>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <span>路况描述：</span>
-                                <textarea cols="20" rows="5" class="addText"></textarea>
+                                <textarea cols="20" rows="5" class="trafficInfo" form="trafficAdd" name="description"></textarea>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <p>
                                     <span>一类增量：</span>
-                                    <input type="text" class="levelOne"/>
+                                    <input type="text" class="levelOne"  form="trafficAdd"  name="type_i_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>
@@ -526,7 +464,7 @@
                             <div>
                                 <p>
                                     <span>二类增量：</span>
-                                    <input type="text" class="levelTwo"/>
+                                    <input type="text" class="levelTwo" form="trafficAdd" name="type_ii_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>
@@ -535,7 +473,7 @@
                             <div>
                                 <p>
                                     <span>三类增量：</span>
-                                    <input type="text" class="levelThree"/>
+                                    <input type="text" class="levelThree" form="trafficAdd" name="type_iii_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>
@@ -548,40 +486,42 @@
                 </div>
             </div>
         </div>
-        <div class="addHtml">
+        <div class="redact">
             <div>
+                <form enctype="multipart/form-data" id="trafficRedact">
+                </form>
                 <div>
                     <ul>
                         <li>
-                            <h3>添加路况</h3>
+                            <h3>编辑路况</h3>
                         </li>
                         <li>
                             <div>
                                 <p>
                                     <span>路况名称：</span>
-                                    <input type="text" class="trafficName"/>
+                                    <input type="text" class="trafficName" form="trafficRedact" name="name"/>
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <span>路况图片：</span> <br/>
-                                <img src="img/design/img2.jpg" alt=""/>
+                                <img src="img/design/img2.jpg" alt="" class="trafficImg" />
 
-                                <p class="files"><label for="addFile"><input type="file" id="addFile"/>选择文件</label></p>
+                                <p class="files"><label for="file"><input type="file" id="file" form="trafficRedact"/>选择文件</label></p>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <span>路况描述：</span>
-                                <textarea name="" id="" cols="20" rows="5" class="addText"></textarea>
+                                <textarea cols="20" rows="5" class="trafficInfo" form="trafficRedact" name="description"></textarea>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <p>
                                     <span>一类增量：</span>
-                                    <input type="text" class="levelOne"/>
+                                    <input type="text" class="levelOne"  form="trafficRedact"  name="type_i_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>
@@ -590,7 +530,7 @@
                             <div>
                                 <p>
                                     <span>二类增量：</span>
-                                    <input type="text" class="levelTwo"/>
+                                    <input type="text" class="levelTwo" form="trafficRedact" name="type_ii_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>
@@ -599,7 +539,7 @@
                             <div>
                                 <p>
                                     <span>三类增量：</span>
-                                    <input type="text" class="levelThree"/>
+                                    <input type="text" class="levelThree" form="trafficRedact" name="type_iii_rate"/>
                                     <b>（ % ）</b>
                                 </p>
                             </div>

@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -506,7 +509,7 @@ div.content > div.details > div > div > ul {
     margin-top: 20px;
     cursor: pointer;
     font-size: 18px;
-    width: 130px;
+    width: 285px;
 }
 .CarSetInfo > div > div > div.CarSetInfoButton > div > button:nth-child(2),
 .userSetInfo > div > div > div.userSetInfoButton > div > button:nth-child(2){
@@ -529,7 +532,7 @@ div.content > div.details > div > div > ul {
     margin-top: 18px;
 }
 
-.CarSetList > div.userInfoCarList > ul > li,
+.CarSetList > div.CarSetInfoCarList > ul > li,
 .userCarList > div.userInfoCarList > ul > li {
     margin-top: 10px;
     overflow: hidden;
@@ -540,24 +543,24 @@ div.content > div.details > div > div > ul {
     float: left;
 }
 
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo,
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo,
 .userCarList > div.userInfoCarList > ul > li > div.carInfo {
     background: #cccccc;
     width: 78%;
     margin-left: 20px;
 }
 
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div,
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo > div,
 .userCarList > div.userInfoCarList > ul > li > div.carInfo > div {
     overflow: hidden;
     line-height: 20px;
 }
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div>div>span:nth-child(1),
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo > div>div>span:nth-child(1),
 .userCarList > div.userInfoCarList > ul > li > div.carInfo > div>div>span:nth-child(1){
     font-weight: bold;
 }
 
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div,
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo > div > div,
 .userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div {
     width: 190px;
     box-sizing: border-box;
@@ -566,13 +569,13 @@ div.content > div.details > div > div > ul {
     padding-left: 19px;
 }
 
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div > a,
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo > div > div > a,
 .userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a {
     padding: 6px 15px;
     color: orange;
 }
 
-.CarSetList > div.CarSetInfoCarList > ul > li > div.CarInfo > div > div > a > span.CarRemove,
+.CarSetList > div.CarSetInfoCarList > ul > li > div.carInfo > div > div > a > span.CarRemove,
 .userCarList > div.userInfoCarList > ul > li > div.carInfo > div > div > a > span.carRemove {
     display: inline-block;
     width: 14px;
@@ -726,20 +729,29 @@ div.userCarList > div.userSetInfoComeback {
     font-size: 18px;
 }
 
-.userSetInfo > div > div.tradingRecord {
+.userSetInfo > div > div.tradingRecord ,
+.CarSetInfo > div > div.tradingRecord {
     padding: 20px 80px;
+}
+.userSetInfo > div > div.tradingRecord.on{
+    display: block;
 }
 
 .userSetInfo > div > div.tradingRecord > div.tradingRecordContent,
 .userSetInfo > div > div.tradingRecord > div.buttonComeBack,
-.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet {
+.userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet,
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordContent,
+.CarSetInfo > div > div.tradingRecord > div.buttonComeBack,
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet {
     margin-top: 60px;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li ,
 .userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li {
     padding: 5px 0;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > i ,
 .userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > i {
     display: inline-block;
     font-style: normal;
@@ -748,14 +760,17 @@ div.userCarList > div.userSetInfoComeback {
     font-weight: bold;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > span ,
 .userSetInfo > div > div.tradingRecord > div.tradingRecordContent > ul > li > span {
     margin-left: 10px;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div ,
 .userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div {
     margin-top: 10px;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div > button ,
 .userSetInfo > div > div.tradingRecord > div.tradingRecordButtonSet > div > button {
     width: 260px;
     box-sizing: border-box;
@@ -767,10 +782,12 @@ div.userCarList > div.userSetInfoComeback {
 
 }
 
+.CarSetInfo > div > div.tradingRecord > div.buttonComeBack > div ,
 .userSetInfo > div > div.tradingRecord > div.buttonComeBack > div {
     text-align: center;
 }
 
+.CarSetInfo > div > div.tradingRecord > div.buttonComeBack > div > button ,
 .userSetInfo > div > div.tradingRecord > div.buttonComeBack > div > button {
     width: 260px;
     box-sizing: border-box;
@@ -792,6 +809,8 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .userSet > div > div.moneyChange > div.userSetTitle > div > p ,
+.carSet > div > div > div.carSetTitle > div > p ,
+.storeOrder > div > div > div.storeOrderTitle > div > p ,
 .storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p
 {
     overflow: hidden;
@@ -800,6 +819,8 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .userSet > div > div.moneyChange > div.userSetTitle > div > p > span ,
+.carSet > div > div > div.carSetTitle > div > p > span ,
+.storeOrder > div > div > div.storeOrderTitle > div > p>span,
 .storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p > span
 {
     font-size: 20px;
@@ -807,6 +828,8 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .userSet > div > div.moneyChange > div.userSetTitle > div > p > button,
+.carSet > div > div > div.carSetTitle > div > p> button,
+.storeOrder > div > div > div.storeOrderTitle > div > p>button,
 .storeOrder > div > div.storeOrderChange > div.storeOrderChangeTitle > div > p > button
 {
     float: right;
@@ -1053,8 +1076,13 @@ div.userCarList > div.userSetInfoComeback {
     box-sizing: border-box;
     height: 400px;
 }
-
+.storeOrder>div>div>div.storeOrderTitle>div.storeChage,
+.carSet>div>div>div.carSetTitle>div.BBB{
+    display: none;
+    margin-top: -25px;
+}
 /*马粮变动记录每个块的宽度*/
+
 .userSet > div > div > div.userSetTitle > p > span:nth-child(1),
 .userSet > div > div > div.userSetTotal > div > p > span:nth-child(1),
 .carSet > div > div > div.carSetTotal > div > p > span:nth-child(1),
@@ -1081,10 +1109,17 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(5),
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(5),
 .userSet > div > div > div.userSetTitle > p > span:nth-child(5) {
     width: 15%;
 }
-
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(6){
+    width: 15%;
+}
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(5)>a,
+.userSet > div > div > div.userSetTotal > div > p > span:nth-child(6)>a{
+    text-decoration: underline;
+}
 .userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(6),
 .userSet > div > div > div.userSetTitle > p > span:nth-child(6) {
     width: 25%;
@@ -1222,22 +1257,12 @@ div.userCarList > div.userSetInfoComeback {
     width: 10%;
 }
 
+.storeOrderPlate{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
 
-
-
-
-
-
-
-
-
-
-.storeOrderPlate>input[type="date"]::-webkit-inner-spin-button {
-    display: none;
 }
 
-/*----------用来移除叉叉按钮----------*/
-.storeOrderPlate>input[type="date"]::-webkit-clear-button{
-    display:none;
-}
 

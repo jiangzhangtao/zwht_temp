@@ -1,5 +1,6 @@
 (function () {
-
+    var admin_id = sessionStorage['admin_id'];
+    var token = sessionStorage['token'];
     /*自适应屏幕*/
     (function () {
         var documentWidth = $(window).width();
@@ -12,7 +13,7 @@
         console.log(menuHeight + logoHeight)
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: detailsHeight + 50
+            minHeight: 810+'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -65,10 +66,12 @@
         $(this).prev('input').val($(this).find("option:selected").text());
         $("#" + this_id + "").css('display', 'none')
     }
+
     function focus() {
         var this_id = $(this).next().attr("id");
         $("#" + this_id + "").css({"display": "block"});
     }
+
     function inputChagen() {
         var this_id = $(this).next().attr("id");
         var select = $("#" + this_id + "");
@@ -101,29 +104,147 @@
         });
     });
 
-    /*                     待发货                    */
+    /*                     系统充值列表                    */
     function system() {
+        $.ajax({
+            type: 'post',
+            url: 'http://180.76.243.205:8383/_API/_adminRecharge/getList',
+            data: {
+                admin_id: admin_id,
+                token: token
+            },
+            success: function (data) {
+                if (data.code == 'E0000') {
+                    if (data.data) {
+                        var html = '';
+                        for (var i = 0; i < data.data.length; i++) {
+                            html += '<li data-id="' + data.data[i].id + '">' +
+                            '<div>' +
+                            '<div class="filterOrder"><span>' + (i + 1) + '</span></div>' +
+                            '<div><span class="recharge_value">' + data.data[i].recharge_value + '</span></div>' +
+                            '<div><span class="ml_value">' + data.data[i].ml_value + '</span></div>' +
+                            '<div>' +
+                            '<a href="##" class="systemEdit"><span class="fa fa-edit"></span>编辑</a>' +
+                            '</div>' +
+                            '</div>' +
+                            '</li>';
+                        }
+                        $('.systemList>ul').html(html);
+                        //查看详情
+                        $('.systemList>ul').on('click', '.systemEdit', function (e) {
+                            e.preventDefault();
+                            var that = this;
+                            $('.systemReact').css({display: "block"});
+                            var recharge_id = $(this).parent().parent().parent().attr('data-id');
+                            var recharge_value = $(this).parent().siblings().children('.recharge_value').html();
+                            var ml_value = $(this).parent().siblings().children('.ml_value').html();
+                            $('.systemReact .recharge').val(recharge_value);
+                            $('.systemReact .ml').val(ml_value);
+                            document.getElementsByClassName('systemReactBtnOk')[0].onclick = function () {
+                                $.ajax({
+                                    type: 'post',
+                                    url: 'http://180.76.243.205:8383/_API/_adminRecharge/edit',
+                                    data: {
+                                        admin_id: admin_id,
+                                        token: token,
+                                        recharge_id: recharge_id,
+                                        recharge_value: $('.systemReact .recharge').val(),
+                                        ml_value: $('.systemReact .ml').val()
+                                    },
+                                    success: function (data) {
+                                        if (data.code == 'E0000') {
+                                            alert('修改成功');
+                                            $(that).parent().siblings().children('.recharge_value').html($('.systemReact .recharge').val());
+                                            $(that).parent().siblings().children('.ml_value').html($('.systemReact .ml').val());
+                                            $('.systemReact').css({display: "none"});
+                                        } else {
+                                            alert(data.message);
+                                        }
+                                    },
+                                    err: function (err) {
+                                        console.log(err);
+                                    }
+                                });
+
+                            }
+                        })
+                    }
+                } else {
+                    alert(data.message);
+                }
+            },
+            err: function (err) {
+                console.log(err);
+            }
+        });
+
+
         //返回列表
         $('.systemReactUndoAdd').click(function () {
-            $('.systemReact').css({display:"none"})
+            $('.systemReact').css({display: "none"})
         });
-        //查看详情
-        $('.systemList>ul').on('click','.systemEdit',function(e){
-            e.preventDefault();
-            $('.systemReact').css({display:"block"})
-        })
+
     }
 
-    /*                      待收货                       */
-    function custom(){
-        $('.moneyButton').click(function(){
-            var $this_input= $(this).parent().siblings().children().children().children().children('input');
-            if($(this).attr('data-id')==1){
-                $(this).attr('data-id',2);
-                $this_input.attr('disabled',false)
-            }else{
-                $(this).attr('data-id',1);
-                $this_input.attr('disabled',true)
+    /*                      自定义充值                       */
+    function custom() {
+
+        $.ajax({
+            type: 'post',
+            url: 'http://180.76.243.205:8383/_API/_adminRecharge/showCustom',
+            data: {
+                admin_id: admin_id,
+                token: token
+            },
+            success: function (data) {
+                if (data.code == 'E0000') {
+                    console.log(data);
+                    $('.rate>input').val(data.data.rate);
+                    $('.ca').html(data.data.value);
+                    $('.value>input').val((data.data.value * data.data.rate).toFixed(2))
+                } else {
+                    alert(data.message);
+                }
+            },
+            err: function (err) {
+                console.log(err);
+            }
+        });
+        $('.moneyButton').click(function () {
+            var $this_input = $(this).parent().siblings().children().children().children().children('input');
+            if ($(this).attr('data-id') == 1) {
+                $(this).attr('data-id', 2);
+                $this_input.attr('disabled', false);
+
+            } else {
+                $(this).attr('data-id', 1);
+                $this_input.attr('disabled', true);
+                var rate = $('.rate>input').val();
+                var value = $('.ca').html();
+                $.ajax({
+                    type: 'post',
+                    url: 'http://180.76.243.205:8383/_API/_adminRecharge/setCustom',
+                    data: {
+                        admin_id: admin_id,
+                        token: token,
+                        value: value,
+                        rate: rate
+                    },
+                    success: function (data) {
+                        if (data.code == 'E0000') {
+                            console.log(data)
+                            alert('修改成功');
+                            $('.value>input').val((value * rate).toFixed(2))
+                        } else {
+                            alert(data.message);
+                        }
+                    },
+                    err: function (err) {
+                        console.log(err);
+                    }
+                });
+
+
             }
         })
     }

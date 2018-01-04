@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -359,6 +362,9 @@ div.content > div.details > div > div > ul {
     font-size: 14px;
     padding: 5px;
     color: #fff;
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 2px;
 
 }
 
@@ -371,6 +377,9 @@ div.content > div.details > div > div > ul {
     text-align: center;
     clear: both;
     padding-top: 25px;
+}
+.shopInfo > div > div.shopInfoLock > div.shopInfoLockFooter{
+    text-align: right;
 }
 
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div > ul > li > h3,
@@ -399,6 +408,10 @@ div.content > div.details > div > div > ul {
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockRight > div > ul > li {
     margin-top: 15px;
     overflow: hidden;
+}
+.shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div > ul > li>div>p>span>button{
+    width: 85px;
+    height: 25px;
 }
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockLeft > div > ul > li>span,
 .shopInfo > div > div.shopInfoLock > div.shopInfoLockRight > div > ul > li>span{
@@ -629,7 +642,7 @@ div.content > div.details > div > div > ul {
 .severList > div > div > div.severListContent > div.severListList,
 .InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList,
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList {
-    height: 600px;
+    height: 570px;
     overflow-y: auto;
 }
 
@@ -660,6 +673,22 @@ div.content > div.details > div > div > ul {
     float: left;
     text-align: center;
     font-size: 16px;
+}
+.InventoryCategories > div > div > div.InventoryCategoriesTitle > p > span,
+.InventoryCategories > div > div > div.InventoryCategoriesContent > div.InventoryCategoriesList > ul > li > div > div{
+    width: 33.3%;
+}
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div>div{
+    width: 50px;
+    height: 25px;
+    margin-left: 85px;
+    background: #000;
+    border-radius: 24%;
+    line-height: 25px;
+    margin-top: 30px;
+}
+.storeCategory > div > div > div.storeCategoryContent > div.storeCategoryList > ul > li > div > div>div>span{
+    color: #FFFFFF;
 }
 
 .cooperative > div > div > div.cooperativeContent > div.cooperativeList > ul > li > div > div,
@@ -727,7 +756,9 @@ div.content > div.details > div > div > ul {
 .storeCategoryAdd,
 .cooperativeListServer,
 .severListAddAdd,
+.severListRedact,
 .InventoryCategoriesListAdd,
+.InventoryCategoriesListRedact,
 .storeCategoryRedact {
     position: fixed;
     top: 0;
@@ -745,6 +776,7 @@ div.content > div.details > div > div > ul {
 .storeCategoryAdd > div > div,
 .cooperativeListServer > div > div,
 .severListAddAdd > div > div,
+.severListRedact > div > div,
 .InventoryCategoriesListAdd > div > div,
 .storeCategoryRedact > div > div {
     position: absolute;
@@ -764,9 +796,14 @@ div.content > div.details > div > div > ul {
 .storeCategoryAdd > div > div > ul > li,
 .cooperativeListServer > div > div > ul > li,
 .severListAddAdd > div > div > ul > li,
+.severListRedact > div > div > ul > li,
 .InventoryCategoriesListAdd > div > div > ul > li,
 .storeCategoryRedact > div > div > ul > li {
     margin-top: 10px;
+    text-align: center;
+}
+.cooperativeListServer > div > div > ul > li>span{
+    font-size: 16px;
 }
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn{
     text-align: center
@@ -775,6 +812,7 @@ div.content > div.details > div > div > ul {
 .storeCategoryAdd > div > div > ul > li > h3,
 .cooperativeListServer > div > div > ul > li > h3,
 .severListAddAdd > div > div > ul > li > h3,
+.severListRedact > div > div > ul > li > h3,
 .InventoryCategoriesListAdd > div > div > ul > li > h3,
 .storeCategoryRedact > div > div > ul > li > h3 {
     text-align: center;
@@ -783,6 +821,7 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li > div > span,
 .severListAddAdd > div > div > ul > li > div > span,
+.severListRedact > div > div > ul > li > div > span,
 .InventoryCategoriesListAdd > div > div > ul > li > div > span,
 .storeCategoryRedact > div > div > ul > li > div > span {
     width: 90px;
@@ -793,6 +832,7 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li > div,
 .severListAddAdd > div > div > ul > li > div,
+.severListRedact > div > div > ul > li > div,
 .InventoryCategoriesListAdd > div > div > ul > li > div,
 .storeCategoryRedact > div > div > ul > li > div {
     display: inline-block;
@@ -801,6 +841,7 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li > div > div,
 .severListAddAdd > div > div > ul > li > div > div,
+.severListRedact > div > div > ul > li > div > div,
 .InventoryCategoriesListAdd > div > div > ul > li > div > div,
 .storeCategoryRedact > div > div > ul > li > div > div {
     display: inline-block;
@@ -808,8 +849,10 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li > div > div > input,
 .severListAddAdd > div > div > ul > li > div > div > input,
+.severListRedact > div > div > ul > li > div > div > input,
 .InventoryCategoriesListAdd > div > div > ul > li > div > div > input,
 .severListAddAdd > div > div > ul > li > div > div > select,
+.severListRedact > div > div > ul > li > div > div > select,
 .InventoryCategoriesListAdd > div > div > ul > li > div > div > select,
 .storeCategoryRedact > div > div > ul > li > div > div > input {
     width: 200px;
@@ -822,6 +865,7 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn,
 .severListAddAdd > div > div > ul > li.severListAddAddBtn,
+.severListRedact > div > div > ul > li.severListRedactBtn,
 .InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn,
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn {
     text-align: center;
@@ -829,6 +873,7 @@ div.content > div.details > div > div > ul {
 
 .storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button,
 .severListAddAdd > div > div > ul > li.severListAddAddBtn > button,
+.severListRedact > div > div > ul > li.severListRedactBtn > button,
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button,
 .InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn > button,
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button {
@@ -845,6 +890,7 @@ div.content > div.details > div > div > ul {
 }
 .storeCategoryAdd > div > div > ul > li.storeCategoryAddBtn > button:nth-child(2),
 .severListAddAdd > div > div > ul > li.severListAddAddBtn > button:nth-child(2),
+.severListRedact > div > div > ul > li.severListRedactBtn > button:nth-child(2),
 .cooperativeListServer > div > div > ul > li.cooperativeListServerBtn > button:nth-child(2),
 .InventoryCategoriesListAdd > div > div > ul > li.InventoryCategoriesListAddBtn > button:nth-child(2),
 .storeCategoryRedact > div > div > ul > li.storeCategoryRedactBtn > button:nth-child(2){

@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -245,12 +248,12 @@ div.content > div.details > div > div > ul {
 .tire > div > div > div.tireContent > div.tireList {
     height: 500px;
     overflow-y: auto;
-    width: 1573px;
+    width: 1829px;
     position: relative;
 }
 
 .tire > div > div > div.tireContent > div.tireAdd {
-    width: 1573px;
+    width: 1829px;
     height: 50px;
     line-height: 50px;
     background: #eeeeee;
@@ -289,7 +292,7 @@ div.content > div.details > div > div > ul {
 
 .tire > div > div > div.tireTitle,
 .tire > div > div > div.tireContent > div.screen {
-    width: 1573px;
+    width: 1829px;
     border-bottom: 1px solid #cccccc;
     padding: 10px 0;
 }
@@ -367,7 +370,7 @@ div.content > div.details > div > div > ul {
 .tireListAdd > div > div > ul > li > h3,
 .tireListRedact > div > div > ul > li > h3 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 
@@ -433,6 +436,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeTitle > p,
 .sidewall > div > div > div.sidewallTitle > p,
 .mould > div > div > div.mouldTitle > p,
+.type > div > div > div.typeTitle > p,
 .brand > div > div > div.brandTitle > p {
     overflow: hidden;
     border-bottom: 1px solid #cccccc;
@@ -445,6 +449,7 @@ div.content > div.details > div > div > ul {
 .figure > div > div > div.figureTitle > p > span,
 .sidewall > div > div > div.sidewallTitle > p > span,
 .mould > div > div > div.mouldTitle > p > span,
+.type > div > div > div.typeTitle > p > span,
 .brand > div > div > div.brandTitle > p > span {
     width: 25%;
     box-sizing: border-box;
@@ -458,6 +463,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent,
 .sidewall > div > div > div.sidewallContent,
 .mould > div > div > div.mouldContent,
+.type > div > div > div.typeContent,
 .brand > div > div > div.brandContent {
     border: 1px solid #ccc;
     margin-top: 10px;
@@ -469,6 +475,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div,
 .sidewall > div > div > div.sidewallContent > div,
 .mould > div > div > div.mouldContent > div,
+.type > div > div > div.typeContent > div,
 .brand > div > div > div.brandContent > div {
     height: 40px;
     line-height: 40px;
@@ -482,8 +489,9 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeList,
 .sidewall > div > div > div.sidewallContent > div.sidewallList,
 .mould > div > div > div.mouldContent > div.mouldList,
+.type > div > div > div.typeContent > div.typeList,
 .brand > div > div > div.brandContent > div.brandList {
-    height: 600px;
+    height: 570px;
     overflow-y: auto;
 }
 
@@ -493,6 +501,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeList > ul > li,
 .sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li,
 .mould > div > div > div.mouldContent > div.mouldList > ul > li,
+.type > div > div > div.typeContent > div.typeList > ul > li,
 .brand > div > div > div.brandContent > div.brandList > ul > li {
     height: 85px;
     line-height: 85px;
@@ -507,6 +516,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeList > ul > li > div,
 .sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div,
 .mould > div > div > div.mouldContent > div.mouldList > ul > li > div,
+.type > div > div > div.typeContent > div.typeList > ul > li > div,
 .brand > div > div > div.brandContent > div.brandList > ul > li > div {
     overflow: hidden;
 }
@@ -517,6 +527,7 @@ div.content > div.details > div > div > ul {
 .figure > div > div > div.figureContent > div.figureList > ul > li > div > div,
 .sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div,
 .mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div,
+.type > div > div > div.typeContent > div.typeList > ul > li > div > div,
 .brand > div > div > div.brandContent > div.brandList > ul > li > div > div {
     width: 25%;
     float: left;
@@ -529,6 +540,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > a,
 .sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div > a,
 .mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div > a,
+.type > div > div > div.typeContent > div.typeList > ul > li > div > div > a,
 .brand > div > div > div.brandContent > div.brandList > ul > li > div > div > a {
     display: inline-block;
     padding: 0 6px;
@@ -544,7 +556,8 @@ div.content > div.details > div > div > ul {
 .figure > div > div > div.figureContent > div.figureList > ul > li > div > div > a > span.figureRemove,
 .stripe > div > div > div.stripeContent > div.stripeList > ul > li > div > div > a > span.stripeRemove,
 .sidewall > div > div > div.sidewallContent > div.sidewallList > ul > li > div > div > a > span.sidewallRemove,
-.mould > div > div > div.mouldlContent > div.mouldList > ul > li > div > div > a > span.mouldRemove,
+.mould > div > div > div.mouldContent > div.mouldList > ul > li > div > div > a > span.mouldRemove,
+.type > div > div > div.typeContent > div.typeList > ul > li > div > div > a > span.typeRemove,
 .brand > div > div > div.brandContent > div.brandList > ul > li > div > div > a > span.brandRemove {
     display: inline-block;
     width: 15px;
@@ -559,6 +572,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeAdd > div,
 .sidewall > div > div > div.sidewallContent > div.sidewallAdd > div,
 .mould > div > div > div.mouldContent > div.mouldAdd > div,
+.type > div > div > div.typeContent > div.typeAdd > div,
 .brand > div > div > div.brandContent > div.brandAdd > div {
     background: #eeeeee;
 }
@@ -569,6 +583,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeAdd > div > a > p,
 .sidewall > div > div > div.sidewallContent > div.sidewallAdd > div > a > p,
 .mould > div > div > div.mouldContent > div.mouldAdd > div > a > p,
+.type > div > div > div.typeContent > div.typeAdd > div > a > p,
 .brand > div > div > div.brandContent > div.brandAdd > div > a > p {
     color: blue;
     font-size: 18px;
@@ -580,6 +595,7 @@ div.content > div.details > div > div > ul {
 .stripe > div > div > div.stripeContent > div.stripeAdd > div > a > p>span:nth-child(2),
 .sidewall > div > div > div.sidewallContent > div.sidewallAdd > div > a > p>span:nth-child(2),
 .mould > div > div > div.mouldContent > div.mouldAdd > div > a > p>span:nth-child(2),
+.type > div > div > div.typeContent > div.typeAdd > div > a > p>span:nth-child(2),
 .brand > div > div > div.brandContent > div.brandAdd > div > a > p>span:nth-child(2){
     text-decoration: underline;
 }
@@ -627,6 +643,10 @@ div.content > div.details > div > div > ul {
     display: none;
 }
 
+.stripe > div > div > div.stripeContent > div.stripeList > ul > li > div.stripeInfo>span{
+    font-size: 12px;
+}
+
 .stripeListAdd > div > div > ul > li > div > div > input,
 .stripeListRedact > div > div > ul > li > div > div > input {
     padding-left: 14px;
@@ -649,6 +669,14 @@ div.content > div.details > div > div > ul {
     display: block;
     text-align: center;
     margin-top: 10px;
+}
+.stripeListAdd > div > div > ul > li > div > div.stripeImg>img,
+.stripeListRedact > div > div > ul > li > div > div.stripeImg>img{
+    width: 190px;
+    height: 190px;
+    display: inline-block;
+    border: 1px solid #000;
+    box-sizing: border-box;
 }
 
 .stripeListAdd > div > div > ul > li > div > p,
@@ -677,6 +705,8 @@ div.content > div.details > div > div > ul {
     /*模具标识           一下内容为所有的添加和编辑模态框的通用样式*/
 .mouldListAdd,
 .mouldListRedact,
+.typeListAdd,
+.typeListRedact,
 .sidewallListAdd,
 .sidewallListRedact,
 .figureListAdd,
@@ -700,6 +730,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div,
 .mouldListRedact > div > div,
+.typeListAdd > div > div,
+.typeListRedact > div > div,
 .sidewallListAdd > div > div,
 .sidewallListRedact > div > div,
 .figureListAdd > div > div,
@@ -728,6 +760,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li > h3,
 .mouldListRedact > div > div > ul > li > h3,
+.typeListAdd > div > div > ul > li > h3,
+.typeListRedact > div > div > ul > li > h3,
 .sidewallListAdd > div > div > ul > li > h3,
 .sidewallListRedact > div > div > ul > li > h3,
 .figureListAdd > div > div > ul > li > h3,
@@ -747,6 +781,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li,
 .mouldListRedact > div > div > ul > li,
+.typeListAdd > div > div > ul > li,
+.typeListRedact > div > div > ul > li,
 .sidewallListAdd > div > div > ul > li,
 .sidewallListRedact > div > div > ul > li,
 .figureListAdd > div > div > ul > li,
@@ -764,6 +800,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li > div > div,
 .mouldListRedact > div > div > ul > li > div > div,
+.typeListAdd > div > div > ul > li > div > div,
+.typeListRedact > div > div > ul > li > div > div,
 .sidewallListAdd > div > div > ul > li > div > div,
 .sidewallListRedact > div > div > ul > li > div > div,
 .figureListAdd > div > div > ul > li > div > div,
@@ -781,6 +819,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li > div > span,
 .mouldListRedact > div > div > ul > li > div > span,
+.typeListAdd > div > div > ul > li > div > span,
+.typeListRedact > div > div > ul > li > div > span,
 .sidewallListAdd > div > div > ul > li > div > span,
 .sidewallListRedact > div > div > ul > li > div > span,
 .figureListAdd > div > div > ul > li > div > span,
@@ -801,6 +841,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li.mouldListAddBtn,
 .mouldListRedact > div > div > ul > li.mouldListRedactBtn,
+.typeListAdd > div > div > ul > li.typeListAddBtn,
+.typeListRedact > div > div > ul > li.typeListRedactBtn,
 .sidewallListAdd > div > div > ul > li.sidewallListAddBtn,
 .sidewallListRedact > div > div > ul > li.sidewallListRedactBtn,
 .figureListAdd > div > div > ul > li.figureListAddBtn,
@@ -819,6 +861,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li.mouldListAddBtn > button,
 .mouldListRedact > div > div > ul > li.mouldListRedactBtn > button,
+.typeListAdd > div > div > ul > li.typeListAddBtn > button,
+.typeListRedact > div > div > ul > li.typeListRedactBtn > button,
 .sidewallListAdd > div > div > ul > li.sidewallListAddBtn > button,
 .sidewallListRedact > div > div > ul > li.sidewallListRedactBtn > button,
 .figureListAdd > div > div > ul > li.figureListAddBtn > button,
@@ -841,6 +885,8 @@ div.content > div.details > div > div > ul {
 
 .mouldListAdd > div > div > ul > li.mouldListAddBtn > button:nth-child(2),
 .mouldListRedact > div > div > ul > li.mouldListRedactBtn > button:nth-child(2),
+.typeListAdd > div > div > ul > li.typeListAddBtn > button:nth-child(2),
+.typeListRedact > div > div > ul > li.typeListRedactBtn > button:nth-child(2),
 .sidewallListAdd > div > div > ul > li.sidewallListAddBtn > button:nth-child(2),
 .sidewallListRedact > div > div > ul > li.sidewallListRedactBtn > button:nth-child(2),
 .figureListAdd > div > div > ul > li.figureListAddBtn > button:nth-child(2),
@@ -861,6 +907,10 @@ div.content > div.details > div > div > ul {
 .mouldListAdd > div > div > ul > li > div > select,
 .mouldListRedact > div > div > ul > li > div > div > input,
 .mouldListRedact > div > div > ul > li > div > select,
+.typeListAdd > div > div > ul > li > div > div > input,
+.typeListAdd > div > div > ul > li > div > select,
+.typeListRedact > div > div > ul > li > div > div > input,
+.typeListRedact > div > div > ul > li > div > select,
 .sidewallListAdd > div > div > ul > li > div > div > input,
 .sidewallListAdd > div > div > ul > li > div > select,
 .sidewallListRedact > div > div > ul > li > div > div > input,
@@ -893,6 +943,8 @@ div.content > div.details > div > div > ul {
     border: none;
 }
 
+.typeListAdd > div > div > ul > li > div > div > input,
+.typeListRedact > div > div > ul > li > div > div > input,
 .mouldListAdd > div > div > ul > li > div > div > input,
 .mouldListRedact > div > div > ul > li > div > div > input,
 .sidewallListAdd > div > div > ul > li > div > div > input,

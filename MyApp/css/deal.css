@@ -1,0 +1,335 @@
+
+html, body, body > div {
+    min-height: 100%;
+}
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
+div.header {
+    height: 80px;
+    line-height: 80px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.header > div.logo > div {
+    float: left;
+}
+
+div.header > div.logo > div.logoImg {
+    height: 80px;
+}
+
+div.header > div.logo > div > p {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+div.header > div.logo > div > img {
+    height: 80px;
+}
+
+div.header > div.login {
+    overflow: hidden;
+    float: right;
+}
+
+div.header > div.login > div {
+    display: inline-block;
+}
+
+div.header > div.login > div > p {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.header > div.login > div > p > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.header > div.login > div > p.exit > span {
+    background: url("../img/account/exit.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.lock > span {
+    background: url("../img/account/lock.png") no-repeat;
+    background-size: 100%;
+}
+
+div.header > div.login > div > p.userImg > span {
+    background: url("../img/account/user.png") no-repeat;
+    background-size: 100%;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+div.content > div.menu {
+    float: left;
+    width: 230px;
+    height: 100%;
+    background: #ee2626;
+}
+
+div.content > div.menu > div > ul > li {
+    border-bottom: 2px solid #fe3232;
+    height: 60px;
+    line-height: 60px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo {
+    background: #c41f1f;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span {
+    width: 15px;
+    height: 15px;
+}
+
+div.content > div.menu > div > ul > li.basicTwo > a > span.basicTwoImg {
+    background: url("../img/basic/select.png") no-repeat;
+    background-size: 100%;
+
+}
+
+div.content > div.menu > div > ul > li.liActive {
+    background: #f46e31;
+}
+
+div.content > div.menu > div > ul > li > a {
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #d32222;
+    color: #ffffff;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+div.content > div.menu > div > ul > li > a > span {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+div.content > div.menu > div > ul > li > a > span.account {
+    background: url("../img/account/account.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.design {
+    background: url("../img/account/design.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.basic {
+    background: url("../img/account/basic.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.order {
+    background: url("../img/account/order.png") no-repeat;
+}
+
+div.content > div.menu > div > ul > li > a > span.entrepot {
+    background: url("../img/account/activity.png") no-repeat;
+}
+
+/*三级菜单*/
+div.content > div.navigation {
+    width: 100%;
+    float: left;
+}
+
+div.content > div.navigation > div {
+    padding-top: 20px;
+}
+
+div.content > div.navigation > div > ul {
+    overflow: hidden;
+    border-bottom: 3px solid #ee2626;
+}
+
+div.content > div.navigation > div > ul > li {
+    float: left;
+    border-top: 2px solid #ee2626;
+    border-left: 2px solid #ee2626;
+    border-right: 2px solid #ee2626;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+div.content > div.navigation > div > ul > li.active {
+    background: #ee2626;
+}
+
+div.content > div.navigation > div > ul > li.active > a {
+    color: #ffffff;
+}
+
+div.content > div.navigation > div > ul > li:nth-child(1) {
+    margin-left: 10px;
+}
+
+div.content > div.navigation > div > ul > li > a {
+    font-size: 15px;
+    color: #000;
+}
+
+/*选项卡内容区域*/
+div.content > div.details {
+    float: left;
+    padding: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+div.content > div.details > div {
+    display: none;
+    height: 100%;
+}
+
+div.content > div.details > div.present {
+    display: block;
+}
+
+div.content > div.details > div > div {
+    height: 100%;
+    padding: 20px 0;
+}
+div.content > div.details > div.custom > div{
+    width: 600px;
+}
+
+div.content > div.details > div > div > ul {
+    padding: 40px 0 0 170px;
+}
+.merchant>div,
+.system >div{
+    overflow: hidden
+}
+.merchant >div>div,
+.system >div>div{
+    float: left;
+    border:1px solid #ccc;
+    height: 530px;
+    box-sizing: border-box
+}
+.merchant >div>div.rightContent,
+.system >div>div.rightContent{
+    margin-left: 40px
+}
+.merchant >div>div.leftContent>div>textarea,
+.system >div>div.leftContent>div>textarea{
+    background: #cccaca
+}
+.merchant >div>div.rightContent>div>textarea,
+.system >div>div.rightContent>div>textarea{
+    background: #ffffff
+}
+.merchant >div>div>div>textarea,
+.system >div>div>div>textarea{
+    border: 1px solid #ccc;
+    margin:5px 10px
+}
+.merchant >div>div>.systemTitle,
+.system >div>div>.systemTitle{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc
+}
+.merchant >div>div.leftContent>div.systemVersions>p,
+.system >div>div.leftContent>div.systemVersions>p{
+    padding: 3px 3px;
+
+}
+.merchant >div>div.leftContent>div.systemVersions>p>input,
+.system >div>div.leftContent>div.systemVersions>p>input{
+  background: #cccaca;
+  border: none;
+  padding-left: 3px;
+  width: 200px
+}
+.merchant >div>div.leftContent>div.systemTime>p,
+.system >div>div.leftContent>div.systemTime>p{
+    text-align: right;
+    padding: 3px
+}
+.merchant >div>div.leftContent>div.merchantButton,
+.system >div>div.leftContent>div.systemButton{
+    text-align: center
+}
+.merchant >div>div.leftContent>div.merchantButton>input,
+.system >div>div.leftContent>div.systemButton>input{
+    width: 140px;
+    height: 34px;
+    box-sizing: border-box;
+    background:#fe3232;
+    color: #ffffff;
+    font-size: 16px; 
+    border: none;
+    margin: 5px 0;
+}
+
+
+#ponyAgreementPage,
+ #merchantPage{
+    width: 400px;
+    overflow-y: hidden;
+}
+
+#merchantPage>.agreementBody,
+#ponyAgreementPage>.agreementBody{
+    padding: 10px;
+    text-align: justify;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    height: 472px;
+    overflow-y: auto;
+    }
+    #merchantPage>.agreementBody>.title
+    #ponyAgreementPage>.agreementBody>.title{
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    text-indent: 28px;
+    }
+    #merchantPage>.agreementBody>.detail>.classify,
+    #ponyAgreementPage>.agreementBody>.detail>.classify{
+    margin: 5px 0;
+    }
+    #merchantPage>.agreementBody>.detail>.classify>.tit,
+    #ponyAgreementPage>.agreementBody>.detail>.classify>.tit{
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    }
+    #merchantPage>.agreementBody>.title>p,
+    #merchantPage>.agreementBody>.detail>.classify>p,
+    #ponyAgreementPage>.agreementBody>.title>p,
+    #ponyAgreementPage>.agreementBody>.detail>.classify>p{
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    }
+    #merchantPage>.agreementBody>.title span,
+    #merchantPage>.agreementBody>.detail>.classify span,
+    #ponyAgreementPage>.agreementBody>.title span,
+    #ponyAgreementPage>.agreementBody>.detail>.classify span{
+    color: #ee2625;
+    font-weight: bold;
+    }

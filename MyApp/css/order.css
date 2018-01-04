@@ -2,7 +2,10 @@
 html, body, body > div {
     min-height: 100%;
 }
-
+div.content > div.menu > div > ul > li.basicTwo{
+    height: 50px;
+    line-height: 50px;
+}
 div.header {
     height: 80px;
     line-height: 80px;
@@ -211,6 +214,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsTitle > p,
 .receiving > div > div > .receivingTitle > p,
 .service > div > div > .serviceTitle > p,
+.undo > div > div > .undoTitle > p,
 .tyreOrder > div > div > .tyreOrderTitle > p,
 .finish > div > div > div.finishTitle > p {
     overflow: hidden;
@@ -221,6 +225,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent,
 .tyreOrder > div > div > div.tyreOrderContent,
 .receiving > div > div > div.receivingContent,
+.undo > div > div > div.undoContent,
 .service > div > div > div.serviceContent,
 .finish > div > div > div.finishContent {
     border: 1px solid #ccc;
@@ -230,6 +235,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent > div,
 .tyreOrder > div > div > div.tyreOrderContent > div,
 .receiving > div > div > div.receivingContent > div,
+.undo > div > div > div.undoContent > div,
 .service > div > div > div.serviceContent > div,
 .finish > div > div > div.finishContent > div {
     height: 40px;
@@ -241,6 +247,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent > div.shipmentsList,
 .tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList,
 .receiving > div > div > div.receivingContent > div.receivingList,
+.undo > div > div > div.undoContent > div.undoList,
 .service > div > div > div.serviceContent > div.serviceList,
 .finish > div > div > div.finishContent > div.finishList {
     height: 600px;
@@ -250,6 +257,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li,
 .tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li,
 .receiving > div > div > div.receivingContent > div.receivingList > ul > li,
+.undo > div > div > div.undoContent > div.undoList > ul > li,
 .service > div > div > div.serviceContent > div.serviceList > ul > li,
 .finish > div > div > div.finishContent > div.finishList > ul > li {
     height: 85px;
@@ -262,6 +270,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div,
 .tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div,
 .receiving > div > div > div.receivingContent > div.receivingList > ul > li > div,
+.undo > div > div > div.undoContent > div.undoList > ul > li > div,
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div,
 .finish > div > div > div.finishContent > div.finishList > ul > li > div {
     overflow: hidden;
@@ -271,6 +280,8 @@ div.content > div.details > div > div > ul {
 .receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div,
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div,
 .service > div > div > div.serviceTitle > p > span,
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div,
+.undo > div > div > div.undoTitle > p > span,
 .finish > div > div > div.finishContent > div.finishList > ul > li > div > div,
 .finish > div > div > div.finishTitle > p > span,
 .tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div,
@@ -284,6 +295,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(1),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(1),
+.undo > div > div > div.undoTitle > p > span:nth-child(1),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(1),
 .service > div > div > div.serviceTitle > p > span:nth-child(1),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(1),
 .tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(1),
@@ -297,6 +310,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(2),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(2),
+.undo > div > div > div.undoTitle > p > span:nth-child(2),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(2),
 .service > div > div > div.serviceTitle > p > span:nth-child(2),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(2),
 .finish > div > div > div.finishTitle > p > span:nth-child(2),
@@ -308,6 +323,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(3),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(3),
+.undo > div > div > div.undoTitle > p > span:nth-child(3),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(3),
 .service > div > div > div.serviceTitle > p > span:nth-child(3),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(3),
 .finish > div > div > div.finishTitle > p > span:nth-child(3),
@@ -329,6 +346,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(4),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(4),
+.undo > div > div > div.undoTitle > p > span:nth-child(4),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(4),
 .service > div > div > div.serviceTitle > p > span:nth-child(4),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(4),
 .tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(4),
@@ -342,6 +361,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(5),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(5),
+.undo > div > div > div.undoTitle > p > span:nth-child(5),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(5),
 .service > div > div > div.serviceTitle > p > span:nth-child(5),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(5),
 .tyreOrder > div > div > div.tyreOrderTitle > p > span:nth-child(5),
@@ -355,6 +376,8 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsTitle > p > span:nth-child(6),
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div:nth-child(6),
+.undo > div > div > div.undoTitle > p > span:nth-child(6),
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div:nth-child(6),
 .service > div > div > div.serviceTitle > p > span:nth-child(6),
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div:nth-child(6),
 .finish > div > div > div.finishTitle > p > span:nth-child(6),
@@ -366,6 +389,7 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsContent > div.query > div,
 .service > div > div > div.serviceContent > div.query > div,
+.undo > div > div > div.undoContent > div.query > div,
 .finish > div > div > div.finishContent > div.query > div,
 .tyreOrder > div > div > div.tyreOrderContent > div.query > div,
 .receiving > div > div > div.receivingContent > div.query > div {
@@ -375,6 +399,7 @@ div.content > div.details > div > div > ul {
 }
 
 .shipments > div > div > div.shipmentsContent > div.query > div > div,
+.undo > div > div > div.undoContent > div.query > div > div,
 .service > div > div > div.serviceContent > div.query > div > div,
 .finish > div > div > div.finishContent > div.query > div > div,
 .tyreOrder > div > div > div.tyreOrderContent > div.query > div > div,
@@ -385,6 +410,7 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsContent > div.query > div > div > input,
 .service > div > div > div.serviceContent > div.query > div > div > input,
+.undo > div > div > div.undoContent > div.query > div > div > input,
 .finish > div > div > div.finishContent > div.query > div > div > input,
 .tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > input,
 .receiving > div > div > div.receivingContent > div.query > div > div > input {
@@ -394,6 +420,7 @@ div.content > div.details > div > div > ul {
 }
 
 .shipments > div > div > div.shipmentsContent > div.query > div > div > button,
+.undo > div > div > div.undoContent > div.query > div > div > button,
 .service > div > div > div.serviceContent > div.query > div > div > button,
 .finish > div > div > div.finishContent > div.query > div > div > button,
 .tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > button,
@@ -411,6 +438,7 @@ div.content > div.details > div > div > ul {
 
 .shipments > div > div > div.shipmentsContent > div.query > div > div > span.queryIcon,
 .service > div > div > div.serviceContent > div.query > div > div > span.queryIcon,
+.undo > div > div > div.undoContent > div.query > div > div > span.queryIcon,
 .finish > div > div > div.finishContent > div.query > div > div > span.queryIcon,
 .tyreOrder > div > div > div.tyreOrderContent > div.query > div > div > span.queryIcon,
 .receiving > div > div > div.receivingContent > div.query > div > div > span.queryIcon {
@@ -427,6 +455,7 @@ div.content > div.details > div > div > ul {
 .shipments > div > div > div.shipmentsContent > div.shipmentsList > ul > li > div > div > a,
 .service > div > div > div.serviceContent > div.serviceList > ul > li > div > div > a,
 .finish > div > div > div.finishContent > div.finishList > ul > li > div > div > a,
+.undo > div > div > div.undoContent > div.undoList > ul > li > div > div > a,
 .tyreOrder > div > div > div.tyreOrderContent > div.tyreOrderList > ul > li > div > div > a,
 .receiving > div > div > div.receivingContent > div.receivingList > ul > li > div > div > a {
     display: inline-block;
@@ -442,6 +471,7 @@ div.content > div.details > div > div > ul {
 .orderInfo > div > div > div.orderInfoTitle,
 .serviceInfo > div > div > div.serviceInfoTitle,
 .finishInfo > div > div > div.finishInfoTitle,
+.undoInfo > div > div > div.undoInfoTitle,
 .tyreOrderInfo > div > div > div.tyreOrderTitle,
 .receivingInfo > div > div > div.receivingInfoTitle {
     text-align: center;
@@ -450,6 +480,7 @@ div.content > div.details > div > div > ul {
 
 .orderInfoContent,
 .serviceInfoContent,
+.undoInfoContent,
 .finishInfoContent,
 .receivingInfoContent {
     overflow: hidden;
@@ -458,6 +489,7 @@ div.content > div.details > div > div > ul {
 
 .orderInfoContent > div,
 .serviceInfoContent > div,
+.undoInfoContent > div,
 .finishInfoContent > div,
 .receivingInfoContent > div {
     float: left;
@@ -470,6 +502,7 @@ div.content > div.details > div > div > ul {
 
 .orderInfoContent > div:nth-child(2),
 .serviceInfoContent > div:nth-child(2),
+.undoInfoContent > div:nth-child(2),
 .finishInfoContent > div:nth-child(2),
 .receivingInfoContent > div:nth-child(2) {
     margin-left: 10%;
@@ -478,6 +511,9 @@ div.content > div.details > div > div > ul {
 .orderInfoContent > div.basicInfo > div.basicInfoTitle,
 .orderInfoContent > div.orderStatus > div.orderStatusTitle,
 .orderDetail > div.orderDetailTitle,
+.undoInfoContent > div.undoBasicInfo > div.undoBasicInfoTitle,
+.undoInfoContent > div.undoStatus > div.undoStatusTitle,
+.undoDetail > div.undoDetailTitle,
 .receivingInfoContent > div.receivingBasicInfo > div.receivingBasicInfoTitle,
 .receivingInfoContent > div.receivingStatus > div.receivingStatusTitle,
 .receivingDetail > div.receivingDetailTitle,
@@ -498,6 +534,9 @@ div.content > div.details > div > div > ul {
 .orderInfoContent > div > div > ul > li,
 .orderDetailContent > div > ul > li,
 .orderInfoContent > div > div > ul > li > p > span,
+.undoInfoContent > div > div > ul > li,
+.undoDetailContent > div > ul > li,
+.undoInfoContent > div > div > ul > li > p > span,
 .finishInfoContent > div > div > ul > li,
 .finishDetailContent > div > ul > li,
 .finishInfoContent > div > div > ul > li > p > span,
@@ -511,6 +550,7 @@ div.content > div.details > div > div > ul {
 }
 
 .orderInfoContent > div > div > ul > li > p,
+.undoInfoContent > div > div > ul > li > p,
 .serviceInfoContent > div > div > ul > li > p,
 .finishInfoContent > div > div > ul > li > p,
 .receivingInfoContent > div > div > ul > li > p {
@@ -521,16 +561,19 @@ div.content > div.details > div > div > ul {
 /*订单明细*/
 .orderDetailContent,
 .serviceDetailContent,
+.undoDetailContent,
 .finishDetailContent,
 .receivingDetailContent {
     overflow-y: auto;
     box-sizing: border-box;
-    height: 400px;
+    max-height: 400px;
+    min-height: 240px;
 }
 
 .finishDetail,
 .serviceDetail,
 .receivingDetail,
+.undoDetail,
 .orderDetail {
     margin-top: 20px;
 }
@@ -538,6 +581,7 @@ div.content > div.details > div > div > ul {
 .receivingDetailContent > div,
 .serviceDetailContent > div,
 .finishDetailContent > div,
+.undoDetailContent > div,
 .orderDetailContent > div {
     overflow: hidden;
 
@@ -546,6 +590,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div,
 .serviceDetailContent > div > div,
 .finishDetailContent > div > div,
+.undoDetailContent > div > div,
 .receivingDetailContent > div > div {
     width: 45%;
     float: left;
@@ -555,6 +600,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div:nth-child(even),
 .serviceDetailContent > div > div:nth-child(even),
 .finishDetailContent > div > div:nth-child(even),
+.undoDetailContent > div > div:nth-child(even),
 .receivingDetailContent > div > div:nth-child(even) {
     margin-left: 10%;
 }
@@ -562,6 +608,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div > ul > li:nth-child(1),
 .serviceDetailContent > div > div > ul > li:nth-child(1),
 .finishDetailContent > div > div > ul > li:nth-child(1),
+.undoDetailContent > div > div > ul > li:nth-child(1),
 .receivingDetailContent > div > div > ul > li:nth-child(1) {
     background: #ff8b28;
     color: #ffffff;
@@ -570,6 +617,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div > ul > li,
 .serviceDetailContent > div > div > ul > li,
 .finishDetailContent > div > div > ul > li,
+.undoDetailContent > div > div > ul > li,
 .tyreOrderInfoContent > div > div > ul > li,
 .receivingDetailContent > div > div > ul > li {
     padding: 5px 0;
@@ -595,6 +643,8 @@ div.content > div.details > div > div > ul {
 .finishDetailContent > div > div > ul > li > span,
 .tyreOrderInfoContent > div > div > ul > li > i,
 .tyreOrderDetailContent > div > div > ul > li > span,
+.undoInfoContent > div > div > ul > li > i,
+.undoDetailContent > div > div > ul > li > span,
 .receivingInfoContent > div > div > ul > li > i,
 .receivingDetailContent > div > div > ul > li > span {
     display: inline-block;
@@ -613,6 +663,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div > ul > li > p,
 .serviceDetailContent > div > div > ul > li > p,
 .finishDetailContent > div > div > ul > li > p,
+.undoDetailContent > div > div > ul > li > p,
 .tyreOrderInfoContent > div > div > ul > li > p,
 .receivingDetailContent > div > div > ul > li > p {
     display: inline-block;
@@ -623,6 +674,7 @@ div.content > div.details > div > div > ul {
 .orderDetailContent > div > div > ul > li > p > img,
 .serviceDetailContent > div > div > ul > li > p > img,
 .finishDetailContent > div > div > ul > li > p > img,
+.undoDetailContent > div > div > ul > li > p > img,
 .receivingDetailContent > div > div > ul > li > p > img {
     display: inline-block;
     width: 133px;
@@ -636,6 +688,7 @@ div.content > div.details > div > div > ul {
 .orderButton > div,
 .serviceButton > div,
 .finishButton > div,
+.undoButton > div,
 .tyreOrderButton > div,
 .receivingButton > div {
     text-align: center;
@@ -644,6 +697,7 @@ div.content > div.details > div > div > ul {
 
 .orderButton > div > button,
 .finishButton > div > button,
+.undoButton > div > button,
 .tyreOrderButton > div > button,
 .serviceButton > div > button,
 .serviceButton > div > div > button,
@@ -657,6 +711,7 @@ div.content > div.details > div > div > ul {
 }
 .tyreOrderButton>div.tyreOrderButtonBack,
 .finishButton>div.finishButtonBack,
+.undoButton>div.finishButtonBack,
 .serviceButton > div.serviceClickButton,
 .finishButton > div.finishButtonOk > button,
 .receivingButton > div.receivingButtonOk > button,
@@ -668,6 +723,7 @@ div.content > div.details > div > div > ul {
 .orderInfo,
 .serviceInfo,
 .tyreOrderInfo,
+.undoInfo,
 .finishInfo,
 .receivingInfo {
     position: fixed;
@@ -681,6 +737,7 @@ div.content > div.details > div > div > ul {
 
 .orderInfo > div > div,
 .serviceInfo > div,
+.undoInfo > div,
 .finishInfo > div,
 .tyreOrderInfo > div,
 .receivingInfo > div > div {
@@ -719,11 +776,14 @@ div.content > div.details > div > div > ul {
 .serviceInfo > div > div.serviceOrderImg {
     display: none;
 }
-
+.orderServiceImg{
+    max-height: 400px;
+    overflow-y: auto;
+}
 .serviceOrderImg img {
     margin-top: 10px;
     display: inline-block;
-    width: 190px;
+    width: 180px;
     height: 113px;
     border: 1px solid #000;
     box-sizing: border-box;

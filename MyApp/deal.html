@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/deal.css" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="header">
+                <div class="logo">
+                    <div class="logoImg">
+                        <img src="img/account/logo.png" alt="" />
+                    </div>
+                    <div>
+                        <p>小马驾驾平台管理系统</p>
+                    </div>
+                </div>
+                <div class="login">
+                    <div>
+                        <p class="userImg">
+                            <span></span>您好，
+                            <b class="userName">admin</b>欢迎登录</p>
+                    </div>
+                    <div>
+                        <p class="lock">
+                            <span></span>锁定</p>
+                    </div>
+                    <div>
+                        <p class="exit">
+                            <span></span>退出</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="menu">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="account.html">
+                                    <span class="account"></span>账号管理</a>
+                            </li>
+                            <li>
+                                <a href="design.html">
+                                    <span class="design"></span>计算公式管理</a>
+                            </li>
+                            <li class="liActive">
+                                <a href="basic.html">
+                                    <span class="basic"></span>基本信息设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="basic.html">
+                                    <span class=""></span>车辆信息</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="tireSet.html">
+                                    <span class=""></span>轮胎设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="shop.html">
+                                    <span class=""></span>门店设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="userSet.html">
+                                    <span class=""></span>用户设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="flowPath.html">
+                                    <span class=""></span>流程设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="logistics.html">
+                                    <span class=""></span>物流设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="deal.html">
+                                    <span class="basicTwoImg"></span>协议设置</a>
+                            </li>
+                            <li class="basicTwo">
+                                <a href="about.html">
+                                    <span class=""></span>关于我们</a>
+                            </li>
+                            <li>
+                                <a href="order.html">
+                                    <span class="order"></span>订单相关信息</a>
+                            </li>
+                            <li class="">
+                                <a href="activity.html">
+                                    <span class="entrepot"></span>活动管理</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div>
+                        <ul>
+                            <li class="active">
+                                <a href="##">用户协议</a>
+                            </li>
+                            <li class="">
+                                <a href="##">商家协议</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="details">
+                    <!--用户协议-->
+                    <div class="system present">
+                        <button id="addRed">加红</button>
+                        <button id="addB">加粗</button>
+                        <button id="addTit">模块标题</button>
+                        <div>
+
+                            <!-- 设置 -->
+                            <div class="leftContent">
+                                <div class="systemTitle">
+                                    <span>下方输入协议内容</span>
+                                </div>
+                                <div class="systemVersions">
+                                    <p>
+                                        <span>网址设置:</span>
+                                        <input type="text">
+                                    </p>
+                                </div>
+                                <div class="systemText">
+                                    <textarea cols="40" rows="25" id="textEdit"></textarea>
+                                </div>
+                                <div class="systemTime">
+                                    <p>创建时间
+                                        <span> 2018-1-1</span>
+                                    </p>
+                                </div>
+                                <div class="systemButton">
+                                    <input type="button" value="提交">
+                                </div>
+                            </div>
+                            <!-- 预览 -->
+                            <div class="rightContent">
+                                <div class="systemTitle">
+                                    <span>协议内容预览</span>
+                                </div>
+                                <div id="ponyAgreementPage">
+
+                                    <div class="agreementBody">
+                                        <div class="title">
+                                            <p>感谢您成为小马驾驾的注册用户</p>
+                                            <p>《小马驾驾用户服务协议》（以下简称“本协议”）是由小马驾驾（
+                                                <span>网址：
+                                                    <span class="titleUrl"></span>
+                                                </span>） (包括PC端、移动端及应用程序)的用户（以下简称“用户或您”）与小马驾驾的运营方，即青岛小马驾驾信息技术有限公司及其关联公司（以下简称“小马驾驾”）之间，就APP交易服务等相关事宜共同缔结。
+                                                <b>本协议具有合同效力，您应当阅读并遵守本协议。请您务必仔细阅读、充分理解各条款内容，特别是以黑体加粗形式提示您注意的条款。</b>
+                                            </p>
+                                        </div>
+                                        <div class="detail">
+                                            <!-- <div class="classify">
+                                            <div class="tit">1协议的确认和接纳</div>
+                                            <p>1.1本站的各项电子服务的所有权和运作权归小马驾驾所有。您同意并点击确认本协议条款并完成注册程序后，才能成为小马驾驾的正式注册用户，并享受各类服务。</p >
+                                            <p>1.2根据国家法律法规变化及小马驾驾运营需要，<b>小马驾驾有权对本协议条款不时进行修改，修改后的协议一经发布即刻生效，并代替原来的协议。您可在小马驾驾APP随时查阅最新协议。您若不同意更新后的协议，可以且应立即停止接受小马驾驾APP依据本协议提供的服务；如您继续使用本APP提供的服务的，即视为同意更新后的协议。小马驾驾强烈建议您在使用本APP之前阅读本协议及APP的公告。</b>本协议包括协议正文及所有小马驾驾已经发布的，或未来可能发布或更新的各类规则。所有规则为本协议不可分割的组成部分，与本协议正文具有同等法律效力。在您申请注册成为小马驾驾注册用户前，请仔细阅读本协议的内容及各类规则。</p >
+                                            <p><b>1.3在您完成用户注册程序后，即表示您自愿接受本协议，正式成为小马驾驾的注册用户，并认可本协议全部条款内容。若您不同意本协议，或对本协议中的条款存在任何疑问，请您立即停止小马驾驾用户注册程序，并可以选择不使用本APP服务。</b></p >
+                                            <p>1.4您点击同意本协议后，即视为您确认自己具有享受小马驾驾商品及服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</p >
+                                            <p>1.5如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用小马驾驾。</p >
+                                            <p><b>1.6小马驾驾保留在中华人民共和国大陆地区施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容、取消订单的权利。</b></p >
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 商家协议 -->
+                    <div class="merchant">
+                            <button id="merchantaddRed">加红</button>
+                            <button id="merchantaddB">加粗</button>
+                            <button id="merchantaddTit">模块标题</button>
+                        <div>
+                               
+                            <!-- 设置 -->
+                            <div class="leftContent">
+                                <div class="systemTitle">
+                                    <span>下方输入协议内容</span>
+                                </div>
+                                <div class="systemVersions">
+                                    <p>
+                                        <span>当前版本号:</span>
+                                        <input type="text">
+                                    </p>
+                                </div>
+                                <div class="systemText">
+                                    <textarea cols="40" rows="25" id="merchantTextEdit"></textarea>
+                                </div>
+                                <div class="systemTime">
+                                    <p>创建时间
+                                        <span> 2018-1-1</span>
+                                    </p>
+                                </div>
+                                <div class="merchantButton">
+                                    <input type="button" value="提交">
+                                </div>
+                            </div>
+                              <!-- 预览 -->
+                              <div class="rightContent">
+                                    <div class="systemTitle">
+                                        <span>协议内容预览</span>
+                                    </div>
+                                    <div id="merchantPage">
+    
+                                        <div class="agreementBody">
+                                            <div class="title">
+                                                <p>感谢您成为小马驾驾的注册用户</p>
+                                                <p>《小马驾驾用户服务协议》（以下简称“本协议”）是由小马驾驾（
+                                                    <span>网址：
+                                                        <span class="titleUrl"></span>
+                                                    </span>） (包括PC端、移动端及应用程序)的用户（以下简称“用户或您”）与小马驾驾的运营方，即青岛小马驾驾信息技术有限公司及其关联公司（以下简称“小马驾驾”）之间，就APP交易服务等相关事宜共同缔结。
+                                                    <b>本协议具有合同效力，您应当阅读并遵守本协议。请您务必仔细阅读、充分理解各条款内容，特别是以黑体加粗形式提示您注意的条款。</b>
+                                                </p>
+                                            </div>
+                                            <div class="detail">
+                                                <!-- <div class="classify">
+                                                <div class="tit">1协议的确认和接纳</div>
+                                                <p>1.1本站的各项电子服务的所有权和运作权归小马驾驾所有。您同意并点击确认本协议条款并完成注册程序后，才能成为小马驾驾的正式注册用户，并享受各类服务。</p >
+                                                <p>1.2根据国家法律法规变化及小马驾驾运营需要，<b>小马驾驾有权对本协议条款不时进行修改，修改后的协议一经发布即刻生效，并代替原来的协议。您可在小马驾驾APP随时查阅最新协议。您若不同意更新后的协议，可以且应立即停止接受小马驾驾APP依据本协议提供的服务；如您继续使用本APP提供的服务的，即视为同意更新后的协议。小马驾驾强烈建议您在使用本APP之前阅读本协议及APP的公告。</b>本协议包括协议正文及所有小马驾驾已经发布的，或未来可能发布或更新的各类规则。所有规则为本协议不可分割的组成部分，与本协议正文具有同等法律效力。在您申请注册成为小马驾驾注册用户前，请仔细阅读本协议的内容及各类规则。</p >
+                                                <p><b>1.3在您完成用户注册程序后，即表示您自愿接受本协议，正式成为小马驾驾的注册用户，并认可本协议全部条款内容。若您不同意本协议，或对本协议中的条款存在任何疑问，请您立即停止小马驾驾用户注册程序，并可以选择不使用本APP服务。</b></p >
+                                                <p>1.4您点击同意本协议后，即视为您确认自己具有享受小马驾驾商品及服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</p >
+                                                <p>1.5如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用小马驾驾。</p >
+                                                <p><b>1.6小马驾驾保留在中华人民共和国大陆地区施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容、取消订单的权利。</b></p >
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/deal.js"></script>

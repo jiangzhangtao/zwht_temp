@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/r.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/share.css"/>
+</head>
+<body>
+<div>
+    <div>
+        <div class="header">
+            <div class="logo">
+                <div class="logoImg"><img src="img/account/logo.png" alt=""/></div>
+                <div><p>小马驾驾平台管理系统</p></div>
+            </div>
+            <div class="login">
+                <div><p class="userImg"><span></span>您好，<b class="userName">admin</b>欢迎登录</p></div>
+                <div><p class="lock"><span></span>锁定</p></div>
+                <div><p class="exit"><span></span>退出</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="account.html"><span class="account"></span>账号管理</a></li>
+                        <li><a href="design.html"><span class="design"></span>计算公式管理</a></li>
+                        <li class=""><a href="basic.html"><span class="basic"></span>基本信息设置</a></li>
+                        <li><a href="order.html"><span class="order"></span>订单相关信息</a></li>
+                        <li class="liActive"><a href="activity.html"><span class="entrepot"></span>活动管理</a></li>
+                        <li class="basicTwo "><a href="activity.html"><span class=""></span>畅行无忧</a></li>
+                        <li class="basicTwo"><a href="coupon.html"><span class=""></span>优惠券</a></li>
+                        <li class="basicTwo"><a href="referrer.html"><span class=""></span>推荐人</a></li>
+                        <li class="basicTwo"><a href="share.html"><span class="basicTwoImg"></span>推广有礼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <div>
+                    <ul>
+                        <li class="active"><a href="##">推广有礼</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="details">
+                <!--推广有礼-->
+                <div class="system present">
+                    <div>
+                        <div>
+                            <div class="systemTitle">
+                                <p>
+                                    <span>推广链接</span>
+                                    <span>推广标题</span>
+                                    <span>推广内容</span>
+                                    <span>操作</span>
+                                </p>
+                            </div>
+                            <div class="systemContent">
+                                <div class="query">
+
+                                </div>
+                                <div class="systemList">
+                                    <form enctype="multipart/form-data" id="share"></form>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <div class="filterOrder"><span>1</span></div>
+                                                <div><span>1500</span></div>
+                                                <div><button class="lock">查看内容</button></div>
+                                                <div>
+                                                    <a href="##" class="systemEdit"><span class="fa fa-edit"></span>编辑</a>
+                                                </div>
+                                            </div>
+                                            <div class="contentDetail">123123123123</div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <!--推广有礼编辑详细信息-->
+        <div class="systemReact">
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3>推广有礼编辑</h3>
+                        </li>
+
+                        <li class="">
+                            <div>
+                                <span>链接地址：</span>
+                                <input type="text" placeholder="请输入链接地址" class="url" form="share" name="url"/>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div>
+                                <span>推广标题：</span>
+                                <input type="text" placeholder="请输入推广标题" class="title" form="share" name="title"/>
+                            </div>
+                        </li>
+                         <li class="">
+                            <div>
+                                <span>推广内容：</span>
+                                <textarea cols="30" rows="10" class="textContent" form="share" name="content"></textarea>
+                            </div>
+                        </li>
+                        <li class="">
+                                <div>
+                                    <span>推广图片：</span>
+                                    <img src="" alt="" class="img">
+                                    <div>
+                                        <input type="file" form="share" name="img" id="file">
+                                    </div>
+                                </div>
+                            </li>
+                        <li class="systemReactBtn">
+                            <button class="systemReactBtnOk">提&nbsp;&nbsp;&nbsp;交</button>
+                            <button class="systemReactUndoAdd">取&nbsp;&nbsp;&nbsp;消</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/share.js"></script>

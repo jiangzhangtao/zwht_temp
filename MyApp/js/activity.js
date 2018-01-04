@@ -1,4 +1,6 @@
 (function () {
+    var admin_id=sessionStorage['admin_id'];
+    var token=sessionStorage['token'];
 
     /*自适应屏幕*/
     (function () {
@@ -9,10 +11,10 @@
         var bodyHeight = $(window).innerHeight();
         var detailsHeight = $('.details').innerHeight();
         var contentHeight = $('.content').height();
-        console.log(menuHeight + logoHeight);
+
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: detailsHeight + 50
+            minHeight: 810+'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -105,6 +107,40 @@
 
     /*               价格增量                */
     function price() {
+        $.ajax({
+			type:'post',
+			url:'http://180.76.243.205:8383/_API/_adminCxwy/getList',
+			data:{
+				admin_id:admin_id,
+				token:token
+			},
+			success:function(data){
+				if(data.code=='E0000'){
+                    console.log(data);
+                    if(data.data){
+                        var html='';
+                        for(var i=0;i<data.data.length;i++){
+                            html+='<li data-id="'+data.data[i].id+'">'+
+                            '<div>'+
+                            '<div class="filterOrder"><span>'+(i+1)+'</span></div>'+
+                            '<div class="times"><span><input type="text" disabled value="'+data.data[i].times+'"/></span></div>'+
+                            '<div class="rate"><span><input type="text" disabled value="'+data.data[i].rate+'"/></span></div>'+
+                            '<div>'+
+                            ' <a href="##" class="priceEdit" data-id="1">'+
+                            '<span class="fa fa-edit"></span><i>编辑</i></a>'+
+                            '</div></div></li>';
+                        }
+                        $('.priceList>ul').html(html)
+                    }
+				}else{
+					alert(data.message);
+				}
+			},
+			err:function(err){
+				console.log(err);
+			}
+		});
+
 
         $(".priceList>ul").on('click', '.priceEdit', function (e) {
             e.preventDefault();
@@ -113,6 +149,7 @@
             var otherLi = $(this).parent().parent().parent().siblings();
             if ($(this).attr('data-id') == 1) {
                 $(this).attr('data-id', 2);
+            
                 //当前Li的input框
                 $(this).parent().siblings().children().children('input').attr('disabled', false);
                 //其他li的input框
@@ -132,6 +169,35 @@
                 otherLi.children().children().children().attr('data-id',1);
                 otherLi.children().children().children().children('span').removeClass('fa-check-circle').addClass('fa-edit');
             } else {
+                
+                var times=$(this).parent().siblings('.times').children().children().val();
+                var rate=$(this).parent().siblings('.rate').children().children().val();
+                var cxwy_id=$(this).parent().parent().parent().attr('data-id');
+
+                $.ajax({
+                    type:'post',
+                    url:'http://180.76.243.205:8383/_API/_adminCxwy/edit',
+                    data:{
+                        admin_id:admin_id,
+                        token:token,
+                        times:times,
+                        rate:rate,
+                        cxwy_id:cxwy_id
+                    },
+                    success:function(data){
+                        if(data.code=='E0000'){
+                            alert('修改成功')
+                        }else{
+                            alert(data.message);
+                        }
+                    },
+                    err:function(err){
+                        console.log(err);
+                    }
+                });
+        
+
+
                 $(this).attr('data-id', 1);
                 //当前Li的input框
                 $(this).parent().siblings().children().children('input').attr('disabled', true);
@@ -168,29 +234,6 @@
             $('.priceEdit').children('i').html('编辑');
             $('.priceEdit').children('span').removeClass('fa-check-circle').addClass('fa-edit');
         });
-        //确认添加
-        $('.priceConfirmAdd').click(function () {
-            $('.priceAdd a').attr('data-id', 0);
-            var newLi = '';
-            newLi += '<li>';
-            newLi += '<div>' +
-            '<div class="filterOrder"><span>1</span></div>' +
-            '<div><span><input type="text" disabled value=""/></span></span></div>' +
-            '<div><span><input type="text" disabled value=""/></span></span></div>' +
-            '<div>' +
-            '<a href="##" class="priceEdit" data-id="1">' +
-            '<span class="fa fa-edit"></span><i>编辑</i></a>' +
-            '</div>' +
-            '</div>';
-            newLi += '</li>';
-            $('.priceList>ul').append(newLi);
-            //假的数据框删除掉
-            $('.newLi').css({
-                display: "none"
-            });
-
-        });
-
 
         //点击导航消失
         $('.navigation li').click(function () {

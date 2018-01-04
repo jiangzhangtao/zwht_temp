@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,ul,ol,li,img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box {
+            width: 700px;
+            height: 400px;
+            /*padding: 5px;*/
+            /*background-color: red;*/
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .ad {
+            width: 700px;
+            height: 400px;
+            position: relative;
+        }
+        #box img {
+            width: 700px;
+            height: 400px;
+        }
+        .ad ul li{
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            float: left;
+        }
+        .ad ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4200px;
+        }
+        .ad ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .ad ol li {
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .ad ol li.current {
+            background: yellow;
+        }
+        .ad ul li.current {
+            background: yellow;
+        }
+        #arr {
+            display: none;
+        }
+        #arr span {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            /*left: 5px;*/
+            top: 50%;
+            margin-top: -20px;
+            background-color: #000;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #arr #left{
+            left: 5px;
+        }
+        #arr #right {
+            right: 5px;
+            /*left: auto;*/
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="all">
+    <div class="ad">
+        <ul id="imgs">
+            <li><img src="imgs/1.jpg" alt=""/></li>
+            <li><img src="imgs/2.jpg" alt=""/></li>
+            <li><img src="imgs/3.jpg" alt=""/></li>
+            <li><img src="imgs/4.jpg" alt=""/></li>
+            <li><img src="imgs/2.png" alt=""/></li>
+            <li><img src="imgs/1.jpg" alt=""/></li>
+        </ul>
+        <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+    <div id="arr"><span id="left"><</span><span id="right">></span></div>
+</div>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function () {
+        //获取小按钮  
+        var $oLi = $("ol>li");
+        //获取图片的宽度  
+        var imgW = $("#imgs > li").width();
+
+        //鼠标移入盒子显示左右按钮  
+        $("#box").on("mouseenter", function () {
+            $("#arr").css("display", "block");
+        });
+        //鼠标移出盒子隐藏左右按钮  
+        $("#box").on("mouseleave", function () {
+            $("#arr").css("display", "none");
+        });
+
+        //默认第一个小按钮是活动  
+        $($oLi[0]).addClass("current");
+
+        //给左按钮注册点击事件  
+        $("#left").click(function () {
+            //判断小按钮中哪个按钮是活动的  
+            var num;
+            $oLi.each(function () {
+                //将ul向右移动  
+                if($(this).hasClass("current")) {
+                    num = $(this).index() - 1;
+                    //当达到最左边时，移动到最右边  
+                    if(num < 0) {
+                        num = 4;
+                    }
+                    $("#imgs").animate({
+                        left: -num * imgW + "px"
+                    }, 300);
+                }
+            });
+            //小按钮的背景色相应的改变  
+            $($oLi[num]).addClass("current").siblings().removeClass("current");
+        });
+        //给右按钮注册点击事件  
+        $("#right").click(function () {
+            //判断小按钮中哪个按钮是活动的  
+            var num;
+            $oLi.each(function () {
+                //将ul向右移动  
+                if($(this).hasClass("current")) {
+                    num = $(this).index() + 1;
+                    //当达到最左边时，移动到最右边  
+                    if(num > 5) {
+                        num = 1;
+                    }
+                    $("#imgs").animate({
+                        left: -num * imgW + "px"
+                    }, 300);
+                }
+            });
+            //小按钮的背景色相应的改变  
+            $($oLi[num]).addClass("current").siblings().removeClass("current");
+        });
+
+        //点击小按钮，图片移动，并给小按钮设置背景颜色  
+        $oLi.on("click", function () {
+            //将活动的小按钮添加一个类  
+            $(this).addClass("current").siblings().removeClass("current");
+            //获取索引  
+            var num = $(this).index();
+            $("#imgs").animate({
+                left: -num * imgW + "px"
+            }, 300);
+        });
+
+        //循环播放  
+        var timeId = setInterval(function () {
+            //判断小按钮中哪个按钮是活动的  
+            var num;
+            $oLi.each(function () {
+                //将ul向右移动  
+                if($(this).hasClass("current")) {
+                    //得到活动的索引,然后加1  
+                    num = $(this).index() + 1;
+                    //让图片移动  
+                    $("#imgs").animate({
+                        left: -num * imgW + "px"
+                    }, 300);
+                    //到达最后一张，让ul从头开始  
+                    if(num== $oLi.length) {
+                        $("#imgs").animate({
+                            left: "0px"
+                        }, 0);
+                        num = 0;
+                    }
+                }
+            });
+            //小按钮的背景色相应的改变  
+            $($oLi[num]).addClass("current").siblings().removeClass("current");
+        }, 2000);
+    })
+</script>
+</body>
+</html>  
