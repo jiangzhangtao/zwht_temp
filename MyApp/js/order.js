@@ -151,8 +151,6 @@
         var menuHeight = $('.menu').innerHeight();
         var logoHeight = $('.header').innerHeight();
         var windowHeight = $(document.body).innerHeight();
-
-        console.log(menuHeight + logoHeight);
         $(".menu").css({
             height: detailsHeight + navigationHeight,
             minHeight: windowHeight - logoHeight - 1
@@ -162,9 +160,7 @@
 
     /*                     待发货                    */
     function shipments() {
-
         //列表
-
         if (daifahuo) {
             var html = '';
             for (var i = 0; i < daifahuo.length; i++) {
@@ -197,6 +193,7 @@
             e.preventDefault();
             $('.orderInfo').css({display: "block"});
             var order_id = $(this).parent().parent().parent().attr('data-id');
+            var that = this;
             $.ajax({
                 type: 'post',
                 url: 'http://180.76.243.205:8383/_API/_adminOrder/getSingle',
@@ -284,7 +281,7 @@
                         document.getElementsByClassName('orderButtonOk')[0].onclick = function () {
                             var font_storage_id = $('.font').val();
                             var rear_storage_id = $('.rear').val();
-                            var that = this;
+                           
                             $.ajax({
                                 type: 'post',
                                 url: 'http://180.76.243.205:8383/_API/_adminOrder/sendShoe',
@@ -444,30 +441,30 @@
                         $('.receivingDetailContent>div').html(html);
 
 
-                        //确认收货
-                        document.getElementsByClassName('receivingButtonOk')[0].onclick = function () {
-                            $.ajax({
-                                type: 'post',
-                                url: 'http://180.76.243.205:8383/_API/_adminOrder/confirm',
-                                data: {
-                                    admin_id: admin_id,
-                                    token: token,
-                                    order_id: order_id
-                                },
-                                success: function (data) {
-                                    if (data.code == 'E0000') {
-                                        console.log(data);
-                                        alert('已发货!')
-                                    } else {
-                                        alert(data.message);
-                                    }
-                                },
-                                err: function (err) {
-                                    console.log(err);
-                                }
-                            });
+                        // //确认收货
+                        // document.getElementsByClassName('receivingButtonOk')[0].onclick = function () {
+                        //     $.ajax({
+                        //         type: 'post',
+                        //         url: 'http://180.76.243.205:8383/_API/_adminOrder/confirm',
+                        //         data: {
+                        //             admin_id: admin_id,
+                        //             token: token,
+                        //             order_id: order_id
+                        //         },
+                        //         success: function (data) {
+                        //             if (data.code == 'E0000') {
+                        //                 console.log(data);
+                        //                 alert('已发货!')
+                        //             } else {
+                        //                 alert(data.message);
+                        //             }
+                        //         },
+                        //         err: function (err) {
+                        //             console.log(err);
+                        //         }
+                        //     });
 
-                        }
+                        // }
 
                     } else {
                         alert(data.message);
@@ -644,7 +641,6 @@
 
                         //确认服务
                         document.getElementsByClassName('serviceButtonOk')[0].onclick = function () {
-
                             $.ajax({
                                 type: 'post',
                                 url: 'http://180.76.243.205:8383/_API/_adminOrder/confirm',
@@ -656,7 +652,7 @@
                                 success: function (data) {
                                     if (data.code == 'E0000') {
                                         console.log(data);
-                                        alert('开始服务!');
+                                        alert('取消订单!');
                                         $(that).parent().parent().parent().remove();
                                         $('.serviceInfo').css({display: "none"});
                                     } else {
@@ -710,7 +706,7 @@
             html += '<div><span>' + ok[i].total + '</span></div>';
             html += '<div><span>' + subType + '</span></div>';
             html += '<div><span>完成</span></div>';
-            html += '<div><a href="##" class="finishEdit"><span class="fa fa-edit"></span>编辑</a></div>';
+            html += '<div><a href="##" class="finishEdit"><span class="fa fa-eye"></span>查看</a></div>';
             html += '</div>';
             html += '</li>';
         }
@@ -823,7 +819,7 @@
             html += '<div><span>' + undo[i].total + '</span></div>';
             html += '<div><span>' + subType + '</span></div>';
             html += '<div><span>已取消</span></div>';
-            html += '<div><a href="##" class="undoEdit"><span class="fa fa-edit"></span>编辑</a></div>';
+            html += '<div><a href="##" class="undoEdit"><span class="fa fa-eye"></span>查看</a></div>';
             html += '</div>';
             html += '</li>';
         }
@@ -922,7 +918,7 @@
                             '<div class="plat_number"><span>' + data.data[i].order.plat_number + '</span></div>' +
                             '<div><span>' + data.data[i].order.total_price + '</span></div>' +
                             '<div>' +
-                            '<a href="##" class="tyreOrderEdit"><span class="fa fa-edit"></span>编辑</a>' +
+                            '<a href="##" class="tyreOrderEdit"><span class="fa fa-eye"></span>查看</a>' +
                             '</div>' +
                             '</div>' +
                             '</li>';

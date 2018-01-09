@@ -13,7 +13,7 @@
         var contentHeight = $('.content').height();
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: 810+'px'
+            minHeight: 810 + 'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -68,7 +68,7 @@
     };
     function focus() {
         var this_id = $(this).next().attr("id");
-        $("#" + this_id + "").css({"display": "block"});
+        $("#" + this_id + "").css({ "display": "block" });
     }
 
     function inputChagen() {
@@ -117,12 +117,12 @@
                     var html = '';
                     for (var i = 0; i < data.data.length; i++) {
                         html += '<li><div>' +
-                        '<div><span>' + (i + 1) + '</span></div>' +
-                        '<div><span>' + data.data[i].name + '</span></div>' +
-                        '<div><span>' + data.data[i].time + '</span></div>' +
-                        '<div><div style="background:' + data.data[i].color + '"><span>' + data.data[i].name + '</span></div></div>' +
-                        '</div>' +
-                        '</li>';
+                            '<div><span>' + (i + 1) + '</span></div>' +
+                            '<div><span>' + data.data[i].name + '</span></div>' +
+                            '<div><span>' + data.data[i].time + '</span></div>' +
+                            '<div><div style="background:' + data.data[i].color + '"><span>' + data.data[i].name + '</span></div></div>' +
+                            '</div>' +
+                            '</li>';
                     }
                     $('.storeCategoryList>ul').append(html)
                 } else {
@@ -137,40 +137,40 @@
 
         //添加类别
         $('.storeCategoryListAdd a').click(function () {
-            $('.storeCategoryAdd').css({display: "block"})
+            $('.storeCategoryAdd').css({ display: "block" })
         });
         //确认添加
         $('.storeCategoryAddBtnOk').click(function () {
-            $('.storeCategoryAdd').css({display: "none"});
+            $('.storeCategoryAdd').css({ display: "none" });
             var html = "";
             html += '<li>' +
-            '<div>' +
-            '<div><span>1</span></div>' +
-            '<div><span>快修</span></div>' +
-            '<div><span>2014-12-23 13:33:22</span></div>' +
-            '<div>' +
-            '<a href="##" class="storeCategoryEdit"><span class="fa fa-edit"></span>编辑</a>' +
-            '<a href="##" class="delete"><span class="storeCategoryRemove"></span>删除</a>' +
-            '</div>' +
-            '</div>' +
-            '</li>';
+                '<div>' +
+                '<div><span>1</span></div>' +
+                '<div><span>快修</span></div>' +
+                '<div><span>2014-12-23 13:33:22</span></div>' +
+                '<div>' +
+                '<a href="##" class="storeCategoryEdit"><span class="fa fa-edit"></span>编辑</a>' +
+                '<a href="##" class="delete"><span class="storeCategoryRemove"></span>删除</a>' +
+                '</div>' +
+                '</div>' +
+                '</li>';
             $('.storeCategoryList>ul').append(html)
         });
         //取消添加
         $('.storeCategoryUndoAdd').click(function () {
-            $('.storeCategoryAdd').css({display: "none"})
+            $('.storeCategoryAdd').css({ display: "none" })
         });
         //编辑类别
         $('.storeCategoryList>ul').on('click', '.storeCategoryEdit', function () {
-            $('.storeCategoryRedact').css({display: "block"})
+            $('.storeCategoryRedact').css({ display: "block" })
         });
         //取消编辑
         $('.storeCategoryUndoRedact').click(function () {
-            $('.storeCategoryRedact').css({display: "none"})
+            $('.storeCategoryRedact').css({ display: "none" })
         });
         //确定编辑
         $('.storeCategoryRedactBtnOk').click(function () {
-            $('.storeCategoryRedact').css({display: "none"})
+            $('.storeCategoryRedact').css({ display: "none" })
         })
     }
 
@@ -187,6 +187,7 @@
             },
             success: function (data) {
                 if (data.code == 'E0000') {
+                    console.log(data)
                     service_type = data.data;
                     var html = '';
                     var option = '';
@@ -194,15 +195,20 @@
                     var severListOption;
                     for (var i = 0; i < data.data.length; i++) {
                         html += '<li data-id="' + data.data[i].id + '">' +
-                        '<div>' +
-                        '<div><span>' + (i + 1) + '</span></div>' +
-                        '<div><span>' + data.data[i].name + '</span></div>' +
-                        '<div><button>点击查看</button></div>' +
-                        '</div>' +
-                        '</li>';
+                            '<div>' +
+                            '<div><span>' + (i + 1) + '</span></div>' +
+                            '<div><span>' + data.data[i].name + '</span></div>' +
+                            '<div class="description"><span><button>查看描述</button></span></div>' +
+                            '</div>' +
+                            '<div class="stripeInfo">';
+                        for (var j = 0; j < data.data[i].service_list.length; j++) {
+                            html += '<span>' + data.data[i].service_list[j].name + '</span>';
+                        }
+                        html += '</div>' +
+                            '</li>';
                         option += '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>'
                     }
-                    $('.cooperativeList>ul').append(html);
+                    $('.cooperativeList>ul').html(html);
                     $('.severListAddAdd .serverTypeSelect').append(option);
                     $('.severListRedact .serverTypeSelect').append(option);
                     $('.severListContent>div>p>select').append(option);
@@ -216,7 +222,6 @@
                         },
                         success: function (data) {
                             if (data.code == 'E0000') {
-                                console.log(data)
                                 for (var i = 0; i < data.data.length; i++) {
                                     var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
                                     $('.severListAddAdd .stockTypeSelect').append(option);
@@ -249,15 +254,15 @@
                                         }
                                     }
                                     htnk1 += '<li data-id="' + data.data[i].id + '">' +
-                                    '<div data-id="' + data.data[i].service_type_id + '">' +
-                                    '<div><span>' + (i + 1) + '</span></div>' +
-                                    '<div class="name"><span>' + data.data[i].name + '</span></div>' +
-                                    '<div><span>' + serviceTypeName + '</span></div>' +
-                                    '<div>' +
-                                    '<a href="##" class="severListEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>' +
-                                    '</div>' +
-                                    '</div>' +
-                                    '</li>';
+                                        '<div data-id="' + data.data[i].service_type_id + '">' +
+                                        '<div><span>' + (i + 1) + '</span></div>' +
+                                        '<div class="name"><span>' + data.data[i].name + '</span></div>' +
+                                        '<div><span>' + serviceTypeName + '</span></div>' +
+                                        '<div>' +
+                                        '<a href="##" class="severListEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '</li>';
                                     var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>'
                                 }
                                 $('.severListList>ul').append(htnk1)
@@ -272,21 +277,18 @@
                         }
                     });
 
-                    $('.cooperativeList>ul').on('click', "button", function () {
-                        $('.cooperli').remove();
-                        $('.cooperativeListServer').css({display: "block"});
-                        var id = $(this).parent().parent().parent().attr('data-id');
-                        var service_list;
-                        for (var i = 0; i < data.data.length; i++) {
-                            if (id == data.data[i].id) {
-                                service_list = data.data[i].service_list;
-                            }
-                        }
-                        var html = '';
-                        for (var i = 0; i < service_list.length; i++) {
-                            html += '<li data-id="' + service_list[i].id + '" class="cooperli"><span>' + service_list[i].name + '</span></li>'
-                        }
-                        $('.cooperativeListServerBtn').before(html)
+                    //查看详细描述信息
+                    $('.cooperativeList>ul').on('mouseover', ".description>span>button", function (e) {
+                        e.preventDefault();
+                        $(this).parent().parent().parent().siblings().css({
+                            display: "block"
+                        })
+                    });
+                    $('.cooperativeList>ul').on('mouseout', ".description>span>button", function (e) {
+                        e.preventDefault();
+                        $(this).parent().parent().parent().siblings().css({
+                            display: "none"
+                        })
                     });
 
 
@@ -301,7 +303,7 @@
 
 
         $('.storeCategoryRedactBtnOk').click(function () {
-            $('.cooperativeListServer').css({display: "none"})
+            $('.cooperativeListServer').css({ display: "none" })
         })
     }
 
@@ -330,15 +332,15 @@
                                 }
                             }
                             html += '<li data-id="' + data.data[i].id + '">' +
-                            '<div data-id="' + data.data[i].service_type_id + '">' +
-                            '<div><span>' + (i + 1) + '</span></div>' +
-                            '<div class="name"><span>' + data.data[i].name + '</span></div>' +
-                            '<div><span>' + serviceTypeName + '</span></div>' +
-                            '<div>' +
-                            '<a href="##" class="severListEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>' +
-                            '</div>' +
-                            '</div>' +
-                            '</li>';
+                                '<div data-id="' + data.data[i].service_type_id + '">' +
+                                '<div><span>' + (i + 1) + '</span></div>' +
+                                '<div class="name"><span>' + data.data[i].name + '</span></div>' +
+                                '<div><span>' + serviceTypeName + '</span></div>' +
+                                '<div>' +
+                                '<a href="##" class="severListEdit" data-id="1"><span class="fa fa-edit"></span>编辑</a>' +
+                                '</div>' +
+                                '</div>' +
+                                '</li>';
                         }
                         $('.severListList>ul').append(html)
 
@@ -578,7 +580,7 @@
          });*/
         // 取消添加
         $('.severListRedactUndo').click(function () {
-            $('.severListRedact').css({display: "none"})
+            $('.severListRedact').css({ display: "none" })
         });
 
     }
@@ -594,7 +596,6 @@
             },
             success: function (data) {
                 if (data.code == 'E0000') {
-                    console.log(data);
                     var html = '';
                     var option;
                     for (var i = 0; i < data.data.length; i++) {
@@ -604,12 +605,12 @@
                             }
                         }
                         html += '<li data-id="' + data.data[i].service_id + '">' +
-                        '<div data-id="' + data.data[i].service_type_id + '">' +
-                        '<div><span>' + (i + 1) + '</span></div>' +
-                        '<div><span>' + data.data[i].name + '</span></div>' +
-                        '<div><span>' + serviceTypeName + '</span></div>' +
-                        '</div>' +
-                        '</li>';
+                            '<div data-id="' + data.data[i].service_type_id + '">' +
+                            '<div><span>' + (i + 1) + '</span></div>' +
+                            '<div><span>' + data.data[i].name + '</span></div>' +
+                            '<div><span>' + serviceTypeName + '</span></div>' +
+                            '</div>' +
+                            '</li>';
                     }
                     $('.InventoryCategoriesList>ul').append(html)
 
@@ -699,17 +700,16 @@
                         } else {
                             var status = '停业'
                         }
-                        console.log(status)
                         html += '<li data-id="' + data.data[i].id + '">' +
-                        '<div>' +
-                        '<div class="shopName"><span>' + data.data[i].name + '</span></div>' +
-                        '<div class="shopImg"><img src="' + data.data[i].location_img_url + '" alt="" /></div>' +
-                        '<div class="shopType"><span>' + data.data[i].type_name + '</span></div>' +
-                        '<div class="shopAddress"><span>' + data.data[i].address + '</span></div>' +
-                        '<div class="shopStatus"><span>' + status + '</span></div>' +
-                        '<div><a href="##" class="shopEdit"><span class="fa fa-eye"></span>查看</a></div>' +
-                        '</div>' +
-                        '</li>';
+                            '<div>' +
+                            '<div class="shopName"><span>' + data.data[i].name + '</span></div>' +
+                            '<div class="shopImg"><img src="' + data.data[i].location_img_url + '" alt="" /></div>' +
+                            '<div class="shopType"><span>' + data.data[i].type_name + '</span></div>' +
+                            '<div class="shopAddress"><span>' + data.data[i].address + '</span></div>' +
+                            '<div class="shopStatus"><span>' + status + '</span></div>' +
+                            '<div><a href="##" class="shopEdit"><span class="fa fa-eye"></span>查看</a></div>' +
+                            '</div>' +
+                            '</li>';
                     }
                     $('.shopList>ul').append(html)
 
@@ -725,8 +725,9 @@
         $('.shopList>ul').on('click', ".shopEdit", function () {
             $('.shopInfoLockLeft .shopTeamwork>ul>li').remove();
             var shop_id = $(this).parent().parent().parent().attr('data-id');
-            $('.shopInfo').css({display: "block"});
-            $('.shopInfoLock').css({display: "block"});
+            $('.shopInfo').css({ display: "block" });
+            $('.shopInfoLock').css({ display: "block" });
+            var shopList = $(this).parent().parent().parent();
             $.ajax({
                 type: 'post',
                 url: 'http://180.76.243.205:8383/_API/_adminStore/getSingle',
@@ -737,6 +738,7 @@
                 },
                 success: function (data) {
                     if (data.code == 'E0000') {
+                        console.log(data)
                         var producer = data.data.producer; //商户数据
                         var store = data.data.store; //店铺数据
                         var service = data.data.service; //合作数据
@@ -769,6 +771,7 @@
                         $('.shopInfoLock>.shopInfoLockRight .business_license_url').attr('src', store.business_license_url);
                         $('.shopInfoLock>.shopInfoLockRight .location_img_url').attr('src', store.location_img_url);
                         $('.shopInfoLock>.shopInfoLockRight .indoor_img_url').attr('src', store.indoor_img_url);
+                        $('.shopInfoLock>.shopInfoLockFooter .shopRepertoryStatus').attr('data-id', store.status);
                         $('.shopInfoLock>.shopInfoLockRight .factory_img_url').attr('src', store.factory_img_url);
 
                         //合作项目
@@ -778,18 +781,59 @@
                             if (datas) {
                                 if (datas.details) {
                                     html += '<li><div>' +
-                                    '<p>' +
-                                    '<span>' + datas.name + ':</span>';
+                                        '<p>' +
+                                        '<span>' + datas.name + ':</span>';
                                     for (var i = 0; i < datas.details.length; i++) {
                                         html += '<span class="shopService">' + datas.details[i].name + '</span>';
                                     }
                                     html += '</p>' +
-                                    '</div>' +
-                                    '</li>';
+                                        '</div>' +
+                                        '</li>';
                                 }
                             }
                         }
                         $('.shopInfoLockLeft .shopTeamwork>ul').append(html);
+
+
+                        //停业与正常的切换
+                        document.getElementsByClassName('shopRepertoryStatus')[0].onclick = function () {
+                            if ($(this).attr("data-id") == 1) {
+                                $(this).attr("data-id", 2);
+                                var status = $(this).attr('data-id');
+                                $('.state>div>p>span').html('停业');
+                                shopList.children().children('.shopStatus').children().html('停业')
+
+                            } else {
+                                $(this).attr("data-id", 1);
+                                var status = $(this).attr('data-id');
+                                $('.state>div>p>span').html('正常');
+                                shopList.children().children('.shopStatus').children().html('正常')
+                            }
+
+
+                            $.ajax({
+                                type: 'post',
+                                url: 'http://180.76.243.205:8383/_API/_adminStore/setStatus',
+                                data: {
+                                    admin_id: admin_id,
+                                    token: token,
+                                    store_id: shop_id,
+                                    status: status
+                                },
+                                success: function (data) {
+                                    if (data.code == 'E0000') {
+                                        alert('修改店铺状态成功!')
+                                    } else {
+                                        alert(data.message);
+                                    }
+                                },
+                                err: function (err) {
+                                    console.log(err);
+                                }
+                            });
+                        };
+
+
                     } else {
                         alert(data.message);
                     }
@@ -802,8 +846,8 @@
 
             //库存列表
             $('.shopRepertory>button').click(function () {
-                $('.shopInventory').css({display: "block"});
-                $('.shopInfoLock').css({display: "none"});
+                $('.shopInventory').css({ display: "block" });
+                $('.shopInfoLock').css({ display: "none" });
                 $.ajax({
                     type: 'post',
                     url: 'http://180.76.243.205:8383/_API/_adminStore/getStock',
@@ -819,12 +863,12 @@
                                 var html = '';
                                 for (var i = 0; i < data.data.length; i++) {
                                     html += '<li>' +
-                                    '<span>' + (i + 1) + '</span>' +
-                                    '<span class="shopTimelineImg"><img src="' + data.data[i].img_url + '" alt=""/></span>' +
-                                    '<span>' + data.data[i].name + '</span>' +
-                                    ' <span>' + data.data[i].amount + '</span>' +
-                                    ' <span>' + data.data[i].sold_no + '</span>' +
-                                    '</li>'
+                                        '<span>' + (i + 1) + '</span>' +
+                                        '<span class="shopTimelineImg"><img src="' + data.data[i].img_url + '" alt=""/></span>' +
+                                        '<span>' + data.data[i].name + '</span>' +
+                                        ' <span>' + data.data[i].amount + '</span>' +
+                                        ' <span>' + data.data[i].sold_no + '</span>' +
+                                        '</li>'
                                 }
                                 $('.shopInventoryTimeline>ul').append(html)
                             }
@@ -840,8 +884,8 @@
 
             //查看评论
             $('.shopReview').click(function () {
-                $('.shopInfoLock').css({display: "none"});
-                $('.shopInfoDiscuss').css({display: "block"});
+                $('.shopInfoLock').css({ display: "none" });
+                $('.shopInfoDiscuss').css({ display: "block" });
                 $.ajax({
                     type: 'post',
                     url: 'http://180.76.243.205:8383/_API/_adminStore/getCommit',
@@ -858,23 +902,23 @@
                                 var html = '';
                                 for (var i = 0; i < data.data.commit.length; i++) {
                                     html += '<li data-id="' + data.data.commit[i].commit_id + '"><div>' +
-                                    '<img src="' + data.data.commit[i].header + '" alt=""/>' +
-                                    '<span>' + data.data.commit[i].nick + '</span>' +
-                                    '<button class="commitDelete">删除该条评论</button>' +
-                                    '</div>' +
-                                    '<div><p>' +
-                                    '<span>评分：</span>';
+                                        '<img src="' + data.data.commit[i].header + '" alt=""/>' +
+                                        '<span>' + data.data.commit[i].nick + '</span>' +
+                                        '<button class="commitDelete">删除该条评论</button>' +
+                                        '</div>' +
+                                        '<div><p>' +
+                                        '<span>评分：</span>';
                                     for (var j = 0; j < data.data.commit[i].star_no; j++) {
                                         html += '<img src="img/shop/shopDiscuss.png" alt=""/>';
                                     }
                                     html += '</p></div>' +
-                                    '<div>' +
-                                    '<p>' +
-                                    '<span>评论：</span>' +
-                                    '<span>' + data.data.commit[i].content + '</span>' +
-                                    '</p>' +
-                                    '</div>' +
-                                    '</li>';
+                                        '<div>' +
+                                        '<p>' +
+                                        '<span>评论：</span>' +
+                                        '<span>' + data.data.commit[i].content + '</span>' +
+                                        '</p>' +
+                                        '</div>' +
+                                        '</li>';
                                 }
                                 $('.shopInfoDiscussContent>ul').append(html)
                             }
@@ -888,30 +932,30 @@
                 });
 
                 //删除评论
-                $('.shopInfoDiscussContent').on('click','.commitDelete',function(){
-                    var commit_id=$(this).parent().parent().attr('data-id');
-                    var thisLi=$(this).parent().parent();
-                    if(confirm('确认删除该条评论?')){
+                $('.shopInfoDiscussContent').on('click', '.commitDelete', function () {
+                    var commit_id = $(this).parent().parent().attr('data-id');
+                    var thisLi = $(this).parent().parent();
+                    if (confirm('确认删除该条评论?')) {
                         $.ajax({
-                            type:'post',
-                            url:'http://180.76.243.205:8383/_API/_adminStore/deleteCommit',
-                            data:{
-                                admin_id:admin_id,
-                                token:token,
-                                commit_id:commit_id,
+                            type: 'post',
+                            url: 'http://180.76.243.205:8383/_API/_adminStore/deleteCommit',
+                            data: {
+                                admin_id: admin_id,
+                                token: token,
+                                commit_id: commit_id,
                                 store_id: shop_id
                             },
-                            success:function(data){
-                                if(data.code=='E0000'){
+                            success: function (data) {
+                                if (data.code == 'E0000') {
                                     alert('删除成功');
                                     thisLi.remove();
-                                    var len=$('.shopInfoDiscussContent>ul>li').length;
+                                    var len = $('.shopInfoDiscussContent>ul>li').length;
                                     $('.shopInfoDiscussTotal>span').html('共' + len + '条评论');
-                                }else{
+                                } else {
                                     alert(data.message);
                                 }
                             },
-                            err:function(err){
+                            err: function (err) {
                                 console.log(err);
                             }
                         });
@@ -920,65 +964,26 @@
                 })
             });
 
-            //停业与正常的切换
-            document.getElementsByClassName('shopStatus')[0].onclick=function(){
-                if ($(this).attr("data-id") == 1) {
-                    var status = $(this).attr('data-id');
-                    $(this).attr("data-id", 2);
-                    $('.state>div>p>span').html('正常')
-                } else {
-                    var status = $(this).attr('data-id');
-                    $(this).attr("data-id", 1);
-                    $('.state>div>p>span').html('停业');
-                }
-
-                $.ajax({
-                    type: 'post',
-                    url: 'http://180.76.243.205:8383/_API/_adminStore/setStatus',
-                    data: {
-                        admin_id: admin_id,
-                        token: token,
-                        store_id: shop_id,
-                        status: status
-                    },
-                    success: function (data) {
-                        if (data.code == 'E0000') {
-                            console.log(data);
-                            if (status == 1) {
-                                var h = '正常'
-                            } else {
-                                var h = '停业'
-                            }
-                            shop.children().children('.shopStatus').children().html(h)
-                        } else {
-                            alert(data.message);
-                        }
-                    },
-                    err: function (err) {
-                        console.log(err);
-                    }
-                });
-            };
 
             //重置密码
-            document.getElementsByClassName('paw')[0].onclick=function(){
-                if(confirm('确认要重置密码?如果重置密码,系统会随机生成6位密码.')){
+            document.getElementsByClassName('paw')[0].onclick = function () {
+                if (confirm('确认要重置密码?如果重置密码,系统会随机生成6位密码.')) {
                     $.ajax({
-                        type:'post',
-                        url:'http://180.76.243.205:8383/_API/_adminStore/resetPwd',
-                        data:{
-                            admin_id:admin_id,
-                            token:token,
-                            store_id:shop_id
+                        type: 'post',
+                        url: 'http://180.76.243.205:8383/_API/_adminStore/resetPwd',
+                        data: {
+                            admin_id: admin_id,
+                            token: token,
+                            store_id: shop_id
                         },
-                        success:function(data){
-                            if(data.code=='E0000'){
-                                alert('您已重置密码,新密码为 '+data.data.new_pwd+' 。请牢记您的新密码！')
-                            }else{
+                        success: function (data) {
+                            if (data.code == 'E0000') {
+                                alert('您已重置密码,新密码为 ' + data.data.new_pwd + ' 。请牢记您的新密码！')
+                            } else {
                                 alert(data.message);
                             }
                         },
-                        err:function(err){
+                        err: function (err) {
                             console.log(err);
                         }
                     });
@@ -989,27 +994,28 @@
         });
 
 
+
         $('.shopRepertory>button').click(function () {
-            $('.shopInventory').css({display: "block"});
-            $('.shopInfoLock').css({display: "none"});
+            $('.shopInventory').css({ display: "block" });
+            $('.shopInfoLock').css({ display: "none" });
         });
 
         //库存列表返回
         $('.comeBack>button').click(function () {
-            $('.shopInventory').css({display: "none"});
-            $('.shopInfoLock').css({display: "block"})
+            $('.shopInventory').css({ display: "none" });
+            $('.shopInfoLock').css({ display: "block" })
         });
 
         //确定关闭详细窗口
         $('.shopOk').click(function () {
-            $('.shopInfo').css({display: "none"})
+            $('.shopInfo').css({ display: "none" })
         });
 
 
         //评论页面返回上一页
         $('.shopDiscussComeBack>button').click(function () {
-            $('.shopInfoDiscuss').css({display: "none"});
-            $('.shopInfoLock').css({display: "block"})
+            $('.shopInfoDiscuss').css({ display: "none" });
+            $('.shopInfoLock').css({ display: "block" })
         })
 
     }

@@ -220,7 +220,12 @@
                 display: "none"
             });
         });
-        //删除
+        $('.storeCategoryUndoRedact').click(function(){
+            $('.storeCategoryRedact').css({
+                display: "none"
+            });
+        });
+        //删除    
         $('.storeCategoryList>ul').on('click', '.delete', function (e) {
             var flow_id = $(this).parent().parent().parent().attr('data-id');
             var that = this;
@@ -315,7 +320,7 @@
         });
     };
 
-    /*                              轮胎更换流程                              */
+    /*                  轮胎更换流程                              */
 
     function tyreChange() {
 

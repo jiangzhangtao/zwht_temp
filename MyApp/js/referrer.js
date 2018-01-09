@@ -13,7 +13,7 @@
         console.log(menuHeight + logoHeight);
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: 810+'px'
+            minHeight: 810 + 'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -119,17 +119,22 @@
                     if (data.data) {
                         var html = '';
                         for (var i = 0; i < data.data.length; i++) {
-                            if(data.data[i].status==1){
-                                var status='是'
-                            }else{
-                                var status='否'
+                            if (data.data[i].status == 1) {
+                                var status = '是'
+                            } else {
+                                var status = '否'
+                            }
+                            if (!data.data[i].recommended.plat_number) {
+                                var plat_number = '尚未绑定车辆'
+                            } else {
+                                var plat_number = data.data[i].recommended.plat_number
                             }
                             html += '<li><div>' +
                                 ' <div class="filterOrder" data-id="' + data.data[i].referrer_id + '"><span><a href="##">' + data.data[i].referrer.name + '</a></span></div>' +
                                 ' <div class="filterOrder" data-id="' + data.data[i].recommended_id + '"><span><a href="##">' + data.data[i].recommended.name + '</a></span></div>' +
-                                '<div class=""><span>' + data.data[i].recommended.plat_number + '</span></div>' +
+                                '<div class=""><span>' + plat_number + '</span></div>' +
                                 '<div><span>' + data.data[i].time + '</span></div>' +
-                                '<div><span>'+status+'</span></div>' +
+                                '<div><span>' + status + '</span></div>' +
                                 '</div></li>';
                         }
                         $('.priceList>ul').html(html)
@@ -145,28 +150,28 @@
 
         //查看用户信息
         $('.priceList>ul').on('click', '.filterOrder a', function (e) {
-            var user_id=$(this).parent().parent().attr('data-id');
+            var user_id = $(this).parent().parent().attr('data-id');
             $.ajax({
-                type:'post',    
-                url:'http://180.76.243.205:8383/_API/_adminUser/getSingle',
-                data:{
-                    admin_id:admin_id,
-                    token:token,
-                    user_id:user_id
+                type: 'post',
+                url: 'http://180.76.243.205:8383/_API/_adminUser/getSingle',
+                data: {
+                    admin_id: admin_id,
+                    token: token,
+                    user_id: user_id
                 },
-                success:function(data){
-                    if(data.code=='E0000'){
-                        if(data.data.gender==1){
-                            var gender='男'
-                        }else{
-                            var gender='女'
+                success: function (data) {
+                    if (data.code == 'E0000') {
+                        if (data.data.gender == 1) {
+                            var gender = '男'
+                        } else {
+                            var gender = '女'
                         }
-                        if(data.data.status==1){
-                            var status='锁定'
-                        }else{
-                            var status="未锁定"
+                        if (data.data.status == 1) {
+                            var status = '锁定'
+                        } else {
+                            var status = "未锁定"
                         }
-                        $('.personal .headImg').attr('src',data.data.headimgurl);
+                        $('.personal .headImg').attr('src', data.data.headimgurl);
                         $('.personal .phone').html(data.data.phone);
                         $('.personal .name').html(data.data.nick);
                         $('.personal .gender').html(gender);
@@ -174,24 +179,22 @@
                         $('.personal .userSetInfoState').html(status);
 
                         //查看该用户所有车辆
-                        document.getElementsByClassName('userSetInfoAllBut')[0].onclick=function(){
-                            var array=[];
+                        document.getElementsByClassName('userSetInfoAllBut')[0].onclick = function () {
+                            var array = [];
                             $.ajax({
-                                type:'post',
-                                url:'http://180.76.243.205:8383/_API/_adminUser/getCarList',
-                                data:{
-                                    admin_id:admin_id,
-                                    token:token,
-                                    user_id:user_id
+                                type: 'post',
+                                url: 'http://180.76.243.205:8383/_API/_adminUser/getCarList',
+                                data: {
+                                    admin_id: admin_id,
+                                    token: token,
+                                    user_id: user_id
                                 },
-                                success:function(data){
-                                    if(data.code=='E0000'){
-                                        console.log(data);
-                                        var li='';
-                                     
+                                success: function (data) {
+                                    if (data.code == 'E0000') {
+                                        var li = '';
                                         for (var i = 0; i < data.data.length; i++) {
                                             array.push(data.data[i]);
-                                           li += '<li data-id="' + data.data[i].id + '">' +
+                                            li += '<li data-id="' + data.data[i].id + '">' +
                                                 '<div><img src="' + data.data[i].logo + '" alt=""/></div>' +
                                                 '<div class="carInfo">' +
                                                 '<div>' +
@@ -233,29 +236,27 @@
                                                     $('.carDetail .is_default').html(a);
                                                 }
                                             }
-                                           
-        
+
+
                                         })
-                                    }else{
+                                    } else {
                                         alert(data.message);
                                     }
                                 },
-                                err:function(err){
+                                err: function (err) {
                                     console.log(err);
                                 }
                             });
                         }
-
-
-                    }else{
+                    } else {
                         alert(data.message);
                     }
                 },
-                err:function(err){
+                err: function (err) {
                     console.log(err);
                 }
             });
-         
+
             e.preventDefault();
             $('.userSetInfo').css({
                 display: "block"

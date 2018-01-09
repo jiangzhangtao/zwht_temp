@@ -166,7 +166,7 @@
                     if (data.code == 'E0000') {
                         if (data.data.status == 1) {
                             var status = '锁定';
-                            $('.userSetLock').html('恢复')
+                
                         } else {
                             var status = '未锁定'
                         }
@@ -175,6 +175,7 @@
                         $('.personal .userNice').val(data.data.nick);
                         $('.personal .userGender').val(data.data.gender);
                         $('.personal .userSetInfoState').html(status);
+                        $('.personal .userSetInfoState').attr('data-id',data.data.status);
                         $('.personal .userMoney').val(data.data.ml);
                     } else {
                         alert(data.message);
@@ -229,14 +230,18 @@
 
             //锁定用户
             document.getElementsByClassName('userSetLock')[0].onclick = function () {
-                if ($(this).attr('data-id') == 1) {
+           
+                if ($('.personal .userSetInfoState').attr('data-id') == 1) {
                     $(this).attr('data-id', 2);
                     $('.personal .userSetInfoState').attr('data-id', 2);
+                
                 } else {
                     $(this).attr('data-id', 1);
                     $('.personal .userSetInfoState').attr('data-id', 1);
                 }
                 var status = $('.personal .userSetInfoState').attr('data-id');
+                console.log(status)
+                var that=this;
                 $.ajax({
                     type: 'post',
                     url: 'http://180.76.243.205:8383/_API/_adminUser/lock',
@@ -249,14 +254,14 @@
                     success: function (data) {
                         if (data.code == 'E0000') {
                             alert('修改成功');
-                            if ($(this).attr('data-id') == 1) {
+                            if ($(that).attr('data-id') == 1) {
                                 $('.userSetInfoState').html('锁定');
                                 var status = '锁定';
-                                $(this).html('恢复')
+                     
                             } else {
                                 $('.userSetInfoState').html('未锁定');
                                 var status = '未锁定';
-                                $(this).html('锁定');
+                        
                             }
                             lis.children().children('.userStatus').children().html(status);
                             $('.userSetInfo').css({display: "none"})

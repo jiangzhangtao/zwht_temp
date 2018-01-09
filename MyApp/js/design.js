@@ -11,7 +11,7 @@
         var contentHeight = $('.content').height();
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: 925+'px'
+            minHeight: 925 + 'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -54,7 +54,7 @@
 
 
     /***********************公示****************/
-        //展示
+    //展示
     $.ajax({
         type: 'post',
         url: 'http://180.76.243.205:8383/_API/_adminFormula/get',
@@ -64,7 +64,7 @@
         },
         success: function (data) {
             if (data.code == 'E0000') {
-                console.log(data);
+
                 /* 一年天数*/
                 var yearDays = data.data.year_days;
                 $('.yearDays').val(yearDays);
@@ -135,149 +135,163 @@
 
                 /*行驶路况*/
                 var roads = data.data.roads;
-                var roadsNameArr=[];
-                var road_info=[];  //所有有用的数据都在他
+                var roadsNameArr = [];
+                var road_info = [];//所有有用的数据都在他
 
                 if (roads) {
-                    for(var i=0;i<roads.length;i++){
-                        var obj={};
-                        obj.road_id=roads[i].id;
-                        obj.selected='type_iii_rate';
+                    for (var i = 0; i < roads.length; i++) {
+                        var obj = {};
+                        obj.road_id = roads[i].id;
+                        obj.selected = 'type_iii_rate';
                         road_info.push(obj)
                     }
-                    obj=null;
-                    var typeDivWidth = $('.roadsSelect>div>div').innerWidth();
-                    var typeDivHeight = $('.roadsSelect>div>div').innerHeight();
-                    $(".roadsSelect>div>div").css({
-                        marginTop: -(typeDivWidth / 2),
-                        marginLeft: -(typeDivHeight / 2)
-                    });
+                    obj = null;
 
+                    //判断事件源
                     $('.type_rate').on('click', 'input', function (e) {
-                        switch (e.target.className){
+                        $('.roadsSelectLi').remove();
+
+
+                        switch (e.target.className) {
                             case 'type_i_rate':
                                 $('.roadsSelect1').css({
                                     display: "block"
                                 });
+
+                                //重新选择时,重置数据
+                                for (var i = 0; i < road_info.length; i++) {
+                                    road_info[i].selected = 'type_iii_rate';
+                                }
+                                for (var i = 0; i < roads.length; i++) {
+                                    roadsNameArr.push(roads[i].name);
+                                    var roadsSelectLi = '<li data-id="' + roads[i].id + '" class="roadsSelectLi"><div>' +
+                                        '<p class="roads_name" data-id="2">' + roads[i].name + '</p>' +
+                                        '</div></li>';
+                                    $('.roadsSelect1 .addBtn').before(roadsSelectLi);
+                                }
+
+                                //选择路况
+                                var roadName = [];
+                                var road_i_id = '';
+                                $('.roadsSelect1 ul').on('click', '.roads_name', function () {
+                                    if ($(this).attr('data-id') == 2) {
+
+                                        road_i_id = $(this).parent().parent().attr('data-id');
+                                        for (var i = 0; i < road_info.length; i++) {
+                                            if (road_i_id == road_info[i].road_id) {
+
+                                                road_info[i].selected = 'type_i_rate'
+                                            }
+                                        };
+                                        roadName.push($(this).html());
+                                        $(this).addClass('on').attr('data-id', 1);
+                                    } else {
+
+                                        $(this).removeClass('on').attr('data-id', 2);
+                                        for (var i = 0; i < roadName.length; i++) {
+                                            if (roadName[i] == $(this).html()) {
+                                                roadName.splice(i, (i + 1));
+                                            }
+                                        }
+                                    }
+                                    document.getElementById('addBtn1').onclick = function () {
+                                        $('.roadsSelect1').css({
+                                            display: "none"
+                                        });
+                                        if (roadName) {
+                                            var ro = roadName.toString();
+                                            $(".type_i_rate").val(ro)
+                                        }
+                                        $('.roadsSelect1 ul').off('click')
+                                    }
+                                });
                                 break;
+
+
                             case 'type_ii_rate':
                                 $('.roadsSelect2').css({
                                     display: "block"
                                 });
+                                console.log(road_info)
+                                for (var j = 0; j < road_info.length; j++) {
+                                    if (road_info[j].selected != 'type_i_rate') {
+                                        roadsNameArr.push(roads[j].name);
+                                        var roadsSelectLi = '<li data-id="' + roads[j].id + '" class="roadsSelectLi"><div>' +
+                                            '<p class="roads_name" data-id="2">' + roads[j].name + '</p>' +
+                                            '</div></li>';
+                                        $('.roadsSelect2 .addBtn').before(roadsSelectLi);
+                                    }
+                                }
+                                //选择路况
+                                var roadName = [];
+                                var road_ii_id = '';
+                                $('.roadsSelect2 ul').on('click', '.roads_name', function () {
+                                    if ($(this).attr('data-id') == 2) {
+                                        road_ii_id = $(this).parent().parent().attr('data-id');
+                                        for (var i = 0; i < road_info.length; i++) {
+                                            if (road_ii_id == road_info[i].road_id) {
+                                                road_info[i].selected = 'type_ii_rate'
+                                            }
+                                        };
+                                        roadName.push($(this).html());
+                                        $(this).addClass('on').attr('data-id', 1);
+                                    } else {
+                                        $(this).removeClass('on').attr('data-id', 2);
+                                        for (var i = 0; i < roadName.length; i++) {
+                                            if (roadName[i] == $(this).html()) {
+                                                roadName.splice(i, (i + 1));
+                                            }
+                                        }
+                                    }
+                                    document.getElementById('addBtn2').onclick = function () {
+                                        $('.roadsSelect2').css({
+                                            display: "none"
+                                        });
+                                        if (roadName) {
+                                            var ro = roadName.toString();
+                                            $(".type_ii_rate").val(ro)
+                                        }
+                                        $('.roadsSelect1 ul').off('click')
+                                    }
+                                });
+                                break;
+
+                            case 'type_iii_rate':
+                                var roadName = [];
+                                for (var j = 0; j < road_info.length; j++) {
+                                    if (road_info[j].selected == 'type_iii_rate') {
+                                        roadsNameArr.push(roads[j].name);
+                                        var roadsSelectLi = '<li data-id="' + roads[j].id + '" class="roadsSelectLi"><div>' +
+                                            '<p class="roads_name" data-id="2">' + roads[j].name + '</p>' +
+                                            '</div></li>';
+                                        $('.roadsSelect3 .addBtn').before(roadsSelectLi);
+                                        roadName.push(roads[j].name);
+                                    }
+                                }
+                                if (roadName) {
+                                    var ro = roadName.toString();
+                                    $(".type_iii_rate").val(ro)
+                                }
+                                $('.roadsSelect1 ul').off('click')
                                 break;
                         }
 
 
-                        //判断事件源
-                        if(e.target.className=='type_i_rate'){
-                            $('.roadsSelectLi').remove();
-                            for (var i = 0; i < roads.length; i++) {
-                                roadsNameArr.push(roads[i].name);
-                                var roadsSelectLi = '<li data-id="' + roads[i].id + '" class="roadsSelectLi"><div>' +
-                                    '<p class="roads_name" data-id="2">' + roads[i].name + '</p>' +
-                                    '</div></li>';
-                                $('.roadsSelect1 .addBtn').before(roadsSelectLi);
-                            }
+                        // //判断事件源
+                        // if (e.target.className == 'type_i_rate') {
 
-                            //选择路况
-                            var roadName=[];
-                            var road_i_id='';
-                            $('.roadsSelect1 ul').on('click','.roads_name',function(){
-                                if($(this).attr('data-id')==2){
-                                    road_i_id=$(this).parent().parent().attr('data-id');
-                                    for(var i=0;i<road_info.length;i++){
-                                        if(road_i_id==road_info[i].road_id){
-                                            road_info[i].selected='type_i_rate'
-                                        }
-                                    };
-                                    roadName.push($(this).html());
-                                    $(this).addClass('on').attr('data-id',1);
-                                }else{
-                                    $(this).removeClass('on').attr('data-id',2);
-                                    for(var i=0;i<roadName.length;i++){
-                                        if(roadName[i]==$(this).html()){
-                                            roadName.splice(i,(i+1));
-                                        }
-                                    }
-                                }
-                                $('.roadsSelect1 .addBtnOk').click(function(){
-                                    $('.roadsSelect1').css({
-                                        display: "none"
-                                    });
-                                    if(roadName){
-                                        console.log(road_info);
-                                        var ro= roadName.toString();
-                                        $(".type_i_rate").val(ro)
-                                    }
-                                });
-                            });
-                        }
-                        else if(e.target.className=='type_ii_rate'){
-                            $('.roadsSelectLi').remove();
-                                for(var j=0;j<road_info.length;j++){
-                                    if(road_info[j].selected!='type_i_rate'){
-                                            roadsNameArr.push(roads[j].name);
-                                            var roadsSelectLi = '<li data-id="' + roads[j].id + '" class="roadsSelectLi"><div>' +
-                                                '<p class="roads_name" data-id="2">' + roads[j].name + '</p>' +
-                                                '</div></li>';
-                                            $('.roadsSelect2 .addBtn').before(roadsSelectLi);
-                                    }
-                                }
-                            //选择路况
-                            var roadName=[];
-                            var road_ii_id='';
-                            $('.roadsSelect2 ul').on('click','.roads_name',function(){
-                                if($(this).attr('data-id')==2){
-                                    road_ii_id=$(this).parent().parent().attr('data-id');
-                                    for(var i=0;i<road_info.length;i++){
-                                        if(road_ii_id==road_info[i].road_id){
-                                            road_info[i].selected='type_ii_rate'
-                                        }
-                                    };
-                                    roadName.push($(this).html());
-                                    $(this).addClass('on').attr('data-id',1);
-                                }else{
-                                    $(this).removeClass('on').attr('data-id',2);
-                                    for(var i=0;i<roadName.length;i++){
-                                        if(roadName[i]==$(this).html()){
-                                            roadName.splice(i,(i+1));
-                                        }
-                                    }
-                                }
-                                $('.roadsSelect2 .addBtnOk').click(function(){
-                                    $('.roadsSelect2').css({
-                                        display: "none"
-                                    });
-                                    if(roadName){
-                                        console.log(road_info);
-                                        var ro= roadName.toString();
-                                        $(".type_ii_rate").val(ro)
-                                    }
-                                });
-                            });
-                        }
-                        else{
-                            var roadName=[];
-                            for(var j=0;j<road_info.length;j++){
-                                if(road_info[j].selected=='type_iii_rate'){
-                                    roadsNameArr.push(roads[j].name);
-                                    var roadsSelectLi = '<li data-id="' + roads[j].id + '" class="roadsSelectLi"><div>' +
-                                        '<p class="roads_name" data-id="2">' + roads[j].name + '</p>' +
-                                        '</div></li>';
-                                    $('.roadsSelect3 .addBtn').before(roadsSelectLi);
-                                    roadName.push(roads[j].name);
-                                }
-                            }
-                            if(roadName){
-                                console.log(road_info);
-                                var ro= roadName.toString();
-                                $(".type_iii_rate").val(ro)
-                            }
-                        }
+                        // }
+                        // else if (e.target.className == 'type_ii_rate') {
+
+                        // }
+                        // else {
+
+                        // }
                     })
                 }
+
                 //
-                $('.driving_license_date').blur(function(){
+                $('.driving_license_date').blur(function () {
                     var driving_license_date = $('.driving_license_date').val();
                     var license_register_date = driving_license_date.split('-')[0];
                     console.log(license_register_date);
@@ -295,27 +309,26 @@
                     $.ajax({
                         type: 'post',
                         url: 'http://180.76.243.205:8383/_API/_adminFormula/calculate',
-                        data:{
-                            cxwy:cxwy,
-                            shoe_size:shoe_size,
-                            flgure_id:flgure_id,
-                            level_id:level_id,
-                            traveled:traveled,
-                            license_register_date:license_register_date,
-                            driving_license_date:driving_license_date,
-                            admin_id:admin_id,
-                            token:token,
-                            road_info:road_info
+                        data: {
+                            cxwy: cxwy,
+                            shoe_size: shoe_size,
+                            flgure_id: flgure_id,
+                            level_id: level_id,
+                            traveled: traveled,
+                            license_register_date: license_register_date,
+                            driving_license_date: driving_license_date,
+                            admin_id: admin_id,
+                            token: token,
+                            road_info: road_info
                         },
-                        success:function(data){
-                            if(data.code=='E0000'){
-                                console.log(data);
+                        success: function (data) {
+                            if (data.code == 'E0000') {
                                 $('.shoe_price>p>b').text(data.data.shoe_price)
-                            }else{
+                            } else {
                                 alert(data.message)
                             }
                         },
-                        error:function(err){
+                        error: function (err) {
                             console.log(err)
                         }
                     })
@@ -400,7 +413,7 @@
 
     /*********************路况增量***********************/
 
-        //路况增量展示
+    //路况增量展示
     $.ajax({
         type: 'post',
         url: 'http://180.76.243.205:8383/_API/_adminRoad/get',
@@ -469,7 +482,6 @@
                                 data: fData,
                                 success: function (data) {
                                     if (data.code == 'E0000') {
-                                        console.log(data);
                                         alert('修改成功!');
                                         //关闭模态框
                                         $('.redact').css({
@@ -482,7 +494,6 @@
                                         var type_i = $('.redact .levelOne').val();
                                         var type_ii = $('.redact .levelTwo').val();
                                         var type_iii = $('.redact .levelThree').val();
-                                        console.log()
                                         thisDiv.children('.describeName').text(name);
                                         thisDiv.children().children('.describeImg').attr('src', img);
                                         thisDiv.children('.describeInfo').text(info);
@@ -539,6 +550,21 @@
             marginTop: -(addDivHeight / 2),
             marginLeft: -(addDivWidth / 2)
         })
+        //图片更换
+        $('.addHtml #redactFile').change(function () {
+
+            var file = this.files[0];
+            console.log(file);
+            if (file == null) {
+                $(".addHtml #trafficFile").parent().parent().siblings('img').attr('src', e.target.result);
+                return;
+            }
+            var render = new FileReader();
+            render.readAsDataURL(file);
+            render.onloadend = function (e) {
+                $(".addHtml #trafficFile").parent().parent().siblings('img').attr('src', e.target.result);
+            }
+        });
     });
 
 
@@ -555,7 +581,6 @@
             data: fData,
             success: function (data) {
                 if (data.code == 'E0000') {
-                    console.log(data);
                     alert('添加成功');
                     $('.addHtml').css({
                         display: "none"
@@ -569,31 +594,40 @@
                     //拼接字符串
                     var str = '';
                     str += "<li data-id='" + data.data.id + "'>" +
-                    "<div><span class='describeName'>" + addName + "</span></div>" +
-                    "<div><span><img src='" + addImg + "' class='describeImg'/></span></div>" +
-                    "<div class='describe'><span><button>查看描述</button></span>" +
-                    '<div class="describeInfo">' + addText + '</div>' +
-                    '</div>' +
-                    '<div><span class="describeType_i">' + addLevelOne + '</span></div>' +
-                    '<div><span class="describeType_ii">' + addLevelTwo + '</span></div>' +
-                    '<div><span class="describeType_iii">' + addLevelThree + '</span></div>' +
-                    '<div>' +
-                    '<span>' +
-                    '<a href="##" class="edit">' +
-                    '<b class="fa fa-edit"></b>' +
-                    '<i>编辑</i>' +
-                    '</a>' +
-                    '<a href="##" class="remo"><b class="fa fa-external-link"></b>' +
-                    '<i>移除</i></a>' +
-                    "</span>" +
-                    '</div>' +
-                    '</li>';
+                        "<div><span class='describeName'>" + addName + "</span></div>" +
+                        "<div><span><img src='" + addImg + "' class='describeImg'/></span></div>" +
+                        "<div class='describe'><span><button>查看描述</button></span>" +
+                        '<div class="describeInfo">' + addText + '</div>' +
+                        '</div>' +
+                        '<div><span class="describeType_i">' + addLevelOne + '</span></div>' +
+                        '<div><span class="describeType_ii">' + addLevelTwo + '</span></div>' +
+                        '<div><span class="describeType_iii">' + addLevelThree + '</span></div>' +
+                        '<div>' +
+                        '<span>' +
+                        '<a href="##" class="edit">' +
+                        '<b class="fa fa-edit"></b>' +
+                        '<i>编辑</i>' +
+                        '</a>' +
+                        '<a href="##" class="remo"><b class="fa fa-external-link"></b>' +
+                        '<i>移除</i></a>' +
+                        "</span>" +
+                        '</div>' +
+                        '</li>';
                     $(".add").before(str);
                     var detailsHeight = $('.details').innerHeight();
                     var navigationHeight = $(".navigation").innerHeight();
                     $(".menu").css({
                         height: detailsHeight + navigationHeight
                     });
+
+
+                    $(".addHtml .trafficName").val("");
+
+                    $('.addHtml .trafficInfo').val('');
+                    $('.addHtml .levelOne').val('');
+                    $(".addHtml .levelTwo").val('');
+                    $(".addHtml .levelThree").val('');
+
                 } else {
                     alert(data.message);
                 }
@@ -619,7 +653,6 @@
                 },
                 success: function (data) {
                     if (data.code == 'E0000') {
-                        console.log(data);
                         alert('删除成功');
                         that.parent().parent().parent().remove();
                     } else {
@@ -642,7 +675,7 @@
         var file = this.files[0];
         console.log(file);
         if (file == null) {
-            $(this).parent().siblings('img').attr('src', "img/design/img1.jpg");
+            $(this).parent().siblings('img').attr('src', "img/design/img2.jpg");
             return;
         }
         var render = new FileReader();
@@ -699,7 +732,6 @@
                 },
                 success: function (data) {
                     if (data.code == 'E0000') {
-                        console.log(data);
                         alert('修改成功!')
                     } else {
                         alert(data.message);
@@ -807,7 +839,6 @@
                         },
                         success: function (data) {
                             if (data.code == 'E0000') {
-                                console.log(data);
                                 alert('修改成功')
                             } else {
                                 alert(data.message);

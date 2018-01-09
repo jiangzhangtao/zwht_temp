@@ -1,6 +1,7 @@
 
 html, body, body > div {
     height: 100%;
+    min-width: 1200px
 }
 div.content > div.menu > div > ul > li.basicTwo{
     height: 40px;
@@ -144,6 +145,7 @@ div.content > div.navigation > div {
 div.content > div.navigation > div > ul {
     overflow: hidden;
     border-bottom: 3px solid #ee2626;
+    min-width: 930px;
 }
 
 div.content > div.navigation > div > ul > li {
@@ -180,6 +182,7 @@ div.content > div.details > div {
 
 div.content > div.details > div.present {
     display: block;
+    min-width: 880px;
 }
 
 div.content > div.details > div > div {

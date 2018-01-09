@@ -11,7 +11,7 @@
         var bodyHeight = $(window).innerHeight();
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: 810+'px'
+            minHeight: 810 + 'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -984,7 +984,7 @@
         //轮胎购买记录的总和
         var carSetTotal = 0;
         $.each($(".carSetList .CarSetListMoney>span"), function (index, item) {
-            carSetTotal = (parseFloat(carSetTotal) + parseFloat($(item).text())).toFixed(2);
+            carSetTotal = (Number(carSetTotal) + Number($(item).text())).toFixed(2);
         });
         $('.carSetTotal .transactionMoneyTotal').html(carSetTotal);
 
@@ -993,10 +993,10 @@
         var afterTradeTotal = 0;
         var tradeMoneyTotal = 0;
         $.each($(".userSetList .beforeTrade>span"), function (index, item) {
-            beforeTradeTotal = (parseFloat(beforeTradeTotal) + parseFloat($(item).text())).toFixed(2);
+            beforeTradeTotal = (Number(beforeTradeTotal) + Number($(item).text())).toFixed(2);
         });
         $.each($(".userSetList .afterTrade>span"), function (index, item) {
-            afterTradeTotal = (parseFloat(afterTradeTotal) + parseFloat($(item).text())).toFixed(2);
+            afterTradeTotal = (Number(afterTradeTotal) + Number($(item).text())).toFixed(2);
         });
         tradeMoneyTotal = (beforeTradeTotal - afterTradeTotal).toFixed(2);
         $('.userSetTotal .beforeTradeTotal').html(beforeTradeTotal);
@@ -1019,6 +1019,7 @@
             },
             success: function (data) {
                 if (data.code == 'E0000') {
+                    console.log(data)
                     if (data.data) {
                         $('.infoUpPage').css({ display: 'none' });
                         $('.infoDownPage').css({ display: 'none' });
@@ -1045,7 +1046,7 @@
                                 '<div><span>' + data.data.shoe_history[i].brand + '</span></div>' +
                                 '<div><span>' + data.data.shoe_history[i].type + '</span></div>' +
                                 '<div><span>' + data.data.shoe_history[i].size + '</span></div>' +
-                                '<div class="CarSetListMoney"><span>' + data.data.shoe_history[i].total + '</span></div>' +
+                                '<div class="CarSetListMoney"><span>' + parseFloat(data.data.shoe_history[i].total) + '</span></div>' +
                                 '<div class="filterPlate"><span>' + data.data.shoe_history[i].phone + '</span></div>' +
                                 '<div><span>' + status + '</span></div>' +
                                 '<div> <a href="##" class="carSetEdit"><span class="fa fa-eye"></span>查看</a></div>' +
@@ -1195,6 +1196,7 @@
                                         $('.carSetList>ul>li').remove(); //移除原有列表数据
                                         $('.BBB').css({ display: "block" });
                                         if (data.data) {
+                                            $('.carSetUserName').html(data.data.shoe_history[0].phone)
                                             $('.carSetList>ul>li').remove();
                                             var total = 0;
                                             var html = '';
@@ -1212,7 +1214,7 @@
                                                 } else if (data.data.shoe_history[i].status == 6) {
                                                     var status = '已退货'
                                                 }
-                                                html += '<li data-id="' + data.data.shoe_history[i].user_id + '">' +
+                                                html += '<li data-id="' + data.data.shoe_history[i].id + '">' +
                                                     '<div>' +
                                                     '<div><span>' + data.data.shoe_history[i].brand + '</span></div>' +
                                                     '<div><span>' + data.data.shoe_history[i].type + '</span></div>' +
@@ -1220,7 +1222,7 @@
                                                     '<div class="CarSetListMoney"><span>' + data.data.shoe_history[i].total + '</span></div>' +
                                                     '<div class="filterPlate"><span>' + data.data.shoe_history[i].phone + '</span></div>' +
                                                     '<div><span>' + status + '</span></div>' +
-                                                    '<div> <a href="##" class="carSetEdit"><span class="fa fa-eye"></span>查看</a></div>' +
+                                                    '<div> <a href="##" class="carSetLook"><span class="fa fa-eye"></span>查看</a></div>' +
                                                     '</div>' +
                                                     '</li>';
                                                 total += parseFloat(data.data.shoe_history[i].total);
@@ -1419,6 +1421,75 @@
                                                     }
                                                 });
                                             }
+
+                                            //查看单一
+                                            $('.carSetList>ul').on('click', '.carSetLook', function (e) {
+                                                e.preventDefault();
+                                                $('.orderoneInfo').css({ display: 'block' });
+                                                var order_id = $(this).parent().parent().parent().attr('data-id');
+                                                $.ajax({
+                                                    type: 'post',
+                                                    url: 'http://180.76.243.205:8383/_API/_adminOrder/getSingle',
+                                                    data: {
+                                                        admin_id: admin_id,
+                                                        token: token,
+                                                        order_id: order_id
+                                                    },
+                                                    success: function (data) {
+                                                        if (data.code == 'E0000') {
+                                                            console.log(data);
+                                                            $('.orderoneInfo .no').html(data.data.order.no);
+                                                            $('.orderoneInfo .phone').html(data.data.order.phone);
+                                                            $('.orderoneInfo .name').html(data.data.order.name);
+                                                            $('.orderoneInfo .plat_number').html(data.data.order.plat_number);
+                                                            $('.orderoneInfo .year').html(data.data.order.time.split(' ')[0]);
+                                                            $('.orderoneInfo .mouth').html(data.data.order.time.split(' ')[1]);
+                                                            $('.orderoneInfo .totalPrice').html(data.data.order.total);
+                                                            $('.orderoneInfo .descriptionde').html(data.data.order.description);
+
+                                                            //状态码
+                                                            if (data.data.order.status == 1) {
+                                                                var status = '已完成'
+                                                            } else if (data.data.order.status == 2) {
+                                                                var status = '待服务'
+                                                            } else if (data.data.order.status == 3) {
+                                                                var status = '支付成功'
+                                                            } else if (data.data.order.status == 4) {
+                                                                var status = '支付失败'
+                                                            } else if (data.data.order.status == 5) {
+                                                                var status = '待支付'
+                                                            } else if (data.data.order.status == 6) {
+                                                                var status = '待车主确认服务'
+                                                            } else if (data.data.order.status == 7) {
+                                                                var status = '已退货'
+                                                            }
+                                                            $('.redFont span').html(status)
+
+                                                            //details 详细服务
+                                                            var html = "";
+                                                            for (var i = 0; i < data.data.details.length; i++) {
+                                                                html += '<div><ul>' +
+                                                                    '<li><span>服务名称：</span><p>' + data.data.details[i].service_name + '</p></li>' +
+                                                                    '<li><span>产品名称：</span><p>' + data.data.details[i].stock_name + '</p></li>' +
+                                                                    '<li><span>产品图片：</span><p><img src="' + data.data.details[i].img + '" alt=""/></p></li>' +
+                                                                    '<li><span>产品数量：</span><p>' + data.data.details[i].stock_no + '</p></li>' +
+                                                                    '</ul></div>';
+                                                            }
+                                                            $('.orderoneInfoDetailContent>div').html(html)
+
+                                                        } else {
+                                                            alert(data.message);
+                                                        }
+                                                    },
+                                                    err: function (err) {
+                                                        console.log(err);
+                                                    }
+                                                });
+                                            });
+                                            $('.orderoneInfoButtonBack>button').click(function () {
+                                                $('.orderoneInfo').css({ display: 'none' })
+                                            })
+
 
                                         }
 
@@ -1773,6 +1844,8 @@
                         $('.storeOrderList>ul').on('click', '.carSetEdit', function (e) {
                             e.preventDefault();
                             var user_id = $(this).parent().parent().parent().attr('data-id');
+                        
+                        
                             $.ajax({
                                 type: 'post',
                                 url: 'http://180.76.243.205:8383/_API/_adminHistory/getSingleStore',
@@ -1782,6 +1855,7 @@
                                     store_id: user_id
                                 },
                                 success: function (data) {
+                                    $('.shop_name').html(data.data.store.name)
                                     if (data.code == 'E0000') {
                                         $('.storeOrderChange').css({ display: "block" });
                                         $('.storeOrderListing').css({ display: "none" });

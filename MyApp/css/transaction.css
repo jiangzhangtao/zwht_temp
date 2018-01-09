@@ -1,6 +1,7 @@
 
 html, body, body > div {
     min-height: 100%;
+    min-width: 1200px
 }
 div.content > div.menu > div > ul > li.basicTwo{
     height: 50px;
@@ -158,6 +159,7 @@ div.content > div.navigation > div {
 div.content > div.navigation > div > ul {
     overflow: hidden;
     border-bottom: 3px solid #ee2626;
+    min-width: 930px;
 }
 
 div.content > div.navigation > div > ul > li {
@@ -196,6 +198,7 @@ div.content > div.details {
 div.content > div.details > div {
     display: none;
     height: 100%;
+    min-width: 880px;
 }
 
 div.content > div.details > div.present {
@@ -244,6 +247,22 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     text-align: center;
 }
+
+
+.carSet > div > div > div.carSetTotal > div > p > span.upPage,
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span.historyUpPage,
+.carSet > div > div > div.carSetTotal > div > p > span.infoUpPage,
+.orderHistory > div > div > div.orderHistoryTotal > div > p > span.historyDownPage,
+.carSet > div > div > div.carSetTotal > div > p > span.downPage,
+.carSet > div > div > div.carSetTotal > div > p > span.infoDownPage
+{
+    text-decoration: underline;
+    color: blue
+}
+
+
+
+
 
 /*筛选框*/
 .userSet > div > div > div.userSetContent > div.userSetScreen,
@@ -346,7 +365,7 @@ div.content > div.details > div > div > ul {
 .orderHistory > div > div > div.orderHistoryContent > div.orderHistoryList > ul > li {
     height: 85px;
     line-height: 85px;
-    background: #dddddd;
+    background: #eee;
     margin-top: 5px;
     font-size: 16px;
 }
@@ -842,6 +861,7 @@ div.userCarList > div.userSetInfoComeback {
     font-size: 18px;
 }
 
+.orderoneInfo,
 .orderInfo,
 .storeOrderInfo,
 .tyreOrderInfo {
@@ -854,7 +874,7 @@ div.userCarList > div.userSetInfoComeback {
     display: none;
 }
 
-
+.orderoneInfo > div > div,
 .orderInfo > div > div,
 .storeOrderInfo > div > div,
 .tyreOrderInfo > div {
@@ -895,6 +915,7 @@ div.userCarList > div.userSetInfoComeback {
 
 .tyreOrderInfoContent > div > div > ul > li > i,
 .orderInfoContent > div > div > ul > li > i,
+.orderoneInfoContent > div > div > ul > li > i,
 .storeOrderInfoContent > div > div > ul > li > i,
 .tyreOrderDetailContent > div > div > ul > li > span {
     display: inline-block;
@@ -911,7 +932,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent > div > div > ul > li > p,
-.storeOrderDetailContent > div > div > ul > li > p,
+.orderoneInfoDetailContent > div > div > ul > li > p,
 .tyreOrderInfoContent > div > div > ul > li > p {
     display: inline-block;
     word-break: break-word;
@@ -932,8 +953,8 @@ div.userCarList > div.userSetInfoComeback {
 .tyreOrderInfo > div > div > div.tyreOrderTitle {
     text-align: center;
 }
-
 .orderButton > div > button,
+.orderoneInfoButton > div > button,
 .storeOrderButton > div > button,
 .tyreOrderButton > div > button {
     width: 260px;
@@ -945,6 +966,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderButton > div,
+.orderoneInfoButton > div ,
 .storeOrderButton > div,
 .tyreOrderButton > div {
     text-align: center;
@@ -953,6 +975,7 @@ div.userCarList > div.userSetInfoComeback {
 
 /*历史订单详情*/
 .orderInfoContent > div > div > ul > li > p,
+.orderoneInfoContent > div > div > ul > li > p,
 .storeOrderInfoContent > div > div > ul > li > p
 {
     display: inline-block;
@@ -960,9 +983,12 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderInfoContent > div > div > ul > li,
+.orderoneInfoContent > div > div > ul > li,
+.orderoneInfoDetailContent > div > div > ul > li,
 .storeOrderInfoContent > div > div > ul > li,
 .orderDetailContent > div > ul > li,
 .orderInfoContent > div > div > ul > li > p > span,
+.orderoneInfoContent > div > div > ul > li > p > span,
 .storeOrderInfoContent > div > div > ul > li > p > span
 {
     margin-top: 18px;
@@ -970,9 +996,12 @@ div.userCarList > div.userSetInfoComeback {
 
 .orderInfoContent > div.basicInfo > div.basicInfoTitle,
 .orderInfoContent > div.orderStatus > div.orderStatusTitle,
+.orderoneInfoContent > div.basicInfo > div.basicInfoTitle,
+.orderoneInfoContent > div.orderStatus > div.orderoneInfoStatus,
 .storeOrderInfoContent > div.storeOrderInfoBasic > div.storeOrderInfoBasicTitle,
 .storeOrderInfoContent > div.storeOrderInfoStatus > div.storeOrderStatusTitle,
 .orderDetail > div.orderDetailTitle,
+.orderoneInfoDetail > div.orderoneInfoDetailTitle,
 .storeOrderDetail > div.storeOrderDetailTitle
 {
     border-bottom: 1px solid #000000;
@@ -980,23 +1009,27 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderInfoContent > div:nth-child(2) ,
+.orderoneInfoContent > div:nth-child(2) ,
 .storeOrderInfoContent > div:nth-child(2)
 {
     margin-left: 10%;
 }
 
 .orderInfoContent > div,
+.orderoneInfoContent > div,
 .storeOrderInfoContent > div
 {
     float: left;
     width: 45%;
 }
 .storeOrderDetail,
-.orderDetail{
+.orderoneInfoDetail,
+    .orderDetail{
     margin-top: 20px;
 }
 
 .orderInfoContent ,
+.orderoneInfoContent ,
 .storeOrderInfoContent
 {
     overflow: hidden;
@@ -1004,6 +1037,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderInfo > div > div > div.orderInfoTitle,
+.orderoneInfo > div > div > div.orderoneInfoTitle,
 .storeOrderInfo > div > div > div.storeOrderInfoTitle
 {
     text-align: center;
@@ -1011,6 +1045,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent > div ,
+.orderoneInfoDetailContent > div ,
 .storeOrderDetailContent > div
 {
     overflow: hidden;
@@ -1018,6 +1053,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent > div > div ,
+.orderoneInfoDetailContent > div > div ,
 .storeOrderDetailContent > div > div
 {
     width: 45%;
@@ -1026,11 +1062,13 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent > div > div:nth-child(even) ,
+.orderoneInfoDetailContent > div > div:nth-child(even) ,
 .storeOrderDetailContent > div > div:nth-child(even) {
     margin-left: 10%;
 }
 
 .orderDetailContent > div > div > ul > li:nth-child(1) ,
+.orderoneInfoDetailContent > div > div > ul > li:nth-child(1) ,
 .storeOrderDetailContent > div > div > ul > li:nth-child(1)
 {
     background: #ff8b28;
@@ -1038,12 +1076,14 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent > div > div > ul > li,
+.orderoneInfoDetailContent > div > div > ul > li,
 .storeOrderDetailContent > div > div > ul > li
 {
     padding: 5px 0;
 }
 
 .orderDetailContent > div > div > ul > li > p > img,
+.orderoneInfoDetailContent > div > div > ul > li > p > img,
 .storeOrderDetailContent > div > div > ul > li > p > img
 {
     display: inline-block;
@@ -1056,8 +1096,10 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderInfoContent > div > div > ul > li > i,
+.orderoneInfoContent > div > div > ul > li > i,
 .storeOrderInfoContent > div > div > ul > li > i,
 .orderDetailContent > div > div > ul > li > span,
+.orderoneInfoDetailContent > div > div > ul > li > span,
 .storeOrderDetailContent > div > div > ul > li > span
 {
     display: inline-block;
@@ -1070,6 +1112,7 @@ div.userCarList > div.userSetInfoComeback {
 }
 
 .orderDetailContent,
+.orderoneInfoDetailContent,
 .storeOrderDetail
 {
     overflow-y: auto;
@@ -1119,6 +1162,7 @@ div.userCarList > div.userSetInfoComeback {
 .userSet > div > div > div.userSetTotal > div > p > span:nth-child(5)>a,
 .userSet > div > div > div.userSetTotal > div > p > span:nth-child(6)>a{
     text-decoration: underline;
+    color: blue
 }
 .userSet > div > div > div.userSetContent > div.userSetList > ul > li > div > div:nth-child(6),
 .userSet > div > div > div.userSetTitle > p > span:nth-child(6) {

@@ -137,7 +137,7 @@
             },
             success: function (data) {
                 if (data.code == 'E0000') {
-                    console.log(data);
+                    // console.log(data);
                     var wareHouse = data.data;
                     if (wareHouse.length) {
                         var wareProvince; //省份具体数据
@@ -152,7 +152,7 @@
                                 '<div class="wareHouseName"><span>' + data.data[i].name + '</span></div>' +
                                 '<div class="wareHouseProvince" data-id="' + data.data[i].province_id + '"><span>' + data.data[i].province_name + '</span></div>' +
                                 '<div class="wareHouseCity" data-id="' + data.data[i].city_id + '"><span>' + data.data[i].city_name + '</span></div>' +
-                                '<div class="wareHousePosition" data-id="' + data.data[i].area_name + '"><span>' + data.data[i].area_name + '</span></div>' +
+                                '<div class="wareHousePosition" data-id="' + data.data[i].area_id + '"><span>' + data.data[i].area_name + '</span></div>' +
                                 '<div class="description"><span><button>查看描述</button></span></div>' +
                                 '<div><a href="##" class="warehouseEdit"><span class="fa fa-edit"></span>编辑</a>' +
                                 '<a href="##" class="delete"><span class="warehouseRemove fa fa-external-link"></span>移除</a></div>' +
@@ -192,7 +192,7 @@
         //添加
         $('.warehouseAddList').click(function () {
             $('.warehouseAdd').css({display: "block"});
-            //拿取城市
+            //拿取城市   
             $('.warehouseAddSelect').change(function () {
                 $('.wareHouseAddCity>option').remove();
                 var province_id = $(this).val();
@@ -204,11 +204,38 @@
                     },
                     success: function (data) {
                         if (data.code == 'E0000') {
-                            console.log(data);
+                            // console.log(data);
                             for (var i = 0; i < data.data.length; i++) {
                                 var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
                                 $('.wareHouseAddCity').append(option)
                             }
+
+                            //获取地区
+                            $('.wareHouseAddArea>option').remove();
+                            var city_id = $('.wareHouseAddCity').val();
+                            $.ajax({
+                                type: 'post',
+                                url: 'http://180.76.243.205:8383/_API/_area/get',
+                                data: {
+                                    city_id: city_id
+                                },
+                                success: function (data) {
+                                    if (data.code == 'E0000') {
+                                        // console.log(data);
+                                        for (var i = 0; i < data.data.length; i++) {
+                                            var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
+                                            $('.wareHouseAddArea').append(option);
+                                        }
+                                    } else {
+                                        alert(data.message);
+                                    }
+                                },
+                                err: function (err) {
+                                    console.log(err);
+                                }
+                            });
+
+
                         } else {
                             alert(data.message);
                         }
@@ -230,7 +257,7 @@
                     },
                     success: function (data) {
                         if (data.code == 'E0000') {
-                            console.log(data);
+                            // console.log(data);
                             for (var i = 0; i < data.data.length; i++) {
                                 var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
                                 $('.wareHouseAddArea').append(option);
@@ -268,7 +295,7 @@
                                 '<div class="wareHouseName"><span>' + data.data.name + '</span></div>' +
                                 '<div class="wareHouseProvince" data-id="' + data.data.province_id + '"><span>' + data.data.province_name + '</span></div>' +
                                 '<div class="wareHouseCity" data-id="' + data.data.city_id + '"><span>' + data.data.city_name + '</span></div>' +
-                                '<div class="wareHousePosition" data-id="' + data.data.area_name + '"><span>' + data.data.area_name + '</span></div>' +
+                                '<div class="wareHousePosition" data-id="' + data.data.area_id + '"><span>' + data.data.area_name + '</span></div>' +
                                 '<div class="description"><span><button>查看描述</button></span></div>' +
                                 '<div><a href="##" class="warehouseEdit"><span class="fa fa-edit"></span>编辑</a>' +
                                 '<a href="##" class="delete"><span class="warehouseRemove fa fa-external-link"></span>移除</a></div>' +
@@ -362,7 +389,7 @@
                         $('.warehouseRedact .wareHouseName').val(data.data.name);
                         $('.warehouseRedact .warehouseRedactSelect').val(data.data.province_id);
                         $('.warehouseRedact .wareHouseAddress').val(data.data.address);
-                        //拿取城市
+                        //拿取城市  省市地区三级联动
                         $('.warehouseRedactSelect').change(function () {
                             $('.wareHouseRedactCity>option').remove();
                             var province_id = $(this).val();
@@ -378,6 +405,30 @@
                                             var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
                                             $('.wareHouseRedactCity').append(option)
                                         }
+                                        // 拿取地区
+                                        $('.wareHouseRedactArea>option').remove();
+                                        var city_id = $('.wareHouseRedactCity').val();
+                                        $.ajax({
+                                            type: 'post',
+                                            url: 'http://180.76.243.205:8383/_API/_area/get',
+                                            data: {
+                                                city_id: city_id
+                                            },
+                                            success: function (data) {
+                                                if (data.code == 'E0000') {
+                                                    // console.log(data);
+                                                    for (var i = 0; i < data.data.length; i++) {
+                                                        var option = '<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>';
+                                                        $('.wareHouseRedactArea').append(option);
+                                                    }
+                                                } else {
+                                                    alert(data.message);
+                                                }
+                                            },
+                                            err: function (err) {
+                                                console.log(err);
+                                            }
+                                        });
                                     } else {
                                         alert(data.message);
                                     }

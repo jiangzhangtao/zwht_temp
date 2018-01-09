@@ -1,6 +1,7 @@
 
 html, body, body > div {
     min-height: 100%;
+    min-width: 1200px
 }
 div.content > div.menu > div > ul > li.basicTwo{
     height: 50px;
@@ -156,6 +157,7 @@ div.content > div.navigation > div {
 div.content > div.navigation > div > ul {
     overflow: hidden;
     border-bottom: 3px solid #ee2626;
+    min-width: 930px;
 }
 
 div.content > div.navigation > div > ul > li {
@@ -192,6 +194,7 @@ div.content > div.details {
 div.content > div.details > div {
     display: none;
     height: 100%;
+    min-width: 880px;
 }
 
 div.content > div.details > div.present {
@@ -252,6 +255,10 @@ div.content > div.details > div.vehicleBrand > div > div > div.vehicleBrandConte
     padding-left: 20px;
     box-sizing: border-box;
     display: inline-block;
+}
+div.content > div.details > div.plateNumber > div > div > div.plateNumberContent > div>p>select,
+div.content > div.details > div.Car > div > div > div.CarContent > div>p>select{
+    height: 30px;
 }
 div.content > div.details > div.AMG > div > div > div.AMGContent > div>p>select{
     height: 30px;
@@ -495,6 +502,7 @@ div.redact > div > div > ul > li > div > img {
     width: 150px;
     height: 150px;
     margin-top: 14px;
+    border: 1px solid #000;
 }
 
 div.addHtml > div > div > ul > li > button:nth-child(1),
@@ -657,11 +665,10 @@ div.agencyRedact > div > div > ul > li.agencyName > div > input {
 div.agencyAddHtml > div > div > ul > li > div > span > select,
 div.agencyRedact > div > div > ul > li > div > span > select {
     width: 200px;
-    height: 106px;
-    outline: none;
+    height: 30px;
+    background: #ccc;
     border: 1px solid #999;
-    position: absolute;
-    right: 0;
+    font-size: 16px;
 }
 
 div.agencyAddHtml > div > div > ul > li > div > span.agencyAddsecond > span,
@@ -726,7 +733,14 @@ div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList >
     float: left;
     text-align: center;
 }
-
+div.content > div.details > div.AMG > div > div > div.AMGTitle > p > span:nth-child(2),
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div > div:nth-child(2){
+    width: 30%;
+}
+div.content > div.details > div.AMG > div > div > div.AMGTitle > p > span:nth-child(3),
+div.content > div.details > div.AMG > div > div > div.AMGContent > div.AMGList > ul > li > div > div:nth-child(3){
+    width: 20%;
+}
 /*车系添加*/
 div.AmgAddHtml,
 div.AmgRedact {
@@ -797,11 +811,11 @@ div.AmgRedact > div > div > ul > li > div > span > input {
 div.AmgAddHtml > div > div > ul > li > div > span > select,
 div.AmgRedact > div > div > ul > li > div > span > select {
     width: 200px;
-    height: 106px;
-    outline: none;
+    height: 30px;
+    background: #ccc;
     border: 1px solid #999;
-    position: absolute;
-    right: 0;
+
+    left: 73px;
 }
 
 div.AmgAddHtml > div > div > ul > li > div > p,
@@ -979,12 +993,10 @@ div.CarRedact > div > div > ul > li > div > span > input {
 
 div.CarAddHtml > div > div > ul > li > div > span > select,
 div.CarRedact > div > div > ul > li > div > span > select {
-    width: 150px;
-    height: 106px;
-    outline: none;
+    width: 200px;
+    height: 30px;
+    background: #ccc;
     border: 1px solid #999;
-    position: absolute;
-    right: 0;
 }
 
 div.CarAddHtml > div > div > ul > li > div > p,
@@ -1165,11 +1177,9 @@ div.plateNumberRedact > div > div > ul > li > div > span > input {
 div.plateNumberAddHtml > div > div > ul > li > div > span > select,
 div.plateNumberRedact > div > div > ul > li > div > span > select {
     width: 200px;
-    height: 106px;
-    outline: none;
+    height: 30px;
+    background: #ccc;
     border: 1px solid #999;
-    position: absolute;
-    right: 0;
 }
 
 div.plateNumberAddHtml > div > div > ul > li > div > p,

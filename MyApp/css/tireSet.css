@@ -1,6 +1,7 @@
 
 html, body, body > div {
     min-height: 100%;
+    min-width: 1200px
 }
 div.content > div.menu > div > ul > li.basicTwo{
     height: 50px;
@@ -158,6 +159,7 @@ div.content > div.navigation > div {
 div.content > div.navigation > div > ul {
     overflow: hidden;
     border-bottom: 3px solid #ee2626;
+    min-width: 930px;
 }
 
 div.content > div.navigation > div > ul > li {
@@ -197,6 +199,7 @@ div.content > div.details {
 div.content > div.details > div {
     display: none;
     height: 100%;
+    min-width: 880px;
 }
 
 div.content > div.details > div.present {
@@ -296,6 +299,12 @@ div.content > div.details > div > div > ul {
     border-bottom: 1px solid #cccccc;
     padding: 10px 0;
 }
+.tire > div > div > div.tireContent > div.screen>p>select{
+    vertical-align: middle
+}
+.tire > div > div > div.tireContent > div.screen{
+    padding: 0
+}
 
 .tire > div > div > div.tireTitle > p > span {
     float: left;
@@ -340,6 +349,7 @@ div.content > div.details > div > div > ul {
     background: #ffffff;
 }
 
+
 .tireListAdd,
 .tireListRedact {
     position: absolute;
@@ -350,7 +360,6 @@ div.content > div.details > div > div > ul {
     height: 100%;
     display: none;
 }
-
 .tireListAdd > div > div,
 .tireListRedact > div > div {
     position: absolute;
@@ -365,56 +374,113 @@ div.content > div.details > div > div > ul {
     box-sizing: border-box;
     padding: 67px 44px;
     padding-top: 20px;
+    overflow: hidden
+}
+.tireListRedact > div > div >div.tireListRedactTitle,
+.tireListAdd > div > div >div.tireListAddTitle{
+    text-align: center
+}
+.tireListRedact > div > div >div.tireListDiv,
+.tireListRedact > div > div >div.imgList,
+.tireListAdd > div > div >div.tireListDiv,
+.tireListAdd > div > div >div.imgList{
+    float: left;
+}
+.tireListRedact > div > div >div.imgList,
+.tireListAdd > div > div >div.imgList{
+    margin-left: 90px;
+ 
+}
+.tireListRedact > div > div >div.imgList>div,
+.tireListAdd > div > div >div.imgList>div{
+    position: relative;
+    margin-top:5px;
+}
+.tireListRedact > div > div >div.imgList>div>input,
+.tireListAdd > div > div >div.imgList>div>input{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100px;
+    height: 100px;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.tireListRedact > div > div >div.tireListRedactBtn,
+.tireListAdd > div > div >div.tireListAddBtn{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px
 }
 
-.tireListAdd > div > div > ul > li > h3,
-.tireListRedact > div > div > ul > li > h3 {
+.tireListRedact > div > div >div.tireListRedactBtn>button,
+.tireListAdd > div > div >div.tireListAddBtn>button{
+    border: none;
+    background: #ee2626;
+    color: #ffffff;
+    cursor: pointer;
+    width: 130px;
+
+}
+
+.tireListRedact > div > div >div.tireListAddBtn:nth-child(2),
+.tireListAdd > div > div >div.tireListAddBtn:nth-child(2){
+    margin-left: 20px;
+}
+.tireListRedact > div > div>div >div>img,
+.tireListAdd > div > div>div >div>img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    display: block
+}
+.tireListAdd > div > div > div > ul > li > h3,
+.tireListRedact > div > div > div > ul > li > h3 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
 }
 
-.tireListAdd > div > div > ul > li,
-.tireListRedact > div > div > ul > li {
+.tireListAdd > div > div > div > ul > li,
+.tireListRedact > div > div > div > ul > li {
     margin-top: 10px;
 }
 
-.tireListAdd > div > div > ul > li > div > div,
-.tireListRedact > div > div > ul > li > div > div {
+.tireListAdd > div > div  > div> ul > li > div > div,
+.tireListRedact > div > div > div > ul > li > div > div {
     display: inline-block;
 }
 
-.tireListAdd > div > div > ul > li > div > span,
-.tireListRedact > div > div > ul > li > div > span {
+.tireListAdd > div > div > div > ul > li > div > span,
+.tireListRedact > div > div > div > ul > li > div > span {
     width: 90px;
     text-align: right;
     display: inline-block;
     font-weight: bold;
 }
 
-.tireListAdd > div > div > ul > li.tireListAddBtn,
-.tireListRedact > div > div > ul > li.tireListRedactBtn {
+.tireListAdd > div > div > div> ul > li.tireListAddBtn,
+.tireListRedact > div > div > div > ul > li.tireListRedactBtn {
     margin-top: 30px;
     text-align: center;
 }
 
-.tireListAdd > div > div > ul > li.tireListAddBtn > button,
-.tireListRedact > div > div > ul > li.tireListRedactBtn > button {
-    border: none;
-    background: #ee2626;
-    color: #ffffff;
-    cursor: pointer;
-    width: 130px;
+.tireListAdd > div > div > div > ul > li.tireListAddBtn > button,
+.tireListRedact > div > div  > div> ul > li.tireListRedactBtn > button {
+  
 }
-.tireListAdd > div > div > ul > li.tireListAddBtn > button:nth-child(2),
-.tireListRedact > div > div > ul > li.tireListRedactBtn > button:nth-child(2){
-    margin-left: 20px;
+.tireListAdd > div > div  > div> ul > li.tireListAddBtn > button:nth-child(2),
+.tireListRedact > div > div > div > ul > li.tireListRedactBtn > button:nth-child(2){
+ 
 
 }
-.tireListAdd > div > div > ul > li > div > div > input,
-.tireListAdd > div > div > ul > li > div > select,
-.tireListRedact > div > div > ul > li > div > div > input,
-.tireListRedact > div > div > ul > li > div > select {
+.tireListAdd > div > div  > div> ul > li > div > div > input,
+.tireListAdd > div > div  > div> ul > li > div > select,
+.tireListRedact > div > div > div > ul > li > div > div > input,
+.tireListRedact > div > div  > div> ul > li > div > select {
     width: 200px;
     height:30px;
     padding-left: 10px;
@@ -423,8 +489,8 @@ div.content > div.details > div > div > ul {
     border: none;
 }
 
-.tireListAdd > div > div > ul > li > div > div > input,
-.tireListRedact > div > div > ul > li > div > div > input {
+.tireListAdd > div > div > div > ul > li > div > div > input,
+.tireListRedact > div > div > div > ul > li > div > div > input {
     padding-left: 14px;
 }
 
@@ -476,6 +542,7 @@ div.content > div.details > div > div > ul {
 .sidewall > div > div > div.sidewallContent > div,
 .mould > div > div > div.mouldContent > div,
 .type > div > div > div.typeContent > div,
+.tire > div > div > div.tireContent > div,
 .brand > div > div > div.brandContent > div {
     height: 40px;
     line-height: 40px;

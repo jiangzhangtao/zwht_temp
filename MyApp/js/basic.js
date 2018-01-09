@@ -10,7 +10,7 @@
         console.log($('.details').innerHeight())
         $(".menu").css({
             height: bodyHeight - logoHeight - 1,
-            minHeight: 800+'px'
+            minHeight: 800 + 'px'
         });
         $('.navigation').css({
             width: documentWidth - menuWidth - 20
@@ -53,7 +53,7 @@
                 }
                 elem = elem.parentNode;
             }
-            $("#" + id1 + "").css('display', 'none')
+            // $("#" + id1 + "").css('display', 'none')
         })
     }
 
@@ -61,7 +61,7 @@
     function changeF() {
         var this_id = $(this).attr("id");
         $(this).prev('input').val($(this).find("option:selected").text());
-        $("#" + this_id + "").css('display', 'none')
+        // $("#" + this_id + "").css('display', 'none')
     };
     function focus() {
         var this_id = $(this).next().attr("id");
@@ -70,8 +70,6 @@
 
     function inputChagen() {
         var this_id = $(this).next().attr("id");
-        var select = $("#" + this_id + "");
-        select.html('');
         for (var i = 0; i < tempArr.length; i++) {
             //如果找到已txt的内容开头的。添加option
             if (tempArr[i].substring(0, $(this).val().length).indexOf($(this).val()) == 0) {
@@ -282,11 +280,13 @@
 
         //addHtml undoAdd
         $(".addHtml .undoAdd").click(function () {
-            $(".addHtml").css("display", "none")
+            $(".addHtml").css("display", "none");
+
         });
 
         //addHtml addOK
         $(".addHtml .addBtnOk").click(function () {
+
             var fData = new FormData(document.getElementById('brandAdd'));
             fData.append('admin_id', admin_id);
             fData.append('token', token);
@@ -329,6 +329,19 @@
         //添加分类
         $(".vehicleBrandAdd>div>a").click(function () {
             $(".addHtml").css("display", "block")
+            //图片更换
+            $('.addHtml #addFile').change(function () {
+                var file = this.files[0];
+                if (file == null) {
+                    $(".addHtml #addFile").parent().parent().siblings('img').attr('src', '../img/index/yulan.png');
+                    return;
+                }
+                var render = new FileReader();
+                render.readAsDataURL(file);
+                render.onloadend = function (e) {
+                    $(".addHtmlImg").attr('src', e.target.result);
+                }
+            });
         });
     }
 
@@ -338,7 +351,7 @@
             $(".agencyList>ul>li").show()
         });
 
-
+        var AmgArray = [];
         //厂商展示
         $.ajax({
             type: 'post',
@@ -350,10 +363,12 @@
             success: function (data) {
                 if (data.code == 'E0000') {
                     var agency = data.data;
+
+                    AmgArray = agency;
                     if (agency) {
                         for (var i = 0; i < agency.length; i++) {
                             var list = '<li data-id="' + agency[i].id + '">' +
-                                '<div><div><span>' + agency[i].factory + '</span></div>' +
+                                '<div><div class="factory"><span>' + agency[i].factory + '</span></div>' +
                                 '<div>' +
                                 '<a href="##" class="agencyEdit"><span class="fa fa-edit"></span>编辑</a>' +
                                 '<a href="##" class="delete"><span class="agencyRemove fa fa-external-link"></span>移除</a>' +
@@ -398,8 +413,8 @@
                 success: function (data) {
                     if (data.code == 'E0000') {
                         console.log(data);
-                        $('.agencyName').attr('data-id', data.data.id);
-                        $('.agencyName input').val(data.data.factory);
+                        $('.agencyRedact .agencyName').attr('data-id', data.data.id);
+                        $('.agencyRedact .agencyName input').val(data.data.factory);
                         $('#agencyRedactTypeNum').val(data.data.car_brand_id);
                         var na = $('#agencyRedactTypeNum option:selected').text();
                         $('#agencyRedactMakeupCo').val(na)
@@ -441,17 +456,47 @@
                 });
             };
         });
-
+        function fil(arr, key, name) {
+            var filArray = [];
+            var reg = new RegExp(key, "ig")
+            for (var i = 0; i < arr.length; i++) {
+                var one = arr[i];
+                if (reg.test(one[name])) {
+                    filArray.push(one)
+                }
+            };
+            return filArray
+        }
 
         /*添加厂商的筛选*/
         var agencyName = $(".agencyList>ul>li>div>div>span");
-        $('.proxy').bind('input propertychange', function () {
-            var proxyData = $(".proxy").val();
-            var lis = $(".agencyList>ul>li").length;
-            for (var i = 0; i < lis; i++) {
-                $(".agencyList>ul>li").hide().filter(":contains('" + proxyData + "')").show();
+        $('.agency .proxy').keyup('input propertychange', function () {
+            var proxyData = $(".agency .proxy").val();
+
+            var arr = fil(AmgArray, proxyData, "factory");
+            if (arr) {
+                var list = '';
+                for (var i = 0; i < arr.length; i++) {
+                    list += '<li data-id="' + arr[i].id + '">' +
+                        '<div><div class="factory"><span>' + arr[i].factory + '</span></div>' +
+                        '<div>' +
+                        '<a href="##" class="agencyEdit"><span class="fa fa-edit"></span>编辑</a>' +
+                        '<a href="##" class="delete"><span class="agencyRemove fa fa-external-link"></span>移除</a>' +
+                        '</div>' +
+                        '</div>' +
+                        '</li>';
+                }
+                $('.agencyList>ul').html(list);
             }
         });
+
+
+
+
+
+
+
+
         //下拉搜索
         var typeNumAdd = 'agencyAddTypeNum';
         var codeAdd = 'agencyAddMakeupCo';
@@ -1145,8 +1190,8 @@
                         $('#CarRedactMakeupCo').val($('#CarRedactTypeNum option:selected').text());
                         $('#CarVerhicleRedact').val(data.data.verhicle_id);
                         $('#CarFactoryRedact').val(data.data.factory_id);
-                        $('.CarPL input').val(data.data.pailiang);
-                        $('.CarYear input').val(data.data.year);
+                        $('.CarRedact .CarPL input').val(data.data.pailiang);
+                        $('.CarRedact .CarYear input').val(data.data.year);
                         var carname = data.data.name;
                         var ca = carname.split(' ');
                         $('.CarRedact .Carname input').val(ca[ca.length - 1]);
@@ -1226,8 +1271,8 @@
                             $('#CarRedactMakeupCo').val($('#CarRedactTypeNum option:selected').text());
                             $('#CarVerhicleRedact').val(verhicle_id);
                             $('#CarFactoryRedact').val(factory_id);
-                            $('.CarPL input').val(pl);
-                            $('.CarYear input').val(year);
+                            $('.CarRedact .CarPL input').val(pl);
+                            $('.CarRedact .CarYear input').val(year);
                             $('.CarRedact .Carname input').val(name);
                             $('.CarRedact .CarFont input').val(font);
                             $('.CarRedact .CarRear input').val(rear);
@@ -1418,7 +1463,6 @@
             },
             success: function (data) {
                 if (data.code == 'E0000') {
-                    console.log(data);
                     if (data.data) {
                         for (var i = 0; i < data.data.length; i++) {
                             var html = "";
@@ -1494,6 +1538,8 @@
                 }
             });
         });
+
+
         $('#plateNumberAddTypeNum').change(function () {
             var position_id = $(this).val();
             $.ajax({
@@ -1627,6 +1673,33 @@
 
         });
 
+
+        $('#plateNumberRedactTypeNum').change(function () {
+            var position_id = $(this).val();
+            $.ajax({
+                type: 'post',
+                url: 'http://180.76.243.205:8383/_API/_adminPlat/getPro',
+                data: {
+                    admin_id: admin_id,
+                    token: token,
+                    position_id: position_id
+                },
+                success: function (data) {
+                    if (data.code == 'E0000') {
+                        console.log(data);
+                        if (data.data) {
+                            $('.plateRedactCityCode').val(data.data[0].province_code)
+                        }
+                    } else {
+                        alert(data.message);
+                    }
+                },
+                err: function (err) {
+                    console.log(err);
+                }
+            });
+        });
+
         //redact undoAdd
         $(".plateNumberRedactBtn .plateNumberUndoAdd").click(function () {
             $(".plateNumberRedact").css("display", "none")
@@ -1635,7 +1708,7 @@
 
         //addHtml undoAdd
         $(".plateNumberAddHtml .plateNumberUndoAdd").click(function () {
-
+            $(".plateNumberAddHtml").css("display", "none")
             //addHtml addOK
 
         });
